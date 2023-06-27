@@ -1,0 +1,12 @@
+# Copyright (C) 2023 FooxyTV (simon@fooxy.tv)
+# All rights reserved.
+# Programming by: TomCat / TomCat's Gaming
+
+## Interface: 11403
+## Title: AdventureGuide Classic
+## Version: 1.0.01
+## Notes: Version: 1.0.01
+## DefaultState: enabled
+## SavedVariables: AdventureGuideClassic_Account
+
+Main.xml
