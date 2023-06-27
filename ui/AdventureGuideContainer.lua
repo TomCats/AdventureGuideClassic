@@ -11,19 +11,22 @@ local component = UI.CreateComponent("AdventureGuideContainer")
 function component.Init()
     -- Create the base window and portrait image
     component.frame = CreateFrame("Frame", addonName .. "_AdventureGuideContainer", UIParent, "PortraitFrameTemplate")
-    component.frame:SetSize(800, 496)
-    component.frame:SetPoint("CENTER")
-    component.frame:EnableMouse(true)
-    component.frame:SetToplevel(true)
-    _G[addonName .. "_AdventureGuideContainerTitleText"]:SetText("AdventureGuide Classic")
-    _G[addonName .. "_AdventureGuideContainerPortrait"]:SetTexture("Interface\\EncounterJournal\\UI-EJ-PortraitIcon")
+    local frame = component.frame
+    frame:SetSize(800, 496)
+    frame:SetPoint("CENTER")
+    frame:EnableMouse(true)
+    frame:SetToplevel(true)
+    frame.title = _G[addonName .. "_AdventureGuideContainerTitleText"]
+    frame.title:SetText("AdventureGuide Classic")
+    frame.portrait = _G[addonName .. "_AdventureGuideContainerPortrait"]
+    frame.portrait:SetTexture("Interface\\EncounterJournal\\UI-EJ-PortraitIcon")
     local mask = component.frame:CreateMaskTexture()
-    mask:SetAllPoints(_G[addonName .. "_AdventureGuideContainerPortrait"])
+    mask:SetAllPoints(frame.portrait)
     mask:SetTexture("Interface\\CharacterFrame\\TempPortraitAlphaMask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
-    _G[addonName .. "_AdventureGuideContainerPortrait"]:AddMaskTexture(mask)
+    frame.portrait:AddMaskTexture(mask)
 
     --todo: Show only via a slash command and UI button
     component.frame:Show()
 end
 
-UI.Add(component)
+    UI.Add(component)
