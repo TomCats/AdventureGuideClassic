@@ -6,3 +6,14 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
+local frame = CreateFrame("Frame")
+
+local function OnEvent(_, event, arg1)
+    if (event == "ADDON_LOADED" and arg1 == addonName) then
+        UI.Init()
+        frame:UnregisterEvent("ADDON_LOADED")
+    end
+end
+
+frame:RegisterEvent("ADDON_LOADED")
+frame:SetScript("OnEvent", OnEvent)
