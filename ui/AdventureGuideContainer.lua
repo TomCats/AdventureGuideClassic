@@ -16,6 +16,7 @@ function component.Init()
     frame:SetSize(800, 496)
     frame:EnableMouse(true)
     frame:SetToplevel(true)
+
     -- Set Background texture of AdventureGuideContainer
     local topLeftTexture = frame:CreateTexture(nil, "BACKGROUND")
     local topRightTexture = frame:CreateTexture(nil, "BACKGROUND")
@@ -23,23 +24,23 @@ function component.Init()
     local bottomRightTexture = frame:CreateTexture(nil, "BACKGROUND")
 
     topLeftTexture:SetTexture("Interface\\OptionsFrame\\UIOptionsFrame-TopLeft")
-    topLeftTexture:SetSize(400, 248)
-    topLeftTexture:SetPoint("TOPLEFT", frame,"TOPLEFT", 0, 0)
+    topLeftTexture:SetSize(400, 250)
+    topLeftTexture:SetPoint("TOPLEFT", frame,"TOPLEFT", 0, -70)
 
     topRightTexture:SetTexture("Interface\\OptionsFrame\\UIOptionsFrame-TopRight")
-    topRightTexture:SetSize(400, 248)
-    topRightTexture:SetPoint("TOPRIGHT", frame, "TOPRIGHT", 0, 0)
+    topRightTexture:SetSize(400, 250)
+    topRightTexture:SetPoint("TOPRIGHT", frame, "TOPRIGHT", 0, -70)
 
     bottomLeftTexture:SetTexture("Interface\\OptionsFrame\\UIOptionsFrame-BottomLeft")
-    bottomLeftTexture:SetSize(400, 248)
+    bottomLeftTexture:SetSize(400, 230)
     bottomLeftTexture:SetPoint("BOTTOMLEFT", frame, "BOTTOMLEFT", 0, 0)
 
     bottomRightTexture:SetTexture("Interface\\OptionsFrame\\UIOptionsFrame-BottomRight")
-    bottomRightTexture:SetSize(400, 248)
+    bottomRightTexture:SetSize(400, 230)
     bottomRightTexture:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", 0, 0)
     
     frame.title = _G[addonName .. "_AdventureGuideContainerTitleText"]
-    frame.title:SetText("Adventure Guide Classic")
+    frame.title:SetText("Adventure Guide")
     frame.portrait = _G[addonName .. "_AdventureGuideContainerPortrait"]
     frame.portrait:SetTexture("Interface\\EncounterJournal\\UI-EJ-PortraitIcon")
     local mask = component.frame:CreateMaskTexture()
