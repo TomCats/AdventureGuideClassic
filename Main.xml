@@ -12,6 +12,8 @@ Programming by: TomCat / TomCat's Gaming
 
     <Include file="ui/UI.xml" />
 
+    <Script file="SlashCommands.lua" />
+    <Script file="Bindings.lua" />
     <Script file="Main.lua" />
 
 </Ui>

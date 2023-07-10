@@ -1,0 +1,7 @@
+<Bindings>
+
+    <Binding name="TOGGLE_ADVENTUREGUIDECLASSIC" category="AdventureGuide Classic" default="SHIFT-J">
+        SlashCmdList["ADVENTUREGUIDECLASSIC"]()
+    </Binding>
+
+</Bindings>
