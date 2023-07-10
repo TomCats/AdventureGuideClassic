@@ -187,7 +187,7 @@ function CreateMinimapButton(buttonInfo)
 		seqNum = seqNum + 1
 	end
 	--noinspection UnusedDef
-	local frame = CreateFrame("Button", name, Minimap, "JoanasGuides-MinimapButtonTemplate")
+	local frame = CreateFrame("Button", name, Minimap, "AdventureGuideClassic-MinimapButtonTemplate")
 	MinimapButtonOnload(frame)
 	frame:SetFrameLevel(13)
 	if (buttonInfo.backgroundColor) then

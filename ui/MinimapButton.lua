@@ -5,7 +5,7 @@ local component = UI.CreateComponent("MinimapButton")
 
 function component.Init(components)
 	local frame = CreateMinimapButton({
-		name = "JoanasGuides-MinimapButton",
+		name = "AdventureGuideClassic-MinimapButton",
 		iconTexture = string.format("Interface\\AddOns\\%s\\images\\AdventureGuideIcon", addonName),
 		backgroundColor = { 0.0,0.0,0.0,1.0 },
 		handler_onclick = function()

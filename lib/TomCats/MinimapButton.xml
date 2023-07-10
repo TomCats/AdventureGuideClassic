@@ -8,7 +8,7 @@ For more information, contact via email at tomcat@tomcatstours.com
 -->
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-    <Button name="JoanasGuides-MiniMapButtonTemplate" virtual="true" frameStrata="MEDIUM" frameLevel="10" dontSavePosition="true">
+    <Button name="AdventureGuideClassic-MiniMapButtonTemplate" virtual="true" frameStrata="MEDIUM" frameLevel="10" dontSavePosition="true">
         <Size x="32" y="32"/>
         <Anchors>
             <Anchor point="CENTER" relativeTo="Minimap" relativePoint="CENTER" x="-78.674" y="-18.193" />
