@@ -9,6 +9,8 @@ Programming by: TomCat / TomCat's Gaming
 
     <Script file="lib/TomCats/GlobalFacade.lua" />
     <Script file="lib/TomCats/Images.lua" />
+    <Include file="lib/TomCats/MinimapButton.xml" />
+    <Script file="lib/TomCats/MinimapButton.lua" />
 
     <Include file="ui/UI.xml" />
 
