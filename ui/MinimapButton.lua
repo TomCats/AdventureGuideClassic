@@ -6,7 +6,7 @@ local component = UI.CreateComponent("MinimapButton")
 function component.Init(components)
 	local frame = CreateMinimapButton({
 		name = "AdventureGuideClassic-MinimapButton",
-		iconTexture = string.format("Interface\\AddOns\\%s\\images\\AdventureGuideIcon", addonName),
+		iconTexture = "Interface\\EncounterJournal\\UI-EJ-PortraitIcon",
 		backgroundColor = { 0.0,0.0,0.0,1.0 },
 		handler_onclick = function()
 			UI.ToggleAdventureGuideContainer()
@@ -18,7 +18,12 @@ function component.Init(components)
 			GameTooltip:SetOwner(this, "ANCHOR_NONE")
 			GameTooltip:SetPoint("TOPRIGHT", this, "BOTTOMRIGHT", 0, 0)
 			--todo: Localize
-			GameTooltip:SetText("AdventureGuide Classic", 1, 1, 1)
+			GameTooltip:AddLine("AdventureGuide Classic")
+			local bindingKey = GetBindingKey("TOGGLE_ADVENTUREGUIDECLASSIC")
+			--todo: Localize
+			if (bindingKey) then
+				GameTooltip:AddLine(string.format("Press %s to toggle", bindingKey), 1, 1, 1)
+			end
 			GameTooltip:Show()
 		end,
 		Hide = function()
