@@ -4,33 +4,30 @@ All rights reserved.
 
 Programming by: TomCat / TomCat's Gaming
 ]]
-select(2, ...).SetupGlobalFacade()
-
 _G["BINDING_NAME_TOGGLE_ADVENTUREGUIDECLASSIC"] = "Toggle Main Window"
 
-local isDirty = false
-
 local frame = CreateFrame("FRAME")
-frame:RegisterEvent("PLAYER_ENTERING_WORLD")
-frame:RegisterEvent("UPDATE_BINDINGS")
+
+local updateCount = 0
+
+-- Work-around for Blizzard issues:
+--   API doesn't reliably set the default keybind according to Bindings.xml
+--   API doesn't reliably report back on GetBindingKey or GetBindingByKey until the 2nd frame after load
 
 frame:SetScript("OnUpdate", function()
-    if (isDirty and not InCombatLockdown()) then
-        isDirty = false
-        SetBinding("SHIFT-J", "TOGGLE_ADVENTUREGUIDECLASSIC")
-    end
-end)
-
-frame:SetScript("OnEvent", function(_, event, arg1, arg2)
-    if ((event == "PLAYER_ENTERING_WORLD" and arg2) or event == "UPDATE_BINDINGS") then
-        if (not ((KeyBindingFrame and KeyBindingFrame:IsShown()) or (SettingsPanel and SettingsPanel:IsShown()))) then
+    if (not InCombatLockdown()) then
+        updateCount = updateCount + 1
+        if (updateCount == 2) then
             local bindingKey = GetBindingKey("TOGGLE_ADVENTUREGUIDECLASSIC")
             if (not bindingKey) then
                 local command = GetBindingByKey("SHIFT-J")
                 if (not command) then
-                    isDirty = true
+                    SetBinding("SHIFT-J", "TOGGLE_ADVENTUREGUIDECLASSIC")
                 end
             end
+            frame:Hide()
+            frame:SetScript("OnUpdate", nop)
+            frame = nil
         end
     end
 end)
