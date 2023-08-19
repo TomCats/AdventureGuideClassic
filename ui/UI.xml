@@ -4,6 +4,7 @@
     <Script file="ui/UI.lua" />
     <Script file="ui/Component.lua" />
     <Script file="ui/AdventureGuideContainer.lua" />
+    <Script file="ui/AdventureGuideNavBar.lua" />
     <Script file="ui/AdventureGuideBottomTabs.lua" />
     <Script file="ui/MinimapButton.lua" />
 
