@@ -11,7 +11,6 @@ local component = UI.CreateComponent("AdventureGuideContainer")
 function component.Init()
     -- Create the base window and portrait image
     component.frame = CreateFrame("Frame", addonName .. "_AdventureGuideContainer", UIParent, "PortraitFrameTemplate")
-    --_G[addonName .. "_AdventureGuideContainer"] = nil
     local frame = component.frame
     frame:SetSize(800, 496)
     frame:EnableMouse(true)
@@ -24,7 +23,6 @@ function component.Init()
     mask:SetAllPoints(frame.portrait)
     mask:SetTexture("Interface\\CharacterFrame\\TempPortraitAlphaMask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
     frame.portrait:AddMaskTexture(mask)
-
     -- Allow the window to be moved with last position saved account-wide
     if (SavedVariables.AdventureGuideContainerLocation) then
         frame:ClearAllPoints()
@@ -45,8 +43,9 @@ function component.Init()
         self:StopMovingOrSizing()
         SavedVariables.AdventureGuideContainerLocation = { self:GetPoint() }
     end)
-
-    --todo: Show only via a slash command and UI button
+    frame.inset = CreateFrame("Frame", frame:GetName() .. "Inset", frame, "InsetFrameTemplate")
+    frame.inset:SetPoint("TOPRIGHT", -4, -60)
+    frame.inset:SetPoint("BOTTOMLEFT", 4, 5)
     component.frame:SetShown(false)
 end
 
