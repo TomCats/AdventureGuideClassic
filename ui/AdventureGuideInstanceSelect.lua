@@ -8,6 +8,8 @@ select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("AdventureGuideInstanceSelect")
 
+local scrollbox
+
 function component.Init(components)
 	local parent = components.AdventureGuideContainer.frame
 	local frame = CreateFrame("Frame", parent:GetName() .. "InstanceSelect", parent)
@@ -22,7 +24,7 @@ function component.Init(components)
 	frame.title:SetJustifyH("LEFT")
 	frame.title:SetPoint("TOPLEFT", 20, -15)
 	frame.title:SetText("Dungeons")
-	local scrollbox = CreateFrame("Frame", nil, frame, "WowScrollBoxList")
+	scrollbox = CreateFrame("Frame", nil, frame, "WowScrollBoxList")
 	scrollbox:SetSize(748, 379)
 	scrollbox:SetPoint("TOPLEFT", 14, -47)
 	local scrollbar = CreateFrame("EventFrame", nil, frame, "WowTrimScrollBar")
@@ -66,11 +68,24 @@ function component.Init(components)
 		view:SetElementInitializer("Button", Initializer);
 	end
 	ScrollUtil.InitScrollBoxWithScrollBar(scrollbox, scrollbar, view);
+end
+
+function component.ShowDungeons()
 	local dataProvider = CreateDataProvider();
 	for _, dungeon in ipairs(Dungeons) do
 		dataProvider:Insert(dungeon)
 	end
 	scrollbox:SetDataProvider(dataProvider);
+	component.frame:Show()
+end
+
+function component.ShowRaids()
+	local dataProvider = CreateDataProvider();
+	for _, dungeon in ipairs(Raids) do
+		dataProvider:Insert(dungeon)
+	end
+	scrollbox:SetDataProvider(dataProvider);
+	component.frame:Show()
 end
 
 UI.Add(component)

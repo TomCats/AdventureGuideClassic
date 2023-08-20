@@ -45,10 +45,7 @@ function component.Init()
     end)
     frame:SetScript("OnShow", function()
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN);
-        if (not frame.selectedTab) then
-            local defaultTab = frame.Tabs[1]
-            defaultTab:GetScript("OnClick")(defaultTab)
-        end
+        frame.Tabs[frame.selectedTab or 1]:GetScript("OnClick")()
     end)
     frame:SetScript("OnHide", function()
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_CLOSE);

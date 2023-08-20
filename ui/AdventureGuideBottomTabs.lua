@@ -8,7 +8,9 @@ select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("AdventureGuideBottomTabs")
 
+local components
 local tabs = { }
+local views = { }
 local tabNameFormat = "%s_AdventureGuideBottomTab%s"
 local tabDisabledTextureFormat = "%s_AdventureGuideBottomTab%s%sDisabled"
 local AdventureGuideContainerFrame
@@ -26,6 +28,14 @@ local function AddTab(label)
     tab:SetScript("OnEvent", nil)
     tab:SetScript("OnShow", nil)
     tab:SetScript("OnClick", function()
+        for _, view in ipairs(views) do
+            view:Hide()
+        end
+        if (tabIdx == 2) then
+            components.AdventureGuideInstanceSelect.ShowDungeons()
+        elseif (tabIdx == 3) then
+            components.AdventureGuideInstanceSelect.ShowRaids()
+        end
         PanelTemplates_Tab_OnClick(tab, AdventureGuideContainerFrame)
         PanelTemplates_SetTab(AdventureGuideContainerFrame, tabIdx)
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
@@ -39,12 +49,14 @@ local function AddTab(label)
     tab:Show()
 end
 
-function component.Init(components)
+function component.Init(components_)
+    components = components_
     AdventureGuideContainerFrame = components.AdventureGuideContainer.frame
     components.AdventureGuideContainer.frame.Tabs = tabs
     AddTab("Suggested Content")
     AddTab("Dungeons")
     AddTab("Raids")
+    table.insert(views, components.AdventureGuideInstanceSelect.frame)
 end
 
 UI.Add(component)
