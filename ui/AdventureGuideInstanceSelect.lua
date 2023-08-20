@@ -23,7 +23,6 @@ function component.Init(components)
 	frame.title = frame:CreateFontString(nil, "BACKGROUND", "GameFontNormalLarge2")
 	frame.title:SetJustifyH("LEFT")
 	frame.title:SetPoint("TOPLEFT", 20, -15)
-	frame.title:SetText("Dungeons")
 	scrollbox = CreateFrame("Frame", nil, frame, "WowScrollBoxList")
 	scrollbox:SetSize(748, 379)
 	scrollbox:SetPoint("TOPLEFT", 14, -47)
@@ -71,6 +70,7 @@ function component.Init(components)
 end
 
 function component.ShowDungeons()
+	component.frame.title:SetText(DUNGEONS)
 	local dataProvider = CreateDataProvider();
 	for _, dungeon in ipairs(Dungeons) do
 		dataProvider:Insert(dungeon)
@@ -80,6 +80,7 @@ function component.ShowDungeons()
 end
 
 function component.ShowRaids()
+	component.frame.title:SetText(RAIDS)
 	local dataProvider = CreateDataProvider();
 	for _, dungeon in ipairs(Raids) do
 		dataProvider:Insert(dungeon)
