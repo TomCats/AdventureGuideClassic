@@ -59,7 +59,12 @@ function component.Init(components)
 		button:Show()
 	end
 	local view = CreateScrollBoxListGridView(4, 4, 0, 0, 0, 15, 15);
-	view:SetElementInitializer("Button", nil, Initializer);
+	if (Compatibility.IsLegacy()) then
+		view:SetElementInitializer("Button", nil, Initializer);
+	else
+		view:SetElementExtent(96)
+		view:SetElementInitializer("Button", Initializer);
+	end
 	ScrollUtil.InitScrollBoxWithScrollBar(scrollbox, scrollbar, view);
 	local dataProvider = CreateDataProvider();
 	for _, dungeon in ipairs(Dungeons) do
