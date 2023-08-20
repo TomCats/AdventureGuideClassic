@@ -43,6 +43,16 @@ function component.Init()
         self:StopMovingOrSizing()
         SavedVariables.AdventureGuideContainerLocation = { self:GetPoint() }
     end)
+    frame:SetScript("OnShow", function()
+        PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN);
+        if (not frame.selectedTab) then
+            local defaultTab = frame.Tabs[1]
+            defaultTab:GetScript("OnClick")(defaultTab)
+        end
+    end)
+    frame:SetScript("OnHide", function()
+        PlaySound(SOUNDKIT.IG_CHARACTER_INFO_CLOSE);
+    end)
     frame.inset = CreateFrame("Frame", frame:GetName() .. "Inset", frame, "InsetFrameTemplate")
     frame.inset:SetPoint("TOPRIGHT", -4, -60)
     frame.inset:SetPoint("BOTTOMLEFT", 4, 5)

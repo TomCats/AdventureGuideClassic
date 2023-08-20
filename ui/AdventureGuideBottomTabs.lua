@@ -25,16 +25,23 @@ local function AddTab(label)
     end
     tab:SetScript("OnEvent", nil)
     tab:SetScript("OnShow", nil)
+    tab:SetScript("OnClick", function()
+        PanelTemplates_Tab_OnClick(tab, AdventureGuideContainerFrame)
+        PanelTemplates_SetTab(AdventureGuideContainerFrame, tabIdx)
+        PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+    end)
     _G[string.format(tabDisabledTextureFormat, addonName, tabIdx, "Left")]:Hide()
     _G[string.format(tabDisabledTextureFormat, addonName, tabIdx, "Middle")]:Hide()
     _G[string.format(tabDisabledTextureFormat, addonName, tabIdx, "Right")]:Hide()
     tabs[tabIdx] = tab
     PanelTemplates_TabResize(tab, 0, nil, 36, 300);
+    AdventureGuideContainerFrame.numTabs = #tabs
     tab:Show()
 end
 
 function component.Init(components)
     AdventureGuideContainerFrame = components.AdventureGuideContainer.frame
+    components.AdventureGuideContainer.frame.Tabs = tabs
     AddTab("Suggested Content")
     AddTab("Dungeons")
     AddTab("Raids")
