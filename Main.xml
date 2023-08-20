@@ -12,6 +12,7 @@ Programming by: TomCat / TomCat's Gaming
     <Include file="lib/TomCats/MinimapButton.xml" />
     <Script file="lib/TomCats/MinimapButton.lua" />
 
+    <Include file="Compatibility.lua" />
     <Include file="DynamicTable.lua" />
 
     <Include file="data/Data.xml" />
