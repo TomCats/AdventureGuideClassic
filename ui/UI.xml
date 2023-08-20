@@ -6,6 +6,7 @@
     <Script file="ui/AdventureGuideContainer.lua" />
     <Script file="ui/AdventureGuideNavBar.lua" />
     <Script file="ui/AdventureGuideInstanceSelect.lua" />
+    <Script file="ui/AdventureGuideEncounters.lua" />
     <Script file="ui/AdventureGuideBottomTabs.lua" />
     <Script file="ui/MinimapButton.lua" />
 

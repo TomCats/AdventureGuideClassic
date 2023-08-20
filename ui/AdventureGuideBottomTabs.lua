@@ -31,7 +31,9 @@ local function AddTab(label)
         for _, view in ipairs(views) do
             view:Hide()
         end
-        if (tabIdx == 2) then
+        if (tabIdx == 1) then
+            components.AdventureGuideEncounters.frame:Show()
+        elseif (tabIdx == 2) then
             components.AdventureGuideInstanceSelect.ShowDungeons()
         elseif (tabIdx == 3) then
             components.AdventureGuideInstanceSelect.ShowRaids()
@@ -57,6 +59,7 @@ function component.Init(components_)
     AddTab("Dungeons")
     AddTab("Raids")
     table.insert(views, components.AdventureGuideInstanceSelect.frame)
+    table.insert(views, components.AdventureGuideEncounters.frame)
 end
 
 UI.Add(component)
