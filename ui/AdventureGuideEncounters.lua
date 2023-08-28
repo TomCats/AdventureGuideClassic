@@ -82,12 +82,8 @@ function component.Init(components)
 		--button:Show()
 	end
 	local bossView = CreateScrollBoxListLinearView();
-	if (Compatibility.IsLegacy()) then
-		bossView:SetElementInitializer("Button", nil, BossButtonInitializer);
-	else
-		bossView:SetElementExtent(55)
-		bossView:SetElementInitializer("Button", BossButtonInitializer);
-	end
+	bossView:SetElementExtent(55)
+	bossView:SetElementInitializer("Button", BossButtonInitializer);
 	bossView:SetPadding(10,0,0,20,15);
 	ScrollUtil.InitScrollBoxListWithScrollBar(bossesScrollbox, bossesScrollbar, bossView);
 	--[[

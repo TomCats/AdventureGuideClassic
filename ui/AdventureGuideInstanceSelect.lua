@@ -67,12 +67,8 @@ function component.Init(components_)
 		button:Show()
 	end
 	local view = CreateScrollBoxListGridView(4, 4, 0, 0, 0, 15, 15);
-	if (Compatibility.IsLegacy()) then
-		view:SetElementInitializer("Button", nil, Initializer);
-	else
-		view:SetElementExtent(96)
-		view:SetElementInitializer("Button", Initializer);
-	end
+	view:SetElementExtent(96)
+	view:SetElementInitializer("Button", Initializer);
 	ScrollUtil.InitScrollBoxWithScrollBar(scrollbox, scrollbar, view);
 	frame:Hide()
 end
