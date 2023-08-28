@@ -8,9 +8,11 @@ select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("AdventureGuideInstanceSelect")
 
+local components
 local scrollbox
 
-function component.Init(components)
+function component.Init(components_)
+	components = components_
 	local parent = components.AdventureGuideContainer.frame
 	local frame = CreateFrame("Frame", parent:GetName() .. "InstanceSelect", parent)
 	component.frame = frame
@@ -53,8 +55,13 @@ function component.Init(components)
 			highlight:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
 			highlight:SetTexCoord(0.34570313, 0.68554688, 0.33300781, 0.42675781)
 			button:SetHighlightTexture(highlight)
+			button:SetScript("OnClick", function()
+				frame:Hide()
+				components.AdventureGuideInstanceInfo.ShowInstanceInfo(button.instanceID)
+			end)
 			button.initialized = true
 		end
+		button.instanceID = elementData.instanceID
 		button.name:SetText(elementData.name);
 		button.bgImage:SetTexture(elementData.buttonImage1);
 		button:Show()
@@ -70,24 +77,23 @@ function component.Init(components)
 	frame:Hide()
 end
 
+local function ShowInstances(instances)
+	local dataProvider = CreateDataProvider()
+	for _, instance in ipairs(instances) do
+		dataProvider:Insert(instance)
+	end
+	scrollbox:SetDataProvider(dataProvider)
+	components.AdventureGuideContainer.SetCurrentView(component.frame)
+end
+
 function component.ShowDungeons()
 	component.frame.title:SetText(DUNGEONS)
-	local dataProvider = CreateDataProvider();
-	for _, dungeon in ipairs(Dungeons) do
-		dataProvider:Insert(dungeon)
-	end
-	scrollbox:SetDataProvider(dataProvider);
-	component.frame:Show()
+	ShowInstances(Dungeons)
 end
 
 function component.ShowRaids()
 	component.frame.title:SetText(RAIDS)
-	local dataProvider = CreateDataProvider();
-	for _, dungeon in ipairs(Raids) do
-		dataProvider:Insert(dungeon)
-	end
-	scrollbox:SetDataProvider(dataProvider);
-	component.frame:Show()
+	ShowInstances(Raids)
 end
 
 UI.Add(component)

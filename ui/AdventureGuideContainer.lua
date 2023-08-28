@@ -8,6 +8,8 @@ select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("AdventureGuideContainer")
 
+local currentView
+
 function component.Init()
     -- Create the base window and portrait image
     component.frame = CreateFrame("Frame", addonName .. "_AdventureGuideContainer", UIParent, "PortraitFrameTemplate")
@@ -54,6 +56,17 @@ function component.Init()
     frame.inset:SetPoint("TOPRIGHT", -4, -60)
     frame.inset:SetPoint("BOTTOMLEFT", 4, 5)
     component.frame:SetShown(false)
+end
+
+function component.SetCurrentView(newView)
+    if (currentView and currentView ~= newView) then
+        currentView:Hide()
+        currentView = newView
+        currentView:Show()
+    else
+        currentView = newView
+        currentView:Show()
+    end
 end
 
 UI.Add(component)

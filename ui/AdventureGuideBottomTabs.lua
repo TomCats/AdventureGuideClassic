@@ -27,18 +27,12 @@ local function AddTab(label)
     tab:SetScript("OnEvent", nil)
     tab:SetScript("OnShow", nil)
     tab:SetScript("OnClick", function()
-        if (components.AdventureGuideContainer.currentView) then
-            components.AdventureGuideContainer.currentView:Hide()
-        end
         if (tabIdx == 1) then
-            components.AdventureGuideContainer.currentView = components.AdventureGuideEncounters.frame
             --todo: remove: Display encounters for the first dungeon until the real suggested content is available
-            components.AdventureGuideEncounters.ShowEncounters(227)
+            components.AdventureGuideInstanceInfo.ShowInstanceInfo(227)
         elseif (tabIdx == 2) then
-            components.AdventureGuideContainer.currentView = components.AdventureGuideInstanceSelect.frame
             components.AdventureGuideInstanceSelect.ShowDungeons()
         elseif (tabIdx == 3) then
-            components.AdventureGuideContainer.currentView = components.AdventureGuideInstanceSelect.frame
             components.AdventureGuideInstanceSelect.ShowRaids()
         end
         PanelTemplates_Tab_OnClick(tab, AdventureGuideContainerFrame)
