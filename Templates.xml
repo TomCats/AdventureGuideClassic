@@ -1,0 +1,22 @@
+<!--
+Copyright (C) 2023 FooxyTV (simon@fooxy.tv)
+All rights reserved.
+
+Programming by: TomCat / TomCat's Gaming
+ -->
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+    <Frame name="AdventureGuideClassic_ScrollingFontTemplate_GameFontBlack" inherits="ScrollingFontTemplate" virtual="true">
+        <KeyValues>
+            <KeyValue key="fontName" value="GameFontBlack" />
+        </KeyValues>
+    </Frame>
+
+    <EventFrame name="AdventureGuideClassic_MinimalScrollBar_NoTrack" inherits="MinimalScrollBar" virtual="true">
+        <KeyValues>
+            <KeyValue key="hideTrack" value="true" type="boolean" />
+        </KeyValues>
+    </EventFrame>
+
+</Ui>
