@@ -80,11 +80,11 @@ function component.Init(components)
 			local creatureFrame = CreateFrame("Frame", nil, button)
 			creatureFrame:SetSize(1, 1)
 			creatureFrame:SetPoint("TOPLEFT", -4, 13)
-			button.creature = creatureFrame:CreateTexture()
-			button.creature:SetDrawLayer("OVERLAY", 6)
-			button.creature:SetTexture("Interface/EncounterJournal/UI-EJ-BOSS-Default")
-			button.creature:SetSize(128, 64)
-			button.creature:SetPoint("TOPLEFT")
+			button.bgImage = creatureFrame:CreateTexture()
+			button.bgImage:SetDrawLayer("OVERLAY", 6)
+			button.bgImage:SetTexture("Interface/EncounterJournal/UI-EJ-BOSS-Default")
+			button.bgImage:SetSize(128, 64)
+			button.bgImage:SetPoint("TOPLEFT")
 			local normal = button:CreateTexture()
 			normal:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
 			normal:SetTexCoord(0.00195313, 0.63671875, 0.21386719, 0.26757813)
@@ -97,17 +97,16 @@ function component.Init(components)
 			highlight:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
 			highlight:SetTexCoord(0.00195313, 0.63671875, 0.15820313, 0.21191406)
 			button:SetHighlightTexture(highlight)
-			button.text = button:CreateFontString()
-			button.text:SetJustifyH("LEFT")
-			button.text:SetJustifyV("MIDDLE")
-			button.text:SetTextColor(0.87, 0.659, 0.463)
-			button.text:SetSize(160, 40)
-			button.text:SetPoint("LEFT", 105, -3)
-			button:SetFontString(button.text)
+			button.name = button:CreateFontString()
+			button.name:SetJustifyH("LEFT")
+			button.name:SetJustifyV("MIDDLE")
+			button.name:SetTextColor(0.87, 0.659, 0.463)
+			button.name:SetSize(160, 40)
+			button.name:SetPoint("LEFT", 105, -3)
+			button:SetFontString(button.name)
 			button:SetNormalFontObject("GameFontNormalMed3")
 			button:SetHighlightFontObject("GameFontNormalMed3")
 			button:SetDisabledFontObject("GameFontHighlightMedium")
-			button:SetText("Monster name goes here")
 			--[[
 				<Scripts>
 					<OnShow function="EncounterJournalBossButton_OnShow"/>
@@ -118,8 +117,9 @@ function component.Init(components)
 			]]
 			button.initialized = true
 		end
-		--button.name:SetText(elementData.name);
-		--button.bgImage:SetTexture(elementData.buttonImage1);
+		button.name:SetText(elementData.name);
+		button.bgImage:SetTexture(elementData.buttonImage1);
+		button.DefeatedOverlay:Hide()
 		--button:Show()
 	end
 	local bossView = CreateScrollBoxListLinearView();
@@ -152,9 +152,10 @@ end
 
 function component.LoadExample()
 	local dataProvider = CreateDataProvider();
+	local dungeon = DungeonsByInstanceID[227]
 	bossesScrollbox:SetDataProvider(dataProvider);
-	for i = 1, 10 do
-		dataProvider:Insert({ })
+	for _, encounterID in ipairs(dungeon.encounters) do
+		dataProvider:Insert(EncountersByEncounterID[encounterID])
 	end
 	--	component.frame:Show()
 end
