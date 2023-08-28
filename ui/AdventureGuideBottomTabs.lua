@@ -10,7 +10,6 @@ local component = UI.CreateComponent("AdventureGuideBottomTabs")
 
 local components
 local tabs = { }
-local views = { }
 local tabNameFormat = "%s_AdventureGuideBottomTab%s"
 local tabDisabledTextureFormat = "%s_AdventureGuideBottomTab%s%sDisabled"
 local AdventureGuideContainerFrame
@@ -28,14 +27,18 @@ local function AddTab(label)
     tab:SetScript("OnEvent", nil)
     tab:SetScript("OnShow", nil)
     tab:SetScript("OnClick", function()
-        for _, view in ipairs(views) do
-            view:Hide()
+        if (components.AdventureGuideContainer.currentView) then
+            components.AdventureGuideContainer.currentView:Hide()
         end
         if (tabIdx == 1) then
-            components.AdventureGuideEncounters.frame:Show()
+            components.AdventureGuideContainer.currentView = components.AdventureGuideEncounters.frame
+            --todo: remove: Display encounters for the first dungeon until the real suggested content is available
+            components.AdventureGuideEncounters.ShowEncounters(227)
         elseif (tabIdx == 2) then
+            components.AdventureGuideContainer.currentView = components.AdventureGuideInstanceSelect.frame
             components.AdventureGuideInstanceSelect.ShowDungeons()
         elseif (tabIdx == 3) then
+            components.AdventureGuideContainer.currentView = components.AdventureGuideInstanceSelect.frame
             components.AdventureGuideInstanceSelect.ShowRaids()
         end
         PanelTemplates_Tab_OnClick(tab, AdventureGuideContainerFrame)
@@ -58,8 +61,6 @@ function component.Init(components_)
     AddTab("Suggested Content")
     AddTab("Dungeons")
     AddTab("Raids")
-    table.insert(views, components.AdventureGuideInstanceSelect.frame)
-    table.insert(views, components.AdventureGuideEncounters.frame)
 end
 
 UI.Add(component)

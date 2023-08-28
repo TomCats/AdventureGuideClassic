@@ -67,6 +67,7 @@ function component.Init(components)
 		view:SetElementInitializer("Button", Initializer);
 	end
 	ScrollUtil.InitScrollBoxWithScrollBar(scrollbox, scrollbar, view);
+	frame:Hide()
 end
 
 function component.ShowDungeons()

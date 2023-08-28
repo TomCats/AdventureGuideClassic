@@ -147,17 +147,18 @@ function component.Init(components)
 
 	</Button>
 	]]
-	component.LoadExample()
+	frame:Hide()
+--	component.LoadExample()
 end
 
-function component.LoadExample()
+function component.ShowEncounters(instanceID)
 	local dataProvider = CreateDataProvider();
-	local dungeon = DungeonsByInstanceID[227]
+	local dungeon = DungeonsByInstanceID[instanceID]
 	bossesScrollbox:SetDataProvider(dataProvider);
 	for _, encounterID in ipairs(dungeon.encounters) do
 		dataProvider:Insert(EncountersByEncounterID[encounterID])
 	end
-	--	component.frame:Show()
+	component.frame:Show()
 end
 
 UI.Add(component)
