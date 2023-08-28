@@ -3,5 +3,6 @@
 
     <Script file="data/Dungeons.lua" />
     <Script file="data/Raids.lua" />
+    <Script file="data/Encounters.lua" />
 
 </Ui>
