@@ -42,7 +42,8 @@ local buttonImages = {
     [5712] = buttonImagePath .. "UIEJBossZolo.blp",
     [5716] = buttonImagePath .. "UIEJBossZulLor.blp",
     [8580] = buttonImagePath .. "UIEJBossAtalalarion.blp",
-    [5711] = buttonImagePath .. "UIEJBossOgomTheWretched.blp"
+    [5711] = buttonImagePath .. "UIEJBossOgomTheWretched.blp",
+    [7604] = buttonImagePath .. "UIEJBossSergeantBly.blp"
 }
 
 Encounters, EncountersByEncounterID = DynamicTable.MakeDynamic(
@@ -279,7 +280,7 @@ Encounters, EncountersByEncounterID = DynamicTable.MakeDynamic(
             { 7275, "Shadowpriest Sezz'ziz", 607770 },
             { 10081, "Dustwraith" },
             { 7274, "Sandfury Executioner" },
-            { 7604, "Sergeant Bly" },
+            { 7604, "Sergeant Bly", buttonImages[7604] },
             { 7795, "Hydromancer Velratha", 607652 },
             { 7273, "Gahz'rilla" },
             { 7267, "Chief Ukorz Sandscalp", 607564 },
