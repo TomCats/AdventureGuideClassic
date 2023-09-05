@@ -56,6 +56,7 @@ function component.Init()
     frame.inset:SetPoint("TOPRIGHT", -4, -60)
     frame.inset:SetPoint("BOTTOMLEFT", 4, 5)
     component.frame:SetShown(false)
+    table.insert(UISpecialFrames, frame:GetName())
 end
 
 function component.SetCurrentView(newView)
