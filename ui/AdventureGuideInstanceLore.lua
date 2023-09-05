@@ -6,7 +6,7 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideInstanceOverview")
+local component = UI.CreateComponent("AdventureGuideInstanceLore")
 
 local components
 
@@ -47,7 +47,7 @@ function component.Init(components_)
 	frame:Hide()
 end
 
-function component.ShowInstanceOverview(instanceID)
+function component.ShowInstanceLore(instanceID)
 	local instance = DungeonsByInstanceID[instanceID]
 	if (not instance) then
 		instance = RaidsByInstanceID[instanceID]
