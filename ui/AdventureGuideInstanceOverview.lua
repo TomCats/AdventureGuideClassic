@@ -48,7 +48,6 @@ function component.Init(components_)
 end
 
 function component.ShowInstanceOverview(instanceID)
-	print(instanceID)
 	local instance = DungeonsByInstanceID[instanceID]
 	if (not instance) then
 		instance = RaidsByInstanceID[instanceID]
