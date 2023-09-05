@@ -28,6 +28,7 @@ function component.Init(components)
 			button.DefeatedOverlay.Icon = button.DefeatedOverlay:CreateTexture(nil, "BACKGROUND")
 			Atlas.SetAtlas(button.DefeatedOverlay.Icon, "Map-MarkedDefeated", true)
 			button.DefeatedOverlay.Icon:SetPoint("CENTER")
+			--todo: implement if API provides a means to do so
 			--[[
 				for button.DefeatedOverlay
 				<Scripts>
@@ -66,6 +67,7 @@ function component.Init(components)
 			button:SetNormalFontObject("GameFontNormalMed3")
 			button:SetHighlightFontObject("GameFontNormalMed3")
 			button:SetDisabledFontObject("GameFontHighlightMedium")
+			--todo: implement onclick
 			--[[
 				<Scripts>
 					<OnShow function="EncounterJournalBossButton_OnShow"/>
@@ -79,30 +81,12 @@ function component.Init(components)
 		button.name:SetText(elementData.name);
 		button.bgImage:SetTexture(elementData.buttonImage1);
 		button.DefeatedOverlay:Hide()
-		--button:Show()
 	end
 	local bossView = CreateScrollBoxListLinearView();
 	bossView:SetElementExtent(55)
 	bossView:SetElementInitializer("Button", BossButtonInitializer);
 	bossView:SetPadding(10,0,0,20,15);
 	ScrollUtil.InitScrollBoxListWithScrollBar(bossesScrollbox, bossesScrollbar, bossView);
-	--[[
-<Button name="EncounterBossButtonTemplate" virtual="true" mixin="EncounterBossButtonMixin" hidden="true">
-		<Size x="325" y="55"/>
-		<ButtonText name="$parentText" parentKey="text" justifyH="LEFT"  justifyV="MIDDLE">
-			<Size x="160" y="40"/>
-			<Anchors>
-				<Anchor point="LEFT" x="105" y="-3"/>
-			</Anchors>
-			<Color r="0.827" g="0.659" b="0.463"/>
-		</ButtonText>
-		<NormalFont style="GameFontNormalMed3"/>
-		<HighlightFont style="GameFontNormalMed3"/>
-		<DisabledFont style="GameFontHighlightMedium"/>
-
-	</Button>
-	]]
---	component.LoadExample()
 end
 
 function component.SetInstance(instance)

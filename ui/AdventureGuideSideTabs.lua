@@ -44,9 +44,6 @@ local function AddTab(label)
 	tab.selected:SetPoint("CENTER", tab.unselected, "CENTER", 0, 0)
 	return tab
 end
---[[
-
-]]
 
 function component.Init(components_)
 	AdventureGuideInstanceInfo = components_.AdventureGuideInstanceInfo
