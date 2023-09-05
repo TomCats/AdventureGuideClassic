@@ -47,7 +47,6 @@ function component.Init()
     end)
     frame:SetScript("OnShow", function()
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN);
-        frame.Tabs[frame.selectedTab or 1]:GetScript("OnClick")()
     end)
     frame:SetScript("OnHide", function()
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_CLOSE);

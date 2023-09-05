@@ -55,6 +55,7 @@ function component.Init(components_)
     AddTab("Suggested Content")
     AddTab("Dungeons")
     AddTab("Raids")
+    AdventureGuideContainerFrame.Tabs[1]:GetScript("OnClick")()
 end
 
 UI.Add(component)
