@@ -12,7 +12,7 @@
     <Script file="ui/DetailsScroll.lua" />
     <Script file="ui/Bosses.lua" />
     <Script file="ui/EncounterJournalTabs.lua" />
-    <Script file="ui/AdventureGuideSideTabs.lua" />
+    <Script file="ui/InfoTabs.lua" />
     <Script file="ui/MinimapButton.lua" />
 
 </Ui>

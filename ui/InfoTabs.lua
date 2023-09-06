@@ -6,7 +6,7 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideSideTabs")
+local component = UI.CreateComponent("InfoTabs")
 
 local function AddTab(label)
 	local tab = CreateFrame("Button", nil, EncounterJournal.encounter.info)
@@ -45,18 +45,22 @@ end
 
 function component.Init(components_)
 	local overviewTab = AddTab("Overview")
+	EncounterJournal.encounter.info.overviewTab = overviewTab
 	overviewTab:SetPoint("TOPLEFT", EncounterJournal.encounter.info, "TOPRIGHT", -12, -35)
 	overviewTab.unselected:SetTexCoord(0.85546875, 0.94921875, 0.52441406, 0.56640625)
 	overviewTab.selected:SetTexCoord(0.90234375, 0.99609375, 0.26953125, 0.31152344)
 	local lootTab = AddTab("Loot")
+	EncounterJournal.encounter.info.lootTab = lootTab
 	lootTab:SetPoint("TOP", overviewTab, "BOTTOM", 0, 2)
 	lootTab.unselected:SetTexCoord(0.73046875, 0.82421875, 0.61816406, 0.66015625)
 	lootTab.selected:SetTexCoord(0.63281250, 0.72656250, 0.61816406, 0.66015625)
 	local abilitiesTab = AddTab("Abilities")
+	EncounterJournal.encounter.info.abilitiesTab = abilitiesTab
 	abilitiesTab:SetPoint("TOP", lootTab, "BOTTOM", 0, 2)
 	abilitiesTab.unselected:SetTexCoord(0.904296875, 0.99609375, 0.70703125, 0.748046875)
 	abilitiesTab.selected:SetTexCoord(0.806640625, 0.8984375, 0.70703125, 0.748046875)
 	local modelTab = AddTab("Model")
+	EncounterJournal.encounter.info.modelTab = modelTab
 	modelTab:SetPoint("TOP", abilitiesTab, "BOTTOM", 0, 2)
 	modelTab.unselected:SetTexCoord(0.90234375, 1, 0.662109375, 0.705078125)
 	modelTab.selected:SetTexCoord(0.8046875, 0.900390625, 0.662109375, 0.705078125)
