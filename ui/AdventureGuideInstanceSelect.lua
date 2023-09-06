@@ -13,22 +13,22 @@ local scrollbox
 
 function component.Init(components_)
 	components = components_
-	local parent = components.AdventureGuideContainer.frame
-	local frame = CreateFrame("Frame", parent:GetName() .. "InstanceSelect", parent)
-	component.frame = frame
-	frame:SetPoint("TOPLEFT", parent.inset, 0, -2)
-	frame:SetPoint("BOTTOMRIGHT", parent.inset, -3, 0)
-	frame.bg = frame:CreateTexture(nil, "BACKGROUND")
-	frame.bg:SetTexture("Interface/EncounterJournal/UI-EJ-Classic")
-	frame.bg:SetAllPoints()
-	frame.bg:SetPoint("TOPLEFT", 3, -1)
-	frame.title = frame:CreateFontString(nil, "BACKGROUND", "GameFontNormalLarge2")
-	frame.title:SetJustifyH("LEFT")
-	frame.title:SetPoint("TOPLEFT", 20, -15)
-	scrollbox = CreateFrame("Frame", nil, frame, "WowScrollBoxList")
+	local instanceSelect = CreateFrame("Frame", EncounterJournal:GetName() .. "InstanceSelect", EncounterJournal)
+	component.frame = instanceSelect
+	EncounterJournal.instanceSelect = instanceSelect
+	instanceSelect:SetPoint("TOPLEFT", EncounterJournal.inset, 0, -2)
+	instanceSelect:SetPoint("BOTTOMRIGHT", EncounterJournal.inset, -3, 0)
+	instanceSelect.bg = instanceSelect:CreateTexture(nil, "BACKGROUND")
+	instanceSelect.bg:SetTexture("Interface/EncounterJournal/UI-EJ-Classic")
+	instanceSelect.bg:SetAllPoints()
+	instanceSelect.bg:SetPoint("TOPLEFT", 3, -1)
+	instanceSelect.title = instanceSelect:CreateFontString(nil, "BACKGROUND", "GameFontNormalLarge2")
+	instanceSelect.title:SetJustifyH("LEFT")
+	instanceSelect.title:SetPoint("TOPLEFT", 20, -15)
+	scrollbox = CreateFrame("Frame", nil, instanceSelect, "WowScrollBoxList")
 	scrollbox:SetSize(748, 379)
 	scrollbox:SetPoint("TOPLEFT", 14, -47)
-	local scrollbar = CreateFrame("EventFrame", nil, frame, "MinimalScrollBar")
+	local scrollbar = CreateFrame("EventFrame", nil, instanceSelect, "MinimalScrollBar")
 	scrollbar:SetPoint("TOPLEFT", scrollbox, "TOPRIGHT", 12, -6)
 	scrollbar:SetPoint("BOTTOMLEFT", scrollbox, "BOTTOMRIGHT", 12, 4)
 	local function Initializer(button, elementData)
@@ -56,7 +56,7 @@ function component.Init(components_)
 			highlight:SetTexCoord(0.34570313, 0.68554688, 0.33300781, 0.42675781)
 			button:SetHighlightTexture(highlight)
 			button:SetScript("OnClick", function()
-				frame:Hide()
+				instanceSelect:Hide()
 				components.AdventureGuideInstanceInfo.ShowInstanceInfo(button.instanceID)
 			end)
 			button.initialized = true
@@ -70,7 +70,7 @@ function component.Init(components_)
 	view:SetElementExtent(96)
 	view:SetElementInitializer("Button", Initializer);
 	ScrollUtil.InitScrollBoxWithScrollBar(scrollbox, scrollbar, view);
-	frame:Hide()
+	instanceSelect:Hide()
 end
 
 local function ShowInstances(instances)

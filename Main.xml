@@ -14,6 +14,9 @@ Programming by: TomCat / TomCat's Gaming
     <Include file="lib/TomCats/MinimapButton.xml" />
     <Script file="lib/TomCats/MinimapButton.lua" />
 
+    <Script file="EJ_Fascade.lua" />
+    <Script file="Blizzard_EncounterJournal.lua" />
+
     <Script file="DynamicTable.lua" />
     <Script file="Atlas.lua" />
 

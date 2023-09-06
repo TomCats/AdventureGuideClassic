@@ -5,4 +5,13 @@
     <Script file="data/Raids.lua" />
     <Script file="data/Encounters.lua" />
 
+    <SimpleHTML name="AdventureGuideClassic_SampleEncounterDescription"
+                file="Interface\AddOns\AdventureGuideClassic\data\encounterDescriptions\sample.html"
+                virtual="true">
+        <Size x="1000" y="1000" />
+        <FontString inherits="GameFontBlack" justifyH="LEFT" justifyV="TOP">
+            <Color r="1" g="1" b="1" a="1"/>
+        </FontString>
+    </SimpleHTML>
+
 </Ui>

@@ -8,6 +8,7 @@
     <Script file="ui/AdventureGuideInstanceSelect.lua" />
     <Script file="ui/AdventureGuideInstanceInfo.lua" />
     <Script file="ui/AdventureGuideInstanceLore.lua" />
+    <Script file="ui/AdventureGuideEncounterOverview.lua" />
     <Script file="ui/AdventureGuideEncounters.lua" />
     <Script file="ui/AdventureGuideBottomTabs.lua" />
     <Script file="ui/AdventureGuideSideTabs.lua" />

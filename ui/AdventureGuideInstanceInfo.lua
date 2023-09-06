@@ -8,16 +8,17 @@ select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("AdventureGuideInstanceInfo")
 
-local components
+local components, currentView
 
 function component.Init(components_)
 	components = components_
-	local frame = CreateFrame("Frame", nil, components.AdventureGuideContainer.frame)
-	component.frame = frame
-	frame:SetPoint("TOPLEFT", components.AdventureGuideContainer.frame.inset, "TOPLEFT", 0, 0)
-	frame:SetPoint("BOTTOMRIGHT", components.AdventureGuideContainer.frame.inset, "BOTTOMRIGHT", -3, 0)
-	local info = CreateFrame("Frame", nil, frame)
-	frame.info = info
+	local encounter = CreateFrame("Frame", nil, EncounterJournal)
+	component.frame = encounter
+	EncounterJournal.encounter = encounter
+	encounter:SetPoint("TOPLEFT", EncounterJournal.inset, "TOPLEFT", 0, 0)
+	encounter:SetPoint("BOTTOMRIGHT", EncounterJournal.inset, "BOTTOMRIGHT", -3, 0)
+	local info = CreateFrame("Frame", nil, encounter)
+	encounter.info = info
 	info:SetSize(785, 425)
 	info:SetPoint("BOTTOMRIGHT", -1, 2)
 	info.bg = info:CreateTexture()
@@ -66,7 +67,7 @@ function component.Init(components_)
 	instanceButtonBorderHighlight:SetTexCoord(0.50585938, 0.63085938, 0.02246094, 0.08203125)
 	info.instanceButton:SetHighlightTexture(instanceButtonBorderHighlight, "ADD")
 	--todo: set OnClick
-	frame:Hide()
+	encounter:Hide()
 end
 
 function component.ShowInstanceInfo(instanceID)
@@ -78,11 +79,23 @@ function component.ShowInstanceInfo(instanceID)
 	component.frame.info.instanceButton.icon:SetMask(I.InstanceButtonIconMask);
 	component.frame.info.instanceButton.icon:SetTexture(instance.buttonImage2)
 	components.AdventureGuideInstanceLore.ShowInstanceLore(instanceID)
+	--components.AdventureGuideEncounterOverview.ShowEncounterOverview()
 	components.AdventureGuideEncounters.SetInstance(instance)
 	components.AdventureGuideContainer.SetCurrentView(component.frame)
 	components.AdventureGuideNavBar.SetInstance(instance.instanceID)
 	components.AdventureGuideNavBar.SetEncounter()
 	components.AdventureGuideNavBar.Refresh()
+end
+
+function component.SetCurrentView(newView)
+	if (currentView and currentView ~= newView) then
+		currentView:Hide()
+		currentView = newView
+		currentView:Show()
+	else
+		currentView = newView
+		currentView:Show()
+	end
 end
 
 UI.Add(component)

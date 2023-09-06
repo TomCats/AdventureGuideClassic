@@ -11,30 +11,30 @@ local component = UI.CreateComponent("AdventureGuideNavBar")
 local instanceID, encounterID
 
 function component.Init(components)
-	local parent = components.AdventureGuideContainer.frame
-	local frame = CreateFrame("Frame", parent:GetName() .. "NavBar", parent, "NavBarTemplate")
-	component.frame = frame
-	frame:SetSize(730, 34)
-	frame:SetPoint("TOPLEFT", 61, -22)
-	local insetBotLeftCorner = frame:CreateTexture(nil, "BORDER", "UI-Frame-InnerBotLeftCorner")
+	local navBar = CreateFrame("Frame", EncounterJournal:GetName() .. "NavBar", EncounterJournal, "NavBarTemplate")
+	component.frame = navBar
+	EncounterJournal.navBar = navBar
+	navBar:SetSize(730, 34)
+	navBar:SetPoint("TOPLEFT", 61, -22)
+	local insetBotLeftCorner = navBar:CreateTexture(nil, "BORDER", "UI-Frame-InnerBotLeftCorner")
 	insetBotLeftCorner:ClearAllPoints()
 	insetBotLeftCorner:SetPoint("BOTTOMLEFT", -3, -3)
-	local insetBotRightCorner = frame:CreateTexture(nil, "BORDER", "UI-Frame-InnerBotRight")
+	local insetBotRightCorner = navBar:CreateTexture(nil, "BORDER", "UI-Frame-InnerBotRight")
 	insetBotRightCorner:ClearAllPoints()
 	insetBotRightCorner:SetPoint("BOTTOMRIGHT", 3, -3)
-	local insetBottomBorder = frame:CreateTexture(nil, "BORDER", "_UI-Frame-InnerBotTile")
+	local insetBottomBorder = navBar:CreateTexture(nil, "BORDER", "_UI-Frame-InnerBotTile")
 	insetBottomBorder:ClearAllPoints()
 	insetBottomBorder:SetPoint("BOTTOMLEFT", insetBotLeftCorner, "BOTTOMRIGHT")
 	insetBottomBorder:SetPoint("BOTTOMRIGHT", insetBotRightCorner, "BOTTOMLEFT")
-	local insetLeftBorder = frame:CreateTexture(nil, "BORDER", "!UI-Frame-InnerLeftTile")
+	local insetLeftBorder = navBar:CreateTexture(nil, "BORDER", "!UI-Frame-InnerLeftTile")
 	insetLeftBorder:ClearAllPoints()
 	insetLeftBorder:SetPoint("TOPLEFT", -3, 0)
 	insetLeftBorder:SetPoint("BOTTOMLEFT", insetBotLeftCorner, "TOPLEFT")
-	local insetRightBorder = frame:CreateTexture(nil, "BORDER", "!UI-Frame-InnerRightTile")
+	local insetRightBorder = navBar:CreateTexture(nil, "BORDER", "!UI-Frame-InnerRightTile")
 	insetRightBorder:ClearAllPoints()
 	insetRightBorder:SetPoint("TOPRIGHT", 3, 0)
 	insetRightBorder:SetPoint("BOTTOMRIGHT", insetBotRightCorner, "TOPRIGHT")
-	frame.button2 = CreateFrame("Button", frame:GetName() .. "Button2", frame, "NavButtonTemplate")
+	navBar.button2 = CreateFrame("Button", navBar:GetName() .. "Button2", navBar, "NavButtonTemplate")
 	local homeData = {
 		name = "Home",
 		OnClick = function()
@@ -47,7 +47,7 @@ function component.Init(components)
 			end
 		end,
 	}
-	NavBar_Initialize(frame, "NavButtonTemplate", homeData, frame.home, frame.overflow);
+	NavBar_Initialize(navBar, "NavButtonTemplate", homeData, navBar.home, navBar.overflow);
 	--local button2Data = {
 	--	name = "Fooxy",
 	--	OnClick = nop,
