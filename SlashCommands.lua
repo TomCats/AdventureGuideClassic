@@ -7,4 +7,4 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 _G.SLASH_ADVENTUREGUIDECLASSIC1 = "/ag"
-SlashCmdList["ADVENTUREGUIDECLASSIC"] = UI.ToggleAdventureGuideContainer
+SlashCmdList["ADVENTUREGUIDECLASSIC"] = UI.ToggleEncounterJournal
