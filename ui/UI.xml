@@ -6,7 +6,7 @@
     <Script file="ui/EncounterJournal.lua" />
     <Script file="ui/AdventureGuideNavBar.lua" />
     <Script file="ui/AdventureGuideInstanceSelect.lua" />
-    <Script file="ui/EncounterJournalEncounterFrame.lua" />
+    <Script file="ui/EncounterFrame.lua" />
     <Script file="ui/AdventureGuideInstanceLore.lua" />
     <Script file="ui/AdventureGuideEncounterOverview.lua" />
     <Script file="ui/AdventureGuideEncounters.lua" />

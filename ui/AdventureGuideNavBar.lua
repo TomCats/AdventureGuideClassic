@@ -75,7 +75,7 @@ function component.Refresh()
 		NavBar_AddButton(component.frame, {
 			name = instance.name,
 			OnClick = function()
-				components.EncounterJournalEncounterFrame.ShowInstanceInfo(instance.instanceID)
+				components.EncounterFrame.ShowInstanceInfo(instance.instanceID)
 			end,
 			listFunc = nop
 		})

@@ -57,7 +57,7 @@ function component.ShowInstanceLore(instanceID)
 	component.frame.loreBG:SetTexture(instance.loreImage)
 	component.frame.loreScrollingFont:SetText(instance.description);
 	component.frame.loreScrollBar:SetShown(component.frame.loreScrollingFont:HasScrollableExtent());
-	components.EncounterJournalEncounterFrame.SetCurrentView(component.frame)
+	components.EncounterFrame.SetCurrentView(component.frame)
 end
 
 UI.Add(component)

@@ -141,7 +141,7 @@ end
 ]]
 
 function component.ShowEncounterOverview(encounterID)
-	components.EncounterJournalEncounterFrame.SetCurrentView(component.frame)
+	components.EncounterFrame.SetCurrentView(component.frame)
 end
 
 UI.Add(component)

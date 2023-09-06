@@ -57,7 +57,7 @@ function component.Init(components_)
 			button:SetHighlightTexture(highlight)
 			button:SetScript("OnClick", function()
 				instanceSelect:Hide()
-				components.EncounterJournalEncounterFrame.ShowInstanceInfo(button.instanceID)
+				components.EncounterFrame.ShowInstanceInfo(button.instanceID)
 			end)
 			button.initialized = true
 		end
