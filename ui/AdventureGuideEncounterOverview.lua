@@ -12,7 +12,7 @@ local components
 
 function component.Init(components_)
 	components = components_
-	local detailsScroll = CreateFrame("ScrollFrame", nil, components.AdventureGuideInstanceInfo.frame.info)
+	local detailsScroll = CreateFrame("ScrollFrame", nil, EncounterJournal.encounter.info)
 	component.frame = detailsScroll
 	EncounterJournal.encounter.info.detailsScroll = detailsScroll
 	EncounterJournal.encounter.infoFrame = detailsScroll
@@ -141,7 +141,7 @@ end
 ]]
 
 function component.ShowEncounterOverview(encounterID)
-	components.AdventureGuideInstanceInfo.SetCurrentView(component.frame)
+	components.EncounterJournalEncounterFrame.SetCurrentView(component.frame)
 end
 
 UI.Add(component)

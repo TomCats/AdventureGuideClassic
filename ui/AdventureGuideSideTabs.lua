@@ -6,12 +6,10 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local AdventureGuideInstanceInfo
-
 local component = UI.CreateComponent("AdventureGuideSideTabs")
 
 local function AddTab(label)
-	local tab = CreateFrame("Button", nil, AdventureGuideInstanceInfo.frame.info)
+	local tab = CreateFrame("Button", nil, EncounterJournal.encounter.info)
 	tab:SetFrameLevel(510)
 	tab:SetSize(63, 57)
 	local normalTexture = tab:CreateTexture()
@@ -46,10 +44,8 @@ local function AddTab(label)
 end
 
 function component.Init(components_)
-	AdventureGuideInstanceInfo = components_.AdventureGuideInstanceInfo
-	AdventureGuideInstanceInfo.Tabs = tabs
 	local overviewTab = AddTab("Overview")
-	overviewTab:SetPoint("TOPLEFT", AdventureGuideInstanceInfo.frame.info, "TOPRIGHT", -12, -35)
+	overviewTab:SetPoint("TOPLEFT", EncounterJournal.encounter.info, "TOPRIGHT", -12, -35)
 	overviewTab.unselected:SetTexCoord(0.85546875, 0.94921875, 0.52441406, 0.56640625)
 	overviewTab.selected:SetTexCoord(0.90234375, 0.99609375, 0.26953125, 0.31152344)
 	local lootTab = AddTab("Loot")

@@ -12,9 +12,9 @@ local components
 
 function component.Init(components_)
 	components = components_
-	local instance = CreateFrame("Frame", nil, components.AdventureGuideInstanceInfo.frame)
+	local instance = CreateFrame("Frame", nil, EncounterJournal.encounter)
 	component.frame = instance
-	components.AdventureGuideInstanceInfo.frame.instance = instance
+	EncounterJournal.encounter.instance = instance
 	instance:SetSize(390, 425)
 	instance:SetPoint("BOTTOMRIGHT", -1, 2)
 	instance.loreBG = instance:CreateTexture()
@@ -57,7 +57,7 @@ function component.ShowInstanceLore(instanceID)
 	component.frame.loreBG:SetTexture(instance.loreImage)
 	component.frame.loreScrollingFont:SetText(instance.description);
 	component.frame.loreScrollBar:SetShown(component.frame.loreScrollingFont:HasScrollableExtent());
-	components.AdventureGuideInstanceInfo.SetCurrentView(component.frame)
+	components.EncounterJournalEncounterFrame.SetCurrentView(component.frame)
 end
 
 UI.Add(component)

@@ -6,7 +6,7 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideInstanceInfo")
+local component = UI.CreateComponent("EncounterJournalEncounterFrame")
 
 local components, currentView
 

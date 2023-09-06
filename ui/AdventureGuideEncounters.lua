@@ -11,7 +11,7 @@ local component = UI.CreateComponent("AdventureGuideEncounters")
 local bossesScrollbox
 
 function component.Init(components)
-	local info = components.AdventureGuideInstanceInfo.frame.info
+	local info = EncounterJournal.encounter.info
 	bossesScrollbox = CreateFrame("Frame", nil, info, "WowScrollBoxList")
 	bossesScrollbox:SetSize(338, 382)
 	bossesScrollbox:SetPoint("BOTTOMLEFT", 25, 1)
