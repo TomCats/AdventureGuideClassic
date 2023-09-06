@@ -29,7 +29,7 @@ function component.ShowInstanceInfo(instanceID)
 	component.frame.info.instanceButton.icon:SetMask(I.InstanceButtonIconMask);
 	component.frame.info.instanceButton.icon:SetTexture(instance.buttonImage2)
 	components.AdventureGuideInstanceLore.ShowInstanceLore(instanceID)
-	--components.AdventureGuideEncounterOverview.ShowEncounterOverview()
+	--components.DetailsScroll.ShowEncounterOverview()
 	components.AdventureGuideEncounters.SetInstance(instance)
 	components.EncounterJournal.SetCurrentView(component.frame)
 	components.AdventureGuideNavBar.SetInstance(instance.instanceID)
