@@ -9,7 +9,7 @@
     <Script file="ui/EncounterFrame.lua" />
     <Script file="ui/Info.lua" />
     <Script file="ui/Instance.lua" />
-    <Script file="ui/DetailsScroll.lua" />
+    <Script file="ui/DetailsScrollFrame.lua" />
     <Script file="ui/Bosses.lua" />
     <Script file="ui/EncounterJournalTabs.lua" />
     <Script file="ui/InfoTabs.lua" />

@@ -6,7 +6,7 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("DetailsScroll")
+local component = UI.CreateComponent("DetailsScrollFrame")
 
 local components
 

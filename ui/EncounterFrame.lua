@@ -29,7 +29,7 @@ function component.ShowInstanceInfo(instanceID)
 	component.frame.info.instanceButton.icon:SetMask(I.InstanceButtonIconMask);
 	component.frame.info.instanceButton.icon:SetTexture(instance.buttonImage2)
 	components.Instance.ShowInstanceLore(instanceID)
-	--components.DetailsScroll.ShowEncounterOverview()
+	--components.DetailsScrollFrame.ShowEncounterOverview()
 	components.Bosses.SetInstance(instance)
 	components.EncounterJournal.SetCurrentView(component.frame)
 	components.NavBar.SetInstance(instance.instanceID)
