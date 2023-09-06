@@ -6,28 +6,28 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideContainer")
+local component = UI.CreateComponent("EncounterJournal")
 
 local currentView
 
 function component.Init()
     -- Create the base window and portrait image
-    EncounterJournal = CreateFrame("Frame", addonName .. "_AdventureGuideContainer", UIParent, "PortraitFrameTemplate")
+    EncounterJournal = CreateFrame("Frame", addonName .. "_EncounterJournal", UIParent, "PortraitFrameTemplate")
     EncounterJournal:SetSize(800, 496)
     EncounterJournal:EnableMouse(true)
     EncounterJournal:SetToplevel(true)
-    EncounterJournal.title = _G[addonName .. "_AdventureGuideContainerTitleText"]
+    EncounterJournal.title = _G[addonName .. "_EncounterJournalTitleText"]
     EncounterJournal.title:SetText("AdventureGuide Classic")
-    EncounterJournal.portrait = _G[addonName .. "_AdventureGuideContainerPortrait"]
+    EncounterJournal.portrait = _G[addonName .. "_EncounterJournalPortrait"]
     EncounterJournal.portrait:SetTexture("Interface\\EncounterJournal\\UI-EJ-PortraitIcon")
     local mask = EncounterJournal:CreateMaskTexture()
     mask:SetAllPoints(EncounterJournal.portrait)
     mask:SetTexture("Interface\\CharacterFrame\\TempPortraitAlphaMask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
     EncounterJournal.portrait:AddMaskTexture(mask)
     -- Allow the window to be moved with last position saved account-wide
-    if (SavedVariables.AdventureGuideContainerLocation) then
+    if (SavedVariables.EncounterJournalLocation) then
         EncounterJournal:ClearAllPoints()
-        EncounterJournal:SetPoint(unpack(SavedVariables.AdventureGuideContainerLocation))
+        EncounterJournal:SetPoint(unpack(SavedVariables.EncounterJournalLocation))
     else
         EncounterJournal:SetPoint("CENTER")
     end
@@ -42,7 +42,7 @@ function component.Init()
     EncounterJournal:SetScript("OnDragStop", function(self)
         EncounterJournal:SetMovable(false)
         self:StopMovingOrSizing()
-        SavedVariables.AdventureGuideContainerLocation = { self:GetPoint() }
+        SavedVariables.EncounterJournalLocation = { self:GetPoint() }
     end)
     EncounterJournal:SetScript("OnShow", function()
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN);
@@ -70,6 +70,6 @@ end
 
 UI.Add(component)
 
-function UI.ToggleAdventureGuideContainer()
+function UI.ToggleEncounterJournal()
     EncounterJournal:SetShown(not EncounterJournal:IsShown())
 end

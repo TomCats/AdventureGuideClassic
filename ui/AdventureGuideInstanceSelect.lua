@@ -79,7 +79,7 @@ local function ShowInstances(instances)
 		dataProvider:Insert(instance)
 	end
 	scrollbox:SetDataProvider(dataProvider)
-	components.AdventureGuideContainer.SetCurrentView(component.frame)
+	components.EncounterJournal.SetCurrentView(component.frame)
 	components.AdventureGuideNavBar.Reset()
 end
 

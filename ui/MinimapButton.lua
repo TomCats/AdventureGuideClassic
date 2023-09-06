@@ -9,7 +9,7 @@ function component.Init(components)
 		iconTexture = "Interface\\EncounterJournal\\UI-EJ-PortraitIcon",
 		backgroundColor = { 0.0,0.0,0.0,1.0 },
 		handler_onclick = function()
-			UI.ToggleAdventureGuideContainer()
+			UI.ToggleEncounterJournal()
 		end
 	})
 	frame.tooltip = {
