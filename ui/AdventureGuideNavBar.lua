@@ -40,9 +40,9 @@ function component.Init(components)
 		OnClick = function()
 			if (instanceID) then
 				if (DungeonsByInstanceID[instanceID]) then
-					components.AdventureGuideInstanceSelect.ShowDungeons()
+					components.InstanceSelect.ShowDungeons()
 				else
-					components.AdventureGuideInstanceSelect.ShowRaids()
+					components.InstanceSelect.ShowRaids()
 				end
 			end
 		end,

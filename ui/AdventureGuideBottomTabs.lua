@@ -30,9 +30,9 @@ local function AddTab(label)
             --todo: remove: Display encounters for the first dungeon until the real suggested content is available
             components.EncounterFrame.ShowInstanceInfo(227)
         elseif (tabIdx == 2) then
-            components.AdventureGuideInstanceSelect.ShowDungeons()
+            components.InstanceSelect.ShowDungeons()
         elseif (tabIdx == 3) then
-            components.AdventureGuideInstanceSelect.ShowRaids()
+            components.InstanceSelect.ShowRaids()
         end
         PanelTemplates_Tab_OnClick(tab, EncounterJournal)
         PanelTemplates_SetTab(EncounterJournal, tabIdx)

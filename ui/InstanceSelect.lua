@@ -6,7 +6,7 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideInstanceSelect")
+local component = UI.CreateComponent("InstanceSelect")
 
 local components
 local scrollbox
