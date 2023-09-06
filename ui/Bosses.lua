@@ -6,16 +6,18 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideEncounters")
+local component = UI.CreateComponent("Bosses")
 
 local bossesScrollbox
 
 function component.Init(components)
 	local info = EncounterJournal.encounter.info
 	bossesScrollbox = CreateFrame("Frame", nil, info, "WowScrollBoxList")
+	EncounterJournal.encounter.info.BossesScrollBox = bossesScrollBox
 	bossesScrollbox:SetSize(338, 382)
 	bossesScrollbox:SetPoint("BOTTOMLEFT", 25, 1)
 	local bossesScrollbar = CreateFrame("EventFrame", nil, info, "MinimalScrollBar")
+	EncounterJournal.encounter.info.BossesScrollBar = bossesScrollBar
 	bossesScrollbar:SetPoint("TOPLEFT", bossesScrollbox, "TOPRIGHT", 5, -5)
 	bossesScrollbar:SetPoint("BOTTOMLEFT", bossesScrollbox, "BOTTOMRIGHT", 5, 5)
 	local function BossButtonInitializer(button, elementData)
