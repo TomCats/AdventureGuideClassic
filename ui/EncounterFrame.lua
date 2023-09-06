@@ -32,9 +32,9 @@ function component.ShowInstanceInfo(instanceID)
 	--components.DetailsScroll.ShowEncounterOverview()
 	components.Bosses.SetInstance(instance)
 	components.EncounterJournal.SetCurrentView(component.frame)
-	components.AdventureGuideNavBar.SetInstance(instance.instanceID)
-	components.AdventureGuideNavBar.SetEncounter()
-	components.AdventureGuideNavBar.Refresh()
+	components.NavBar.SetInstance(instance.instanceID)
+	components.NavBar.SetEncounter()
+	components.NavBar.Refresh()
 end
 
 function component.SetCurrentView(newView)

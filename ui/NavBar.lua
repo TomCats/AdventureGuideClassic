@@ -6,7 +6,7 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideNavBar")
+local component = UI.CreateComponent("NavBar")
 
 local instanceID, encounterID
 

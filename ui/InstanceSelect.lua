@@ -80,7 +80,7 @@ local function ShowInstances(instances)
 	end
 	scrollbox:SetDataProvider(dataProvider)
 	components.EncounterJournal.SetCurrentView(component.frame)
-	components.AdventureGuideNavBar.Reset()
+	components.NavBar.Reset()
 end
 
 function component.ShowDungeons()

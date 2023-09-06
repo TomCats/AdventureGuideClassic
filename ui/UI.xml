@@ -4,7 +4,7 @@
     <Script file="ui/UI.lua" />
     <Script file="ui/Component.lua" />
     <Script file="ui/EncounterJournal.lua" />
-    <Script file="ui/AdventureGuideNavBar.lua" />
+    <Script file="ui/NavBar.lua" />
     <Script file="ui/InstanceSelect.lua" />
     <Script file="ui/EncounterFrame.lua" />
     <Script file="ui/Info.lua" />
