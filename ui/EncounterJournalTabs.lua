@@ -6,16 +6,16 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("AdventureGuideBottomTabs")
+local component = UI.CreateComponent("EncounterJournalTabs")
 
 local components
 local tabs = { }
-local tabNameFormat = "%s_AdventureGuideBottomTab%s"
-local tabDisabledTextureFormat = "%s_AdventureGuideBottomTab%s%sDisabled"
+local tabNameFormat = "%s_%sTab"
+local tabDisabledTextureFormat = "%s_%sTab%sDisabled"
 
-local function AddTab(label)
+local function AddTab(name, label)
     local tabIdx = #tabs + 1
-    local tab = CreateFrame("Button", string.format(tabNameFormat, addonName, tabIdx),
+    local tab = CreateFrame("Button", string.format(tabNameFormat, addonName, name),
             EncounterJournal, "CharacterFrameTabButtonTemplate")
     tab:SetText(label)
     if (tabIdx == 1) then
@@ -38,21 +38,22 @@ local function AddTab(label)
         PanelTemplates_SetTab(EncounterJournal, tabIdx)
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
     end)
-    _G[string.format(tabDisabledTextureFormat, addonName, tabIdx, "Left")]:Hide()
-    _G[string.format(tabDisabledTextureFormat, addonName, tabIdx, "Middle")]:Hide()
-    _G[string.format(tabDisabledTextureFormat, addonName, tabIdx, "Right")]:Hide()
+    _G[string.format(tabDisabledTextureFormat, addonName, name, "Left")]:Hide()
+    _G[string.format(tabDisabledTextureFormat, addonName, name, "Middle")]:Hide()
+    _G[string.format(tabDisabledTextureFormat, addonName, name, "Right")]:Hide()
     tabs[tabIdx] = tab
     PanelTemplates_TabResize(tab, 0, nil, 36, 300);
     EncounterJournal.numTabs = #tabs
     tab:Show()
+    return tab
 end
 
 function component.Init(components_)
     components = components_
     EncounterJournal.Tabs = tabs
-    AddTab("Suggested Content")
-    AddTab("Dungeons")
-    AddTab("Raids")
+    EncounterJournal.suggestTab = AddTab("Suggest", "Suggested Content")
+    EncounterJournal.dungeonsTab = AddTab("Dungeon", "Dungeons")
+    EncounterJournal.raidsTab = AddTab("Raid", "Raids")
     EncounterJournal.Tabs[1]:GetScript("OnClick")()
 end
 

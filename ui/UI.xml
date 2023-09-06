@@ -11,7 +11,7 @@
     <Script file="ui/Instance.lua" />
     <Script file="ui/DetailsScroll.lua" />
     <Script file="ui/Bosses.lua" />
-    <Script file="ui/AdventureGuideBottomTabs.lua" />
+    <Script file="ui/EncounterJournalTabs.lua" />
     <Script file="ui/AdventureGuideSideTabs.lua" />
     <Script file="ui/MinimapButton.lua" />
 
