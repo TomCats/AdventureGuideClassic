@@ -38,7 +38,10 @@ function component.Init(components)
 	local homeData = {
 		name = "Home",
 		OnClick = function()
-			components.EncounterJournalTabs.GetTab(components.EncounterJournal.frame.selectedTab).onclickFunc()
+			local instances = AdventureGuideNavigationService.GetInstances()
+			if (instances) then
+				components.InstanceSelect.Show()
+			end
 		end,
 	}
 	NavBar_Initialize(navBar, "NavButtonTemplate", homeData, navBar.home, navBar.overflow);
