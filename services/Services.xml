@@ -2,5 +2,6 @@
 ..\FrameXML\UI.xsd">
 
     <Script file="services/Instance.lua" />
+    <Script file="services/AdventureGuideNavigation.lua" />
 
 </Ui>
