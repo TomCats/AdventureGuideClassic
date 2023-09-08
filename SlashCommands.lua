@@ -8,7 +8,7 @@ select(2, ...).SetupGlobalFacade()
 
 _G.SLASH_ADVENTUREGUIDECLASSIC1 = "/agc"
 SlashCmdList["ADVENTUREGUIDECLASSIC"] = function(message)
-	message = string.lower(message)
+	message = string.lower(message or "")
 	if (message == "") then
 		UI.ToggleEncounterJournal()
 	elseif (message == "button") then
