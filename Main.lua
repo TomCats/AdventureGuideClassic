@@ -12,7 +12,7 @@ local function OnEvent(_, event, arg1)
     if (event == "ADDON_LOADED" and arg1 == addonName) then
         _G[SavedVariablesName] = _G[SavedVariablesName] or { }
         SavedVariables = _G[SavedVariablesName]
-        UI.Init()
+        MinimapButton.Init()
         frame:UnregisterEvent("ADDON_LOADED")
     end
 end
