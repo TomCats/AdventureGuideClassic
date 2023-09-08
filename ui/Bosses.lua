@@ -8,18 +8,18 @@ select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("Bosses")
 
-local bossesScrollbox
+local bossesScrollBox
 
 function component.Init(components)
 	local info = EncounterJournal.encounter.info
-	bossesScrollbox = CreateFrame("Frame", nil, info, "WowScrollBoxList")
+	bossesScrollBox = CreateFrame("Frame", nil, info, "WowScrollBoxList")
 	EncounterJournal.encounter.info.BossesScrollBox = bossesScrollBox
-	bossesScrollbox:SetSize(338, 382)
-	bossesScrollbox:SetPoint("BOTTOMLEFT", 25, 1)
-	local bossesScrollbar = CreateFrame("EventFrame", nil, info, "MinimalScrollBar")
+	bossesScrollBox:SetSize(338, 382)
+	bossesScrollBox:SetPoint("BOTTOMLEFT", 25, 1)
+	local bossesScrollBar = CreateFrame("EventFrame", nil, info, "MinimalScrollBar")
 	EncounterJournal.encounter.info.BossesScrollBar = bossesScrollBar
-	bossesScrollbar:SetPoint("TOPLEFT", bossesScrollbox, "TOPRIGHT", 5, -5)
-	bossesScrollbar:SetPoint("BOTTOMLEFT", bossesScrollbox, "BOTTOMRIGHT", 5, 5)
+	bossesScrollBar:SetPoint("TOPLEFT", bossesScrollBox, "TOPRIGHT", 5, -5)
+	bossesScrollBar:SetPoint("BOTTOMLEFT", bossesScrollBox, "BOTTOMRIGHT", 5, 5)
 	local function BossButtonInitializer(button, elementData)
 		if (not button.initialized) then
 			button:SetSize(325, 55)
@@ -88,12 +88,12 @@ function component.Init(components)
 	bossView:SetElementExtent(55)
 	bossView:SetElementInitializer("Button", BossButtonInitializer);
 	bossView:SetPadding(10,0,0,20,15);
-	ScrollUtil.InitScrollBoxListWithScrollBar(bossesScrollbox, bossesScrollbar, bossView);
+	ScrollUtil.InitScrollBoxListWithScrollBar(bossesScrollBox, bossesScrollBar, bossView);
 end
 
 function component.SetInstance(instance)
 	local dataProvider = CreateDataProvider();
-	bossesScrollbox:SetDataProvider(dataProvider);
+	bossesScrollBox:SetDataProvider(dataProvider);
 	for _, encounterID in ipairs(instance.encounters) do
 		dataProvider:Insert(EncountersByEncounterID[encounterID])
 	end

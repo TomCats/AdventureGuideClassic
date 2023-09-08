@@ -8,8 +8,11 @@
     <Script file="ui/InstanceSelect.lua" />
     <Script file="ui/EncounterFrame.lua" />
     <Script file="ui/Info.lua" />
+    <Script file="ui/ModelFrame.lua" />
+    <Script file="ui/CreatureButtons.lua" />
     <Script file="ui/Instance.lua" />
     <Script file="ui/DetailsScrollFrame.lua" />
+    <Script file="ui/OverviewScrollFrame.lua" />
     <Script file="ui/Bosses.lua" />
     <Script file="ui/EncounterJournalTabs.lua" />
     <Script file="ui/InfoTabs.lua" />
