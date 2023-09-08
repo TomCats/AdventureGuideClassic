@@ -69,6 +69,9 @@ function component.Init(components)
 			button:SetNormalFontObject("GameFontNormalMed3")
 			button:SetHighlightFontObject("GameFontNormalMed3")
 			button:SetDisabledFontObject("GameFontHighlightMedium")
+			button:SetScript("OnClick", function()
+				components.EncounterFrame.SetCurrentView(components.Overview.frame)
+			end)
 			--todo: implement onclick
 			--[[
 				<Scripts>
