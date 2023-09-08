@@ -50,14 +50,20 @@ end
 function component.Init(components_)
     components = components_
     EncounterJournal.Tabs = tabs
-    EncounterJournal.suggestTab = AddTab("Suggest", "Suggested Content", function()
-        components.EncounterFrame.ShowInstanceInfo(InstanceService.GetDungeons()[1])
-    end)
+    --EncounterJournal.suggestTab = AddTab("Suggest", "Suggested Content", function()
+    --    --todo: Create suggested content tab
+    --end)
     EncounterJournal.dungeonsTab = AddTab("Dungeon", "Dungeons", function()
-        components.InstanceSelect.ShowDungeons()
+        AdventureGuideNavigationService.Reset()
+        AdventureGuideNavigationService.SetInstances(InstanceService.GetDungeons())
+        components.InstanceSelect.SetTitle(DUNGEONS)
+        components.InstanceSelect.Show()
     end)
     EncounterJournal.raidsTab = AddTab("Raid", "Raids", function()
-        components.InstanceSelect.ShowRaids()
+        AdventureGuideNavigationService.Reset()
+        AdventureGuideNavigationService.SetInstances(InstanceService.GetRaids())
+        components.InstanceSelect.SetTitle(RAIDS)
+        components.InstanceSelect.Show()
     end)
     EncounterJournal.Tabs[1]:GetScript("OnClick")()
 end

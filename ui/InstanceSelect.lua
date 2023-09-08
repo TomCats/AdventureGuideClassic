@@ -74,24 +74,18 @@ function component.Init(components_)
 	instanceSelect:Hide()
 end
 
-local function ShowInstances(instances)
+function component.SetTitle(title)
+	component.frame.title:SetText(title)
+end
+
+function component.Show()
 	local dataProvider = CreateDataProvider()
-	for _, instance in ipairs(instances) do
+	for _, instance in ipairs(AdventureGuideNavigationService.GetInstances()) do
 		dataProvider:Insert(instance)
 	end
 	scrollbox:SetDataProvider(dataProvider)
 	components.EncounterJournal.SetCurrentView(component.frame)
 	components.NavBar.Reset()
-end
-
-function component.ShowDungeons()
-	component.frame.title:SetText(DUNGEONS)
-	ShowInstances(InstanceService.GetDungeons())
-end
-
-function component.ShowRaids()
-	component.frame.title:SetText(RAIDS)
-	ShowInstances(InstanceService.GetRaids())
 end
 
 UI.Add(component)
