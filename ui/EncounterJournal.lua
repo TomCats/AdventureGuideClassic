@@ -70,6 +70,12 @@ end
 
 UI.Add(component)
 
+local initialized = false
+
 function UI.ToggleEncounterJournal()
+    if (not initialized) then
+        UI.Init()
+        initialized = true
+    end
     EncounterJournal:SetShown(not EncounterJournal:IsShown())
 end
