@@ -13,6 +13,7 @@ local currentView
 function component.Init()
     -- Create the base window and portrait image
     EncounterJournal = CreateFrame("Frame", addonName .. "_EncounterJournal", UIParent, "PortraitFrameTemplate")
+    component.frame = EncounterJournal
     EncounterJournal:SetSize(800, 496)
     EncounterJournal:EnableMouse(true)
     EncounterJournal:SetToplevel(true)

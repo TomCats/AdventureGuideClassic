@@ -13,7 +13,7 @@ local tabs = { }
 local tabNameFormat = "%s_%sTab"
 local tabDisabledTextureFormat = "%s_%sTab%sDisabled"
 
-local function AddTab(name, label)
+local function AddTab(name, label, onclickFunc)
     local tabIdx = #tabs + 1
     local tab = CreateFrame("Button", string.format(tabNameFormat, addonName, name),
             EncounterJournal, "CharacterFrameTabButtonTemplate")
@@ -26,14 +26,7 @@ local function AddTab(name, label)
     tab:SetScript("OnEvent", nil)
     tab:SetScript("OnShow", nil)
     tab:SetScript("OnClick", function()
-        if (tabIdx == 1) then
-            --todo: remove: Display encounters for the first dungeon until the real suggested content is available
-            components.EncounterFrame.ShowInstanceInfo(InstanceService.GetDungeons()[1])
-        elseif (tabIdx == 2) then
-            components.InstanceSelect.ShowDungeons()
-        elseif (tabIdx == 3) then
-            components.InstanceSelect.ShowRaids()
-        end
+        tab.onclickFunc()
         PanelTemplates_Tab_OnClick(tab, EncounterJournal)
         PanelTemplates_SetTab(EncounterJournal, tabIdx)
         PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
@@ -44,16 +37,28 @@ local function AddTab(name, label)
     tabs[tabIdx] = tab
     PanelTemplates_TabResize(tab, 0, nil, 36, 300);
     EncounterJournal.numTabs = #tabs
+    _G.EncounterJournalTabs = tabs
+    tab.onclickFunc = onclickFunc
     tab:Show()
     return tab
+end
+
+function component.GetTab(idx)
+    return tabs[idx]
 end
 
 function component.Init(components_)
     components = components_
     EncounterJournal.Tabs = tabs
-    EncounterJournal.suggestTab = AddTab("Suggest", "Suggested Content")
-    EncounterJournal.dungeonsTab = AddTab("Dungeon", "Dungeons")
-    EncounterJournal.raidsTab = AddTab("Raid", "Raids")
+    EncounterJournal.suggestTab = AddTab("Suggest", "Suggested Content", function()
+        components.EncounterFrame.ShowInstanceInfo(InstanceService.GetDungeons()[1])
+    end)
+    EncounterJournal.dungeonsTab = AddTab("Dungeon", "Dungeons", function()
+        components.InstanceSelect.ShowDungeons()
+    end)
+    EncounterJournal.raidsTab = AddTab("Raid", "Raids", function()
+        components.InstanceSelect.ShowRaids()
+    end)
     EncounterJournal.Tabs[1]:GetScript("OnClick")()
 end
 

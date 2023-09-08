@@ -38,13 +38,7 @@ function component.Init(components)
 	local homeData = {
 		name = "Home",
 		OnClick = function()
-			if (instanceID) then
-				if (DungeonsByInstanceID[instanceID]) then
-					components.InstanceSelect.ShowDungeons()
-				else
-					components.InstanceSelect.ShowRaids()
-				end
-			end
+			components.EncounterJournalTabs.GetTab(components.EncounterJournal.frame.selectedTab).onclickFunc()
 		end,
 	}
 	NavBar_Initialize(navBar, "NavButtonTemplate", homeData, navBar.home, navBar.overflow);
