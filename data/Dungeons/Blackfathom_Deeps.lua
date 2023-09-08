@@ -18,6 +18,75 @@ InstanceService.AddDungeon({
 		name = "Ghamoo-Ra",
 		encounterID = 4887,
 		portrait = 607613,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"This veteran dragon hunter's title was given ages ago as a mark of legend.",
+			{ heading = "Overview" },
+			"As an expert in hunting winged beasts, Chargath utilizes {spell:12345} rigged with {spell:45678}",
+			"Upon reaching 100 energy, Chargath unleashes {spell:12345} on his target.",
+			{
+				role = DPS,
+				"When broken, {spell:12345} will cause {spell:12345}.",
+				"{spell:12345} leaves behind {spell:12345} where it strikes the floor.",
+			},
+			{
+				role = HEALER,
+				"When broken, {spell:12345} will cause {spell:12345}.",
+				"{spell:12345} leaves behind {spell:12345} where it strikes the floor.",
+			},
+			{
+				role = TANK,
+				"When broken, {spell:12345} will cause {spell:12345}.",
+				"{spell:12345} leaves behind {spell:12345} where it strikes the floor.",
+			},
+
+		},
+		abilities = {
+			{
+				spell = 12345,
+				important = true,
+				"Chargath hurls a Grounding Spear at a random player, inflicting 4,459 Physical damage...",
+				{
+					spell = 12345,
+					"Magma erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+				},
+				{
+					spell = 12345,
+					"Grounding Chain erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+					{
+						spell = 12345,
+						"If Chargath trips on Grounding Chain, it breaks, knocking him down for 2 sec.",
+					},
+					{
+						spell = 12345,
+						"Inflicts 1,254 Fire damage to all players and an additional 836 Fire Damage every 1 sec",
+					}
+				},
+			},
+			{
+				spell = 12345,
+				tank = true,
+				bleed = true,
+				"Chargath hurls a Grounding Spear at a random player, inflicting 4,459 Physical damage...",
+				{
+					spell = 12345,
+					"Magma erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+				},
+				{
+					spell = 12345,
+					"Grounding Chain erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+					{
+						spell = 12345,
+						"If Chargath trips on Grounding Chain, it breaks, knocking him down for 2 sec.",
+					},
+					{
+						spell = 12345,
+						"Inflicts 1,254 Fire damage to all players and an additional 836 Fire Damage every 1 sec",
+					}
+				},
+			}
+		},
 	},
 	{
 		name = "Lady Sarevess",
