@@ -6,20 +6,20 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("Bosses")
+local component = UI.CreateComponent("Encounters")
 
-local bossesScrollBox
+local encountersScrollBox
 
 function component.Init(components)
 	local info = EncounterJournal.encounter.info
-	bossesScrollBox = CreateFrame("Frame", nil, info, "WowScrollBoxList")
-	EncounterJournal.encounter.info.BossesScrollBox = bossesScrollBox
-	bossesScrollBox:SetSize(338, 382)
-	bossesScrollBox:SetPoint("BOTTOMLEFT", 25, 1)
-	local bossesScrollBar = CreateFrame("EventFrame", nil, info, "MinimalScrollBar")
-	EncounterJournal.encounter.info.BossesScrollBar = bossesScrollBar
-	bossesScrollBar:SetPoint("TOPLEFT", bossesScrollBox, "TOPRIGHT", 5, -5)
-	bossesScrollBar:SetPoint("BOTTOMLEFT", bossesScrollBox, "BOTTOMRIGHT", 5, 5)
+	encountersScrollBox = CreateFrame("Frame", nil, info, "WowScrollBoxList")
+	EncounterJournal.encounter.info.BossesScrollBox = encountersScrollBox
+	encountersScrollBox:SetSize(338, 382)
+	encountersScrollBox:SetPoint("BOTTOMLEFT", 25, 1)
+	local encountersScrollBar = CreateFrame("EventFrame", nil, info, "MinimalScrollBar")
+	EncounterJournal.encounter.info.BossesScrollBar = encountersScrollBar
+	encountersScrollBar:SetPoint("TOPLEFT", encountersScrollBox, "TOPRIGHT", 5, -5)
+	encountersScrollBar:SetPoint("BOTTOMLEFT", encountersScrollBox, "BOTTOMRIGHT", 5, 5)
 	local function BossButtonInitializer(button, encounter)
 		if (not button.initialized) then
 			button:SetSize(325, 55)
@@ -91,12 +91,12 @@ function component.Init(components)
 	bossView:SetElementExtent(55)
 	bossView:SetElementInitializer("Button", BossButtonInitializer);
 	bossView:SetPadding(10,0,0,20,15);
-	ScrollUtil.InitScrollBoxListWithScrollBar(bossesScrollBox, bossesScrollBar, bossView);
+	ScrollUtil.InitScrollBoxListWithScrollBar(encountersScrollBox, encountersScrollBar, bossView);
 end
 
 function component.SetInstance(instance)
 	local dataProvider = CreateDataProvider();
-	bossesScrollBox:SetDataProvider(dataProvider);
+	encountersScrollBox:SetDataProvider(dataProvider);
 	for _, encounter in ipairs(instance) do
 		dataProvider:Insert(encounter)
 	end
