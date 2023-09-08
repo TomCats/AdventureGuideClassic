@@ -70,7 +70,8 @@ function component.Init(components)
 			button:SetHighlightFontObject("GameFontNormalMed3")
 			button:SetDisabledFontObject("GameFontHighlightMedium")
 			button:SetScript("OnClick", function()
-				components.EncounterFrame.SetCurrentView(components.InstanceOverview.frame)
+				AdventureGuideNavigationService.SetEncounter(button.encounter)
+				components.EncounterOverview.Show()
 			end)
 			--todo: implement onclick
 			--[[
@@ -83,6 +84,7 @@ function component.Init(components)
 			]]
 			button.initialized = true
 		end
+		button.encounter = encounter
 		button.name:SetText(encounter.name);
 		button.bgImage:SetTexture(encounter.portrait);
 		button.DefeatedOverlay:Hide()

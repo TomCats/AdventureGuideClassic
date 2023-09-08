@@ -14,6 +14,7 @@
     <Script file="ui/AbilitiesScrollFrame.lua" />
     <Script file="ui/InstanceOverview.lua" />
     <Script file="ui/Encounters.lua" />
+    <Script file="ui/EncounterOverview.lua" />
     <Script file="ui/EncounterJournalTabs.lua" />
     <Script file="ui/InfoTabs.lua" />
     <Script file="ui/MinimapButton.lua" />

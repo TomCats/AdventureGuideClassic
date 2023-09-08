@@ -6,9 +6,12 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("Overview")
+local component = UI.CreateComponent("EncounterOverview")
+
+local components
 
 function component.Init(components_)
+	components = components_
 	local overviewScroll = CreateFrame("ScrollFrame", nil, EncounterJournal.encounter.info)
 	component.frame = overviewScroll
 	EncounterJournal.encounter.info.overviewScroll = overviewScroll
@@ -67,6 +70,10 @@ function component.Init(components_)
 	</Scripts>
 	]]
 	component.frame = overviewScroll
+end
+
+function component.Show()
+	components.EncounterFrame.SetCurrentView(component.frame)
 end
 
 UI.Add(component)
