@@ -24,7 +24,7 @@ function component.ShowInstanceInfo(instance)
 	component.frame.info.instanceTitle:SetText(instance.name)
 	component.frame.info.instanceButton.icon:SetMask(I.InstanceButtonIconMask);
 	component.frame.info.instanceButton.icon:SetTexture(instance.icon)
-	components.Instance.ShowInstanceLore(instance)
+	components.InstanceOverview.Show(instance)
 	--components.AbilitiesScrollFrame.ShowEncounterOverview()
 	components.Bosses.SetInstance(instance)
 	components.EncounterJournal.SetCurrentView(component.frame)

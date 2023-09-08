@@ -6,7 +6,7 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local component = UI.CreateComponent("Instance")
+local component = UI.CreateComponent("InstanceOverview")
 
 local components
 
@@ -48,7 +48,7 @@ function component.Init(components_)
 	instance:Hide()
 end
 
-function component.ShowInstanceLore(instance)
+function component.Show(instance)
 	component.frame.title:SetText(instance.name)
 	component.frame.loreBG:SetTexture(instance.splash)
 	component.frame.loreScrollingFont:SetText(instance.overview);

@@ -10,7 +10,7 @@
     <Script file="ui/Info.lua" />
     <Script file="ui/ModelFrame.lua" />
     <Script file="ui/CreatureButtons.lua" />
-    <Script file="ui/Instance.lua" />
+    <Script file="ui/InstanceOverview.lua" />
     <Script file="ui/AbilitiesScrollFrame.lua" />
     <Script file="ui/Overview.lua" />
     <Script file="ui/Bosses.lua" />
