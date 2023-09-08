@@ -25,7 +25,7 @@ function component.ShowInstanceInfo(instance)
 	component.frame.info.instanceButton.icon:SetMask(I.InstanceButtonIconMask);
 	component.frame.info.instanceButton.icon:SetTexture(instance.icon)
 	components.Instance.ShowInstanceLore(instance)
-	--components.DetailsScrollFrame.ShowEncounterOverview()
+	--components.AbilitiesScrollFrame.ShowEncounterOverview()
 	components.Bosses.SetInstance(instance)
 	components.EncounterJournal.SetCurrentView(component.frame)
 	components.NavBar.SetInstance(instance)

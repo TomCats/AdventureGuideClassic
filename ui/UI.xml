@@ -11,7 +11,7 @@
     <Script file="ui/ModelFrame.lua" />
     <Script file="ui/CreatureButtons.lua" />
     <Script file="ui/Instance.lua" />
-    <Script file="ui/DetailsScrollFrame.lua" />
+    <Script file="ui/AbilitiesScrollFrame.lua" />
     <Script file="ui/OverviewScrollFrame.lua" />
     <Script file="ui/Bosses.lua" />
     <Script file="ui/EncounterJournalTabs.lua" />
