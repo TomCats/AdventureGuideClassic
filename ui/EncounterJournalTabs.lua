@@ -28,7 +28,7 @@ local function AddTab(name, label)
     tab:SetScript("OnClick", function()
         if (tabIdx == 1) then
             --todo: remove: Display encounters for the first dungeon until the real suggested content is available
-            components.EncounterFrame.ShowInstanceInfo(227)
+            components.EncounterFrame.ShowInstanceInfo(InstanceService.GetDungeons()[1])
         elseif (tabIdx == 2) then
             components.InstanceSelect.ShowDungeons()
         elseif (tabIdx == 3) then

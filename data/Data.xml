@@ -1,9 +1,32 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
 
-    <Script file="data/Dungeons.lua" />
-    <Script file="data/Raids.lua" />
-    <Script file="data/Encounters.lua" />
+    <Script file="data/Dungeons/Blackfathom_Deeps.lua" />
+    <Script file="data/Dungeons/Blackrock_Depths.lua" />
+    <Script file="data/Dungeons/Blackrock_Spire.lua" />
+    <Script file="data/Dungeons/Dire_Maul.lua" />
+    <Script file="data/Dungeons/Gnomeregan.lua" />
+    <Script file="data/Dungeons/Maraudon.lua" />
+    <Script file="data/Dungeons/Ragefire_Chasm.lua" />
+    <Script file="data/Dungeons/Razorfen_Downs.lua" />
+    <Script file="data/Dungeons/Razorfen_Kraul.lua" />
+    <Script file="data/Dungeons/Scarlet_Monastery.lua" />
+    <Script file="data/Dungeons/Scholomance.lua" />
+    <Script file="data/Dungeons/Shadowfang_Keep.lua" />
+    <Script file="data/Dungeons/Stratholme.lua" />
+    <Script file="data/Dungeons/The_Deadmines.lua" />
+    <Script file="data/Dungeons/The_Stockade.lua" />
+    <Script file="data/Dungeons/The_Temple_of_Atal_hakkar.lua" />
+    <Script file="data/Dungeons/Uldaman.lua" />
+    <Script file="data/Dungeons/Wailing_Caverns.lua" />
+    <Script file="data/Dungeons/Zul_Farrak.lua" />
+
+    <Script file="data/Raids/Molten_Core.lua" />
+    <Script file="data/Raids/Blackwing_Lair.lua" />
+    <Script file="data/Raids/Zul_Gurub.lua" />
+    <Script file="data/Raids/Ruins_of_Ahn_Qiraj.lua" />
+    <Script file="data/Raids/Temple_of_Ahn_Qiraj.lua" />
+    <Script file="data/Raids/Naxxramas.lua" />
 
     <SimpleHTML name="AdventureGuideClassic_SampleEncounterDescription"
                 file="Interface\AddOns\AdventureGuideClassic\data\encounterDescriptions\sample.html"

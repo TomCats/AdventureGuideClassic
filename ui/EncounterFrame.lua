@@ -20,19 +20,15 @@ function component.Init(components_)
 	encounter:Hide()
 end
 
-function component.ShowInstanceInfo(instanceID)
-	local instance = DungeonsByInstanceID[instanceID]
-	if (not instance) then
-		instance = RaidsByInstanceID[instanceID]
-	end
+function component.ShowInstanceInfo(instance)
 	component.frame.info.instanceTitle:SetText(instance.name)
 	component.frame.info.instanceButton.icon:SetMask(I.InstanceButtonIconMask);
-	component.frame.info.instanceButton.icon:SetTexture(instance.buttonImage2)
-	components.Instance.ShowInstanceLore(instanceID)
+	component.frame.info.instanceButton.icon:SetTexture(instance.icon)
+	components.Instance.ShowInstanceLore(instance)
 	--components.DetailsScrollFrame.ShowEncounterOverview()
 	components.Bosses.SetInstance(instance)
 	components.EncounterJournal.SetCurrentView(component.frame)
-	components.NavBar.SetInstance(instance.instanceID)
+	components.NavBar.SetInstance(instance)
 	components.NavBar.SetEncounter()
 	components.NavBar.Refresh()
 end

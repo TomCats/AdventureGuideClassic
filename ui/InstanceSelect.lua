@@ -31,7 +31,7 @@ function component.Init(components_)
 	local scrollbar = CreateFrame("EventFrame", nil, instanceSelect, "MinimalScrollBar")
 	scrollbar:SetPoint("TOPLEFT", scrollbox, "TOPRIGHT", 12, -6)
 	scrollbar:SetPoint("BOTTOMLEFT", scrollbox, "BOTTOMRIGHT", 12, 4)
-	local function Initializer(button, elementData)
+	local function Initializer(button, instance)
 		if (not button.initialized) then
 			button:SetSize(174, 96)
 			button.bgImage = button:CreateTexture(nil, "BACKGROUND")
@@ -57,13 +57,14 @@ function component.Init(components_)
 			button:SetHighlightTexture(highlight)
 			button:SetScript("OnClick", function()
 				instanceSelect:Hide()
-				components.EncounterFrame.ShowInstanceInfo(button.instanceID)
+				components.EncounterFrame.ShowInstanceInfo(button.instance)
 			end)
 			button.initialized = true
 		end
-		button.instanceID = elementData.instanceID
-		button.name:SetText(elementData.name);
-		button.bgImage:SetTexture(elementData.buttonImage1);
+		button.instance = instance
+		button.instanceID = instance.instanceID
+		button.name:SetText(instance.name);
+		button.bgImage:SetTexture(instance.thumbnail);
 		button:Show()
 	end
 	local view = CreateScrollBoxListGridView(4, 4, 0, 0, 0, 15, 15);
@@ -85,12 +86,12 @@ end
 
 function component.ShowDungeons()
 	component.frame.title:SetText(DUNGEONS)
-	ShowInstances(Dungeons)
+	ShowInstances(InstanceService.GetDungeons())
 end
 
 function component.ShowRaids()
 	component.frame.title:SetText(RAIDS)
-	ShowInstances(Raids)
+	ShowInstances(InstanceService.GetRaids())
 end
 
 UI.Add(component)

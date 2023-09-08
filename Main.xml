@@ -17,6 +17,7 @@ Programming by: TomCat / TomCat's Gaming
     <Script file="DynamicTable.lua" />
     <Script file="Atlas.lua" />
 
+    <Include file="services/Services.xml" />
     <Include file="data/Data.xml" />
     <Include file="ui/UI.xml" />
 

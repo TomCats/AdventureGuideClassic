@@ -20,7 +20,7 @@ function component.Init(components)
 	EncounterJournal.encounter.info.BossesScrollBar = bossesScrollBar
 	bossesScrollBar:SetPoint("TOPLEFT", bossesScrollBox, "TOPRIGHT", 5, -5)
 	bossesScrollBar:SetPoint("BOTTOMLEFT", bossesScrollBox, "BOTTOMRIGHT", 5, 5)
-	local function BossButtonInitializer(button, elementData)
+	local function BossButtonInitializer(button, encounter)
 		if (not button.initialized) then
 			button:SetSize(325, 55)
 			button.DefeatedOverlay = CreateFrame("Button", nil, button)
@@ -80,8 +80,8 @@ function component.Init(components)
 			]]
 			button.initialized = true
 		end
-		button.name:SetText(elementData.name);
-		button.bgImage:SetTexture(elementData.buttonImage1);
+		button.name:SetText(encounter.name);
+		button.bgImage:SetTexture(encounter.portrait);
 		button.DefeatedOverlay:Hide()
 	end
 	local bossView = CreateScrollBoxListLinearView();
@@ -94,8 +94,8 @@ end
 function component.SetInstance(instance)
 	local dataProvider = CreateDataProvider();
 	bossesScrollBox:SetDataProvider(dataProvider);
-	for _, encounterID in ipairs(instance.encounters) do
-		dataProvider:Insert(EncountersByEncounterID[encounterID])
+	for _, encounter in ipairs(instance) do
+		dataProvider:Insert(encounter)
 	end
 end
 

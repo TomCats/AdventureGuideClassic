@@ -8,7 +8,7 @@ select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("NavBar")
 
-local instanceID, encounterID
+local instance, encounterID
 
 function component.Init(components)
 	local navBar = CreateFrame("Frame", EncounterJournal:GetName() .. "NavBar", EncounterJournal, "NavBarTemplate")
@@ -57,8 +57,8 @@ function component.Init(components)
 
 end
 
-function component.SetInstance(instanceID_)
-	instanceID = instanceID_
+function component.SetInstance(instance_)
+	instance = instance_
 end
 
 function component.SetEncounter(encounterID_)
@@ -67,15 +67,11 @@ end
 
 function component.Refresh()
 	NavBar_Reset(component.frame)
-	if (instanceID) then
-		local instance = DungeonsByInstanceID[instanceID]
-		if (not instance) then
-			instance = RaidsByInstanceID[instanceID]
-		end
+	if (instance) then
 		NavBar_AddButton(component.frame, {
 			name = instance.name,
 			OnClick = function()
-				components.EncounterFrame.ShowInstanceInfo(instance.instanceID)
+				components.EncounterFrame.ShowInstanceInfo(instance)
 			end,
 			listFunc = nop
 		})
@@ -89,7 +85,7 @@ function component.Refresh()
 end
 
 function component.Reset()
-	instanceID = nil
+	instance = nil
 	encounterID = nil
 	NavBar_Reset(component.frame)
 end

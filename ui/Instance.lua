@@ -48,14 +48,10 @@ function component.Init(components_)
 	instance:Hide()
 end
 
-function component.ShowInstanceLore(instanceID)
-	local instance = DungeonsByInstanceID[instanceID]
-	if (not instance) then
-		instance = RaidsByInstanceID[instanceID]
-	end
+function component.ShowInstanceLore(instance)
 	component.frame.title:SetText(instance.name)
-	component.frame.loreBG:SetTexture(instance.loreImage)
-	component.frame.loreScrollingFont:SetText(instance.description);
+	component.frame.loreBG:SetTexture(instance.splash)
+	component.frame.loreScrollingFont:SetText(instance.overview);
 	component.frame.loreScrollBar:SetShown(component.frame.loreScrollingFont:HasScrollableExtent());
 	components.EncounterFrame.SetCurrentView(component.frame)
 end
