@@ -45,7 +45,7 @@ InstanceService.AddDungeon({
 		abilities = {
 			{
 				spell = 12345,
-				important = true,
+				icons = { IMPORTANT },
 				"Chargath hurls a Grounding Spear at a random player, inflicting 4,459 Physical damage...",
 				{
 					spell = 12345,
@@ -66,8 +66,7 @@ InstanceService.AddDungeon({
 			},
 			{
 				spell = 12345,
-				tank = true,
-				bleed = true,
+				icons = { TANK, BLEED },
 				"Chargath hurls a Grounding Spear at a random player, inflicting 4,459 Physical damage...",
 				{
 					spell = 12345,
