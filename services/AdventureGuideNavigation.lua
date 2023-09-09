@@ -22,6 +22,10 @@ function AdventureGuideNavigationService.GetEncounter()
 	return encounter
 end
 
+function AdventureGuideNavigationService.GetEncounterContent()
+	return encounter.overview
+end
+
 function AdventureGuideNavigationService.GetInstance()
 	return instance
 end
