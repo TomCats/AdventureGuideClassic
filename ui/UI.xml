@@ -2,6 +2,12 @@
 ..\FrameXML\UI.xsd">
 
     <Script file="ui/UI.lua" />
+
+    <Script file="ui/widgets/Widgets.lua" />
+    <Script file="ui/widgets/WidgetMixin.lua" />
+    <Script file="ui/widgets/WidgetTypeMixin.lua" />
+    <Script file="ui/widgets/Root.lua" />
+
     <Script file="ui/Component.lua" />
     <Script file="ui/EncounterJournal.lua" />
     <Script file="ui/NavBar.lua" />
