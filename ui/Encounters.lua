@@ -71,7 +71,6 @@ function component.Init(components)
 			button:SetDisabledFontObject("GameFontHighlightMedium")
 			button:SetScript("OnClick", function()
 				AdventureGuideNavigationService.SetEncounter(button.encounter)
-				components.EncounterOverview.Show()
 			end)
 			--todo: implement onclick
 			--[[
