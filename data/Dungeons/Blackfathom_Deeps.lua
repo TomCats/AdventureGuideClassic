@@ -26,7 +26,9 @@ InstanceService.AddDungeon({
 			"As an expert in hunting winged beasts, Chargath utilizes {spell:12345} rigged with {spell:45678}",
 			"Upon reaching 100 energy, Chargath unleashes {spell:12345} on his target.",
 			{
-				role = DPS,
+				role = DAMAGE,
+				"When broken, {spell:12345} will cause {spell:12345}.",
+				"{spell:12345} leaves behind {spell:12345} where it strikes the floor.",
 				"When broken, {spell:12345} will cause {spell:12345}.",
 				"{spell:12345} leaves behind {spell:12345} where it strikes the floor.",
 			},
@@ -40,7 +42,6 @@ InstanceService.AddDungeon({
 				"When broken, {spell:12345} will cause {spell:12345}.",
 				"{spell:12345} leaves behind {spell:12345} where it strikes the floor.",
 			},
-
 		},
 		abilities = {
 			{
@@ -52,7 +53,7 @@ InstanceService.AddDungeon({
 					"Magma erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
 				},
 				{
-					spell = 12345,
+					npc = 12345,
 					"Grounding Chain erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
 					{
 						spell = 12345,
