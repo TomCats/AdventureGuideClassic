@@ -23,7 +23,7 @@ function AdventureGuideNavigationService.GetEncounter()
 end
 
 function AdventureGuideNavigationService.GetEncounterContent()
-	return encounter.overview
+	return encounter.abilities or { }
 end
 
 function AdventureGuideNavigationService.GetInstance()

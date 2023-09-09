@@ -20,16 +20,21 @@ function component.Init(components_)
 	scrollFrame.scrollBarBottomY = 6
 	scrollFrame:SetPoint("BOTTOMRIGHT", -5, 1)
 	scrollFrame.scrollBarTemplate = "MinimalScrollBar"
-	scrollFrame.child = Widgets.Acquire()
-	scrollFrame.child:SetParent(scrollFrame)
+	scrollFrame.child = Widgets.AcquireRoot(scrollFrame)
 	scrollFrame.child:SetPoint("TOPLEFT")
 	scrollFrame.child:SetSize(320, 1)
+
+
+	scrollFrame.child:SetHeight(100)
+
+
 	scrollFrame:SetScrollChild(scrollFrame.child)
 	ScrollFrame_OnLoad(scrollFrame)
 	scrollFrame:Hide()
 end
 
 function component.Show()
+	component.frame.child:SetContents(AdventureGuideNavigationService.GetEncounterContent())
 	components.EncounterFrame.SetCurrentView(component.frame)
 end
 
