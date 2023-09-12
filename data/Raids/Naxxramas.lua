@@ -10,8 +10,8 @@ InstanceService.AddRaid({
 	name = "Naxxramas",
 	instanceID = 746,
 	thumbnail = 1396587,
-	icon = 136321,
-	splash = 1396512,
+	icon = 136347,
+	splash = 1396506,
 	mapID = 533,
 	overview = "",
 	{

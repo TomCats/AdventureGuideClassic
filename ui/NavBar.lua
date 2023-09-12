@@ -45,12 +45,12 @@ function component.Init(components)
 		end,
 	}
 	NavBar_Initialize(navBar, "NavButtonTemplate", homeData, navBar.home, navBar.overflow);
-	--local button2Data = {
-	--	name = "Fooxy",
-	--	OnClick = nop,
-	--}
-	--NavBar_AddButton(frame, button2Data)
-	--NavBar_AddButton(frame, button2Data)
+	-- local button2Data = {
+	-- 	name = "Fooxy",
+	-- 	OnClick = nop,
+	-- }
+	-- NavBar_AddButton(frame, button2Data)
+	-- NavBar_AddButton(frame, button2Data)
 
 end
 
