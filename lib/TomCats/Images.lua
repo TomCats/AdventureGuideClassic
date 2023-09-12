@@ -10,7 +10,7 @@ For more information, contact via email at tomcat@tomcatstours.com
 ]]
 select(2, ...).SetupGlobalFacade()
 
-local imagesPattern = "Interface\\AddOns\\%s\\images\\%s.blp"
+local imagesPattern = "Interface\\AddOns\\%s\\images\\%s.png"
 
 I = { }
 
