@@ -3,5 +3,6 @@
 
     <Script file="services/Instance.lua" />
     <Script file="services/AdventureGuideNavigation.lua" />
+    <Script file="services/TokenizedText.lua" />
 
 </Ui>

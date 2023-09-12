@@ -38,9 +38,7 @@ function widgetType:SetContents(widget, contents)
 		end
 		local type = Widgets.GetTypeForContent(contentPart)
 		if (not type) then
-			print("widgetType not found")
 		else
-			print("found widgetType for", type.name)
 			local child = type:Acquire(widget)
 			type:SetContents(child, contentPart)
 			height = height + child:GetHeight()

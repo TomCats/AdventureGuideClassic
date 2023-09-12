@@ -22,9 +22,7 @@ function widgetType:Construct(parent)
 			end
 			local type = Widgets.GetTypeForContent(contentPart)
 			if (not type) then
-				print("widgetType not found")
 			else
-				print("found widgetType for", type.name)
 				type:SetContents(type:Acquire(frame), contentPart)
 			end
 		end

@@ -45,12 +45,12 @@ function WidgetTypeMixin:SetAnchors(widget)
 			widget:SetPoint("TOPRIGHT")
 		else
 			widget:SetPoint("TOPLEFT", parent, "TOPLEFT", 10, -16)
-			widget:SetPoint("TOPRIGHT", parent, "TOPRIGHT", 0, -16)
+			widget:SetPoint("RIGHT", parent, "RIGHT", 0, -16)
 		end
 	else
 		local previous = widget:GetParent().widgets[widget.idx - 1]
 		widget:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, 0)
-		widget:SetPoint("TOPRIGHT", previous, "BOTTOMRIGHT", 0, 0)
+		widget:SetPoint("RIGHT", parent, "RIGHT", 0, -16)
 	end
 end
 

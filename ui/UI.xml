@@ -5,6 +5,7 @@
 
     <Script file="ui/widgets/Widgets.lua" />
     <Script file="ui/widgets/WidgetTypeMixin.lua" />
+    <Script file="ui/widgets/CollapsibleSectionWidgetTypeMixin.lua" />
     <Script file="ui/widgets/Root.lua" />
     <Script file="ui/widgets/Text.lua" />
     <Script file="ui/widgets/Heading.lua" />

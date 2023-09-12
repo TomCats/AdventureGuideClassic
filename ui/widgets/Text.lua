@@ -27,7 +27,7 @@ function widgetType:IsTypeFor(content)
 end
 
 function widgetType:SetContents(widget, contents)
-	widget.text:SetText(contents.text)
+	widget.text:SetText(TokenizedTextService.ReplaceWithWoWEscapeCodes(contents.text))
 	WidgetTypeMixin:SetAnchors(widget)
 	widget:SetHeight(widget.text:GetStringHeight() + 12)
 	widget:Show()
