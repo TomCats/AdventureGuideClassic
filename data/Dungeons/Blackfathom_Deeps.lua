@@ -27,10 +27,38 @@ InstanceService.AddDungeon({
 			"Upon reaching 100 energy, Chargath unleashes {spell:8676} on his target.",
 			{
 				role = DAMAGE,
-				"When broken, {spell:8676} will cause {spell:8676}.",
+				"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
 				"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
 				"When broken, {spell:8676} will cause {spell:8676}.",
 				"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
+				{
+					role = DAMAGE,
+					"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
+					"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
+					"When broken, {spell:8676} will cause {spell:8676}.",
+					"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
+					{
+						role = DAMAGE,
+						"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
+						"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
+						"When broken, {spell:8676} will cause {spell:8676}.",
+						"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
+						{
+							role = DAMAGE,
+							"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
+							"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
+							"When broken, {spell:8676} will cause {spell:8676}.",
+							"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
+							{
+								role = DAMAGE,
+								"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
+								"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
+								"When broken, {spell:8676} will cause {spell:8676}.",
+								"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
+							},
+						},
+					},
+				},
 			},
 			{
 				role = HEALER,
@@ -92,11 +120,19 @@ InstanceService.AddDungeon({
 		name = "Lady Sarevess",
 		encounterID = 4837,
 		portrait = 607682,
+		overview = {
+			"Text for Lady Saravess",
+			"2nd Text for Lady Saravess",
+		}
 	},
 	{
 		name = "Gelihast",
 		encounterID = 6243,
 		portrait = 607609,
+		overview = {
+			"Text for Gelihast",
+			"2nd Text for Gelihast",
+		}
 	},
 	{
 		name = "Baron Aquanis",

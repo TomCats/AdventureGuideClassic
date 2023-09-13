@@ -33,7 +33,6 @@ function TokenizedTextService.ReplaceWithWoWEscapeCodes(inputstr)
 		local colonPos = string.find(str, ":")
 		local handlerType = string.sub(str, 1, colonPos - 1)
 		local data = string.sub(str, colonPos + 1)
-		print(handlerType, data)
 		parts[i] = handlers[handlerType](data)
 	end
 	return table.concat(parts)

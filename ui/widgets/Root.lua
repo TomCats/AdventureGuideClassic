@@ -21,10 +21,7 @@ function widgetType:Construct(parent)
 				contents[idx] = contentPart
 			end
 			local type = Widgets.GetTypeForContent(contentPart)
-			if (not type) then
-			else
-				type:SetContents(type:Acquire(frame), contentPart)
-			end
+			type:SetContents(type:Acquire(frame), contentPart)
 		end
 	end
 	-- example

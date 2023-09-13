@@ -20,10 +20,11 @@ function WidgetTypeMixin:Acquire(parent)
 		table.insert(parent.widgets, widget)
 		widget.idx = #parent.widgets
 	end
+	widget:Show()
 	return widget
 end
 
--- should be overridden
+-- should be overridden with a function that starts with the ConstructDefault call
 function WidgetTypeMixin:Construct(parent)
 	return self:ConstructDefault("Frame", nil, parent)
 end
@@ -31,8 +32,22 @@ end
 -- do not override
 function WidgetTypeMixin:ConstructDefault(frameType, name, parent, template, id)
 	local frame = CreateFrame(frameType, name, parent, template, id)
+	frame.widgetType = self
 	frame.widgets = { }
 	return frame
+end
+
+-- do no toverride
+function WidgetTypeMixin:Release(widget)
+	if (widget.widgets) then
+		while(#widget.widgets > 0) do
+			local child = table.remove(widget.widgets)
+			child.widgetType:Release(child)
+		end
+	end
+	widget:ClearAllPoints()
+	widget:Hide()
+	table.insert(self.pool, widget)
 end
 
 -- do not override
@@ -44,13 +59,23 @@ function WidgetTypeMixin:SetAnchors(widget)
 			widget:SetPoint("TOPLEFT")
 			widget:SetPoint("TOPRIGHT")
 		else
-			widget:SetPoint("TOPLEFT", parent, "TOPLEFT", 10, -16)
-			widget:SetPoint("RIGHT", parent, "RIGHT", 0, -16)
+			widget:SetPoint("TOPLEFT", parent, "TOPLEFT", 10, -24)
+			widget:SetPoint("RIGHT", parent, "RIGHT", 0, 0)
 		end
 	else
 		local previous = widget:GetParent().widgets[widget.idx - 1]
-		widget:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, 0)
-		widget:SetPoint("RIGHT", parent, "RIGHT", 0, -16)
+		if (self.type == "Button") then
+			if (parent.type.name == "Root") then
+				widget:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, -8)
+				widget:SetPoint("RIGHT", parent, "RIGHT", 0, 0)
+			else
+				widget:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 8, -16)
+				widget:SetPoint("RIGHT", parent, "RIGHT", 0, 0)
+			end
+		else
+			widget:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, 0)
+			widget:SetPoint("RIGHT", parent, "RIGHT", 0, 0)
+		end
 	end
 end
 

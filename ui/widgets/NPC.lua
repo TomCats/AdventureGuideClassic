@@ -28,7 +28,7 @@ end
 
 function widgetType:SetContents(widget, contents)
 	widget.text:SetText("NPC " .. contents.npc)
-	WidgetTypeMixin:SetAnchors(widget)
+	self:SetAnchors(widget)
 	local height = widget.text:GetStringHeight() + 12
 	for idx, contentPart in ipairs(contents) do
 		if (type(contentPart) == "string") then

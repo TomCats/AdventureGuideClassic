@@ -15,26 +15,8 @@ function widgetType:IsTypeFor(content)
 end
 
 function widgetType:SetContents(widget, contents)
-	print(contents.role)
 	widget.button.title:SetText(contents.role)
-	WidgetTypeMixin:SetAnchors(widget)
-	local height = 24
-	for idx, contentPart in ipairs(contents) do
-		if (type(contentPart) == "string") then
-			-- todo: replace tokens and convert into a table
-			contentPart = { text = contentPart}
-			contents[idx] = contentPart
-		end
-		local type = Widgets.GetTypeForContent(contentPart)
-		if (not type) then
-		else
-			local child = type:Acquire(widget)
-			type:SetContents(child, contentPart)
-			height = height + child:GetHeight()
-		end
-	end
-	widget:SetHeight(height)
-	widget:Show()
+	CollapsibleSectionWidgetTypeMixin.SetContents(self, widget, contents)
 end
 
 Widgets.RegisterType(widgetType)

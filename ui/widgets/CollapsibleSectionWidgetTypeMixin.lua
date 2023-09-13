@@ -6,10 +6,27 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-CollapsibleSectionWidgetTypeMixin = Mixin(WidgetTypeMixin)
+CollapsibleSectionWidgetTypeMixin = Mixin({
+	type = "Button"
+}, WidgetTypeMixin)
+
+local function AbilityIcon_OnShow(self)
+	local parent = self:GetParent()
+	parent.title:ClearAllPoints()
+	parent.title:SetPoint("LEFT", parent.abilityIcon, "RIGHT", 5, 0.5)
+	parent.title:SetPoint("RIGHT")
+end
+
+local function AbilityIcon_OnHide(self)
+	local parent = self:GetParent()
+	parent.title:ClearAllPoints()
+	parent.title:SetPoint("LEFT", parent.expandedIcon, "RIGHT", 5, 0.5)
+	parent.title:SetPoint("RIGHT")
+end
 
 function CollapsibleSectionWidgetTypeMixin:Construct(parent)
 	local frame = WidgetTypeMixin.ConstructDefault(self, "Frame", nil, parent)
+	frame:SetSize(200, 24)
 	local button = CreateFrame("Button", nil, frame)
 	frame.button = button
 	button:SetSize(200,24)
@@ -17,25 +34,33 @@ function CollapsibleSectionWidgetTypeMixin:Construct(parent)
 	button:SetPoint("RIGHT")
 	button.expandedIcon = button:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 	button.expandedIcon:SetSize(12, 12)
-	button.expandedIcon:SetPoint("TOPLEFT", 5, 0)
+	button.expandedIcon:SetPoint("LEFT", 5, 0)
 	button.expandedIcon:SetText("-")
-
+	button.expandedIcon:SetTextColor(0.929, 0.788, 0.620, 1)
+	button.title = button:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+	button.title:SetSize(1, 10)
+	button.title:SetJustifyH("LEFT")
+	button.title:SetTextColor(0.929, 0.788, 0.620, 1)
 	button.abilityIcon = button:CreateTexture(nil, "OVERLAY")
 	button.abilityIcon:SetSize(18, 18)
 	button.abilityIcon:SetPoint("LEFT", button.expandedIcon, "RIGHT", 5, 0)
 	button.abilityIcon:SetColorTexture(0, 0, 0, 1)
-
-	button.title = button:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-	button.title:SetSize(5, 10)
-	button.title:SetJustifyH("LEFT")
-	button.title:SetPoint("RIGHT")
-	button.title:SetPoint("LEFT", button.abilityIcon, "RIGHT", 5, -1)
+	button.abilityIcon:Hide()
+	button.abilityIcon:SetScript("OnShow", AbilityIcon_OnShow)
+	button.abilityIcon:SetScript("OnHide", AbilityIcon_OnHide)
+	AbilityIcon_OnHide(button.abilityIcon)
 
 	button.left = button:CreateTexture(nil, "BACKGROUND", "UI-PaperOverlay-PaperHeader-SelectUp-Left")
 	button.left:ClearAllPoints()
 	button.left:SetPoint("LEFT", -1, -1)
-	print("NumPoints", button.left:GetNumPoints())
-	_G.DEBUGBUTTON = button
+	button.right = button:CreateTexture(nil, "BACKGROUND", "UI-PaperOverlay-PaperHeader-SelectUp-Right")
+	button.right:ClearAllPoints()
+	button.right:SetPoint("RIGHT", 2, -1)
+	button.middle = button:CreateTexture(nil, "BACKGROUND", "UI-PaperOverlay-PaperHeader-SelectUp-Mid")
+	button.middle:SetDrawLayer("BACKGROUND", -2)
+	button.middle:ClearAllPoints()
+	button.middle:SetPoint("LEFT", button.left, "RIGHT", -32, 0)
+	button.middle:SetPoint("RIGHT", button.right, "LEFT", 32, 0)
 
 	--frame.text = frame:CreateFontString(nil, "ARTWORK", "GameFontBlack")
 	--frame.text:SetJustifyH("LEFT")
@@ -43,8 +68,30 @@ function CollapsibleSectionWidgetTypeMixin:Construct(parent)
 	--frame.text:SetPoint("RIGHT", -12, -8)
 	--frame.text:SetTextColor(0.25, 0.1484375, 0.02, 1)
 	--frame.text:SetWordWrap(true)
-
 	return frame
+end
+
+function CollapsibleSectionWidgetTypeMixin:SetContents(widget, contents)
+
+	self:SetAnchors(widget)
+	--local height = 32
+	for idx, contentPart in ipairs(contents) do
+		if (type(contentPart) == "string") then
+			-- todo: replace tokens and convert into a table
+			contentPart = { text = contentPart}
+			contents[idx] = contentPart
+		end
+		local type = Widgets.GetTypeForContent(contentPart)
+		if (not type) then
+		else
+			local child = type:Acquire(widget)
+			type:SetContents(child, contentPart)
+			--height = height + child:GetHeight()
+		end
+	end
+	local height = widget:GetTop() - widget.widgets[#widget.widgets]:GetBottom()
+	widget:SetHeight(height)
+	widget:Show()
 end
 
 --[[

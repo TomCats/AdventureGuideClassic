@@ -34,7 +34,7 @@ function component.ShowInstanceInfo(instance)
 end
 
 function component.SetCurrentView(newView)
-	if (currentView and currentView ~= newView) then
+	if (currentView) then
 		currentView:Hide()
 		currentView = newView
 		currentView:Show()
