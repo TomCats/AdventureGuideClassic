@@ -10,6 +10,7 @@
     <Script file="ui/widgets/Text.lua" />
     <Script file="ui/widgets/Heading.lua" />
     <Script file="ui/widgets/Role.lua" />
+    <Script file="ui/widgets/Section.lua" />
     <Script file="ui/widgets/Spell.lua" />
     <Script file="ui/widgets/NPC.lua" />
 

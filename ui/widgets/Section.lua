@@ -7,16 +7,15 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local widgetType = Mixin({
-	name = "Spell"
+	name = "Section"
 }, CollapsibleSectionWidgetTypeMixin)
 
 function widgetType:IsTypeFor(content)
-	return content.spell and true or false
+	return content.section and true or false
 end
 
 function widgetType:SetContents(widget, contents)
-	local spellName = GetSpellInfo(contents.spell)
-	widget.button.title:SetText(spellName)
+	widget.button.title:SetText(contents.section)
 	CollapsibleSectionWidgetTypeMixin.SetContents(self, widget, contents)
 end
 
