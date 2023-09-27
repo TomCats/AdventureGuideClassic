@@ -18,40 +18,216 @@ InstanceService.AddRaid({
 		name = "Razorgore the Untamed",
 		encounterID = 12435,
 		portrait = 1379008,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Vaelastrasz the Corrupt",
 		encounterID = 13020,
 		portrait = 1379022,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Broodlord Lashlayer",
 		encounterID = 12017,
 		portrait = 1378968,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Firemaw",
 		encounterID = 11983,
 		portrait = 1378973,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Ebonroc",
 		encounterID = 14601,
 		portrait = 1378971,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Flamegor",
 		encounterID = 11981,
 		portrait = 1378974,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Chromaggus",
 		encounterID = 14020,
 		portrait = 1378969,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Nefarian",
 		encounterID = 11583,
 		portrait = 1379001,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"lore information goes here..",
+			{ heading = "Overview" },
+			"information goes here..",
+			{
+				role = DAMAGE,
+				"",
+			},
+			{
+				role = HEALER,
+				"",
+			},
+			{
+				role = TANK,
+				"",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 })

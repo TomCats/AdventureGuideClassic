@@ -21,54 +21,21 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"This veteran dragon hunter's title was given ages ago as a mark of legend.",
+			"Ghamoo-Ra is a massive and ancient turtle residing deep within Blackfathom Deeps. This aquatic behemoth is considered a guardian of the subterranean waters and the creatures that dwell within them. Ghamoo-Ra's immense size and formidable defenses make it a fearsome inhabitant of the underground aquatic realm.",
+			"Adventurers who venture into Blackfathom Deeps must face Ghamoo-Ra's immense strength and the challenges of navigating the underwater passages it calls home. Its presence serves as a reminder of the mysteries and perils lurking beneath the surface.",
 			{ heading = "Overview" },
-			"As an expert in hunting winged beasts, Chargath utilizes {spell:8676} rigged with {spell:8676}",
-			"Upon reaching 100 energy, Chargath unleashes {spell:8676} on his target.",
+			"Ghamoo-Ra is the first boss in Blackfathom Deeps. Ghamoo-Ra has high amount of armor, and will {spell:5568} a random party member.",
 			{
 				role = DAMAGE,
-				"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
-				"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
-				"When broken, {spell:8676} will cause {spell:8676}.",
-				"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
-				{
-					role = DAMAGE,
-					"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
-					"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
-					"When broken, {spell:8676} will cause {spell:8676}.",
-					"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
-					{
-						role = DAMAGE,
-						"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
-						"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
-						"When broken, {spell:8676} will cause {spell:8676}.",
-						"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
-						{
-							role = DAMAGE,
-							"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
-							"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
-							"When broken, {spell:8676} will cause {spell:8676}.",
-							"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
-							{
-								role = DAMAGE,
-								"When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}. When broken, {spell:8676} will cause {spell:8676}.",
-								"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
-								"When broken, {spell:8676} will cause {spell:8676}.",
-								"{spell:8676} leaves behind {spell:8676}{spell:8676} where it strikes the floor.",
-							},
-						},
-					},
-				},
+				"Simple fight, attack only Ghamoo-Ra. Ghamoo-Ra has only one ability, {spell:5568}. Ghamoo-Ra can be stunned and feared.",
 			},
 			{
 				role = HEALER,
-				"When broken, {spell:8676} will cause {spell:8676}.",
-				"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
+				"Maintain healing on your tank from maximum range, make sure keep all party members health up as they may take damage from {spell:5568} at any moment.",
 			},
 			{
 				role = TANK,
-				"When broken, {spell:8676} will cause {spell:8676}.",
-				"{spell:8676} leaves behind {spell:8676} where it strikes the floor.",
+				"Face the boss away from the group and maintain threat. Reposition after {spell:5568}.",
 			},
 		},
 		abilities = {
@@ -120,38 +87,209 @@ InstanceService.AddDungeon({
 		name = "Lady Sarevess",
 		encounterID = 4837,
 		portrait = 607682,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Text for Lady Saravess",
-			"2nd Text for Lady Saravess",
-		}
+			"Lady Sarevess is a naga sorceress who has claimed Blackfathom Deeps as her lair. She is known for her mastery of water-based magic and her allegiance to the naga forces that seek to expand their dominion beneath the waves. Lady Sarevess's control over the aquatic environment and her cunning tactics make her a formidable adversary in the depths.",
+			"Adventurers who delve into Blackfathom Deeps must confront Lady Sarevess's powerful spells and her connection to the naga's dark ambitions. Her presence in the underwater caverns underscores the naga's influence and their determination to control the subterranean realm.",
+			{ heading = "Overview" },
+			"Lady Sarevess is the second boss encountered in Blackfathom Deeps, and is accompanied by two adds. Lady Sarvess uses {spell:8435} that will hit all players in front of her.",
+			{
+				role = DAMAGE,
+				"{spell:8435} can be interrupted. Lady Sarevess casts {spell:865} if you interrupt her {spell:8435}. She will only cast {spell:865} if you are in her proximity. {spell:8435} is cast in a frontal cone and chains from target to target. Be sure to stay spread out to avoid chaining {spell:8435}. Lady Sarvess casts {spell:246} if you try to kite her. Crowd Control one of the guards and focus down the other before switching to Lady Sarevess.",
+			},
+			{
+				role = HEALER,
+				"Spread out to avoid being hit with {spell:8435}. Maintain healing on the tank.",
+			},
+			{
+				role = TANK,
+				"Tank all three of the mobs as the encounter starts. To make the fight easier, have one of the adds Crowd Controlled while tanking and focus damage on the other one.",
+			},
+		},
+		abilities = {
+			{
+				spell = 12345,
+				icons = { IMPORTANT },
+				"Chargath hurls a Grounding Spear at a random player, inflicting 4,459 Physical damage...",
+				{
+					spell = 12345,
+					"Magma erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+				},
+				{
+					npc = 12345,
+					"Grounding Chain erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+					{
+						spell = 12345,
+						"If Chargath trips on Grounding Chain, it breaks, knocking him down for 2 sec.",
+					},
+					{
+						spell = 12345,
+						"Inflicts 1,254 Fire damage to all players and an additional 836 Fire Damage every 1 sec",
+					}
+				},
+			},
+			{
+				spell = 12345,
+				icons = { TANK, BLEED },
+				"Chargath hurls a Grounding Spear at a random player, inflicting 4,459 Physical damage...",
+				{
+					spell = 12345,
+					"Magma erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+				},
+				{
+					spell = 12345,
+					"Grounding Chain erupts out of the ground around the spear, inflicting 3,000 Fire damage...",
+					{
+						spell = 12345,
+						"If Chargath trips on Grounding Chain, it breaks, knocking him down for 2 sec.",
+					},
+					{
+						spell = 12345,
+						"Inflicts 1,254 Fire damage to all players and an additional 836 Fire Damage every 1 sec",
+					}
+				},
+			}
+		},
 	},
 	{
 		name = "Gelihast",
 		encounterID = 6243,
 		portrait = 607609,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Text for Gelihast",
-			"2nd Text for Gelihast",
+			"Gelihast is a fearsome murloc warrior who has established a stronghold within Blackfathom Deeps. He commands a tribe of murlocs and is known for his ruthless tactics and territorial nature. Gelihast's mastery of close combat and his control over his murloc followers make him a dangerous foe in the depths.",
+			"Adventurers who venture into Blackfathom Deeps must face Gelihast's aggressive attacks and his determination to defend his territory. His presence in the submerged caverns serves as a reminder of the diversity of creatures that call the depths their home.",
+			{ heading = "Overview" },
+			"Gelihast is an optional Murloc boss located in Blackfathom Deeps, who casts {spell:6533} against his enemies. Pull the adds in his room one at a time to clear it out, then try to pull the boss alone. Remember to click the stone behind him once he's defeated for {spell:8733}.",
+			{
+				role = DAMAGE,
+				"Gelihast casts {spell:6533} on random targets. Targets that have been affected by {spell:6533} receive reduced threat. Ranged damage should stay close in order to get {spell:6533} to mitigate threat generation.",
+			},
+			{
+				role = HEALER,
+				"Maintain healing on the tank.",
+			},
+			{
+				role = TANK,
+				"Pull the adds one at a time before pulling Gelihast. There is no good place to Line Of Sight pull the casters, so try to pull them far back to get them a safe distance from the rest of the murlocs.",
+			}
+		},
+		abilities = {
+
 		}
 	},
 	{
 		name = "Baron Aquanis",
 		encounterID = 12876,
 		portrait = 607552,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"Baron Aquanis is a powerful water elemental that has been summoned to Blackfathom Deeps by dark forces. This elemental entity serves as a guardian of the submerged tunnels and channels beneath the depths. Baron Aquanis's control over water magic and his formidable elemental form make him a formidable protector of the underground waters.",
+			"Adventurers who delve into Blackfathom Deeps must confront Baron Aquanis's watery attacks and his role as a guardian of the subterranean aquatic realm. His presence underscores the mystical forces at play in the depths and the dangers of tampering with elemental magic.",
+			{ heading = "Overview" },
+			"Baron Aquanis is another miniboss that is summoned when Horde party members loot the Fathom Stone for a dungeon quest.",
+			{
+				role = DAMAGE,
+				"Baron Aquanis is an easy fight, let the tank pull and don't over aggro, focus damage on Baron Aquanis.",
+			},
+			{
+				role = HEALER,
+				"Maintain healing on the tank.",
+			},
+			{
+				role = TANK,
+				"Baron Aquanis is an easy fight, make sure to hold aggro.",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Twilight Lord Kelris",
 		encounterID = 4832,
 		portrait = 607800,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"Twilight Lord Kelris is a high-ranking member of the Twilight's Hammer cult, which seeks to usher in the return of the malevolent Old Gods. Within Blackfathom Deeps, Kelris conducts dark rituals and schemes to further the cult's goals. His mastery of shadow magic and his allegiance to the Old Gods make him a formidable and sinister figure in the depths.",
+			"Adventurers who venture into Blackfathom Deeps must confront Twilight Lord Kelris's shadowy spells and his role in advancing the cult's nefarious agenda. His presence within the underwater caverns serves as a reminder of the lurking darkness and the threats posed by the Old Gods.",
+			{ heading = "Overview" },
+			"Twilight Lord Kelris is an Orc Warlock located in the ceremonial chamber before the final room of the instance.",
+			{
+				role = DAMAGE,
+				"Kelris casts {spell:8399} and {spell:15587}. They cannot be interrupted. Be careful if the tank has been casted with {spell:8399} as you might be next on the threat table.  ",
+			},
+			{
+				role = HEALER,
+				"Assign a damage dealer with healing ability to help cover in the event you are targeted by {spell:8399}. Use {spell:527} to remove the sleep affect, be ready to quickly use it on your group members, especially the tank.",
+			},
+			{
+				role = TANK,
+				"Tank the boss away from the group, maintaining threat throughout the fight. If you're targeted with {spell:8399}, be ready to use high threat abilities or taunt to regain aggro on the boss.",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Old Serra'kis",
 		encounterID = 4830,
 		portrait = 607733,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"Old Serra'kis is a massive and ancient hydra that dwells within the watery depths of Blackfathom Deeps. This colossal creature is a testament to the primal forces of nature that still exist deep underground. Old Serra'kis's multiple heads and devastating attacks make it a formidable and iconic inhabitant of the submerged realm.",
+			"Adventurers who delve into Blackfathom Deeps must confront Old Serra'kis's ferocious assaults and the awe-inspiring presence of this ancient hydra. Its existence beneath the waves serves as a reminder of the untamed wilderness that can be found in the most unexpected of places.",
+			{ heading = "Overview" },
+			"Old Serra'kis is an optional boss in Blackfathom Deeps who will periodcally heal himself when attacking. The notable aspect of this boss is that you fight him underwater.",
+			{
+				role = DAMAGE,
+				"maximize your damage output without overthrowing the tank from the primary threat position, or running out of breath.",
+			},
+			{
+				role = HEALER,
+				"Keep your party members up and heal the tank without running out of breath.",
+			},
+			{
+				role = TANK,
+				"Maintain threat on the boss without running out of breath.",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 	{
 		name = "Aku'mai",
 		encounterID = 4829,
 		portrait = 607614,
+		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		npcs = { 2135, 12456, 12314 },
+		overview = {
+			"Aku'mai is an immense and malevolent creature known as the Deepstrider that lurks in the darkest depths of Blackfathom Deeps. Its origins are shrouded in mystery, but it is believed to be a primeval and nightmarish entity. Aku'mai's horrifying form and deadly attacks make it the ultimate challenge for adventurers who dare to explore the deepest reaches of the submerged caverns.",
+			"Adventurers who venture into Blackfathom Deeps must face Aku'mai's nightmarish presence and its status as the ultimate guardian of the submerged realm. The legend of Aku'mai serves as a chilling testament to the unimaginable horrors that await those who dare to delve too deep into the underground abyss.",
+			{ heading = "Overview" },
+			"Aku'mai is the final Hydra boss of Blackfathom Deeps who uses {spell:3815} to damage the group.",
+			{
+				role = DAMAGE,
+				"{spell:3815} can be interrupted. Don't stand in {spell:3815}, Aku'mai can be stunned. You should save your stuns and crowd control effects for his {spell:3490}. While enraged, Aku'mai receives 75% increased attack speed for 5 seconds.",
+			},
+			{
+				role = HEALER,
+				"Don't stand in {spell:3815}. Your tank will need additional healing during {spell:3490}.",
+			},
+			{
+				role = TANK,
+				"Tank the boss away from the healer and ranged damage dealers. Move out of {spell:3815}. Use defensive cooldowns when he casts {spell:3490}",
+			}
+		},
+		abilities = {
+			
+		}
 	},
 })
