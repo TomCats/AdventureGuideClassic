@@ -10,6 +10,10 @@ local component = UI.CreateComponent("InstanceOverview")
 
 local components
 
+function InfoButtonOnClick()
+	print("InfoButton clicked!")
+end
+
 function component.Init(components_)
 	components = components_
 	local instance = CreateFrame("Frame", nil, EncounterJournal.encounter)
@@ -23,6 +27,23 @@ function component.Init(components_)
 	instance.loreBG:SetSize(390, 336)
 	instance.loreBG:SetPoint("TOP", 3, -9)
 	instance.loreBG:SetTexCoord(0, 0.7617187, 0, 0.65625)
+
+
+	-- Want to make this texture clickable so I can print boss levels in the chat window or create a new frame which will display additional information regarding the dungeon (Quests, Mob level and level range)
+	instance.infoButtonFrame = CreateFrame("Button", nil, instance)
+	instance.infoButtonFrame:SetSize(35, 35)
+	instance.infoButtonFrame:SetPoint("BOTTOMLEFT", 33, 126)
+	instance.infoButton = instance.infoButtonFrame:CreateTexture()
+	instance.infoButton:SetAllPoints(true)
+	instance.infoButton:SetDrawLayer("ARTWORK", 4)
+	instance.infoButton:SetTexture("Interface/Common/help-i")
+
+	instance.infoButtonFrame:SetScript("OnMouseDown", function (self, button)
+		if button == "LeftButton" then
+			print("InfoButton Clicked!")
+		end
+	end)
+
 	instance.title = instance:CreateFontString(nil, "OVERLAY", "QuestFont_Super_Huge")
 	instance.title:SetJustifyH("CENTER")
 	instance.title:SetJustifyV("BOTTOM")
@@ -51,9 +72,65 @@ end
 function component.Show(instance)
 	component.frame.title:SetText(instance.name)
 	component.frame.loreBG:SetTexture(instance.splash)
+	-- component.frame.infoButton:SetText(instance.info)
 	component.frame.loreScrollingFont:SetText(instance.overview);
 	component.frame.loreScrollBar:SetShown(component.frame.loreScrollingFont:HasScrollableExtent());
 	components.EncounterFrame.SetCurrentView(component.frame)
 end
 
 UI.Add(component)
+
+--[[
+<Button name="$parentMapButton" parentKey="mapButton">
+	<Size x="48" y="32"/>
+	<Anchors>
+		<Anchor point="BOTTOMLEFT" x="33" y="126"/>
+	</Anchors>
+	<Layers>
+		<Layer level="BACKGROUND">
+			<Texture name="$parentShadow" inherits="UI-EJ-ShowMapBG">
+				<Anchors>
+					<Anchor point="LEFT" x="-3" y="5"/>
+				</Anchors>
+			</Texture>
+		</Layer>
+		<Layer level="ARTWORK">
+			<FontString name="$parentText" font="GameFontNormal" justifyH="LEFT" text="ENCOUNTER_JOURNAL_SHOW_MAP">
+				<Size x="0" y="0"/>
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" x="2" y="0"/>
+				</Anchors>
+			</FontString>
+			<Texture name="$parentTexture" file="Interface\QuestFrame\UI-QuestMap_Button" parentKey="texture">
+				<Size x="48" y="32"/>
+				<Anchors>
+					<Anchor point="RIGHT"/>
+				</Anchors>
+				<TexCoords left="0.125" right="0.875" top="0.0" bottom="0.5"/>
+			</Texture>
+		</Layer>
+		<Layer level="HIGHLIGHT">
+			<Texture name="$parentHighlight" file="Interface\BUTTONS\ButtonHilight-Square" alphaMode="ADD">
+				<Size x="36" y="25"/>
+				<Anchors>
+					<Anchor point="RIGHT" x="-7" y="0"/>
+				</Anchors>
+			</Texture>
+		</Layer>
+	</Layers>
+	<Scripts>
+		<OnClick>
+			local _, _, _, _, _, _, mapID = EJ_GetInstanceInfo();
+			if mapID and mapID > 0 then
+				OpenWorldMap(mapID);
+			end
+		</OnClick>
+		<OnMouseDown>
+			self.texture:SetTexCoord(0.125, 0.875, 0.5, 1.0);
+		</OnMouseDown>
+		<OnMouseUp>
+			self.texture:SetTexCoord(0.125, 0.875, 0.0, 0.5);
+		</OnMouseUp>
+	</Scripts>
+</Button>
+]]
