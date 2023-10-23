@@ -27,23 +27,6 @@ function component.Init(components_)
 	instance.loreBG:SetSize(390, 336)
 	instance.loreBG:SetPoint("TOP", 3, -9)
 	instance.loreBG:SetTexCoord(0, 0.7617187, 0, 0.65625)
-
-
-	-- Want to make this texture clickable so I can print boss levels in the chat window or create a new frame which will display additional information regarding the dungeon (Quests, Mob level and level range)
-	instance.infoButtonFrame = CreateFrame("Button", nil, instance)
-	instance.infoButtonFrame:SetSize(35, 35)
-	instance.infoButtonFrame:SetPoint("BOTTOMLEFT", 33, 126)
-	instance.infoButton = instance.infoButtonFrame:CreateTexture()
-	instance.infoButton:SetAllPoints(true)
-	instance.infoButton:SetDrawLayer("ARTWORK", 4)
-	instance.infoButton:SetTexture("Interface/Common/help-i")
-
-	instance.infoButtonFrame:SetScript("OnMouseDown", function (self, button)
-		if button == "LeftButton" then
-			print("InfoButton Clicked!")
-		end
-	end)
-
 	instance.title = instance:CreateFontString(nil, "OVERLAY", "QuestFont_Super_Huge")
 	instance.title:SetJustifyH("CENTER")
 	instance.title:SetJustifyV("BOTTOM")
