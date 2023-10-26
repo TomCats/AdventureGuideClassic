@@ -108,27 +108,25 @@ InstanceService.AddDungeon({
 			"Zevrim Thornhoof is a satyr sorcerer who lurks within Dire Maul's Warpwood Quarter. He is known for his mastery of dark magic and his allegiance to the corrupted satyrs. Thornhoof's presence within the once-sacred halls of Dire Maul is a testament to the foul influence that has taken root within the ancient elven ruins.",
 			"Origins shrouded in darkness, Thornhoof's transformation into a satyr reflects the malevolent forces that have permeated Dire Maul. His arcane powers and dedication to the satyr cause make him a formidable adversary, standing as a symbol of the ruin that has befallen this sacred place.",
 			{ heading = "Overview" },
-			"information goes here..",
-
-			--Zevrim Thornhoof is a sadistic satyr boss who will attempt to Sacrifice your party members on his alter.
-
+			"Zevrim Thornhoof is a sadistic satyr boss who will attempt to sacrifice your party members on his alter.",
 			{
 				role = DAMAGE,
-				"",
-
-				--Focus your DPS output on the boss while making sure not to overtake the primary threat position. You may be teleported to the sacrificial alter during the fight. If you are a Paladin or a Mage you can use Divine Shield or Ice Block to get out of this. Ranged DPS. Should stand at maximum distance to get out of range from Intense Pain. Warlocks can enslave one of the Wildspawn Hellcaller or Wildspawn Shadowstalker to fight against Zevrim, these mobs are considerably stronger than your minions. If you can, Dispel the multi-target Intense Pain debuff.
+				"Focus your damage output on Zevrim while making sure not to overtake the primary threat position.
+				You may be teleported to the sacrificial alter during the fight. If you are a Paladin or a Mage you
+				can use Divine Shield or Ice Block to get out of this. Ranged damage dealer, should stand at maximum
+				distance to get out of range from {spell:} Instense Pain. Warlocks can enslave one of the Wildspawn
+				Hellcaller or Wildspawn Shadowstalker to fight against Zevrim, these mobs are considerably stronger
+				than your minions. If you can, {spell:} Dispell the multi-target {spell:} Intense Pain debuff.",
 			},
 			{
 				role = HEALER,
-				"",
-
-				--Whoever is sent to the sacrificial alter will mandate some significant healing attention. Use whatever abilities you have to ensure that your party members survive. Dispel the [Intense Pain] debuff from you party members if possible.
+				"Whoever is sent to the sacrificial alter will mandate some significant healing attention. Use major
+				cooldown abilities you have to ensure that your party members survive. {spell:} Dispel the {spell:}
+				Intense Pain debuff from your party members if possible.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--Maintain the primary threat position during the fight.
+				"Maintain the primary threat position during the fight.",
 			}
 		},
 		abilities = {
@@ -145,26 +143,26 @@ InstanceService.AddDungeon({
 			"Alzzin the Wildshaper, a druid corrupted by dark forces, resides in Dire Maul's Warpwood Quarter. He has the ability to shape-shift into various animal forms, making him a versatile and unpredictable foe. Alzzin's presence within Dire Maul represents the corruption that has seeped into the heart of the natural world.",
 			"Once a guardian of nature's balance, Alzzin's transformation into a twisted servant of darkness is a tragic tale. His mastery over shape-shifting and the wilds has been tainted, now serving the malevolent forces that have overtaken the ruins.",
 			{ heading = "Overview" },
-			"information goes here..",
-
-			--Alzzin the Wildshaper is the shapeshifting final boss of Dire Maul East, taking on the forms of a Satyr, a Dire Wolf, and a Treant throughout the fight. If you do not clear all of the Warpwood Crushers from the ramp on the way down to fight Alzzin, they will engage along with the boss and come make your encounter a lot more difficult. Do not exit the instance without entering the tunnel behind Alzzin and mining the Rich Thorium Veins, which are consistently located here.
+			"Alzzin the Wildshaper is the shapeshifting final boss of Dire Maul East, taking on the forms of a Satyr,
+			 a Dire Wolf, and a Treant throughout the fight. If you do not clear all of the Warpwood Crushers from
+			 the ramp on the way down to fight Alzzin, they will engage along with the boss and come make your
+			 encounter a lot more difficult.",
 			{
 				role = DAMAGE,
-				"",
-
-				--Alzzin drops threat every time he shape shifts, so allow your tank generate enough threat to stay in the primary threat position. At 35% the boss will have adds joining the encounter - utilize AoE effects to burn them down before returning to Alzzin. Use [Sunder Armor] or [Expose Armor], especially when the boss is in Treant form.
+				"Alzzin drops threat every time he shape shifts, so allow your tank to generate enough threat to stay
+				 in the primary threat position. At 35% Alzzin will have adds joining the encounter - Utilize area of
+				  effect abilities to defeat them quickly before returning to Alzzin. Use {spell:} Sunder Armor or
+				  {spell:} Expose Armor, especially when the boss is in Treant form.",
 			},
 			{
 				role = HEALER,
-				"",
-
-				--Your Tank is going to take the most damage when the boss is in Dire Wolf form, so try to keep them topped off at all times.
+				"Your tank is going to take the most damage when Alzzin is in Dire Wolf form, so try to keep them
+				topped off at all times.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--Alzzin drops threat every time he changes form, so use threat generating abilities to reestablish yourself at the top of the threat meter.
+				"Alzzin drops threat every time he changes form, so use threat generating abilities to reestablish
+				yourself at the top of the threat meter.",
 			}
 		},
 		abilities = {
@@ -181,18 +179,26 @@ InstanceService.AddDungeon({
 			"Guard Mol'dar is a formidable ogre enforcer who commands the Gordok forces within Dire Maul's North Wing. His brute strength and unwavering loyalty to the Gordok tribe make him a key defender of their territory. Mol'dar's presence within Dire Maul represents the might and tenacity of the ogres who have claimed this part of the ruins.",
 			"Mol'dar's rise to prominence among the Gordok ogres is a testament to his leadership and martial prowess. He stands as a stalwart guardian, ensuring the Gordok tribe's dominance within the North Wing and serving as a symbol of their dominance in Dire Maul.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Guard Mol'dar is one of the guards in Dire Maul North, and should not be engaged if you are attempting
+			the Dire Maul Tribute Run. Note that he drops the Gordok Innter Door Key. If you are doing a Tributer
+			Run, to get past the Inner Door, you will need to use a Seaforum Charge, Truesilver Skeleton Key, or
+			pickpocket (Rogues only) Mol'dar for the key. If you are running Dire Maul North with the intention of
+			killing all bosses, engage Mol'dar which is a simple fight. Once friendly, Mol'dar will grant you the two
+			 hour Mol'dar Moxie stamina buff.",
 			{
 				role = DAMAGE,
-				"",
+				"Ranged damage dealers should stand at maximum range to avoid being hit by {spell:} Knock Away or
+				{spell:} Shield Charge.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus your healing output on the tank, as your damage dealers shouldn't be taking much, if any,
+				damage.",
 			},
 			{
 				role = TANK,
-				"",
+				"Tank Gaurd Mol'dar up against a wall to avoid being knocked around by {spell:} Knock Away. Save any
+				defensive cooldowns for when Mol'dar {spell:} Enrage.",
 			}
 		},
 		abilities = {
@@ -209,18 +215,24 @@ InstanceService.AddDungeon({
 			"Stomper Kreeg is a massive, ale-loving ogre who resides within Dire Maul's North Wing. He is known for his insatiable appetite for alcohol and his formidable strength. Kreeg's presence within the ruins is a reflection of the unique character and challenges found within the North Wing.",
 			"Kreeg's joviality and love for ale make him an unusual figure in the somber halls of Dire Maul. However, his immense strength and unpredictable behavior can pose a formidable challenge to those who dare to face him within the North Wing's chambers.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Stomper Kreeg is a drunken orgre who can be bypassed simply by waiting for him to fall asleep. If you
+			intend to defeat the ogre, engage him after deating the surrounding adds. If you are attempting the Dire
+			Maul Tribute Run, do not engage with Stomper Kreeg, and simply move along.",
 			{
 				role = DAMAGE,
-				"",
+				"Be aware that {spell:} Booze Spit reduces your chance to hit by 75% and gets you hammered. Ranged
+				damage dealers need to stand at maximum range to avoid being hit by his {spell:} Whirlwind and
+				{spell:} War Stomp abilities.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Keep your melee damage dealers health up as they wll take damage from {spell:} Whirlwind and
+				{spell:} War Stomp, your primary focus needs to be on keeping your tank alive.",
 			},
 			{
 				role = TANK,
-				"",
+				"Engage Stomper Kreeg and maintain the primary threat position. Save any defensive cooldowns for when
+				 Kreeg {spell:} Enrage.",
 			}
 		},
 		abilities = {
@@ -237,18 +249,24 @@ InstanceService.AddDungeon({
 			"Guard Fengus is a powerful ogre enforcer responsible for overseeing the Gordok forces within Dire Maul's North Wing. He is known for his unwavering loyalty to the Gordok tribe and his formidable combat skills. Fengus's presence within Dire Maul serves as a symbol of the ogres' dominance in this part of the ruins.",
 			"Fengus's rise to authority among the Gordok ogres is a testament to his martial prowess and dedication. He stands as a vigilant protector, ensuring that the North Wing remains firmly under the control of the Gordok tribe and representing their strength within Dire Maul.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Guard Fengus is another of the Guards in Dire Maul North who needs to be skipped for the Tribute run, or
+			 defeated for his loot. To get past him, make sure he walks away from his chest and steal the key to open
+			  the door and move on. Once friendly, Fengus will grant you the two hour Fengus Ferocity attack power
+			  buff.",
 			{
 				role = DAMAGE,
-				"",
+				"Ranged damage dealers should stand at maximum range to avoid being hit by {spell:} Knock Away or
+				{spell:} Shield Charge.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus your healing output on the tank, as your damage dealers shouldn't be taking much, if any,
+				damage.",
 			},
 			{
 				role = TANK,
-				"",
+				"Tank Guard Fengus up against a wall to avoid being knocked around by {spell:10101}. Save any
+				defensive cooldowns for Fengus {spell:} Enrage.",
 			}
 		},
 		abilities = {
@@ -265,18 +283,25 @@ InstanceService.AddDungeon({
 			"Guard Slip'kik is a vigilant ogre enforcer responsible for maintaining order within Dire Maul's North Wing. His loyalty to the Gordok tribe and his relentless dedication to their cause make him a formidable defender of their territory. Slip'kik's presence within Dire Maul reflects the Gordok ogres' unwavering hold on this part of the ruins.",
 			"Slip'kik's role as a guardian and enforcer highlights his commitment to the Gordok tribe's dominance. He stands as a stalwart protector, ensuring that the North Wing remains firmly under their control and symbolizing the ogres' authority within Dire Maul.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Guard Slip'kik patrols the walkway below the ramps which take you upward in Dire Maul North. Slip'kik
+			can be killed for some rare loot. If attempting the Dire Maul North Tribute run, you will require a
+			Thorium Widget and a vial of Frost Oil in order to fix the broken trap on the ground in Slip'kik's path.
+			Upon success, the Guard will be trapped in ice and your group may move along. Once friendly, Guard
+			Slip'kik grants you the two hour Slip'kik's Savvy spell critical chance buff.",
 			{
 				role = DAMAGE,
-				"",
+				"Ranged damage dealers should stand at maximum range to avoid being hit by {spell:} Knock Away or
+				{spell:} Shield Charge.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus your healing output on the tank, as your damage dealers shouldn't be taking much, if any,
+				damage.",
 			},
 			{
 				role = TANK,
-				"",
+				"Tank Guard Slip'kik up against a wall to avoid being knocked around by {spell:} Knock Away. Save any
+				 defensive cooldowns for when Slip'kik {spell:} Enrage.",
 			}
 		},
 		abilities = {
@@ -293,18 +318,27 @@ InstanceService.AddDungeon({
 			"Captain Kromcrush is a fearsome ogre commander who leads the Gordok forces within Dire Maul's North Wing. His formidable strength and tactical prowess make him a key figure in the defense of their territory. Kromcrush's presence within Dire Maul exemplifies the might and leadership of the Gordok tribe in this part of the ruins.",
 			"Kromcrush's ascent to the rank of captain among the Gordok ogres is a testament to his martial skill and strategic acumen. He stands as a formidable defender, ensuring that the North Wing remains firmly under Gordok control and representing their unwavering authority within Dire Maul.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Captain Kromcrush is the final of the named ogres that stand between you and Kind Gordok at the end of
+			Dire Maul North. Kromcrush can be defeated for loot, or bypassed in the Tribute run. If you are
+			attempting the Dire Maul North Tribute run, you will need to loot an Ogre Tannin from one of the Ogre
+			Tannin Baskets in the room before where Captain Kromcrush stands. Once you have the tannin, speak with
+			Knot Thimblejack downstairs near Slip'kik and receive your Gordok Ogre Suit. Take the suit back up to
+			Kromcrush, equip it, and speak with the Captain. At the end of your dialogue he will storm off.",
 			{
 				role = DAMAGE,
-				"",
+				"Be prepared to crowd control the reaver adds when they are summoned around 50% health. Use any
+				abilities available to break the fear from {spell:} Intimidating Shout, especially if you are running
+				 right into other mobs. Stay behind the boss to avoid being hit with {spell:} Mortal Cleave.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Be aware that {spell:} Mortal Cleave reduces the effect of healing spells on the target, and your
+				tank will be effected with this debuff during the right.",
 			},
 			{
 				role = TANK,
-				"",
+				"When Kromcrush spawns his Gordok Reaver adds, get threat on them before your damage dealers or healer
+				 take significant damage from them.",
 			}
 		},
 		abilities = {
@@ -321,18 +355,31 @@ InstanceService.AddDungeon({
 			"Cho'Rush the Observer is a mysterious ogre mage who holds a prominent position within Dire Maul's North Wing. His command of arcane magic and enigmatic presence make him a unique and formidable figure. Cho'Rush's role within Dire Maul reflects the complex and arcane nature of the ruins.",
 			"Cho'Rush's mastery of arcane arts sets him apart from the other ogres within the North Wing. His enigmatic presence and command of magical forces are a testament to the diverse challenges and mysteries that adventurers encounter within Dire Maul.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Cho'Rush the Observer and King Gordok are together in the last encounter of the instance. The final
+			challenge in the Tribute run is to not kill Cho'Rush the Observer. He must live through the enoucnter in
+			order to observe your worthiness. This is the final requirement of the tribute, and upon success grants
+			you access to the Gordok Tribute chest and the buffs from the now friendly Ogre guards. For a Tribute run
+			 where Cho'Rush must live, the fight is a bit of a damage race. Cho'Rush must be managed but the faster
+			 King Gordok has been defeated the better. Within a normal run of Dire Maul North, it is much easier to
+			 focus down Cho'Rush the Observer first, then move on to King Gordok.",
 			{
 				role = DAMAGE,
-				"",
+				"Focus your damage on Cho'Rush first if you are not attempting the tribute run, making a point to
+				interrupt the ogre's abilities - especially {spell:} Healing Wave. Switch to Gordok and be aware of
+				his {spell:} War Stomp ability. In the Tribute run, assign on player to interrupt Cho'Rush's
+				abilities while the group defeats Gordok.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus on your tank, and be aware that your damage dealers will be taking some damage from the two
+				ogres abilities. Use an ability like {spell:} Fear Ward or {spell:} Tremor Totem to try and negate
+				the {spell:} Psychic Scream fear from your tank. Stand at max range from Cho'Rush to avoid being
+				feared.",
 			},
 			{
 				role = TANK,
-				"",
+				"Establish and maintain threat on Kind Gordok. If your group is killing Cho'Rush, focus the ogre down
+				 with your damage dealers, making sure to interrupt {spell:} Healing Wave and {spell:} Mind Blast.",
 			}
 		},
 		abilities = {
@@ -349,18 +396,28 @@ InstanceService.AddDungeon({
 			"King Gordok is the reigning monarch of the Gordok ogres and the ruler of Dire Maul's North Wing. His immense size and might, combined with his ruthless authority, make him a formidable figure within the ruins. King Gordok's presence exemplifies the Gordok ogres' dominance over this part of Dire Maul.",
 			"King Gordok's ascent to the throne is a testament to his strength and command over the Gordok tribe. He stands as the unchallenged ruler, ensuring that the North Wing remains under Gordok control and representing the unrivaled authority of his tribe within Dire Maul.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"King Gordok and Cho'Rush the Observer are together in the last encounter of the instance. The final
+			challenge in the Tribute run is to not kill Cho'Rush the Observer. ",
+
+			--King Gordok and Cho'Rush the Observer are together in the last encounter of the instance. The final challenge in the Tribute run is to not kill Cho'Rush the Observer. He must live through the encounter in order to "observe" your worthiness. This is the final requirement of the tribute, and upon success grants you access to the Gordok Tribute chest and the buffs from the now friendly Ogre guards. For a Tribute run where Cho'Rush must live, the fight is a bit of a DPS race. Cho'Rush must be managed but the faster that King Gordok dies, the better. He does a decent amount of damage to the tank so healer mana can disappear rapidly. In a normal run of Dire Maul North, it is much easier to focus down Cho'Rush the Observer first, then move on to King Gordok.
+
 			{
 				role = DAMAGE,
 				"",
+
+				--Burn Down Cho'Rush first if you are not attempting the tribute, making a point to interrupt the ogre's abilities - especially [Healing Wave]. Switch to Gordok and be aware of his [War Stomp] ability. In the Tribute Run, assign one player to interrupt Cho'Rush's abilities while the group burns down Gordok.
 			},
 			{
 				role = HEALER,
 				"",
+
+				--Focus on your tank, and be aware that your DPS will be taking some damage from the two ogres abilities. Use an ability like [Fear Ward] or [Tremor Totem] to try and negate the [Psychic Scream] fear from your Tank. Stand at max range from Cho'Rush to avoid being feared.
 			},
 			{
 				role = TANK,
 				"",
+
+				--Establish and maintain threat on King Gordok. If your group is killing Cho'Rush, focus the ogre down with your DPS, making sure to interrupt [Healing Wave] and secondly [Mind Blast].
 			}
 		},
 		abilities = {
