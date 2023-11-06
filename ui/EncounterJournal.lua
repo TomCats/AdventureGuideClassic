@@ -10,6 +10,8 @@ local component = UI.CreateComponent("EncounterJournal")
 
 local currentView
 
+local version = C_AddOns.GetAddOnMetadata(addonName, "Version")
+
 function component.Init()
     -- Create the base window and portrait image
     EncounterJournal = CreateFrame("Frame", addonName .. "_EncounterJournal", UIParent, "PortraitFrameTemplate")
@@ -18,7 +20,7 @@ function component.Init()
     EncounterJournal:EnableMouse(true)
     EncounterJournal:SetToplevel(true)
     EncounterJournal.title = _G[addonName .. "_EncounterJournalTitleText"]
-    EncounterJournal.title:SetText("AdventureGuide Classic")
+    EncounterJournal.title:SetText("Adventure Guide v" .. version)
     EncounterJournal.portrait = _G[addonName .. "_EncounterJournalPortrait"]
     EncounterJournal.portrait:SetTexture("Interface\\EncounterJournal\\UI-EJ-PortraitIcon")
     local mask = EncounterJournal:CreateMaskTexture()

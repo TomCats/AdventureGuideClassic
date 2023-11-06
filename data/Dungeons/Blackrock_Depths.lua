@@ -149,14 +149,14 @@ InstanceService.AddDungeon({
 				},
 				{
 					role = TANK,
-				    "Tanking this fight is straight forward, maintain threat and allow damage dealers to focus {npc:9027} down. Use defensive cooldowns when you are affected by {spell:15708} to help reduce the damage you take and the need for healing spells. Be aware of when the boss uses {spell:21049}, as a combination of this and {spell:15708} will result in you taking significantly more damage.",
+				    "Tanking this fight is straight forward, maintain threat and allow damage dealers to focus Gorosh down. Use defensive cooldowns when you are affected by {spell:15708} to help reduce the damage you take and the need for healing spells. Be aware of when the boss uses {spell:21049}, as a combination of this and {spell:15708} will result in you taking significantly more damage.",
 				}
 			},
 			{
 				npc = 9028,
 				{
 					role = DAMAGE,
-					"Allow for your tank to establish threat before you open up on damage. Ranged damage dealers should stand at mazimum range to avoid the effects of {spell:6524}.",
+					"Allow for your tank to establish threat before you open up on damage. Ranged damage dealers should stand at maximum range to avoid the effects of {spell:6524}.",
 				},
 				{
 					role = HEALER,
@@ -171,7 +171,7 @@ InstanceService.AddDungeon({
 				npc = 9029,
 				{
 					role = DAMAGE,
-					"When {npc:9029} uses {spell:7121}, caster damage dealers should hold off from casting to not waste mana. Priests should buff the group with {spell:1279}, and Warlocks should use their {spell:6232} to mitigate damage from {spell:28599}.",
+					"When Eviscerator uses {spell:7121}, caster damage dealers should hold off from casting to not waste mana. Priests should buff the group with {spell:1279}, and Warlocks should use their {spell:6232} to mitigate damage from {spell:28599}.",
 				},
 				{
 					role = HEALER,
@@ -179,18 +179,18 @@ InstanceService.AddDungeon({
 				},
 				{
 					role = TANK,
-					"This fight is simple, focus your damage on {npc:9029} and maintain threat.",
+					"This fight is simple, focus your damage on Eviscerator and maintain threat.",
 				}
 			},
 			{
 				npc = 9030,
 				{
 					role = DAMAGE,
-					"Once your tank has established threat you can begin your damage rotation, keep a distance from {npc:9030} to avoid being hit by {spell:26192}. Be aware of who has been targeted by {spell:14621}, and {spell:21076} it if your calass can do so.",
+					"Once your tank has established threat you can begin your damage rotation, keep a distance from Ok'thor to avoid being hit by {spell:26192}. Be aware of who has been targeted by {spell:14621}, and {spell:21076} it if your calass can do so.",
 				},
 				{
 					role = HEALER,
-					"Melee damage dealers, the tank, and anyone standing too close to {npc:9030} will be hit by {spell:26192}. Top everyone off after this goes out to avoid unnecessary deaths. Be aware of who is affected by {spell:14621}, and if your class can, be quick to {spell:21076} the target.",
+					"Melee damage dealers, the tank, and anyone standing too close to Ok'thor will be hit by {spell:26192}. Top everyone off after this goes out to avoid unnecessary deaths. Be aware of who is affected by {spell:14621}, and if your class can, be quick to {spell:21076} the target.",
 				},
 				{
 					role = TANK,
@@ -209,7 +209,7 @@ InstanceService.AddDungeon({
 				},
 				{
 					role = TANK,
-					"Engage {npc:9031} in the center of the room, and focus damage while maintaining threat.",
+					"Engage Anub'shiah in the center of the room, and focus damage while maintaining threat.",
 				}
 			},
 			{
@@ -224,7 +224,7 @@ InstanceService.AddDungeon({
 				},
 				{
 					role = TANK,
-					"Engage {npc:9032} as it skitters out to the arena floor, and maintain threat on the boss throughout the encounter.",
+					"Engage Hedrum as it skitters out to the arena floor, and maintain threat on the boss throughout the encounter.",
 				}
 			},
 		},

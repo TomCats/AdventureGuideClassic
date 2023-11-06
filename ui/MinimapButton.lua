@@ -21,7 +21,7 @@ function MinimapButton.Init()
 				GameTooltip:SetOwner(this, "ANCHOR_NONE")
 				GameTooltip:SetPoint("TOPRIGHT", this, "BOTTOMRIGHT", 0, 0)
 				--todo: Localize
-				GameTooltip:AddLine("AdventureGuide Classic")
+				GameTooltip:AddLine("Adventure Guide")
 				local bindingKey = GetBindingKey("TOGGLE_ADVENTUREGUIDECLASSIC")
 				--todo: Localize
 				if (bindingKey) then
