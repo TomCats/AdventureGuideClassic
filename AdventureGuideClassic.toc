@@ -3,9 +3,9 @@
 # Programming by: TomCat / TomCat's Gaming
 
 ## Interface: 11403
-## Title: AdventureGuide Classic
-## Version: 1.0.01
-## Notes: Version: 1.0.01
+## Title: AdventureGuideClassic
+## Version: 1.0.1
+## Notes: Version: 1.0.1
 ## DefaultState: enabled
 ## SavedVariables: AdventureGuideClassic_Account
 
