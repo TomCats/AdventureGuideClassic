@@ -24,18 +24,18 @@ InstanceService.AddDungeon({
 			"Interrogator Vishas is a sadistic member of the Scarlet Crusade known for his brutal methods of extracting information from prisoners. He plays a key role within the Scarlet Monastery, using his dark techniques to interrogate and torment those captured by the Crusade. Vishas's presence in the Monastery highlights the ruthless and fanatical nature of the Scarlet Crusade as they seek to eradicate all perceived threats.",
 			"Vishas's reputation for cruelty and his position as an enforcer of the Scarlet Crusade's ideology make him a fearsome adversary for those who intrude upon the Monastery. His actions serve as a reminder of the depths to which the Crusade is willing to go in their quest to purge the land of perceived heresy.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Interrogator Vishas is the first boss you will encounter in Scarlet Monastery Graveyard. Vishas is accompanied by several other members of the Scarlet Crusade that need to be defeated first before engaging him.",
 			{
 				role = DAMAGE,
-				"",
+				"This fight is a simple encounter, you should do as much damage as possible while watching your threat. Damage dealers should focus on killing the adds before engaging Interrogator Vishas.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus healing on your tank, but be ready to quickly heal any damage dealer that pulls aggro.",
 			},
 			{
 				role = TANK,
-				"",
+				"Use area of effect abilities to generate threat on all the adds that accompany Interrogator Vishas. Mark adds with Skull and Cross and prioritize threat on those targets.",
 			}
 		},
 		abilities = {

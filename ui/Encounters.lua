@@ -9,6 +9,7 @@ select(2, ...).SetupGlobalFacade()
 local component = UI.CreateComponent("Encounters")
 
 local encountersScrollBox
+local selectedButton
 
 function component.Init(components)
 	local info = EncounterJournal.encounter.info

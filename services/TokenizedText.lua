@@ -10,7 +10,7 @@ local handlers = {
 	--todo: replace with real spell/npc link colors
 	["spell"] = function(data)
 		local spellName = GetSpellInfo(data)
-		return "|CFFFF0000|Hspell:" .. data .. "|h[" .. spellName .. "]|h|r"
+		return "|CFF0000FF|Hspell:" .. data .. "|h[" .. spellName .. "]|h|r"
 	end,
 	["npc"] = function(data)
 		local npcName = NPCService.GetName(data) or "..."
