@@ -87,7 +87,7 @@ InstanceService.AddDungeon({
 			},
 			{
 				role = HEALER,
-				"The healer should wait to use any spells until the tank has managed to establish some threat among the adds and the boss. Early healing aggro will result in a wipe if the adds are attracted to the healer. Focus on the tank, but be aware that the rest of the group may take damage from adds and {spell:} Fire Nova.",
+				"The healer should wait to use any spells until the tank has managed to establish some threat among the adds and the boss. Early healing aggro will result in a wipe if the adds are attracted to the healer. Focus on the tank, but be aware that the rest of the group may take damage from adds and {spell:12470}.",
 			},
 			{
 				role = TANK,
