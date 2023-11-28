@@ -24,7 +24,7 @@ InstanceService.AddDungeon({
 			"Tuten'kash is a grotesque and ancient crypt fiend that has taken residence deep within Razorfen Downs. Its malevolent presence and insatiable appetite for flesh have corrupted the once-sacred crypts. Tuten'kash's existence in Razorfen Downs serves as a chilling testament to the necromantic forces that have twisted the crypts into a nightmarish realm.",
 			"Tuten'kash's monstrous form and its relentless hunger for the living make it a formidable adversary for those who venture into Razorfen Downs. Its role highlights the unnatural and profane transformation that has befallen the crypts.",
 			{ heading = "Overview" },
-			"Summon the first boss in Razorfen Downs by ringing the gong in Tuten'kash's chamober. The first two times the gong is rang, waves of spiders adds will ceom into the room from either side. The third time you rin the gong, Tuten'kash is summoned. Killing Tuten'kash is straightforward, and many groups may not need to worry about dispelling the {spell:} Virulent Posiion or decuring {spell:} Curse of Tuten'kash.",
+			"Summon the first boss in Razorfen Downs by ringing the gong in Tuten'kash's chamober. The first two times the gong is rang, waves of spiders adds will ceom into the room from either side. The third time you rin the gong, Tuten'kash is summoned. Killing Tuten'kash is straightforward, and many groups may not need to worry about dispelling the {spell:12254} or decuring {spell:12255}.",
 			{
 				role = DAMAGE,
 				"Stay behind Tuten'kash to avoid {spell:12252}, and Mages or Druids decurse {spell:12255} from your healers or caster damage dealers as necessary.",
