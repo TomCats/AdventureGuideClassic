@@ -83,15 +83,15 @@ InstanceService.AddDungeon({
 			"Death Speaker Jargba is the thid boss you will encounter in Razorfen Kraul. Jargba is accompanied by a Death's Head Acolyte and a Razorfen Groundshaker.",
 			{
 				role = DAMAGE,
-				"Defeat the Death's Head Acolyte first, then the Razorfen Groundshaker, and finally Jargba himself. Interrupt the Death's Head Acolyte's {spell:} Mana Burn cast.",
+				"Defeat the Death's Head Acolyte first, then the Razorfen Groundshaker, and finally Jargba himself. Interrupt the Death's Head Acolyte's {spell:10876} cast.",
 			},
 			{
 				role = HEALER,
-				"STay far away from the Razorfen Groundshaker in order to avoid his area of effect sun. Stay for away from Death Speaker Jargba in order to avoid being targeted by his {spell:} Dominate Mind ability. Priest and Shaman healers can use {spell:} Dispel Magic and {spell:} Purge respectively to dispoepel Jargba's {spell:} Dominate Mind.",
+				"Stay far away from the Razorfen Groundshaker in order to avoid his area of effect sun. Stay for away from Death Speaker Jargba in order to avoid being targeted by his {spell:14515} ability. Priest and Shaman healers can use {spell:527} and {spell:370} respectively to dispel Jargba's {spell:14515}.",
 			},
 			{
 				role = TANK,
-				"Let your damage dealers deal with the Death's Head Acolyte while you build threat on the Razorfen Groundshaker and Jargba himself. Keep the Razorfen Groundshaker and Jargba himself away from your healer, so they cannot be affected by their stun and mind control abilities. Jargba will spam his {spell:} Shadow Bolt ability if nobody is within his melee range, causing him to deal a lot more damage. So make sure you're always close to him.",
+				"Let your damage dealers deal with the Death's Head Acolyte while you build threat on the Razorfen Groundshaker and Jargba himself. Keep the Razorfen Groundshaker and Jargba himself away from your healer, so they cannot be affected by their stun and mind control abilities. Jargba will spam his {spell:9613} Shadow Bolt ability if nobody is within his melee range, causing him to deal a lot more damage. So make sure you're always close to him.",
 			}
 		},
 		abilities = {
@@ -111,21 +111,15 @@ InstanceService.AddDungeon({
 			"Overlord Ramtusk is the fourth boss you will encounter in Razorfen Kraul. Ramtusk is accompanied by two Razorfen Spearhides.",
 			{
 				role = DAMAGE,
-				"",
-
-				--If your group is using crowd control on the adds, ignore them and damage Ramtusk. If your group is not crowd controlling the adds, focus them down first, starting with the mob that was marked skull. Pay close attention to your threat, as your tank might struggle to hold aggro on 3 different mobs. Melee DPS should move away from the Spearhides while they are doing their spinning animation, signifying that they are about to cast their powerful [Whirling Barrage] AoE spell.
+				"If your groups is using crowd control on the adds, ignore them and damage Ramtusk. If your group is not crowd controlling the adds, focus them down first, starting with the mob that was marked with skull. Pay close attention to your threat, as your tank might struggle to hold aggro on three different mobs. Melee damage dealers should move away from the spearhides while they are doing their spinning ainimation, signifying that they are about to cost their powerful {spell:8259} area of effect spell.",
 			},
 			{
 				role = HEALER,
-				"",
-
-				--Wait a few moments before you cast your healing spells when the fight begins, or you may pull aggro. There is a high likelihood that several of your DPS players will be hit by the Spearhides' [Whirling Barrage] AoE ability. It deals a moderate amount of damage, so you will need to be quick with healing them in that event. Make sure you're far away from the Spearhides, so you don't get hit by the [Whirling Barrage] yourself - it can kill you very easily.
+				"Wait a few moments before you cast your healing spells when the fight begins, or you may pull aggro. There is a high likelihood that several of your damage dealers will be hit by the Spearhides' {spell:8259} area of effect ability. It deals a moderate amount of damage, so you will need to be quick with healing them in that event. Make sure you're for away from the Spearhides, so you don't get hit by the {spell:8259} yourself - it can take you down very easily.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--Make sure you have marked the mobs so everyone in your group knows which one to attack, which one to crowd control, etc. Use your AoE abilities to hold threat on secondary targets while your group kills the primary target, which should be marked skull. Pull the Razorfen Spearhides away from your healer and casters, as their [Whirling Barrage] AoE ability deals a lot of damage.
+				"Make sure you have marked the mobs so everyone in your knows which one to attack, which one to crowd control, etc. Use your area of effect abilities to hold threat on secondary targets while your group kills the primary target, which should be marked skull. Pull the Razorfen Spearhides away from your healer and casters, as their {spell:8259} area of effect ability deals a lot of damage.",
 			}
 		},
 		abilities = {
@@ -142,26 +136,18 @@ InstanceService.AddDungeon({
 			"Agathelos the Raging is a massive and enraged quillboar who has taken up residence within the depths of Razorfen Kraul. His uncontrollable fury and overwhelming strength have turned the quillboar lair into a chaotic battleground. Agathelos's presence within Razorfen Kraul reflects the primal and destructive forces that lurk in the quillboar tunnels.",
 			"Agathelos's berserk rage and his relentless attacks make him a formidable and unpredictable foe for those who venture into Razorfen Kraul. His existence serves as a testament to the untamed and volatile nature of the quillboar.",
 			{ heading = "Overview" },
-			"information goes here..",
-
-			--Agathelos the Raging is the fifth boss you will encounter in Razorfen Kraul. He is a level 33 elite Boar. Before you can fight him, you must first defeat the mobs that are keeping him sealed: a Death's Head Seer and 2 Ward Guardians.
+			"Agathelos the Raging is the fifth boss you will encounter in Razorfen Kraul. Before you can fight Agathelos, you must first defeat the mobs that are keeping him sealed: a Death's Head Seer and two Ward Guardians.",
 			{
 				role = DAMAGE,
-				"",
-
-				--He deals a very high amount of damage, so be very careful to not overtake your tank on threat. Be sure to stay in melee range of Agathelos even if you are a caster to avoid his [Rushing Charge] ability. If he seems to randomly die before his HP reaches 0, he is feigning death. You need to keep dealing damage to him, or else he will come back stronger.
+				"Agathelos deals a very high amount of damage, so be very careful to not overtake your tank on threat. Be sure to stay in melee range of Agathelos even if you are a caster to avoid {spell:8260} ability. If he seems to randomly die before his health points reaches 0, he is feigning death. You need to keep dealing damage to him, or else he will come back stronger.",
 			},
 			{
 				role = HEALER,
-				"",
-
-				--Agathelos deals a very high amount of damage, so keeping the tank alive will be your number 1 priority. Only heal other players if the tank is looking healthy. Be sure to stay in melee range of Agathelos to avoid his [Rushing Charge] ability.
+				"Agathelos deals a very high amount of damage, so keeping the tank alive will be your number one priority. Only heal other players if the tank is looking healthy. Be sure to stay in melee range of Agathelos to avoid his {spell:8260} ability.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--Be prepared to use a potion or healthstone if you ever find yourself dropping low on health. Agathelos does a very high amount of damage, and an unlucky crit can kill you even at relatively high health. Be sure to stay in melee range of Agathelos to avoid his [Rushing Charge] ability. If he seems to randomly die before his HP reaches 0, he is feigning death. You need to keep dealing damage to him, or else he will come back stronger.
+				"Be prepared to use a potion or healthstone if you ever find yourself dropping low on health. Agathelos does a very high amount of damage, and an unlucky crit can kill you even at relatively high health. Be sure to stay in melee range of Agathelos avoid his {spell:8260} ability. If Agathelos seems to randomly die before his health points reaches 0, he is feigning death. You need to keep dealing damage to him, or else he will come back stronger.",
 			}
 		},
 		abilities = {
@@ -178,26 +164,18 @@ InstanceService.AddDungeon({
 			"Charlga Razorflank is a cunning and ruthless quillboar matriarch who holds sway over the quillboar clans within Razorfen Kraul. Her mastery of druidic magic and her command over the Thornweavers have corrupted the lair. Charlga's presence in Razorfen Kraul signifies the twisted and unnatural influences that have infested the quillboar tunnels.",
 			"Charlga's control over druidic magic and her role as the matriarch highlight the malevolent forces at play in Razorfen Kraul. She serves as a grim reminder of the dangers posed by those who misuse nature's gifts and twist them for their own ends.",
 			{ heading = "Overview" },
-			"information goes here..",
-
-			--Charlga Razorflank is the sixth and final boss you will encounter in Razorfen Kraul. She is a level 33 elite Quillboar priestess.
+			"Charlga Razorflank is the sixth and final boss you will encounter in Razorfen Kraul.",
 			{
 				role = DAMAGE,
-				"",
-
-				--Ranged DPS should stay far away from other players in the group to avoid chaining Charlga's [Chain Bolt]. Do not bother applying any magical debuffs or DoTs on Charlga. She will constantly dispel all of them with her [Purity] spell. She is invulnerable to all damage while [Purity] is active.
+				"Ranged damage dealers should stay far away from other players in the group to avoud chaining Charlga's {spell:}. Do not bother apply any magical debuggs or damage over time spells on Charlga. She will constantly dispel all of them with her {spell:8361} spell. Charlga is invulnerable to all damage while {spell:8361} is active.",
 			},
 			{
 				role = HEALER,
-				"",
-
-				--Stand away from other players to avoid getting hit by her [Chain Bolt] ability. Your melee DPS will need healing throughout this fight, as they will likely get hit by her [Chain Bolt] repeatedly.
+				"Stand away from other players to avoid getting hit by her {spell:8292} Chain Bolt ability. Your melee damage dealers will need healing throughout this fight, as they will likely get hit by her {spell:8292} repeatedly.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--Tank Charlga in the middle of the ramp outside her hut. She teleports back to her hut occasionally, so you will have to be quick with grabbing her again.
+				"Tank Charlga in the middle of the ramp outside her but. She teleports back to her hut occasionally, so you will have to be quick with grabbing her again.",
 			}
 		},
 		abilities = {

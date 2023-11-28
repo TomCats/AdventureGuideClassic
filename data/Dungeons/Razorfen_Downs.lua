@@ -27,15 +27,15 @@ InstanceService.AddDungeon({
 			"Summon the first boss in Razorfen Downs by ringing the gong in Tuten'kash's chamober. The first two times the gong is rang, waves of spiders adds will ceom into the room from either side. The third time you rin the gong, Tuten'kash is summoned. Killing Tuten'kash is straightforward, and many groups may not need to worry about dispelling the {spell:} Virulent Posiion or decuring {spell:} Curse of Tuten'kash.",
 			{
 				role = DAMAGE,
-				"Stay behind Tuten'kash to avoid {spell:} Web Spray, and Mages or Druids decurse {spell:} Curse of Tuten'kash from your healers or caster damage dealers as necessary.",
+				"Stay behind Tuten'kash to avoid {spell:12252}, and Mages or Druids decurse {spell:12255} from your healers or caster damage dealers as necessary.",
 			},
 			{
 				role = HEALER,
-				"Stay behind Tuten'kash and focus your healing spells on the tank. Druids decurse {spell:} Curse of Tuten'kash as necessary.",
+				"Stay behind Tuten'kash and focus your healing spells on the tank. Druids decurse {spell:12255} as necessary.",
 			},
 			{
 				role = TANK,
-				"Tank needs to pick up Tuten'kash and face him away from the group to avoid {spell:} Web Spray.",
+				"Tank needs to pick up Tuten'kash and face him away from the group to avoid {spell:12252}.",
 			}
 		},
 		abilities = {
@@ -91,7 +91,7 @@ InstanceService.AddDungeon({
 			},
 			{
 				role = TANK,
-				"The tank should use an area of effect ability to generate some inital threat on the non elite adds, but focus on establishing threat on Mordresh. Interrupt {spell:} Fireball when possible.",
+				"The tank should use an area of effect ability to generate some inital threat on the non elite adds, but focus on establishing threat on Mordresh. Interrupt {spell:12466} when possible.",
 			}
 		},
 		abilities = {
@@ -108,18 +108,18 @@ InstanceService.AddDungeon({
 			"Ragglesnout is a massive and ravenous boar that roams the desecrated halls of Razorfen Downs. Its immense size and insatiable appetite have turned the crypts into a treacherous labyrinth. Ragglesnout's presence within Razorfen Downs reflects the chaotic and dangerous wildlife that now inhabits the crypts.",
 			"Ragglesnout's voracious appetite and its deadly charges make it a formidable and ever-moving obstacle for those who navigate Razorfen Downs. Its existence is a testament to the untamed and perilous nature of the crypts' ecosystem.",
 			{ heading = "Overview" },
-			"Ragglesnout is a rare Quillboar mob who casts shadow spells, heal, and mind controls. This fight requires other members to fill in healing or picking up Ragglesnout if your tank or healer become affected by {spell:} Dominate Mind.",
+			"Ragglesnout is a rare Quillboar mob who casts shadow spells, heal, and mind controls. This fight requires other members to fill in healing or picking up Ragglesnout if your tank or healer become affected by {spell:7645}.",
 			{
 				role = DAMAGE,
-				"During this encounter, interrupt {spell:} Shadow Bolt and {spell:} Heal while maximizing your damage output as well. If your healer or tank are under {spell:} Dominate Mind, fill in and attempt to crowd control the mind controlled party members.",
+				"During this encounter, interrupt {spell:11659} and {spell:12039} while maximizing your damage output as well. If your healer or tank are under {spell:7645}, fill in and attempt to crowd control the mind controlled party members.",
 			},
 			{
 				role = HEALER,
-				"Focus on healing the tank, and using heal over time and bubble effects to prevent damage done to other players during {spell:} Dominate Mind.",
+				"Focus on healing the tank, and using heal over time and bubble effects to prevent damage done to other players during {spell:7645}.",
 			},
 			{
 				role = TANK,
-				"Tank Ragglesnout facing away from the group, and rotate interrupts with your group on {spell:} Heal and {spell:} Shadow Bolt.",
+				"Tank Ragglesnout facing away from the group, and rotate interrupts with your group on {spell:12039} and {spell:11659}.",
 			}
 		},
 		abilities = {
@@ -139,11 +139,11 @@ InstanceService.AddDungeon({
 			"This abomination patrols below The Spiral of Thorns. The first is a simple encounter.",
 			{
 				role = DAMAGE,
-				"Melee should stay behind Glutton, and all damage dealers need to avoid {spell:} Disease Cloud ability.",
+				"Melee should stay behind Glutton, and all damage dealers need to avoid {spell:12627} ability.",
 			},
 			{
 				role = HEALER,
-				"Focus on healing the tank during the enrage phase, and avoid {spell:} Disease Cloud.",
+				"Focus on healing the tank during the enrage phase, and avoid {spell:12627}.",
 			},
 			{
 				role = TANK,
@@ -167,7 +167,7 @@ InstanceService.AddDungeon({
 			"Amennar is a servant to the Lich King, and the final boss of Razorfen Downs. Amnennar casts frost spells and a knock back. The group should stack up behind Amnennar while the tank faces him towards the tent where he spawns.",
 			{
 				role = DAMAGE,
-				"The damage dealers in this fight should stack up to reduce to effects of {spell:} Frost Nova. When Frost Spectres are summoned, avoud them while ranged focuses them down and then switch back to Amnennar.",
+				"The damage dealers in this fight should stack up to reduce to effects of {spell:15531}. When Frost Spectres are summoned, avoud them while ranged focuses them down and then switch back to Amnennar.",
 			},
 			{
 				role = HEALER,
@@ -175,7 +175,7 @@ InstanceService.AddDungeon({
 			},
 			{
 				role = TANK,
-				"The tank simply needs to face the boss away from the group to avoid {spell:} Amnennar's Wrath.",
+				"The tank simply needs to face the boss away from the group to avoid {spell:13009}.",
 			}
 		},
 		abilities = {
