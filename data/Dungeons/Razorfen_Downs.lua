@@ -83,7 +83,7 @@ InstanceService.AddDungeon({
 			"Mordresh is a caster skeleton boss which you encounter on top of a pile of bones, surrounded by non-elite skeletons. Groups should use their multi target abilities to take down the non elite mobs then focus damage on Mordresh. He does not have very high armor, so this fight is easy for a balanced group composition.",
 			{
 				role = DAMAGE,
-				"Starting the fight, the damage dealers should focus on using area of effect spells and abilities to take care of the adds quickly - as long as the adds are dealt with quickly, this fight will be easy for damage dealers to take down Mordresh. Once focusing on the boss, use interrupts to prevent {spell:} Fireball.",
+				"Starting the fight, the damage dealers should focus on using area of effect spells and abilities to take care of the adds quickly - as long as the adds are dealt with quickly, this fight will be easy for damage dealers to take down Mordresh. Once focusing on the boss, use interrupts to prevent {spell:12466}.",
 			},
 			{
 				role = HEALER,
