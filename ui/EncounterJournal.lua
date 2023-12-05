@@ -19,8 +19,46 @@ function component.Init()
     EncounterJournal:SetSize(800, 496)
     EncounterJournal:EnableMouse(true)
     EncounterJournal:SetToplevel(true)
+
+    -- Create version icon
+    local emptyRingTexture = "Interface\\Common\\portrait-ring-withbg"
+    local helpTexture = "Interface\\Common\\help-i.blp"
+
+    EncounterJournal.versionIcon = CreateFrame("Frame", addonName .. "_VersionIcon", EncounterJournal)
+    EncounterJournal.versionIcon:SetSize(35, 35)
+    EncounterJournal.versionIcon:SetPoint("LEFT", EncounterJournal.portrait, "RIGHT", -5, 12)
+    EncounterJournal.versionIcon.emptyRingTexture = EncounterJournal.versionIcon:CreateTexture()
+    EncounterJournal.versionIcon.emptyRingTexture:SetAllPoints(EncounterJournal.versionIcon)
+    EncounterJournal.versionIcon.emptyRingTexture:SetTexture(emptyRingTexture)
+    EncounterJournal.versionIcon.helpTexture = EncounterJournal.versionIcon:CreateTexture(nil, "ARTWORK")
+    EncounterJournal.versionIcon.helpTexture:SetAllPoints(EncounterJournal.versionIcon)
+    EncounterJournal.versionIcon.helpTexture:SetTexture(helpTexture)
+    EncounterJournal.versionIcon.helpTexture:SetBlendMode("ADD")
+    EncounterJournal.versionText = EncounterJournal:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    EncounterJournal.versionText:SetPoint("LEFT", EncounterJournal.versionIcon, "RIGHT", 5, 0)
+    EncounterJournal.versionText:SetText("v" .. version)
+    EncounterJournal.versionText:Hide()
+    EncounterJournal.versionIcon:SetScript("OnEnter", function (self)
+        -- EncounterJournal.versionText:Show()
+        local name = UnitName("player")
+        local class = select(2,UnitClass("player"))
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -20, -22)
+        -- GameTooltip:AddLine("Name: " .. name,color.r,color.g,color.b)
+        -- GameTooltip:AddLine("Version: v" .. version,color.r,color.g,color.b)
+        GameTooltip:AddLine("Name: |c"..RAID_CLASS_COLORS[class].colorStr..name.."|r",.65,.85,1)
+        GameTooltip:AddLine("Version: |c"..RAID_CLASS_COLORS[class].colorStr..version.."|r",.65,.85,1)
+        GameTooltip:AddLine("Release: |c"..RAID_CLASS_COLORS[class].colorStr.."Development".."|r",.65,.85,1)
+        GameTooltip:Show()
+    end)
+
+    EncounterJournal.versionIcon:SetScript("OnLeave", function(self)
+        -- EncounterJournal.versionText:Hide()
+        GameTooltip:Hide()
+    end)
+
+
     EncounterJournal.title = _G[addonName .. "_EncounterJournalTitleText"]
-    EncounterJournal.title:SetText("Adventure Guide v" .. version)
+    EncounterJournal.title:SetText("Adventure Guide")
     EncounterJournal.portrait = _G[addonName .. "_EncounterJournalPortrait"]
     EncounterJournal.portrait:SetTexture("Interface\\EncounterJournal\\UI-EJ-PortraitIcon")
     local mask = EncounterJournal:CreateMaskTexture()
