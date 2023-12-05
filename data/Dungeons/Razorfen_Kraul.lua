@@ -167,11 +167,11 @@ InstanceService.AddDungeon({
 			"Charlga Razorflank is the sixth and final boss you will encounter in Razorfen Kraul.",
 			{
 				role = DAMAGE,
-				"Ranged damage dealers should stay far away from other players in the group to avoud chaining Charlga's {spell:}. Do not bother apply any magical debuggs or damage over time spells on Charlga. She will constantly dispel all of them with her {spell:8361} spell. Charlga is invulnerable to all damage while {spell:8361} is active.",
+				"Ranged damage dealers should stay far away from other players in the group to avoid chaining Charlga's {spell:8292}. Do not bother apply any magical debuggs or damage over time spells on Charlga. She will constantly dispel all of them with her {spell:8361} spell. Charlga is invulnerable to all damage while {spell:8361} is active.",
 			},
 			{
 				role = HEALER,
-				"Stand away from other players to avoid getting hit by her {spell:8292} Chain Bolt ability. Your melee damage dealers will need healing throughout this fight, as they will likely get hit by her {spell:8292} repeatedly.",
+				"Stand away from other players to avoid getting hit by her {spell:8292} ability. Your melee damage dealers will need healing throughout this fight, as they will likely get hit by her {spell:8292} repeatedly.",
 			},
 			{
 				role = TANK,

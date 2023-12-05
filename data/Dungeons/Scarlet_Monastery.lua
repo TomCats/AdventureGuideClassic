@@ -52,18 +52,24 @@ InstanceService.AddDungeon({
 			"Bloodmage Thalnos is a formidable spellcaster within the Scarlet Crusade, specializing in the destructive power of fire magic. He serves as a key member of the Crusade within the Scarlet Monastery, using his fiery abilities to incinerate any who oppose the order. Thalnos's presence in the Monastery symbolizes the fanatical devotion of the Scarlet Crusade and their willingness to employ dark magic to further their cause.",
 			"Thalnos's mastery of fire magic and his role as a prominent member of the Scarlet Crusade's leadership make him a dangerous foe for those who venture into the Monastery. His existence serves as a reminder of the formidable magical forces that support the Crusade's mission.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Bloodmage Thalnos is the last boss of Scarlet Monastery Graveyard. He can be found at the very bottom of the crypt, he is also not accompanied by any other adds, but in order to reach him you will have to clear the entire crypt.",
 			{
 				role = DAMAGE,
 				"",
+
+				--This fight is a tank and spank so you should do as much damage as possible while watching your threat. Bloodmage Thalnos casts
 			},
 			{
 				role = HEALER,
 				"",
+
+				--Be sure to stand as far away from the boss as possible to avoid getting hit by his
 			},
 			{
 				role = TANK,
 				"",
+
+				--This fight is a tank and spank so you should focus on doing as much threat as possible on the boss, so the DPS can go all-out. Bloodmage Thalnos casts
 			}
 		},
 		abilities = {
