@@ -21,53 +21,23 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Rethilgore is a wretched worgen who has succumbed to the dark curse of Shadowfang Keep. Once a victim of the relentless curse that plagues the keep's inhabitants, Rethilgore has become a twisted and malevolent creature. His presence within the accursed keep reflects the enduring influence of the curse and the horrors that await those who venture into its depths.",
-			"Rethilgore's transformation into a monstrous worgen and his role as a guardian of Shadowfang Keep make him a formidable adversary for intruders. His existence serves as a chilling reminder of the dreadful fate that awaits those who fall victim to the curse.",
+			"Rethilgore, the first boss in Shadowfang Keep, is a formidable worgen accompanied by elite adds. His transformation into a worgen guardian highlights the curse's impact within the keep.",
 			{ heading = "Overview" },
-			"information goes here..",
 			{
 				role = DAMAGE,
-				"",
+				"Focus on eliminating adds before targeting Rethilgore. Manage resources effectively, especially under {spell:7127}, which can impair damage dealing.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Maintain the party's health, particularly the tank, against Rethilgore's high damage. The {spell:7127} debuff requires careful mana management and healing prioritization.",
 			},
 			{
 				role = TANK,
-				"",
+				"Hold aggro on Rethilgore and his adds. Watch for {spell:7295}, which can cause significant damage. Managing the debuff {spell:7127} is key to controlling the encounter's pace.",
 			}
 		},
 		abilities = {
-			
-		}
-	},
-	{
-		name = "Fel Steed / Shadow Charger",
-		encounterID = 3864,
-		portrait = I.UIEJBossFelSteed,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
-		npcs = { 2135, 12456, 12314 },
-		overview = {
-			"Fel Steed and Shadow Charger are dark and spectral steeds that serve as loyal companions to Baron Silverlaine, the lord of Shadowfang Keep. These ghostly steeds have been imbued with unholy power and are manifestations of the dark magic that permeates the keep. Their presence within the keep symbolizes the twisted and supernatural forces at work within its walls.",
-			"Fel Steed and Shadow Charger's spectral nature and their role as loyal companions to Baron Silverlaine make them eerie and formidable adversaries for intruders. Their existence serves as a haunting testament to the supernatural horrors that await those who challenge the denizens of the keep.",
-			{ heading = "Overview" },
-			"information goes here..",
-			{
-				role = DAMAGE,
-				"",
-			},
-			{
-				role = HEALER,
-				"",
-			},
-			{
-				role = TANK,
-				"",
-			}
-		},
-		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -77,25 +47,23 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Razorclaw the Butcher is a monstrous and sadistic worgen who revels in the pain and suffering of others. He serves as one of the ruthless enforcers within Shadowfang Keep, responsible for tormenting prisoners and disposing of intruders. Razorclaw's presence within the keep reflects the cruelty and malevolence that define its inhabitants.",
-			"Razorclaw's savage nature and his role as an enforcer make him a fearsome adversary for anyone who ventures into Shadowfang Keep. His existence serves as a chilling reminder of the torment and brutality that await those who cross the keep's threshold.",
-			{ heading = "Overview" },
-			"information goes here..",
+			"Razorclaw the Butcher, a sadistic worgen and the second boss of Shadowfang Keep, is known for his cruelty. Dealing with his adds is crucial before focusing on him.",
+			{ heading = "Strategy" },
 			{
 				role = DAMAGE,
-				"",
+				"Prioritize eliminating adds before attacking Razorclaw. Maintain damage output while managing threat levels.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Keep the tank healed, especially through Razorclaw's constant attacks. Stay alert to the needs of the party during the encounter.",
 			},
 			{
 				role = TANK,
-				"",
+				"Focus on holding Razorclaw's aggro and managing adds. Use {spell:7485} strategically to maintain control of the encounter.",
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -105,27 +73,26 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Baron Silverlaine is the lord and master of Shadowfang Keep, a once-noble figure who has been consumed by the darkness that plagues the keep. He rules over the cursed fortress with an iron fist, commanding the spectral and wretched creatures within. Baron Silverlaine's presence within the keep reflects the tragic transformation of a once-noble soul into a malevolent force.",
-			"Baron Silverlaine's mastery of dark magic and his role as the ruler of Shadowfang Keep make him a formidable and tragic adversary for those who dare to challenge him. His existence serves as a haunting testament to the corruption and despair that define the cursed keep.",
+			"Baron Silverlaine, the ruler of Shadowfang Keep and its third boss, commands spectral forces and is known for his dark magic. Clearing the adds in his room is crucial before engaging him.",
 			{ heading = "Overview" },
-			"information goes here..",
 			{
 				role = DAMAGE,
-				"",
+				"Prioritize high damage output while managing threat. Interrupt and decurse Baron's {spell:7068} to mitigate its effects.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus on healing, especially the tank. {spell:7068} is a critical ability to watch out for, as it reduces healing received and should be decursed.",
 			},
 			{
 				role = TANK,
-				"",
+				"Maintain high threat on Baron and manage the adds. Interrupt {spell:7068} to reduce its healing reduction effect, ensuring better survivability.",
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
+	
 	{
 		name = "Commander Springvale",
 		encounterID = 4278,
@@ -133,25 +100,23 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Commander Springvale is a loyal servant of Baron Silverlaine and a formidable worgen warrior within Shadowfang Keep. He stands as a sentinel and protector of the keep, ready to defend it against intruders. Commander Springvale's presence reflects the unwavering loyalty of the keep's inhabitants to their cursed lord.",
-			"Commander Springvale's martial prowess and his role as a guardian make him a formidable adversary for those who venture into Shadowfang Keep. His existence serves as a reminder of the fierce defenders who stand ready to protect their dark lord.",
+			"Commander Springvale, the fourth boss in Shadowfang Keep, is a formidable worgen warrior accompanied by adds, guarding the keep with vigilance.",
 			{ heading = "Overview" },
-			"information goes here..",
 			{
 				role = DAMAGE,
-				"",
+				"Focus on quickly eliminating the adds before engaging Springvale. Watch out for {spell:7074} from the guardsmen, which can silence players.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Manage your mana carefully while keeping the party alive. Be cautious of {spell:7074}, which can be particularly dangerous during the fight.",
 			},
 			{
 				role = TANK,
-				"",
+				"Pull small groups of enemies to manage the room before facing Springvale. Be mindful of the Wailing Guardsman's {spell:7074}. At 30% health, Springvale uses {spell:13874} followed by {spell:1026}, which should be interrupted while he's under the effect of {spell:13874}.",
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -161,27 +126,26 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Odo the Blindwatcher is a blind and enigmatic figure who serves the denizens of Shadowfang Keep as a seer and mystic. Despite his blindness, he possesses an uncanny ability to sense and perceive intruders. Odo's presence within the keep reflects the mystical and supernatural elements that are intertwined with its cursed halls.",
-			"Odo's mysterious powers and his role as a seer make him an enigmatic adversary for those who explore Shadowfang Keep. His existence serves as a reminder of the otherworldly forces that influence the keep's fate.",
-			{ heading = "Overview" },
-			"information goes here..",
+			"Odo the Blindwatcher, a seer and mystic, is the fifth boss in Shadowfang Keep. Accompanied by Vile Bats, he uses his supernatural senses to confront intruders.",
+			{ heading = "Strategy" },
 			{
 				role = DAMAGE,
-				"",
+				"Prioritize the Vile Bats before focusing on Odo. Save damage cooldowns for when Odo is below 50% health, as he gains more attack power with {spell:7481} during this phase.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus on sustaining the tank, especially as Odo's damage output increases. Manage your mana efficiently to handle the escalating damage in the later stages of the fight.",
 			},
 			{
 				role = TANK,
-				"",
+				"Maintain threat on both Odo and the Vile Bats. Be prepared for Odo's increasing attack power due to {spell:7481}, especially as his health drops below 50%.",
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
+	
 	{
 		name = "Fenrus the Devourer",
 		encounterID = 4274,
@@ -189,27 +153,26 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Fenrus the Devourer is a monstrous worgen known for his insatiable hunger and his role as a guardian of Shadowfang Keep. He is responsible for hunting down and consuming intruders who dare to enter the keep. Fenrus's presence reflects the savage and predatory nature of the worgen within the cursed fortress.",
-			"Fenrus's relentless hunger and his role as a guardian make him a fearsome adversary for anyone who ventures into Shadowfang Keep. His existence serves as a chilling reminder of the ravenous creatures that lurk within its shadows.",
+			"Fenrus the Devourer, a formidable worgen and the fifth boss of Shadowfang Keep, fiercely guards the entrance to Arugal's chambers.",
 			{ heading = "Overview" },
-			"information goes here..",
 			{
 				role = DAMAGE,
-				"",
+				"Focus on high damage output while managing threat. The encounter is straightforward, with Fenrus alone, making it primarily a damage test.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Prioritize healing the tank, as Fenrus can inflict significant damage. Manage your mana efficiently throughout the encounter.",
 			},
 			{
 				role = TANK,
-				"",
+				"Maintain high threat on Fenrus to allow damage dealers to focus their efforts. Use defensive cooldowns effectively to mitigate Fenrus's heavy attacks.",
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
+
 	{
 		name = "Wolf Master Nandos",
 		encounterID = 3927,
@@ -217,27 +180,26 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Wolf Master Nandos is a worgen who has embraced his lupine form and serves as a trainer and leader of the worgen packs within Shadowfang Keep. He commands these savage creatures with unwavering loyalty to Baron Silverlaine. Nandos's presence within the keep reflects the primal and bestial nature of its inhabitants.",
-			"Wolf Master Nandos's mastery over worgen packs and his role as a trainer make him a formidable adversary for those who challenge the keep's defenses. His existence serves as a reminder of the feral and relentless forces that protect Shadowfang Keep.",
+			"Wolf Master Nandos, the sixth boss in Shadowfang Keep, commands a pack of loyal worgen. Positioned before Arugal's chamber, he and his wolves fiercely defend the keep.",
 			{ heading = "Overview" },
-			"information goes here..",
 			{
 				role = DAMAGE,
-				"",
+				"Focus on AOE damage to handle Nandos and his wolves, being mindful of your threat level to avoid drawing aggro away from the tank.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Concentrate healing on the tank, especially when Nandos summons his pack at 80% health. Manage your mana effectively to sustain through the additional damage.",
 			},
 			{
 				role = TANK,
-				"",
+				"Maintain aggro on Nandos and his wolves, particularly after he summons additional wolves. Be prepared to quickly taunt them to protect your group.",
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
+
 	{
 		name = "Archmage Arugal",
 		encounterID = 4275,
@@ -245,25 +207,23 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Archmage Arugal is a powerful and twisted mage who is responsible for summoning worgen into the region of Silverpine Forest and ultimately cursing Shadowfang Keep. He became obsessed with the idea of creating a loyal army and inadvertently unleashed a terrible curse. Arugal's presence within the keep reflects the cataclysmic consequences of his reckless magic.",
-			"Archmage Arugal's mastery of arcane and summoning magic, as well as his role as the catalyst for the worgen curse, make him a formidable and tragic adversary for those who venture into Shadowfang Keep. His existence serves as a haunting reminder of the price of unchecked ambition and dark experimentation.",
+			"Archmage Arugal, the last boss of Shadowfang Keep, is notorious for unleashing the worgen curse. His arcane magic and summoning abilities pose significant challenges, including teleportation and mind control.",
 			{ heading = "Overview" },
-			"information goes here..",
 			{
 				role = DAMAGE,
-				"",
+				"Focus on high damage output, but beware of mind control. Arugal casts {spell:22709}, a high-damage shadow spell. During {spell:7621}, crowd control affected allies rather than attacking them.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Arugal's mind control and teleportation abilities demand efficient mana management. You can't dispel {spell:7621}, so prioritize healing for crowd-controlled allies.",
 			},
 			{
 				role = TANK,
-				"",
+				"Keep constant aggro on Arugal to manage his dangerous {spell:22709}. Utilize shadow resistance and avoid attacking allies under the effect of {spell:7621}, focusing on crowd control instead.",
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 })

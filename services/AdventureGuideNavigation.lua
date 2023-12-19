@@ -22,6 +22,10 @@ function AdventureGuideNavigationService.GetEncounter()
 	return encounter
 end
 
+function AdventureGuideNavigationService.GetEncounterName()
+    return encounter and encounter.name or "Unknown Encounter"
+end
+
 function AdventureGuideNavigationService.GetEncounterContent()
 	return encounter.overview or { }
 end

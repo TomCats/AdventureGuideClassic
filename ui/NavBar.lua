@@ -62,13 +62,13 @@ function component.SetEncounter(encounterID_)
 	encounterID = encounterID_
 end
 
-function component.Refresh()
+function component.Refresh(encounterName)
 	NavBar_Reset(component.frame)
 	if (instance) then
 		NavBar_AddButton(component.frame, {
 			name = instance.name,
 			OnClick = function()
-				components.EncounterFrame.ShowInstanceInfo(instance)
+				components.EncounterFrame.ShowInstanceInfo(instance) -- Causing Lua errors
 			end,
 			listFunc = nop
 		})
@@ -78,6 +78,13 @@ function component.Refresh()
 				listFunc = nop
 			})
 		end
+	if encounterName then
+		NavBar_AddButton(component.frame, {
+		name = encounterName,
+		OnClick = nop,
+		listFunc = nop
+		})
+	end
 	end
 end
 

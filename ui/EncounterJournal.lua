@@ -22,7 +22,8 @@ function component.Init()
 
     -- Create version icon
     local emptyRingTexture = "Interface\\Common\\portrait-ring-withbg"
-    local helpTexture = "Interface\\Common\\help-i.blp"
+    local helpTexture = "Interface\\Common\\help-i"
+    local highlightTexture = "Interface\\Common\\portrait-ring-withbg-highlight"
 
     EncounterJournal.versionIcon = CreateFrame("Frame", addonName .. "_VersionIcon", EncounterJournal)
     EncounterJournal.versionIcon:SetSize(35, 35)
@@ -40,11 +41,12 @@ function component.Init()
     EncounterJournal.versionText:Hide()
     EncounterJournal.versionIcon:SetScript("OnEnter", function (self)
         -- EncounterJournal.versionText:Show()
+        EncounterJournal.versionIcon.emptyRingTexture:SetAllPoints(EncounterJournal.versionIcon)
+        EncounterJournal.versionIcon.emptyRingTexture:SetTexture(highlightTexture)
         local name = UnitName("player")
         local class = select(2,UnitClass("player"))
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -20, -22)
-        -- GameTooltip:AddLine("Name: " .. name,color.r,color.g,color.b)
-        -- GameTooltip:AddLine("Version: v" .. version,color.r,color.g,color.b)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -15, -7)
+        GameTooltip:AddLine("Information")
         GameTooltip:AddLine("Name: |c"..RAID_CLASS_COLORS[class].colorStr..name.."|r",.65,.85,1)
         GameTooltip:AddLine("Version: |c"..RAID_CLASS_COLORS[class].colorStr..version.."|r",.65,.85,1)
         GameTooltip:AddLine("Release: |c"..RAID_CLASS_COLORS[class].colorStr.."Development".."|r",.65,.85,1)
@@ -53,6 +55,8 @@ function component.Init()
 
     EncounterJournal.versionIcon:SetScript("OnLeave", function(self)
         -- EncounterJournal.versionText:Hide()
+        EncounterJournal.versionIcon.emptyRingTexture:SetAllPoints(EncounterJournal.versionIcon)
+        EncounterJournal.versionIcon.emptyRingTexture:SetTexture(emptyRingTexture)
         GameTooltip:Hide()
     end)
 

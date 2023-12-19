@@ -53,6 +53,7 @@ function component.Init(components_)
 end
 
 function component.Show(instance)
+	EncounterJournal.encounter.info.encounterTitle:SetText("")
 	component.frame.title:SetText(instance.name)
 	component.frame.loreBG:SetTexture(instance.splash)
 	-- component.frame.infoButton:SetText(instance.info)
