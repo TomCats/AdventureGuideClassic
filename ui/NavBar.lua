@@ -7,10 +7,12 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("NavBar")
+local components
 
 local instance, encounterID
 
-function component.Init(components)
+function component.Init(components_)
+	components = components_
 	local navBar = CreateFrame("Frame", EncounterJournal:GetName() .. "NavBar", EncounterJournal, "NavBarTemplate")
 	component.frame = navBar
 	EncounterJournal.navBar = navBar
@@ -68,7 +70,7 @@ function component.Refresh(encounterName)
 		NavBar_AddButton(component.frame, {
 			name = instance.name,
 			OnClick = function()
-				components.EncounterFrame.ShowInstanceInfo(instance) -- Causing Lua errors
+				components.EncounterFrame.ShowInstanceInfo(instance)
 			end,
 			listFunc = nop
 		})
