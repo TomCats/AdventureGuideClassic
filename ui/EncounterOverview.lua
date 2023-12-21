@@ -52,7 +52,7 @@ function component.Init(components_)
 	overviewScroll.child.overviewDescription.Text:SetTextColor("p", 0.25, 0.1484375, 0.02, 1)
 	overviewScroll.child.overviewDescription.Text:SetJustifyH("p", "LEFT")
 	overviewScroll.child.overviewDescription.Text:SetJustifyV("p", "TOP")
-	overviewScroll.child.overviewDescription.Text:SetScript("OnHyperlinkEnter", nop) -- EncounterJournal_OnHyperlinkEnter
+	overviewScroll.child.overviewDescription.Text:SetScript("OnHyperlinkEnter", function() print(time())  end) -- EncounterJournal_OnHyperlinkEnter
 	overviewScroll:SetScrollChild(overviewScroll.child)
 	ScrollFrame_OnLoad(overviewScroll)
 	overviewScroll:Hide()

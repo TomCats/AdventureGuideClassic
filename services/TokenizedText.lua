@@ -8,19 +8,24 @@ select(2, ...).SetupGlobalFacade()
 
 local handlers = {
 	--todo: replace with real spell/npc link colors
-	["spell"] = function(data)
-		local spellName = GetSpellInfo(data)
-		return "|CFF0000FF|Hspell:" .. data .. "|h[" .. spellName .. "]|h|r"
-	end,
-	["npc"] = function(data)
-		local npcName = NPCService.GetName(data) or "..."
-		return "|CFFFF0000|Hnpc:" .. data .. "|h[" .. npcName .. "]|h|r"
-	end,
+	["spell"] = {
+		tokenizer = function(data)
+			local spellName = GetSpellInfo(data)
+			return "|CFF0000FF|Hspell:" .. data .. "|h[" .. spellName .. "]|h|r"
+		end,
+	},
+	["npc"] = {
+		tokenizer = function(data)
+			local npcName = NPCService.GetName(data)
+			if (not npcName) then return "" end
+			return npcName
+		end,
+	},
 }
 
 TokenizedTextService = { }
 
-function TokenizedTextService.ReplaceWithWoWEscapeCodes(inputstr)
+function TokenizedTextService.ReplaceTokens(inputstr)
 	local parts = { }
 	local lastPos = 1
 	while true do
@@ -37,7 +42,7 @@ function TokenizedTextService.ReplaceWithWoWEscapeCodes(inputstr)
 		local colonPos = string.find(str, ":")
 		local handlerType = string.sub(str, 1, colonPos - 1)
 		local data = string.sub(str, colonPos + 1)
-		parts[i] = handlers[handlerType](data)
+		parts[i] = handlers[handlerType].tokenizer(data)
 	end
 	return table.concat(parts)
 end
