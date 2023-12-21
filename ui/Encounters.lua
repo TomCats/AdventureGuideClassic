@@ -7,14 +7,26 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("Encounters")
-
+local components
 local encountersScrollBox
-local selectedButton
 local sharedHighlightFrame
-local selectedEncounterID
-local allButtons = {}
 
-function component.Init(components)
+local function EncounterButton_OnClick(self)
+	AdventureGuideNavigationService.SetEncounter(self.encounter)
+	EncounterJournal.encounter.info.encounterTitle:SetText("")
+	if self.encounter then
+		local encounterName = AdventureGuideNavigationService.GetEncounterName()
+		EncounterJournal.encounter.info.encounterTitle:SetText(encounterName)
+		components.NavBar.Refresh(encounterName)
+	end
+	sharedHighlightFrame:SetParent(self)
+	sharedHighlightFrame:SetAllPoints(self)
+	sharedHighlightFrame:Show()
+	components.DynamicContentScroller.Show()
+end
+
+function component.Init(components_)
+	components = components_
 	local info = EncounterJournal.encounter.info
 	encountersScrollBox = CreateFrame("Frame", nil, info, "WowScrollBoxList")
 	EncounterJournal.encounter.info.BossesScrollBox = encountersScrollBox
@@ -24,14 +36,14 @@ function component.Init(components)
 	EncounterJournal.encounter.info.BossesScrollBar = encountersScrollBar
 	encountersScrollBar:SetPoint("TOPLEFT", encountersScrollBox, "TOPRIGHT", 5, -5)
 	encountersScrollBar:SetPoint("BOTTOMLEFT", encountersScrollBox, "BOTTOMRIGHT", 5, 5)
-	local sharedHighlightFrame = CreateFrame("Frame", nil, encountersScrollBox)
+	sharedHighlightFrame = CreateFrame("Frame", nil, encountersScrollBox)
 	sharedHighlightFrame:Hide()
 	local highlightTexture = sharedHighlightFrame:CreateTexture()
 	highlightTexture:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
 	highlightTexture:SetTexCoord(0.00195313, 0.63671875, 0.15820313, 0.21191406)
 	highlightTexture:SetAllPoints(sharedHighlightFrame)
 	local function BossButtonInitializer(button, encounter)
-		button.encounterID = encounter.encounterID
+		button.encounter = encounter
 		if (not button.initialized) then
 			button:SetSize(325, 55)
 			button.DefeatedOverlay = CreateFrame("Button", nil, button)
@@ -80,26 +92,15 @@ function component.Init(components)
 			button:SetNormalFontObject("GameFontNormalMed3")
 			button:SetHighlightFontObject("GameFontNormalMed3")
 			button:SetDisabledFontObject("GameFontHighlightMedium")
-			table.insert(allButtons, button)
-			button:SetScript("OnClick", function()
-				AdventureGuideNavigationService.SetEncounter(button.encounter)
-				EncounterJournal.encounter.info.encounterTitle:SetText("")
-				if button.encounter then
-					local encounterName = AdventureGuideNavigationService.GetEncounterName()
-					EncounterJournal.encounter.info.encounterTitle:SetText(encounterName)
-					print(encounterName)
-					components.NavBar.Refresh(encounterName)
-				end
-				if selectedButton and selectedButton ~= button then
-					sharedHighlightFrame:Hide()
-				end
-				sharedHighlightFrame:SetParent(button)
-				sharedHighlightFrame:SetAllPoints(button)
-				sharedHighlightFrame:Show()
-				selectedButton = button
-				components.DynamicContentScroller.Show()
-			end)
+			button:SetScript("OnClick", EncounterButton_OnClick)
 			button.initialized = true
+		end
+		if (encounter and encounter == AdventureGuideNavigationService.GetEncounter()) then
+			sharedHighlightFrame:SetParent(button)
+			sharedHighlightFrame:SetAllPoints(button)
+			sharedHighlightFrame:Show()
+		elseif (sharedHighlightFrame:GetParent() == button) then
+			sharedHighlightFrame:Hide()
 		end
 		button.encounter = encounter
 		button.name:SetText(encounter.name);
@@ -118,19 +119,6 @@ function component.SetInstance(instance)
 	encountersScrollBox:SetDataProvider(dataProvider);
 	for _, encounter in ipairs(instance) do
 		dataProvider:Insert(encounter)
-	end
-end
-
--- TODO Display all of the encountersScrollBox buttons to be able to track for highlightTexture
-function UpdateButtonHighlights()
-	for _, button in ipairs(allButtons) do
-		if button.encounter == selectedEncounterID then
-			sharedHighlightFrame:SetParent(button)
-			sharedHighlightFrame:SetAllPoints(button)
-			sharedHighlightFrame:Show()
-		elseif sharedHighlightFrame:GetParent() == button then
-			sharedHighlightFrame:Hide()
-		end
 	end
 end
 
