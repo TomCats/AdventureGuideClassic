@@ -18,6 +18,7 @@ InstanceService.AddDungeon({
 		name = "Ghamoo-Ra",
 		encounterID = 4887,
 		portrait = 607613,
+		instance = "Blackfathom Deeps",
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
