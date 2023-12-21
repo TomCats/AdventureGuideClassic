@@ -16,7 +16,7 @@ end
 
 function widgetType:SetContents(widget, contents)
 	widget.button.title:SetText(contents.role)
-	CollapsibleSectionWidgetTypeMixin.SetContents(self, widget, contents)
+	CollapsibleSectionWidgetTypeMixin.SetContents(self, widget, contents, true)
 end
 
 Widgets.RegisterType(widgetType)

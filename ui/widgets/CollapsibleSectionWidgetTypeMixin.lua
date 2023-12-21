@@ -24,6 +24,17 @@ local function AbilityIcon_OnHide(self)
 	parent.title:SetPoint("RIGHT")
 end
 
+local function SetIcon(texture, index)
+	local iconSize = 32;
+	local columns = 256/iconSize;
+	local rows = 64/iconSize;
+	local l = mod(index, columns) / columns;
+	local r = l + (1/columns);
+	local t = floor(index/columns) / rows;
+	local b = t + (1/rows);
+	texture:SetTexCoord(l,r,t,b);
+end
+
 function CollapsibleSectionWidgetTypeMixin:Construct(parent)
 	local frame = WidgetTypeMixin.ConstructDefault(self, "Frame", nil, parent)
 	frame:SetSize(200, 24)
@@ -49,6 +60,34 @@ function CollapsibleSectionWidgetTypeMixin:Construct(parent)
 	button.abilityIcon:SetScript("OnShow", AbilityIcon_OnShow)
 	button.abilityIcon:SetScript("OnHide", AbilityIcon_OnHide)
 	AbilityIcon_OnHide(button.abilityIcon)
+	button.icons = { }
+	for i = 1, 4 do
+		local iconFrame = CreateFrame("Frame", nil, button)
+		table.insert(button.icons, iconFrame)
+		iconFrame:SetSize(32, 32)
+		iconFrame.icon = iconFrame:CreateTexture(nil, "OVERLAY")
+		iconFrame.icon:SetTexture(I.UIEJIcons)
+		iconFrame.icon:SetPoint("CENTER")
+		iconFrame.icon:SetSize(32, 32)
+		iconFrame:SetScript("OnEnter", function(self)
+			if self.tooltipTitle then
+				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+				GameTooltip:SetText(self.tooltipTitle,1,1,1);
+				GameTooltip:AddLine(self.tooltipText, nil, nil, nil, true);
+				GameTooltip:Show();
+			end
+		end)
+		iconFrame:SetScript("OnLeave", function()
+			GameTooltip:Hide()
+		end)
+		if (i == 1) then
+			iconFrame:SetPoint("RIGHT", 5, 0)
+		else
+			iconFrame:SetPoint("RIGHT", button.icons[i-1], "LEFT", 10, 0)
+		end
+		SetIcon(iconFrame.icon, i)
+	end
+
 
 	button.left = button:CreateTexture(nil, "BACKGROUND", "UI-PaperOverlay-PaperHeader-SelectUp-Left")
 	button.left:ClearAllPoints()
@@ -71,7 +110,7 @@ function CollapsibleSectionWidgetTypeMixin:Construct(parent)
 	return frame
 end
 
-function CollapsibleSectionWidgetTypeMixin:SetContents(widget, contents)
+function CollapsibleSectionWidgetTypeMixin:SetContents(widget, contents, bulleted)
 
 	self:SetAnchors(widget)
 	--local height = 32
@@ -85,7 +124,7 @@ function CollapsibleSectionWidgetTypeMixin:SetContents(widget, contents)
 		if (not type) then
 		else
 			local child = type:Acquire(widget)
-			type:SetContents(child, contentPart)
+			type:SetContents(child, contentPart, bulleted)
 			--height = height + child:GetHeight()
 		end
 	end
@@ -95,6 +134,7 @@ function CollapsibleSectionWidgetTypeMixin:SetContents(widget, contents)
 end
 
 --[[
+
 <Frame name="EncounterInfoTemplate" virtual="true" inherits="InlineHyperlinkFrameTemplate">
 	<Animations>
 		<AnimationGroup parentKey="flashAnim">
