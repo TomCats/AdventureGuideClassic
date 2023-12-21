@@ -34,6 +34,11 @@ function WidgetTypeMixin:ConstructDefault(frameType, name, parent, template, id)
 	local frame = CreateFrame(frameType, name, parent, template, id)
 	frame.widgetType = self
 	frame.widgets = { }
+	if (string.upper(frameType) == "FRAME") then
+		frame:SetHyperlinksEnabled(true)
+		frame:SetScript("OnHyperlinkEnter", HyperlinkService.OnHyperlinkEnter)
+		frame:SetScript("OnHyperlinkLeave", HyperlinkService.OnHyperlinkLeave)
+	end
 	return frame
 end
 
