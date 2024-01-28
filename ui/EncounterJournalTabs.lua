@@ -50,11 +50,11 @@ end
 function component.Init(components_)
     components = components_
     EncounterJournal.Tabs = tabs
-    EncounterJournal.suggestTab = AddTab("Suggest", "Suggested Content", function()
-       --todo: Create suggested content tab
-    end)
-    EncounterJournal.suggestTab:Disable()
-    EncounterJournal.suggestTab:EnableMouse(false)
+    -- EncounterJournal.suggestTab = AddTab("Suggest", "Suggested Content", function()
+    --    --todo: Create suggested content tab
+    -- end)
+    -- EncounterJournal.suggestTab:Disable()
+    -- EncounterJournal.suggestTab:EnableMouse(false)
     EncounterJournal.dungeonsTab = AddTab("Dungeon", "Dungeons", function()
         AdventureGuideNavigationService.Reset()
         AdventureGuideNavigationService.SetInstances(InstanceService.GetDungeons())

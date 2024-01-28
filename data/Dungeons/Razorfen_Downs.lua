@@ -22,24 +22,23 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Tuten'kash is a grotesque and ancient crypt fiend that has taken residence deep within Razorfen Downs. Its malevolent presence and insatiable appetite for flesh have corrupted the once-sacred crypts. Tuten'kash's existence in Razorfen Downs serves as a chilling testament to the necromantic forces that have twisted the crypts into a nightmarish realm.",
-			"Tuten'kash's monstrous form and its relentless hunger for the living make it a formidable adversary for those who venture into Razorfen Downs. Its role highlights the unnatural and profane transformation that has befallen the crypts.",
 			{ heading = "Overview" },
-			"Summon the first boss in Razorfen Downs by ringing the gong in Tuten'kash's chamober. The first two times the gong is rang, waves of spiders adds will ceom into the room from either side. The third time you rin the gong, Tuten'kash is summoned. Killing Tuten'kash is straightforward, and many groups may not need to worry about dispelling the {spell:12254} or decuring {spell:12255}.",
+			"Manage spider waves, then confront Tuten'kash. Damage dealers stay behind to avoid {spell:12252}, decurse {spell:12255} as needed. Healers focus on tank, stay behind. Tanks face Tuten'kash away from group.",
 			{
 				role = DAMAGE,
-				"Stay behind Tuten'kash to avoid {spell:12252}, and Mages or Druids decurse {spell:12255} from your healers or caster damage dealers as necessary.",
+				"Avoid {spell:12252}, decurse {spell:12255}. Focus Tuten'kash after adds."
 			},
 			{
 				role = HEALER,
-				"Stay behind Tuten'kash and focus your healing spells on the tank. Druids decurse {spell:12255} as necessary.",
+				"Heal tank, stay behind Tuten'kash. Decurse {spell:12255} as needed."
 			},
 			{
 				role = TANK,
-				"Tank needs to pick up Tuten'kash and face him away from the group to avoid {spell:12252}.",
+				"Face Tuten'kash away, manage threat, avoid {spell:12252}."
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -50,24 +49,23 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Plaguemaw the Rotting is a vile and ancient carrion worm that infests the depths of Razorfen Downs. Its putrid presence and the diseases it spreads have tainted the once-pure crypts. Plaguemaw's presence in Razorfen Downs represents the grim consequences of the crypts' desecration.",
-			"Plaguemaw's decaying form and its ability to spread pestilence make it a loathsome and dangerous foe for those who delve into Razorfen Downs. Its existence serves as a reminder of the sickness and decay that have plagued the crypts.",
 			{ heading = "Overview" },
-			"If you choose to escort Belnistrasz while in Razorfen Downs, then Plaguemaw will be presented as the final boss of the event. Plaguemaw is simple and is the easiest part of the escort itself. Managing the multiple adds before him is the challenging part, as you need to keep Belnistrasz protected from mobs which spawn quickly. You cannot heal the NPC, be very careful holding threat off him.",
+			"Manage adds, protect Belnistrasz. Damage dealers control adds, focus Plaguemaw. Healers maintain group health, manage aggro. Tanks pick up adds, simple tanking for Plaguemaw.",
 			{
 				role = DAMAGE,
-				"Classes that can off tank adds or use any Crowd Control abilities should do so during this encounter to make ptecting Belnistrasz easier. When Plaguemaw spawns, use your damage rotation to maximize damage output.",
+				"Control adds, focus Plaguemaw. Assist in protecting Belnistrasz."
 			},
 			{
 				role = HEALER,
-				"The healer in this fight's main priority is keeping themselves from getting threat on any adds as they spawn. Keep up your tank and any other classes helping pick up mobs.",
+				"Avoid add aggro, heal tank and helpers. Protect Belnistrasz."
 			},
 			{
 				role = TANK,
-				"The tank should be picking up and marking adds as they spawn, focusing on keeping any off of Belnistrasz and the healer. Plaguemaw himself is a simple tank encounter.",
+				"Manage adds, simple tanking for Plaguemaw. Protect Belnistrasz."
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -78,24 +76,23 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Mordresh Fire Eye is a malevolent and powerful undead sorcerer who has claimed Razorfen Downs as his domain. His mastery of fire magic and his dark ambitions have corrupted the once-holy crypts. Mordresh's presence in Razorfen Downs symbolizes the dangerous arcane forces that now rule the crypts.",
-			"Mordresh's command over fire magic and his oppressive rule over the crypts highlight the malevolent and destructive powers that have taken hold in Razorfen Downs. He serves as a grim reminder of the dangers posed by undead sorcerers and their sinister magic.",
 			{ heading = "Overview" },
-			"Mordresh is a caster skeleton boss which you encounter on top of a pile of bones, surrounded by non-elite skeletons. Groups should use their multi target abilities to take down the non elite mobs then focus damage on Mordresh. He does not have very high armor, so this fight is easy for a balanced group composition.",
+			"Eliminate skeletons, then confront Mordresh. Damage dealers use AoE for adds, interrupt {spell:12466}. Healers wait for tank aggro, focus tank. Tanks use AoE for adds, focus on Mordresh, interrupt {spell:12466}.",
 			{
 				role = DAMAGE,
-				"Starting the fight, the damage dealers should focus on using area of effect spells and abilities to take care of the adds quickly - as long as the adds are dealt with quickly, this fight will be easy for damage dealers to take down Mordresh. Once focusing on the boss, use interrupts to prevent {spell:12466}.",
+				"Use AoE for adds, then focus Mordresh. Interrupt {spell:12466}."
 			},
 			{
 				role = HEALER,
-				"The healer should wait to use any spells until the tank has managed to establish some threat among the adds and the boss. Early healing aggro will result in a wipe if the adds are attracted to the healer. Focus on the tank, but be aware that the rest of the group may take damage from adds and {spell:12470}.",
+				"Delay healing, focus tank. Manage group health during add phase."
 			},
 			{
 				role = TANK,
-				"The tank should use an area of effect ability to generate some inital threat on the non elite adds, but focus on establishing threat on Mordresh. Interrupt {spell:12466} when possible.",
+				"Use AoE for adds, establish threat on Mordresh. Interrupt {spell:12466}."
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -106,24 +103,23 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Ragglesnout is a massive and ravenous boar that roams the desecrated halls of Razorfen Downs. Its immense size and insatiable appetite have turned the crypts into a treacherous labyrinth. Ragglesnout's presence within Razorfen Downs reflects the chaotic and dangerous wildlife that now inhabits the crypts.",
-			"Ragglesnout's voracious appetite and its deadly charges make it a formidable and ever-moving obstacle for those who navigate Razorfen Downs. Its existence is a testament to the untamed and perilous nature of the crypts' ecosystem.",
 			{ heading = "Overview" },
-			"Ragglesnout is a rare Quillboar mob who casts shadow spells, heal, and mind controls. This fight requires other members to fill in healing or picking up Ragglesnout if your tank or healer become affected by {spell:7645}.",
+			"Interrupt spells, manage mind control. Damage dealers interrupt {spell:11659}, {spell:12039}, handle mind control. Healers focus on healing, manage mind-controlled allies. Tanks face away from group, rotate interrupts.",
 			{
 				role = DAMAGE,
-				"During this encounter, interrupt {spell:11659} and {spell:12039} while maximizing your damage output as well. If your healer or tank are under {spell:7645}, fill in and attempt to crowd control the mind controlled party members.",
+				"Interrupt {spell:11659}, {spell:12039}. Manage mind-controlled allies."
 			},
 			{
 				role = HEALER,
-				"Focus on healing the tank, and using heal over time and bubble effects to prevent damage done to other players during {spell:7645}.",
+				"Heal tank, manage mind-controlled allies. Stay alert."
 			},
 			{
 				role = TANK,
-				"Tank Ragglesnout facing away from the group, and rotate interrupts with your group on {spell:12039} and {spell:11659}.",
+				"Face away from group. Interrupt {spell:12039}, {spell:11659}. Manage mind control."
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -134,24 +130,23 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Glutton is a repugnant and bloated creature that has made its lair within the plagued halls of Razorfen Downs. Its ravenous hunger and corrosive bile have tainted the once-sacred crypts. Glutton's presence in Razorfen Downs represents the grotesque corruption that now infests the crypts.",
-			"Glutton's revolting appearance and its ability to spew corrosive bile make it a repulsive and dangerous adversary for those who explore Razorfen Downs. Its role serves as a chilling reminder of the monstrous transformations that have taken place in the crypts.",
 			{ heading = "Overview" },
-			"This abomination patrols below The Spiral of Thorns. The first is a simple encounter.",
+			"Manage Glutton. Damage dealers avoid {spell:12627}, focus on Glutton. Healers focus on tank, avoid {spell:12627}. Tanks pick up Glutton, face away from group.",
 			{
 				role = DAMAGE,
-				"Melee should stay behind Glutton, and all damage dealers need to avoid {spell:12627} ability.",
+				"Avoid {spell:12627}. Focus Glutton."
 			},
 			{
 				role = HEALER,
-				"Focus on healing the tank during the enrage phase, and avoid {spell:12627}.",
+				"Heal tank during enrage, avoid {spell:12627}."
 			},
 			{
 				role = TANK,
-				"Pick up Glutton, and face him away from the group.",
+				"Pick up Glutton, face away from group."
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
 	},
 	{
@@ -162,24 +157,23 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Amnennar the Coldbringer is an ancient and powerful lich who has claimed Razorfen Downs as his necropolis. His mastery of frost magic and his dark ambitions have frozen the crypts in eternal winter. Amnennar's presence in Razorfen Downs symbolizes the malevolent necromantic forces that have taken root in the crypts.",
-			"Amnennar's command over frost magic and his oppressive rule over the crypts highlight the chilling and destructive powers that have consumed Razorfen Downs. He serves as a grim reminder of the dangers posed by liches and their mastery over the undead.",
 			{ heading = "Overview" },
-			"Amennar is a servant to the Lich King, and the final boss of Razorfen Downs. Amnennar casts frost spells and a knock back. The group should stack up behind Amnennar while the tank faces him towards the tent where he spawns.",
+			"Confront Amnennar. Damage dealers stack, avoid Frost Spectres, focus Amnennar. Healers stack with group, manage add damage. Tanks face Amnennar away, control positioning.",
 			{
 				role = DAMAGE,
-				"The damage dealers in this fight should stack up to reduce to effects of {spell:15531}. When Frost Spectres are summoned, avoud them while ranged focuses them down and then switch back to Amnennar.",
+				"Stack, manage Frost Spectres, focus Amnennar. Avoid {spell:15531}."
 			},
 			{
 				role = HEALER,
-				"Healing this fight should be straightforward, just stack up with the group and pay attention to who is taking damage from the summoned adds.",
+				"Stack, heal group, focus on add damage."
 			},
 			{
 				role = TANK,
-				"The tank simply needs to face the boss away from the group to avoid {spell:13009}.",
+				"Face away, control Amnennar. Manage group positioning."
 			}
 		},
 		abilities = {
-			
+			-- Abilities details go here
 		}
-	},
+	}
 })

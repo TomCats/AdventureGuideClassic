@@ -24,7 +24,7 @@ InstanceService.AddDungeon({
 			"Skul, the Necropolis' caretaker, is a loyal servant of the Scourge and is responsible for overseeing the undead within Stratholme. He is known for his eerie demeanor and his role as a sentinel of the cursed city. Skul's presence within Stratholme reflects the grim authority of the Scourge over the city's ruins.",
 			"Skul's spectral nature and his role as the caretaker make him a haunting adversary for those who venture into Stratholme. His existence serves as a chilling reminder of the city's fall to the Scourge.",
 			{ heading = "Overview" },
-			"Skul is a rare mob who spawns near the main entrance of Stratholme. Many groups approach the instance from the side entrance, and will not pass by Skul on the way.",
+			"Skul is a rare mob who spawns near the main entrance of Stratholme. Damage dealers should interrupt SKu's abilities and let the tank handle threat, healers keep the tank's health topped up.",
 			{
 				role = DAMAGE,
 				"Try to interrupt Skul's abilities as much as possible. Let your tank maintain threat while you take Skul down.",
@@ -50,20 +50,19 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Hearthsinger Forresten was once a renowned bard and entertainer in Stratholme before its fall. However, he succumbed to the plague and now roams the city as a tormented spirit, seeking to relive his past glory. Forresten's presence within Stratholme reflects the tragedy and despair that befell its inhabitants.",
-			"Forresten's spectral form and his longing for his former life make him a melancholic adversary for those who explore Stratholme. His existence serves as a reminder of the city's lost culture and its descent into darkness.",
 			{ heading = "Overview" },
-			"Hearthsinger Forresten is a rare mob who spawns either down the street from Fras Siabi or patrolling along part of Market Row.",
+			"Hearthsinger Forresten is a rare mob who spawns either down the street from Fras Siabi or patrolling along part of Market Row. Damage dealers should spread out to minimize impact from {spell:2643} and manage sleep from {spell:16798}. Healers should keep the tank's health topped off, use shields carefully, and be prepared for sleep effects. Tanks need to position Forresten away from patrolling mobs and quickly regain threat after potential sleep interruptions.",
 			{
 				role = DAMAGE,
-				"Hearthsinger Forresten is a rare mob within Stratholme and a simple encounter. Spread out to avoid too many people being hit by {spell:2643}. If you are put to sleep with {spell:16798}, the effect will last 8 seconds.",
+				"Avoid stacking and be ready for an 8 second sleep from {spell:16798} while spreading out to minimize hits from {spell:2643}.",
 			},
 			{
 				role = HEALER,
-				"Keep the tank's healthy topped off at all times and try to put a shield up if possible to do so without generating threat or negatively impacting your tank's threat generation. You may be put to sleep by {spell:16798} so be prepared. Spread out to avoud being hit with {spell:2643} too often.",
+				"Maintain the tank's health and shield them without impacting threat, and be prepared for sleep from {spell:16798}, while staying spread out to evade {spell:2643}.",
 			},
 			{
 				role = TANK,
-				"Tank Hearthsinger Forresten where he stands, away from other patrolling mobs. You may be put to sleep by {spell:16798}, and will need to get threat back on the boss as soon as you awake.",
+				"Tank Hearthsinger Forresten away from patrol, quickly recover from the sleep effect of {spell:16798}, and regain threat.",
 			}
 		},
 		abilities = {
@@ -78,20 +77,19 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"The Unforgiven is a vengeful spirit who dwells within Stratholme, driven by a burning desire for retribution against those he deems responsible for his suffering. His presence reflects the lingering torment and anger that permeate the cursed city.",
-			"The Unforgiven's spectral form and his thirst for vengeance make him a relentless adversary for anyone who ventures into Stratholme. His existence serves as a chilling reminder of the consequences of the city's fall.",
 			{ heading = "Overview" },
-			"THe Unforgiven is an undead spirit who will spawn some non-elite adds when engaged.",
+			"The Unforgiven is an undead spirit who will spawn some non-elite adds when engaged. Damage dealers should prioritize adds before attacking The Unforgiven, healers need to maintain everyone's health, tanks should secure threat on The Unforgiven while damage dealers handle the adds.",
 			{
 				role = DAMAGE,
-				"Focus down the adds first followed by the The Unforgiven. Make sure your tank has established threat on The Unforgiven before starting your damage rotation.",
+				"Prioritize defeating the adds before attacking The Unforgiven, ensuring the tank has established threat first.",
 			},
 			{
 				role = HEALER,
-				"As the damage dealers focus their damage on the adds they may take some damage. Keep everyone's health topped up as best you can. Once the adds are defeated, only the tank should be taking damage.",
+				"Keep everyone's health up as damage dealers target the adds, focusing on the tank once the adds are defeated.",
 			},
 			{
 				role = TANK,
-				"Allow your damage dealers to focus all their damage onto the adds while you establish threat on The Unforgiven. Once the adds are down, this is a simple encounter.",
+				"Establish threat on The Unforgiven while damage dealers eliminate the adds, simplifying the encounter afterward.",
 			}
 		},
 		abilities = {
@@ -108,18 +106,18 @@ InstanceService.AddDungeon({
 			"Postmaster Malown was once responsible for Stratholme's mail service before its fall to the Scourge. He has been transformed into a malevolent undead postmaster who now haunts the city's post office. Malown's presence reflects the perversion of everyday life within Stratholme by the Scourge.",
 			"Malown's eerie role as a postmaster and his spectral form make him a unique and unsettling adversary for those who explore Stratholme. His existence serves as a reminder of the mundane aspects of life that have been twisted by the curse.",
 			{ heading = "Overview" },
-			"Postmaster Malown spawns after you open the third mailbox in Stratholme, using Market Row Postbox Key which drops off the Stratholme Curier throughout the instance. Malown spawns with three Undead Postman which apply stacks of Wailing Dead. The only crowd control you can use on them are {spell:19725} or {spell:11444}.",
+			"Postmaster Malown spawns after you open the third mailbox in Stratholme using Market Row Postbox Key which drops off the Stratholme Curier throughout the instance. Malown spawns with three Undead Postman which apply stacks of Wailing Dead. The only crowd control you can use on them are spell:19725 or spell:11444. Damage dealers should crowd control adds when possible, healers face high tank damage, dispel {spell:411959} quickly, tanks should separate Malown from crowd-controlled adds, maintain threat on all engaged mobs.",
 			{
 				role = DAMAGE,
-				"Use crowd control on the adds if possible. Try to clear out the adds which you could no crowd control fitst, then switch to Postmaster Malown. If you are Mage or Druid, decurse your party members as necessary.",
+				"Apply crowd control on adds, prioritize non-crowd controllable adds first before focusing on Postmaster Malown, and decurse party members if possible.",
 			},
 			{
 				role = HEALER,
-				"Your tank will be taking a lot of damage as most of the adds will not be able to be crowd controlled. Dispel {spell:411959} as quickly as you can, especially if it is on the tank. If you are a Druid, decurse your party members as necessary.",
+				"Manage heavy tank damage due to limited crowd control on adds, quickly dispel {spell:411959}, and decurse as needed.",
 			},
 			{
 				role = TANK,
-				"When Postmaster Malown and his adds spawn, try to pull the boss away from whichever adds are being crowd controlled. Maintain threat on all of the engaged mobs, and allow your damage dealers to focus damage on the adds first and then move onto Postmaster Malown.",
+				"Separate Postmaster Malown from crowd-controlled adds, maintain threat on all engaged mobs, allowing damage dealers to focus on adds before Postmaster Malown.",
 			}
 		},
 		abilities = {
@@ -136,18 +134,18 @@ InstanceService.AddDungeon({
 			"Timmy the Cruel is a tormented child spirit who wanders the streets of Stratholme, consumed by the darkness that plagues the city. His presence reflects the tragedy of innocent lives lost during the city's fall to the Scourge.",
 			"Timmy's spectral form and his role as a child make him a haunting and empathetic adversary for those who venture into Stratholme. His existence serves as a reminder of the innocence that was snuffed out in the city's darkest hours.",
 			{ heading = "Overview" },
-			"Timmy the Cruel will run out from the left hand side of the courtyard once you have defeated all of the mobs who are posted outside of the Scarlet domain of the instance.",
+			"Timmy the Cruel will run out from the left hand side of the courtyard once you have defeated all of the mobs who are posted outside of the Scarlet domain of the instance. Damage dealers should wait for the tank to establish threat. Healers need to focus on keeping the tank's health full, especially during Timmy's {spell:425315} phase. Tanks maintain threat to enable damage dealers to optimize output.",
 			{
 				role = DAMAGE,
-				"Allow your tank to establish threat, then maximize damage output on the boss.",
+				"Wait for the tank to establish threat, then focus on maximizing damage output.",
 			},
 			{
 				role = HEALER,
-				"Keep your tank topped off, especially for when Timmy goes into {spell:425415}.",
+				"Ensure the tank's health is fully replenished, particularly during Timmy's use of {spell:425415}.",
 			},
 			{
 				role = TANK,
-				"This is a simple tank encounter. Allow your damage dealers to maximize their damage output while you maintain threat.",
+				"Maintain threat, enabling damage dealers to optimize their damage output.",
 			}
 		},
 		abilities = {
@@ -251,7 +249,7 @@ InstanceService.AddDungeon({
 			"The final encounter of Strat Live begins with an all-too-easy tank and spank with Grand Crusader Dathrophan. Just when the fight seems to be over, he will transform into the powerful demon Balnazzar.",
 			{
 				role = DAMAGE,
-				"The boss' {spell:9256} ability can be dispelled. {spell:22884} can be avoided if standing at maximum range.",
+				"Balnazzar's {spell:9256} ability can be dispelled. {spell:22884} can be avoided if standing at maximum range.",
 			},
 			{
 				role = HEALER,
@@ -315,7 +313,7 @@ InstanceService.AddDungeon({
 			},
 			{
 				role = TANK,
-				"Tanking this rare mb is nothing out of the ordinary. Pull it away from areas where other mobs are patrolling and use defensive cooldowns to handle the {spell:14331} bleed effect.",
+				"Tanking this rare mob is nothing out of the ordinary. Pull it away from areas where other mobs are patrolling and use defensive cooldowns to handle the {spell:14331} bleed effect.",
 			}
 		},
 		abilities = {

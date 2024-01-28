@@ -21,8 +21,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Rethilgore, the first boss in Shadowfang Keep, is a formidable worgen accompanied by elite adds. His transformation into a worgen guardian highlights the curse's impact within the keep.",
+			"Rethilgore is a wretched worgen who has succumbed to the dark curse of Shadowfang Keep. Once a victim of the relentless curse that plagues the keep's inhabitants, Rethilgore has become a twisted and malevolent creature. His presence within the accursed keep reflects the enduring influence of the curse and the horrors that await those who venture into its depths.",
 			{ heading = "Overview" },
+			"Rethilgore, the imposing worgen boss in Shadowfang Keep, presents a challenge with his elite adds. The key is to eliminate the adds swiftly, then focus on Rethilgore while managing his {spell:7127} debuff. Damage dealers should target adds first; healers must prioritize mana management and dispelling, while tanks should control the adds and mitigate Rethilgore's damage.",
 			{
 				role = DAMAGE,
 				"Focus on eliminating adds before targeting Rethilgore. Manage resources effectively, especially under {spell:7127}, which can impair damage dealing.",
@@ -47,8 +48,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Razorclaw the Butcher, a sadistic worgen and the second boss of Shadowfang Keep, is known for his cruelty. Dealing with his adds is crucial before focusing on him.",
-			{ heading = "Strategy" },
+			"Razorclaw the Butcher is a monstrous and sadistic worgen who revels in the pain and suffering of others. He serves as one of the ruthless enforcers within Shadowfang Keep, responsible for tormenting prisoners and disposing of intruders. Razorclaw's presence within the keep reflects the cruelty and malevolence that define its inhabitants.",
+			{ heading = "Overview" },
+			"Facing Razorclaw the Butcher means dealing with his adds first. Damage dealers should prioritize add control, while healers focus on sustaining the group under constant attacks. Tanks need to balance aggro management between Razorclaw and his adds, using {spell:7485} effectively for encounter control.",
 			{
 				role = DAMAGE,
 				"Prioritize eliminating adds before attacking Razorclaw. Maintain damage output while managing threat levels.",
@@ -73,8 +75,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Baron Silverlaine, the ruler of Shadowfang Keep and its third boss, commands spectral forces and is known for his dark magic. Clearing the adds in his room is crucial before engaging him.",
+			"Baron Silverlaine is the lord and master of Shadowfang Keep, a once-noble figure who has been consumed by the darkness that plagues the keep. He rules over the cursed fortress with an iron fist, commanding the spectral and wretched creatures within. Baron Silverlaine's presence within the keep reflects the tragic transformation of a once-noble soul into a malevolent force.",
 			{ heading = "Overview" },
+			"Baron Silverlaine, commanding spectral forces, requires clearing adds before engagement. Damage dealers should interrupt and manage threat, especially against {spell:7068}. Healers focus on dispelling and sustaining the tank, while tanks should interrupt key spells and maintain high threat on both Baron and adds.",
 			{
 				role = DAMAGE,
 				"Prioritize high damage output while managing threat. Interrupt and decurse Baron's {spell:7068} to mitigate its effects.",
@@ -92,7 +95,6 @@ InstanceService.AddDungeon({
 			-- Abilities details go here
 		}
 	},
-	
 	{
 		name = "Commander Springvale",
 		encounterID = 4278,
@@ -100,8 +102,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Commander Springvale, the fourth boss in Shadowfang Keep, is a formidable worgen warrior accompanied by adds, guarding the keep with vigilance.",
+			"Commander Springvale is a loyal servant of Baron Silverlaine and a formidable worgen warrior within Shadowfang Keep. He stands as a sentinel and protector of the keep, ready to defend it against intruders. Commander Springvale's presence reflects the unwavering loyalty of the keep's inhabitants to their cursed lord.",
 			{ heading = "Overview" },
+			"In the Commander Springvale encounter, Damage dealers must quickly handle adds before engaging Springvale. Healers should manage mana while dealing with {spell:7074}. Tanks must control enemy groups effectively and interrupt Springvale's {spell:13874} and {spell:1026} at critical moments.",
 			{
 				role = DAMAGE,
 				"Focus on quickly eliminating the adds before engaging Springvale. Watch out for {spell:7074} from the guardsmen, which can silence players.",
@@ -126,8 +129,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Odo the Blindwatcher, a seer and mystic, is the fifth boss in Shadowfang Keep. Accompanied by Vile Bats, he uses his supernatural senses to confront intruders.",
-			{ heading = "Strategy" },
+			"Odo the Blindwatcher is a blind and enigmatic figure who serves the denizens of Shadowfang Keep as a seer and mystic. Despite his blindness, he possesses an uncanny ability to sense and perceive intruders. Odo's presence within the keep reflects the mystical and supernatural elements that are intertwined with its cursed halls.",
+			{ heading = "Overview" },
+			"Odo the Blindwatcher, accompanied by Vile Bats, requires Damage dealers to prioritize adds first. Healers should prepare for increased damage output as Odo's health drops, especially under {spell:7481}. Tanks need to maintain threat on both Odo and the bats, preparing for his enhanced attack power in the later phase.",
 			{
 				role = DAMAGE,
 				"Prioritize the Vile Bats before focusing on Odo. Save damage cooldowns for when Odo is below 50% health, as he gains more attack power with {spell:7481} during this phase.",
@@ -145,7 +149,6 @@ InstanceService.AddDungeon({
 			-- Abilities details go here
 		}
 	},
-	
 	{
 		name = "Fenrus the Devourer",
 		encounterID = 4274,
@@ -153,8 +156,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Fenrus the Devourer, a formidable worgen and the fifth boss of Shadowfang Keep, fiercely guards the entrance to Arugal's chambers.",
+			"Fenrus the Devourer is a monstrous worgen known for his insatiable hunger and his role as a guardian of Shadowfang Keep. He is responsible for hunting down and consuming intruders who dare to enter the keep. Fenrus's presence reflects the savage and predatory nature of the worgen within the cursed fortress.",
 			{ heading = "Overview" },
+			"Fenrus the Devourer presents a straightforward damage test, with Damage dealers focusing on high output. Healers should prioritize tank healing under Fenrus's heavy attacks, while tanks need to use defensive cooldowns effectively to withstand these assaults.",
 			{
 				role = DAMAGE,
 				"Focus on high damage output while managing threat. The encounter is straightforward, with Fenrus alone, making it primarily a damage test.",
@@ -172,7 +176,6 @@ InstanceService.AddDungeon({
 			-- Abilities details go here
 		}
 	},
-
 	{
 		name = "Wolf Master Nandos",
 		encounterID = 3927,
@@ -180,8 +183,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Wolf Master Nandos, the sixth boss in Shadowfang Keep, commands a pack of loyal worgen. Positioned before Arugal's chamber, he and his wolves fiercely defend the keep.",
+			"Wolf Master Nandos is a worgen who has embraced his lupine form and serves as a trainer and leader of the worgen packs within Shadowfang Keep. He commands these savage creatures with unwavering loyalty to Baron Silverlaine. Nandos's presence within the keep reflects the primal and bestial nature of its inhabitants.",
 			{ heading = "Overview" },
+			"Dealing with Wolf Master Nandos and his pack demands AOE damage focus from Damage dealers, careful aggro management by the tank, and sustained healing by the healers, especially post-80% health when Nandos summons more wolves. Efficient mana use and quick taunting are crucial.",
 			{
 				role = DAMAGE,
 				"Focus on AOE damage to handle Nandos and his wolves, being mindful of your threat level to avoid drawing aggro away from the tank.",
@@ -199,7 +203,6 @@ InstanceService.AddDungeon({
 			-- Abilities details go here
 		}
 	},
-
 	{
 		name = "Archmage Arugal",
 		encounterID = 4275,
@@ -207,8 +210,9 @@ InstanceService.AddDungeon({
 		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
-			"Archmage Arugal, the last boss of Shadowfang Keep, is notorious for unleashing the worgen curse. His arcane magic and summoning abilities pose significant challenges, including teleportation and mind control.",
+			"Archmage Arugal is a powerful and twisted mage who is responsible for summoning worgen into the region of Silverpine Forest and ultimately cursing Shadowfang Keep. He became obsessed with the idea of creating a loyal army and inadvertently unleashed a terrible curse. Arugal's presence within the keep reflects the cataclysmic consequences of his reckless magic.",
 			{ heading = "Overview" },
+			"Archmage Arugal's challenge lies in his mind control and arcane magic. Damage dealers should balance high output with crowd control during {spell:7621}. Healers must manage mana efficiently and focus on allies under mind control. Tanks need to maintain constant aggro and utilize shadow resistance while avoiding attacking mind-controlled allies.",
 			{
 				role = DAMAGE,
 				"Focus on high damage output, but beware of mind control. Arugal casts {spell:22709}, a high-damage shadow spell. During {spell:7621}, crowd control affected allies rather than attacking them.",
