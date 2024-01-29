@@ -22,7 +22,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Skul, the Necropolis' caretaker, is a loyal servant of the Scourge and is responsible for overseeing the undead within Stratholme. He is known for his eerie demeanor and his role as a sentinel of the cursed city. Skul's presence within Stratholme reflects the grim authority of the Scourge over the city's ruins.",
-			"Skul's spectral nature and his role as the caretaker make him a haunting adversary for those who venture into Stratholme. His existence serves as a chilling reminder of the city's fall to the Scourge.",
 			{ heading = "Overview" },
 			"Skul is a rare mob who spawns near the main entrance of Stratholme. Damage dealers should interrupt SKu's abilities and let the tank handle threat, healers keep the tank's health topped up.",
 			{
@@ -104,7 +103,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Postmaster Malown was once responsible for Stratholme's mail service before its fall to the Scourge. He has been transformed into a malevolent undead postmaster who now haunts the city's post office. Malown's presence reflects the perversion of everyday life within Stratholme by the Scourge.",
-			"Malown's eerie role as a postmaster and his spectral form make him a unique and unsettling adversary for those who explore Stratholme. His existence serves as a reminder of the mundane aspects of life that have been twisted by the curse.",
 			{ heading = "Overview" },
 			"Postmaster Malown spawns after you open the third mailbox in Stratholme using Market Row Postbox Key which drops off the Stratholme Curier throughout the instance. Malown spawns with three Undead Postman which apply stacks of Wailing Dead. The only crowd control you can use on them are spell:19725 or spell:11444. Damage dealers should crowd control adds when possible, healers face high tank damage, dispel {spell:411959} quickly, tanks should separate Malown from crowd-controlled adds, maintain threat on all engaged mobs.",
 			{
@@ -132,7 +130,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Timmy the Cruel is a tormented child spirit who wanders the streets of Stratholme, consumed by the darkness that plagues the city. His presence reflects the tragedy of innocent lives lost during the city's fall to the Scourge.",
-			"Timmy's spectral form and his role as a child make him a haunting and empathetic adversary for those who venture into Stratholme. His existence serves as a reminder of the innocence that was snuffed out in the city's darkest hours.",
 			{ heading = "Overview" },
 			"Timmy the Cruel will run out from the left hand side of the courtyard once you have defeated all of the mobs who are posted outside of the Scarlet domain of the instance. Damage dealers should wait for the tank to establish threat. Healers need to focus on keeping the tank's health full, especially during Timmy's {spell:425315} phase. Tanks maintain threat to enable damage dealers to optimize output.",
 			{
@@ -160,48 +157,19 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Cannon Master Willey was once a skilled engineer in Stratholme, responsible for the city's defenses. In undeath, he has been transformed into a fearsome cannon master who guards the city's gates. Willey's presence reflects the militarization and fortification of Stratholme by the Scourge.",
-			"Willey's mastery of cannons and his role as a defender of the gates make him a formidable adversary for anyone who ventures into Stratholme. His existence serves as a reminder of the city's tragic fall and its transformation into a bastion of the Scourge.",
 			{ heading = "Overview" },
-			"Cannon Master Willey is engaged within the small Armory section of this Crimson Domain. Willey spawns adds which will need to be either crowd controlled or defeated quickly. You can also pick up a cannon ball in the room and fire it from one of the cannons in the room to deal significant damage to the adds.",
+			"Cannon Master Willey spawns adds which will need to be either crowd controlled or defeated quickly. You can also pick up a cannon ball in the room and fire it from one of the cannons in the room to deal significant damage to the adds.",
 			{
 				role = DAMAGE,
 				"Focus your damage output on the boss. When adds spawns, crowd control them or utilize the cannons in the room to defeat them.",
 			},
 			{
 				role = HEALER,
-				"Keep your distance from the boss during the encounter so that the adds do not run straight to you when they spawn. Make sure to stand behind the cannon though. Keep your tank topped off throughout the fight.",
+				"Keep your distance from the boss during the encounter so that the adds do not run straight to you when they spawn. Make sure to stand behind the cannon.",
 			},
 			{
 				role = TANK,
-				"Be ready to pickup adds when they spawn.",
-			}
-		},
-		abilities = {
-			
-		}
-	},
-	{
-		name = "Crimson Hammersmith",
-		encounterID = 11120,
-		portrait = I.UIEJBossCrimsonHammersmith,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
-		npcs = { 2135, 12456, 12314 },
-		overview = {
-			"The Crimson Hammersmith is a blacksmith who was once skilled in crafting weapons and armor in Stratholme. In undeath, he has become a malevolent hammersmith who forges weapons for the Scourge. His presence reflects the perversion of craftsmanship by the dark forces that now control the city.",
-			"The Crimson Hammersmith's role as a weapon forger and his spectral form make him a formidable and unsettling adversary for those who explore Stratholme. His existence serves as a chilling reminder of the twisted industry that now drives the city.",
-			{ heading = "Overview" },
-			"The Crimson Hammersmith will spawn if someone clicks on the pattern on the ground. This will easily happen if a party member doesn't realize what will happen so this encounter usually comes as an unexpected add while the party is pulling regular mob packs.",
-			{
-				role = DAMAGE,
-				"To help the party out don't click on the pattern in the middle of a fight with mob packs. If you want to kill him then announce it to the party.",
-			},
-			{
-				role = HEALER,
-				"This mob is more of an unexpected add than a boss. Be prepared to call it out and heal through it.",
-			},
-			{
-				role = TANK,
-				"This mob is more of an unexpected add than a boss. Be prepared to grab threat on it if someone summons him.",
+				"Keep Willey aggroed and away from the groupm, be ready to pickup adds when they spawn.",
 			}
 		},
 		abilities = {
@@ -216,16 +184,15 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Archivist Galford was once a scholar and historian in Stratholme, responsible for preserving its knowledge and history. In undeath, he has been transformed into a malevolent archivist who guards the city's secrets. Galford's presence reflects the corruption of knowledge and the manipulation of history by the Scourge.",
-			"Galford's role as an archivist and his spectral form make him a formidable adversary for those who venture into Stratholme. His existence serves as a reminder of the city's lost wisdom and the dark forces that seek to control its past.",
 			{ heading = "Overview" },
 			"Archivist Galford is located in his own library across from the final chamber of the Crimson Domain. Engage Archivist in his room and have the group spread out while bringing Galford down.",
 			{
 				role = DAMAGE,
-				"Galford is essentially a simple encounter for damage dealer players, utilize any self healing or defensive cooldowns as necessary.",
+				"Utilize any self healing or defensive cooldowns as necessary.",
 			},
 			{
 				role = HEALER,
-				"Archivist Galford will likely damage multiple player at once, so you will need to rotate your healing accordingly. FOcus the tank, and try to place shield or heal over time effects on your party members. Any member of the party may be targeted with {spell:17293}. If the tank is targeted, the boss may choose to switch targets until the tank gets threat back.",
+				"Rotate your healing accordingly. Focus the tank, and try to place shield or heal over time effects on your party members. Any member of the party may be targeted with {spell:17293}. If the tank is targeted, the boss may choose to switch targets until the tank gets threat back.",
 			},
 			{
 				role = TANK,
@@ -244,7 +211,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Balnazzar is a powerful dreadlord and one of the dreadlords who manipulated the events that led to Stratholme's fall. He serves as a central figure in the Scourge's control of the city and its undead inhabitants. Balnazzar's presence reflects the malevolent influence of the Nathrezim over Stratholme.",
-			"Balnazzar's mastery of demonic magic and his role as a puppeteer behind the city's fall make him a formidable and cunning adversary for those who challenge the Scourge within Stratholme. His existence serves as a chilling reminder of the dreadlords' role in the city's downfall.",
 			{ heading = "Overview" },
 			"The final encounter of Strat Live begins with an all-too-easy tank and spank with Grand Crusader Dathrophan. Just when the fight seems to be over, he will transform into the powerful demon Balnazzar.",
 			{
