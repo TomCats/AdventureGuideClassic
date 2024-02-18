@@ -50,7 +50,7 @@ InstanceService.AddDungeon({
 		overview = {
 			"Hearthsinger Forresten was once a renowned bard and entertainer in Stratholme before its fall. However, he succumbed to the plague and now roams the city as a tormented spirit, seeking to relive his past glory. Forresten's presence within Stratholme reflects the tragedy and despair that befell its inhabitants.",
 			{ heading = "Overview" },
-			"Hearthsinger Forresten is a rare mob who spawns either down the street from Fras Siabi or patrolling along part of Market Row. Damage dealers should spread out to minimize impact from {spell:2643} and manage sleep from {spell:16798}. Healers should keep the tank's health topped off, use shields carefully, and be prepared for sleep effects. Tanks need to position Forresten away from patrolling mobs and quickly regain threat after potential sleep interruptions.",
+			"Hearthsinger Forresten, a rare mob, spawns near Fras Siabi or on Market Row. Damage dealers should disperse to lessen {spell:2643} impact and control {spell:16798} sleep. Healers must maintain tank health, use shields wisely, and anticipate sleep effects. Tanks should keep Forresten away from patrols and recover threat swiftly after sleep disruptions.",
 			{
 				role = DAMAGE,
 				"Avoid stacking and be ready for an 8 second sleep from {spell:16798} while spreading out to minimize hits from {spell:2643}.",
@@ -104,7 +104,7 @@ InstanceService.AddDungeon({
 		overview = {
 			"Postmaster Malown was once responsible for Stratholme's mail service before its fall to the Scourge. He has been transformed into a malevolent undead postmaster who now haunts the city's post office. Malown's presence reflects the perversion of everyday life within Stratholme by the Scourge.",
 			{ heading = "Overview" },
-			"Postmaster Malown spawns after you open the third mailbox in Stratholme using Market Row Postbox Key which drops off the Stratholme Curier throughout the instance. Malown spawns with three Undead Postman which apply stacks of Wailing Dead. The only crowd control you can use on them are spell:19725 or spell:11444. Damage dealers should crowd control adds when possible, healers face high tank damage, dispel {spell:411959} quickly, tanks should separate Malown from crowd-controlled adds, maintain threat on all engaged mobs.",
+			"Postmaster Malown appears after the third mailbox in Stratholme is opened with a Market Row Postbox Key, dropped by the Stratholme Curier. Malown, accompanied by three Undead Postmen applying Wailing Dead stacks, can be controlled with {spell:19725} or {spell:11444}. Damage dealers should control adds, healers should manage high tank damage and dispel {spell:411959} promptly, while tanks separate Malown from controlled adds and maintain threat on all mobs.",
 			{
 				role = DAMAGE,
 				"Apply crowd control on adds, prioritize non-crowd controllable adds first before focusing on Postmaster Malown, and decurse party members if possible.",
@@ -131,7 +131,7 @@ InstanceService.AddDungeon({
 		overview = {
 			"Timmy the Cruel is a tormented child spirit who wanders the streets of Stratholme, consumed by the darkness that plagues the city. His presence reflects the tragedy of innocent lives lost during the city's fall to the Scourge.",
 			{ heading = "Overview" },
-			"Timmy the Cruel will run out from the left hand side of the courtyard once you have defeated all of the mobs who are posted outside of the Scarlet domain of the instance. Damage dealers should wait for the tank to establish threat. Healers need to focus on keeping the tank's health full, especially during Timmy's {spell:425315} phase. Tanks maintain threat to enable damage dealers to optimize output.",
+			"Timmy the Cruel emerges from the left of the courtyard after all mobs outside the Scarlet domain are defeated. Damage dealers should let the tank establish threat. Healers should prioritize tank health, especially during Timmy's {spell:425315} phase. Tanks should maintain threat for optimal damage dealer output.",
 			{
 				role = DAMAGE,
 				"Wait for the tank to establish threat, then focus on maximizing damage output.",
@@ -212,7 +212,7 @@ InstanceService.AddDungeon({
 		overview = {
 			"Balnazzar is a powerful dreadlord and one of the dreadlords who manipulated the events that led to Stratholme's fall. He serves as a central figure in the Scourge's control of the city and its undead inhabitants. Balnazzar's presence reflects the malevolent influence of the Nathrezim over Stratholme.",
 			{ heading = "Overview" },
-			"The final encounter of Strat Live begins with an all-too-easy tank and spank with Grand Crusader Dathrophan. Just when the fight seems to be over, he will transform into the powerful demon Balnazzar.",
+			"The final encounter of Stratholme Live begins with with Grand Crusader Dathrophan. Just when the fight seems to be over, he will transform into the powerful demon Balnazzar.",
 			{
 				role = DAMAGE,
 				"Balnazzar's {spell:9256} ability can be dispelled. {spell:22884} can be avoided if standing at maximum range.",
@@ -238,12 +238,11 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Magistrate Barthilas was once a lawkeeper in Stratholme, responsible for maintaining order and justice. In undeath, he has become a malevolent magistrate who enforces the twisted laws of the Scourge. Barthilas's presence reflects the perversion of justice and order within the cursed city.",
-			"Barthilas's role as a magistrate and his spectral form make him a formidable and relentless adversary for those who explore Stratholme. His existence serves as a chilling reminder of the city's descent into chaos and tyranny.",
 			{ heading = "Overview" },
 			"Magistrate Barthilas is either located near the church at the beginning of the instance, or just before the courtyard where you fight Ramstein. Barthilas drops the Key to the City which gets you in the back gate.",
 			{
 				role = DAMAGE,
-				"For damage dealers, this fight is essentially a simple encounter. Let the tank establish threat, then maximize your damage output on the boss.",
+				"For damage dealers, this fight is essentially a straight forward encounter, let the tank establish threat, then maximize your damage output on the boss.",
 			},
 			{
 				role = HEALER,
@@ -266,7 +265,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Stonespine is a monstrous and undead giant who guards the corridors of Stratholme with brute strength. He is known for his formidable presence and his role as a sentinel of the city's depths. Stonespine's presence reflects the overwhelming power of the Scourge within the cursed city.",
-			"Stonespine's colossal stature and his role as a guardian make him a formidable adversary for anyone who ventures into Stratholme. His existence serves as a chilling reminder of the indomitable forces that protect the city's secrets.",
 			{ heading = "Overview" },
 			"Stonespine is a rare spawn that partols around the area between Nerub'enkan and Baroness Anastari's ziggurats.",
 			{
@@ -294,7 +292,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Nerub'enkan is an undead nerubian who has been twisted and enslaved by the Scourge to guard Stratholme's inner chambers. He is known for his ruthless nature and his role as a sentinel of the city's depths. Nerub'enkan's presence reflects the corruption of the nerubian race by the dark forces that control the city.",
-			"Nerub'enkan's formidable nerubian abilities and his role as a guardian make him a relentless adversary for those who explore Stratholme. His existence serves as a reminder of the nerubians' tragic fate and their transformation into tools of the Scourge.",
 			{ heading = "Overview" },
 			"Nerub'enkan stands at the top of the first msall ziggurat you encounter off to the left. Be sure to clear any groups of hostile mobs in the area before engaging Nerb'enkan, as it will complicate the encounter to include them at the same time. After defeating the boss, be sure to clear the Thuzodin Acolytes within the ziggurat.",
 			{
@@ -322,7 +319,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"The Black Guard Swordsmith is an undead blacksmith who forges deadly weapons for the Scourge within Stratholme. He is known for his skill in crafting blades of death and his role as a weapon forger. The Swordsmith's presence reflects the Scourge's relentless pursuit of arms and power within the city.",
-			"The Swordsmith's mastery of weapon crafting and his role as a forger make him a formidable adversary for anyone who ventures into Stratholme. His existence serves as a reminder of the deadly arsenal that fuels the Scourge's dominion over the city.",
 			{ heading = "Overview" },
 			"The Black Guard Swordsmith will spawn if someone clicks on the pattern on the ground. This will easily happen if a party member doesn't realize what will happen so this boss usually comes as an unexpected add while the party is pulling regular mob packs.",
 			{
@@ -331,11 +327,11 @@ InstanceService.AddDungeon({
 			},
 			{
 				role = HEALER,
-				"This mob is more of an unexpected add than a boss. Be prepared to call it out and heal through it.",
+				"This encounter is more like a surprise add than a boss. Stay alert to identify it and provide necessary healing.",
 			},
 			{
 				role = TANK,
-				"This mob is more of an unexpected add than a boss. Be prepared to grab threat on it if someone summons him.",
+				"Stay alert to identify the Black Guard Swordsmith and pick him up as soon as possible.",
 			}
 		},
 		abilities = {
@@ -350,7 +346,6 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Maleki the Pallid is a sinister and powerful undead sorcerer who serves as a guardian of Stratholme's inner chambers. He is known for his mastery of dark magic and his role as a sentinel of the city's depths. Maleki's presence reflects the malevolent and arcane forces that infest the cursed city.",
-			"Maleki's formidable arcane abilities and his role as a guardian make him a formidable adversary for those who explore Stratholme. His existence serves as a chilling reminder of the dark and arcane secrets that lie hidden within the city.",
 			{ heading = "Overview" },
 			"Maleki the Pallid stands atop the third and final ziggurat. Maleki hits hard but he is easier than the other two bosses. Just make sure to not get adds during the encounter.",
 			{
@@ -378,20 +373,19 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Baroness Anastari is an elegant and deadly undead noble who was once a prominent figure in Stratholme's aristocracy. In undeath, she has become a malevolent baroness who commands the undead with regal authority. Anastari's presence reflects the perversion of nobility and power by the Scourge.",
-			"Anastari's mastery of necromancy and her role as a baroness make him a formidable and regal adversary for those who venture into Stratholme. Her existence serves as a chilling reminder of the aristocracy's fall and the rise of dark nobility within the city.",
 			{ heading = "Overview" },
-			"Baroness Anastari is a banshee type who stands atop the second ziggurat you encounter in the instance. Anastari will {spell:17244} group members during the encounter who will need to be brought to 50% health before the mind control is broken. {spell:17244}, alongside her {spell:15487} and {spell:5884} can make this encounter a challenge. Once defeated, do not forget to clear the inside of the ziggurat of Thuzadin Acolytes.",
+			"Baroness Anastari, a banshee atop the second ziggurat, uses {spell:17244} to control group members, who must be damaged to 50% health to break free. She also uses {spell:15487} and {spell:5884}. Damage dealers should focus on Anastari, switching to controlled members when necessary, and decurse {spell:5884} if possible. Healers should keep everyone healthy, especially after {spell:17244}, and decurse {spell:5884} if possible. Tanks should keep Anastari's attention, switching to controlled members when necessary.",
 			{
 				role = DAMAGE,
-				"As soon as the tank has established threat, utilize all damage increasing cooldowns not only to damage the boss as much as possible but to avoid having them popped while you are under the effect of {spell:17244}. Focus your damage on Baroness Anastari until she casts {spell:17244} on a group member. Then, quickly damage them to 50% to break the mind control. If you are a Mage or Druid, decurse your party members from {spell:5884}. Casters be aware that you may be affected with {spell:15487}.",
+				"Once the tank has threat, use damage cooldowns. Focus on Anastari, but switch to controlled members when necessary. Decurse {spell:5884} if possible. Be aware of {spell:15487}.",
 			},
 			{
 				role = HEALER,
-				"Keep all party members topped off as well as you can. Once Anastari casts {spell:17244} your group will damage the possessed party member to 50% health, and they will require immediate healing back up to 100%. If you are a Druid, decurse your group members from {spell:5884}. Be prepared to be affected by {spell:15487}",
+				"Maintain party health, especially after {spell:17244}. Decurse {spell:5884} if possible. Be prepared for {spell:15487}.",
 			},
 			{
 				role = TANK,
-				"Tank Baroness Anastari at the top of the ziggurat. Switch to the {spell:17244} party member when necessary, then reestablish yourself atop the threat meter for Baroness Anastari.",
+				"Tank Anastari at the ziggurat top. Switch to controlled members when necessary, then regain Anastari's attention.",
 			}
 		},
 		abilities = {
@@ -406,9 +400,8 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Ramstein the Gorger is a monstrous and grotesque abomination who dwells within the depths of Stratholme. He is known for his insatiable appetite for flesh and his role as a guardian of the city's catacombs. Ramstein's presence reflects the grotesque and horrifying creations of the Scourge.",
-			"Ramstein's ravenous hunger and his role as a guardian make him a formidable and repulsive adversary for anyone who ventures into Stratholme. His existence serves as a chilling reminder of the grotesque experiments that occur within the city's depths.",
 			{ heading = "Overview" },
-			"Ramstein the Gorger will spawn in the courtyard before Baron Rivendare's room once you have defeated all of the abominations that patrol the courtyard. The fight is straightforward, but Ramstein hits hard and has a threat drop mechanic.",
+			"Ramstein the Gorger appears in the courtyard before Baron Rivendare's room after all courtyard abominations are defeated. Ramstein hits hard and has a threat drop mechanic. Damage dealers should manage threat carefully due to Ramstein's {spell:17307}, allowing a plate or ranged damage dealer to kite him if necessary. Healers should prepare heals for the damage dealer Ramstein will switch to when he casts {spell:17307}, keeping all party members as healthy as possible. Tanks should pull Ramstein away from the group, establish threat, and have a taunt ready for when Ramstein uses {spell:17307}.",
 			{
 				role = DAMAGE,
 				"Pay careful attention to threat during this encounter, as Ramstein's {spell:17307} ability will switch his primary target to whoever is in the secondary threat position. Try to let this be either a plate damage dealer or a ranged damage dealer who can kite him around for a little bit.",
@@ -434,20 +427,19 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Baron Rivendare is a powerful and ruthless undead noble who serves as the master of Stratholme. He is responsible for maintaining the Scourge's control over the cursed city. Rivendare's presence reflects the central authority of the Scourge within Stratholme.",
-			"Rivendare's mastery of necromancy and his role as the ruler of Stratholme make him a formidable and cunning adversary for those who challenge the Scourge's dominion. His existence serves as a chilling reminder of the dark lord who holds the city in his grip.",
 			{ heading = "Overview" },
-			"Baron Rivendare is the final boss encounter for Stratholme Undead, and drops the The infamous Deathcharger's Reins. Baron Riven is a challenging as he reduces healing capabilities on the tank with a {spell:9347}, and deals considerable damage to all party members in close proximity with {spell:17625}",
+			"Baron Rivendare, the final boss of Stratholme Undead, challenges the group with {spell:9347}, reducing healing on the tank, and {spell:17625}, damaging all nearby party members. Ranged damage dealers should stay at maximum range, prioritizing skeleton adds over the boss. Melee should stay behind Rivendare to avoid {spell:407811}. Healers should maintain distance, use healing cooldowns when the tank is affected by {spell:9347}, and consistently heal melee players affected by {spell:17625}. Tanks should position Rivendare away from the group, use defensive cooldowns for {spell:9347}, and trust damage dealers to handle skeleton adds.",
 			{
 				role = DAMAGE,
-				"Ranged damage dealers should stack up in the left side of the room upon entry to stay at maximum range from the boss. When he spawns his skeleton adds, melee should prioritize them over the boss as they can be pesky on your healer. Melee need to stay behind Baron Rivendare at all times to avoid being hit with {spell:407811}.",
+				"Ranged dealers should stay at maximum range on the room's left side. Prioritize skeleton adds over the boss. Melee should stay behind Rivendare to avoid {spell:407811}.",
 			},
 			{
 				role = HEALER,
-				"The healer needs to stack up on the left side of the room with ranged damage dealers, keeping maximum distance from the Baron Rivendare. Utilize your healing increasing cooldowns when the tank is affected by {spell:9347}. All melee players will be taking damage from {spell:17625} and require consistent healing.",
+				"Stay with ranged dealers at maximum distance from Rivendare. Use healing cooldowns when the tank is affected by {spell:9347}. Consistently heal melee players affected by {spell:17625}.",
 			},
 			{
 				role = TANK,
-				"Make sure everyone is ready to run in with you, as the door will close when you engage Baron Rivendare. Run in, and take the Baron to the back right side of the room upon entry, opposite where ranged damage dealers and your healer should be. Put your back to a wall so that melee can position themselves well and avoid being hit by {spell:407811}. Prepare your defensive cooldowns for whenever you are affected by {spell:9347}. When skeletons spawn, trust that your DPS will make quick work of them and do not try to pick them up because you don't want to turn Baron Rivendare around or put your ranged/healer in his {spell:17625}.",
+				"Engage Rivendare with the group, positioning him at the room's back right side. Use defensive cooldowns for {spell:9347}. Trust DPS to handle skeleton adds and avoid turning Rivendare or exposing the group to {spell:17625}.",
 			}
 		},
 		abilities = {

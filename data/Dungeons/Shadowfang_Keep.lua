@@ -23,7 +23,7 @@ InstanceService.AddDungeon({
 		overview = {
 			"Rethilgore is a wretched worgen who has succumbed to the dark curse of Shadowfang Keep. Once a victim of the relentless curse that plagues the keep's inhabitants, Rethilgore has become a twisted and malevolent creature. His presence within the accursed keep reflects the enduring influence of the curse and the horrors that await those who venture into its depths.",
 			{ heading = "Overview" },
-			"Rethilgore, the imposing worgen boss in Shadowfang Keep, presents a challenge with his elite adds. The key is to eliminate the adds swiftly, then focus on Rethilgore while managing his {spell:7127} debuff. Damage dealers should target adds first; healers must prioritize mana management and dispelling, while tanks should control the adds and mitigate Rethilgore's damage.",
+			"Rethilgore, the imposing worgen boss in Shadowfang Keep, the key is to eliminate the adds swiftly, then focus on Rethilgore while managing his {spell:7127} debuff. Damage dealers should target adds first; healers must prioritize mana management and dispelling, while tanks should control the adds and mitigate Rethilgore's damage.",
 			{
 				role = DAMAGE,
 				"Focus on eliminating adds before targeting Rethilgore. Manage resources effectively, especially under {spell:7127}, which can impair damage dealing.",

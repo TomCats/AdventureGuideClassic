@@ -22,20 +22,19 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Rhahk'Zor, a massive ogre, is one of the earliest challenges adventurers face within The Deadmines. Known for his immense strength and brutal tactics, he serves as a formidable guardian of the pirate-infested underground complex. Rhahk'Zor's presence in The Deadmines reflects the danger and lawlessness that have taken hold of the once-prosperous mine.",
-			"As the first obstacle adventurers encounter, Rhahk'Zor stands as a testament to the strength and determination required to navigate the treacherous depths of The Deadmines. His towering figure and ruthless nature make him a formidable adversary for those who seek to disrupt the pirate operations.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Rhak'zor, the first boss in the Deadmines, is a level 19 elite ogre accompanied by two level 17 elite Defias Watchmen who attack from range. Damage dealers should defeat the Defias Watchmen first, avoid {spell:6304} to minimize damage, and use crowd control abilities to manage the Watchmen's damage output. Healers should focus on healing the tank through the damage from {spell:6304}. Tanks should maximize threat on Rhak'zor to enable full damage output, maintain high threat, and be cautious of {spell:6304}.",
 			{
 				role = DAMAGE,
-				"",
+				"Defeat the Defias Watchmen before targeting Rhahk'zor. Avoid {spell:6304} to minimize damage taken. Use crowd control abilities to manage the Defias Watchmen's damage output.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Heal the tank through the damage from {spell:6304}.",
 			},
 			{
 				role = TANK,
-				"",
+				"Maximize threat on the boss to enable full damage output. Maintain high threat and be cautious of {spell:6304}.",
 			}
 		},
 		abilities = {
