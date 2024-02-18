@@ -131,7 +131,7 @@ InstanceService.AddDungeon({
 		overview = {
 			"Timmy the Cruel is a tormented child spirit who wanders the streets of Stratholme, consumed by the darkness that plagues the city. His presence reflects the tragedy of innocent lives lost during the city's fall to the Scourge.",
 			{ heading = "Overview" },
-			"Timmy the Cruel emerges from the left of the courtyard after all mobs outside the Scarlet domain are defeated. Damage dealers should let the tank establish threat. Healers should prioritize tank health, especially during Timmy's {spell:425315} phase. Tanks should maintain threat for optimal damage dealer output.",
+			"Timmy the Cruel emerges from the left of the courtyard after all mobs outside the Scarlet domain are defeated. Damage dealers should let the tank establish threat. Healers should prioritize tank health, especially during Timmy's {spell:425415} phase. Tanks should maintain threat for optimal damage dealer output.",
 			{
 				role = DAMAGE,
 				"Wait for the tank to establish threat, then focus on maximizing damage output.",
