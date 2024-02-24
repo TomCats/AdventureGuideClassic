@@ -22,20 +22,19 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Targorr the Dread is a menacing ogre warden who presides over the prisoners within the Stockade. Known for his ruthless and oppressive rule, he represents the brutal authority of the prison's wardens. Targorr's presence within the Stockade reflects the grim and unforgiving environment in which the inmates are held.",
-			"As the first line of defense for the Stockade, Targorr the Dread is a formidable adversary for any who attempt to escape its confines. His sheer strength and cruel methods make him a significant obstacle for those seeking to free the imprisoned within the prison's walls.",
 			{ heading = "Overview" },
-			"information goes here..",
+			"Targorr the Dread, the first boss in The Stockade, is a Blackrock orc. He is not officially accompanied by any other monsters, but nearby Defias will often join the fight. Damage dealers should focus on killing the adds before engaging Targorr, while managing their threat. Healers should concentrate their healing on the tank. Tanks should maximize threat so damage dealers can go all-out.",
 			{
 				role = DAMAGE,
-				"",
+				"Damage dealers should do as much damage as possible while watching their threat. Focus on killing the adds before engaging Targorr the Dread.",
 			},
 			{
 				role = HEALER,
-				"",
+				"Focus your healing on the tank.",
 			},
 			{
 				role = TANK,
-				"",
+				"Tank should focus on doing as much threat as possible. so the damage dealers can go all-out.",
 			}
 		},
 		abilities = {
@@ -50,20 +49,27 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Kam Deepfury is a corrupt dwarf officer who has aligned himself with the criminal elements within the Stockade. He serves as an enforcer for the corrupt leadership and has a reputation for brutality. Kam's presence in the Stockade reflects the mingling of criminal elements with the prison's staff.",
-			"As one of the corrupt officers responsible for maintaining order within the Stockade, Kam Deepfury poses a significant challenge for those who seek to confront the corruption within the prison. His allegiance to the criminal leadership and his willingness to use force make him a formidable foe.",
 			{ heading = "Overview" },
 			"information goes here..",
+
+			--Kam Deepfury is the second boss you will encounter in the Stockade. He is a level 27 elite Dark Iron dwarf. He is not officially accompanied by any other monsters, but nearby elite Defias will often join the fight.
 			{
 				role = DAMAGE,
 				"",
+
+				--This fight is a tank and spank so you should do as much damage as possible while watching your threat. Damage dealers should focus on killing the adds before Kam Deepfury.
 			},
 			{
 				role = HEALER,
 				"",
+
+				--This fight is a tank and spank so you should focus your healing on the tank. Healers should keep track of their mana, as Kam Deepfury can deal significant damage to the party. Kam will frequently stun the tank using [Shield Slam], so be ready for your tank's health to spike while stunned.
 			},
 			{
 				role = TANK,
 				"",
+
+				--This fight is a tank and spank so you should focus on doing as much threat as possible on the boss, so the DPS can go all-out. Kam Deepfury does a high amount of damage while also frequently stunning his target with [Shield Slam]. Tanks should be aware that an early stun can make holding aggro tricky.
 			}
 		},
 		abilities = {
@@ -78,20 +84,30 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Hamhock is a massive ogre who has been incarcerated within the Stockade for his crimes. Despite his imposing size, he is often manipulated by the corrupt staff and used as muscle for their schemes. Hamhock's presence in the Stockade reflects the complex power dynamics and the exploitation of inmates within the prison.",
-			"As a prisoner turned enforcer, Hamhock serves as a unique challenge within the Stockade. Adventurers must contend with both his size and the corrupt staff who control him in their efforts to bring justice to the prison.",
 			{ heading = "Overview" },
 			"information goes here..",
+
+			--Hamhock is the third boss you will encounter in the Stockade. He is a level 28 elite ogre magi. He is accompanied by 2 Defias.
+
 			{
 				role = DAMAGE,
 				"",
+
+				--This fight is a tank and spank so you should do as much damage as possible while watching your threat. Hamhock is accompanied by two adds that should be killed before engaging him. Damage dealers can interrupt Hamhock's [Chain Lightning] and purge his [Bloodlust] effect.
+
 			},
 			{
 				role = HEALER,
 				"",
+
+				--This fight is a tank and spank so you should focus your healing on the tank. If you are a Shaman or Priest, purge his [Bloodlust] effect.
 			},
 			{
 				role = TANK,
 				"",
+
+				--This fight is a tank and spank so you should focus on doing as much threat as possible on the boss, so the DPS can go all-out. Tanks should keep in mind that they can interrupt his [Chain Lightning] if they possess any interrupt abilities.
+
 			}
 		},
 		abilities = {
@@ -106,20 +122,30 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Dextren Ward is a defias traitor who was imprisoned within the Stockade for his crimes against the brotherhood. Despite his past loyalties, he has become a victim of the very organization he once served. Dextren's presence in the Stockade highlights the internal strife and betrayals that often occur among criminal factions.",
-			"As a former member of the Defias Brotherhood, Dextren Ward's betrayal has led to his incarceration within the Stockade. His knowledge of the criminal organization's secrets makes him a unique target for adventurers seeking to uncover the truth.",
 			{ heading = "Overview" },
 			"information goes here..",
+
+			--Dextren Ward is the last boss you will encounter in the Stockade. He is a level 26 elite human. He is not officially accompanied by any other monsters, but nearby elite Defias will often join the fight.
+
 			{
 				role = DAMAGE,
 				"",
+
+				--This fight is a tank and spank so you should do as much damage as possible while watching your threat. Damage dealers should focus on killing the adds first before engaging Dextren Ward while being cautious of his [Intimidating Shout].
+
 			},
 			{
 				role = HEALER,
 				"",
+
+				--This fight is a tank and spank so you should focus your healing on the tank. Dextren Ward casts [Intimidating Shout] so healers should beware of this mechanic and keep track of the entire party's position to quickly get back in healing range.
+
 			},
 			{
 				role = TANK,
 				"",
+
+				--This fight is a tank and spank so you should focus on doing as much threat as possible on the boss, so the DPS can go all-out. Dextren Ward deals significant damage. Tanks should be careful not to lose aggro, and use their defensive cooldowns properly.
 			}
 		},
 		abilities = {
@@ -134,20 +160,31 @@ InstanceService.AddDungeon({
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Bazil Thredd is a cunning and treacherous defias rogue who has taken control of the Stockade's operations. He is responsible for the corruption and chaos that have engulfed the prison. Bazil's presence within the Stockade represents the power and influence of the Defias Brotherhood over the institution.",
-			"As the mastermind behind the corruption within the Stockade, Bazil Thredd is the final obstacle that adventurers must overcome. His cunning tactics, rogue skills, and determination to maintain control make him a formidable adversary in the battle to restore order within the prison.",
 			{ heading = "Overview" },
 			"information goes here..",
+
+			--Bazil Thredd is a boss of the Stormwind Stockade, and is accompanied by adds. Clear the room before you engage Thredd.
+
 			{
 				role = DAMAGE,
 				"",
+
+				--In the last boss encounter of the dungeon, damage dealers should focus on dealing as much damage as possible while watching their threat. Bazil Thredd deals high amounts of damage that can be perilous to a damage dealer if they manage to gain his attention.
+
 			},
 			{
 				role = HEALER,
 				"",
+
+				--For the last boss encounter of the dungeon, healers should focus on maintaining the tank's health pool. This boss deals significant damage to your tank.
+
 			},
 			{
 				role = TANK,
 				"",
+
+				--The last boss encounter of the dungeon, Bazil Thredd, deals high amounts of damage while also being accompanied by adds. Tanks should focus on maintaining aggro on the adds while damage dealers kill them.
+
 			}
 		},
 		abilities = {

@@ -10,10 +10,6 @@ local component = UI.CreateComponent("InstanceOverview")
 
 local components
 
-function InfoButtonOnClick()
-	print("InfoButton clicked!")
-end
-
 function component.Init(components_)
 	components = components_
 	local instance = CreateFrame("Frame", nil, EncounterJournal.encounter)
