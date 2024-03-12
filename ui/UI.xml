@@ -27,6 +27,7 @@
     <Script file="ui/Encounters.lua" />
     <Script file="ui/EncounterJournalTabs.lua" />
     <Script file="ui/InfoTabs.lua" />
+    <Script file="ui/Loot.lua" />
     <Script file="ui/MinimapButton.lua" />
 
 </Ui>

@@ -38,9 +38,14 @@ function component.Init(components_)
 	end)
 end
 
-function component.Show()
+function component.ShowOverview()
 	components.EncounterFrame.SetCurrentView(component.frame)
 	component.frame.child:SetContents(AdventureGuideNavigationService.GetEncounterContent())
+end
+
+function component.ShowAbilities()
+	components.EncounterFrame.SetCurrentView(component.frame)
+	component.frame.child:SetContents(AdventureGuideNavigationService.GetEncounter().abilities)
 end
 
 UI.Add(component)

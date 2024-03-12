@@ -57,6 +57,8 @@ function component.Init(components_)
 			button:SetHighlightTexture(highlight)
 			button:SetScript("OnClick", function()
 				instanceSelect:Hide()
+				AdventureGuideNavigationService.Reset()
+				AdventureGuideNavigationService.SetInstance(button.instance)
 				components.EncounterFrame.ShowInstanceInfo(button.instance)
 			end)
 			button.initialized = true

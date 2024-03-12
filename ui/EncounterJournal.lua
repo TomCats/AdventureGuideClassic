@@ -126,6 +126,7 @@ function UI.ToggleEncounterJournal()
     end
     EncounterJournal:SetShown(not EncounterJournal:IsShown())
     if (AdventureGuideNavigationService.GetEncounter()) then
-        components.DynamicContentScroller.Show()
+-- todo: switch to correct view
+        components.DynamicContentScroller.ShowOverview()
     end
 end

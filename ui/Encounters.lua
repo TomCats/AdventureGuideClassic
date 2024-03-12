@@ -22,7 +22,8 @@ local function EncounterButton_OnClick(self)
 	sharedHighlightFrame:SetParent(self)
 	sharedHighlightFrame:SetAllPoints(self)
 	sharedHighlightFrame:Show()
-	components.DynamicContentScroller.Show()
+	--todo: Switch to correct view
+	components.DynamicContentScroller.ShowOverview()
 	components.InfoTabs.Refresh()
 end
 

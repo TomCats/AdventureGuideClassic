@@ -7,6 +7,7 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("InfoTabs")
+local components
 local overviewTab, lootTab, questTab, abilitiesTab, modelTab
 local selectedTab
 
@@ -58,6 +59,7 @@ local function validateVersion(versionString)
 end
 
 function component.Init(components_)
+	components = components_
 	overviewTab = AddTab("Overview")
 	selectedTab = overviewTab
 	EncounterJournal.encounter.info.overviewTab = overviewTab
@@ -73,6 +75,13 @@ function component.Init(components_)
 		GameTooltip:Hide()
 	end)
 	overviewTab:SetScript("OnClick", function()
+		if (AdventureGuideNavigationService.GetEncounter()) then
+			components.DynamicContentScroller.ShowOverview()
+		else
+			components.InstanceOverview.Show(AdventureGuideNavigationService.GetInstance())
+		end
+		selectedTab = overviewTab
+		component.Refresh()
 		--tab.onclickFunc()
 		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
 		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
@@ -92,6 +101,9 @@ function component.Init(components_)
 		GameTooltip:Hide()
 	end)
 	lootTab:SetScript("OnClick", function()
+		components.Loot.Show()
+		selectedTab = lootTab
+		component.Refresh()
 		--tab.onclickFunc()
 		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
 		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
@@ -138,6 +150,9 @@ function component.Init(components_)
 		GameTooltip:Hide()
 	end)
 	abilitiesTab:SetScript("OnClick", function()
+		selectedTab = abilitiesTab
+		components.DynamicContentScroller.ShowAbilities()
+		component.Refresh()
 		--tab.onclickFunc()
 		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
 		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
