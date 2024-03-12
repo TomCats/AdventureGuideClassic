@@ -7,12 +7,14 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("EncounterJournal")
+local components
 
 local currentView
 
 local version = C_AddOns.GetAddOnMetadata(addonName, "Version")
 
-function component.Init()
+function component.Init(components_)
+    components = components_
     -- Create the base window and portrait image
     EncounterJournal = CreateFrame("Frame", addonName .. "_EncounterJournal", UIParent, "PortraitFrameTemplate")
     component.frame = EncounterJournal
@@ -123,4 +125,7 @@ function UI.ToggleEncounterJournal()
         initialized = true
     end
     EncounterJournal:SetShown(not EncounterJournal:IsShown())
+    if (AdventureGuideNavigationService.GetEncounter()) then
+        components.DynamicContentScroller.Show()
+    end
 end
