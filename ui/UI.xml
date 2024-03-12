@@ -24,7 +24,6 @@
     <Script file="ui/CreatureButtons.lua" />
     <Script file="ui/InstanceOverview.lua" />
     <Script file="ui/DynamicContentScroller.lua" />
-    <Script file="ui/InstanceOverview.lua" />
     <Script file="ui/Encounters.lua" />
     <Script file="ui/EncounterJournalTabs.lua" />
     <Script file="ui/InfoTabs.lua" />
