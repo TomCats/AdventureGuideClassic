@@ -7,6 +7,8 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("InfoTabs")
+local overviewTab, lootTab, questTab, abilitiesTab, modelTab
+local selectedTab
 
 local function AddTab(label)
 	local tab = CreateFrame("Button", nil, EncounterJournal.encounter.info)
@@ -26,6 +28,7 @@ local function AddTab(label)
 	disabledTexture:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
 	disabledTexture:SetSize(63, 57)
 	disabledTexture:SetTexCoord(0.25585938, 0.37890625, 0.90332031, 0.95898438)
+	disabledTexture:SetDesaturated(true)
 	tab:SetDisabledTexture(disabledTexture)
 	local highlightTexture = tab:CreateTexture()
 	highlightTexture:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
@@ -40,6 +43,7 @@ local function AddTab(label)
 	tab.selected:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
 	tab.selected:SetSize(48, 43)
 	tab.selected:SetPoint("CENTER", tab.unselected, "CENTER", 0, 0)
+	tab.selected:Hide()
 	return tab
 end
 
@@ -54,7 +58,8 @@ local function validateVersion(versionString)
 end
 
 function component.Init(components_)
-	local overviewTab = AddTab("Overview")
+	overviewTab = AddTab("Overview")
+	selectedTab = overviewTab
 	EncounterJournal.encounter.info.overviewTab = overviewTab
 	overviewTab:SetPoint("TOPLEFT", EncounterJournal.encounter.info, "TOPRIGHT", -12, -35)
 	overviewTab.unselected:SetTexCoord(0.85546875, 0.94921875, 0.52441406, 0.56640625)
@@ -67,7 +72,13 @@ function component.Init(components_)
 	overviewTab:SetScript("OnLeave", function (self)
 		GameTooltip:Hide()
 	end)
-	local lootTab = AddTab("Loot")
+	overviewTab:SetScript("OnClick", function()
+		--tab.onclickFunc()
+		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
+		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
+		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+	end)
+	lootTab = AddTab("Loot")
 	EncounterJournal.encounter.info.lootTab = lootTab
 	lootTab:SetPoint("TOP", overviewTab, "BOTTOM", 0, 2)
 	lootTab.unselected:SetTexCoord(0.73046875, 0.82421875, 0.61816406, 0.66015625)
@@ -80,7 +91,13 @@ function component.Init(components_)
 	lootTab:SetScript("OnLeave", function (self)
 		GameTooltip:Hide()
 	end)
-	local questTab = AddTab("Quests")
+	lootTab:SetScript("OnClick", function()
+		--tab.onclickFunc()
+		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
+		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
+		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+	end)
+	questTab = AddTab("Quests")
     EncounterJournal.encounter.info.questTab = questTab
     questTab:SetPoint("TOP", lootTab, "BOTTOM", 0, 2)
 	questTab.selected:ClearAllPoints()
@@ -101,7 +118,13 @@ function component.Init(components_)
 	questTab:SetScript("OnLeave", function (self)
 		GameTooltip:Hide()
 	end)
-	local abilitiesTab = AddTab("Abilities")
+	questTab:SetScript("OnClick", function()
+		--tab.onclickFunc()
+		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
+		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
+		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+	end)
+	abilitiesTab = AddTab("Abilities")
 	EncounterJournal.encounter.info.abilitiesTab = abilitiesTab
 	abilitiesTab:SetPoint("TOP", questTab, "BOTTOM", 0, 2)
 	abilitiesTab.unselected:SetTexCoord(0.904296875, 0.99609375, 0.70703125, 0.748046875)
@@ -114,7 +137,13 @@ function component.Init(components_)
 	abilitiesTab:SetScript("OnLeave", function (self)
 		GameTooltip:Hide()
 	end)
-	local modelTab = AddTab("Model")
+	abilitiesTab:SetScript("OnClick", function()
+		--tab.onclickFunc()
+		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
+		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
+		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+	end)
+	modelTab = AddTab("Model")
 	EncounterJournal.encounter.info.modelTab = modelTab
 	modelTab:SetPoint("TOP", abilitiesTab, "BOTTOM", 0, 2)
 	modelTab.unselected:SetTexCoord(0.90234375, 1, 0.662109375, 0.705078125)
@@ -128,5 +157,54 @@ function component.Init(components_)
 		GameTooltip:Hide()
 	end)
 end
+
+local function selectTab(tab)
+	tab.selected:Show()
+	tab.unselected:Hide()
+	tab:SetHighlightLocked(true)
+	tab:SetEnabled(true)
+end
+
+local function unselectTab(tab)
+	tab.selected:Hide()
+	tab.unselected:Show()
+	tab:SetHighlightLocked(false)
+	tab:SetEnabled(true)
+	tab.unselected:SetDesaturated(false)
+end
+
+local function disableTab(tab)
+	tab.selected:Hide()
+	tab.unselected:Show()
+	tab:SetHighlightLocked(false)
+	tab:SetEnabled(false)
+	tab.unselected:SetDesaturated(true)
+end
+
+function component.Refresh()
+	selectTab(selectedTab)
+	if (selectedTab ~= overviewTab) then
+		unselectTab(overviewTab)
+	end
+	if (selectedTab ~= lootTab) then
+		unselectTab(lootTab)
+	end
+	disableTab(questTab)
+	if (selectedTab ~= abilitiesTab) then
+		if (AdventureGuideNavigationService.GetEncounter()) then
+			unselectTab(abilitiesTab)
+		else
+			disableTab(abilitiesTab)
+		end
+	end
+	if (selectedTab ~= modelTab) then
+		if (AdventureGuideNavigationService.GetEncounter()) then
+			unselectTab(modelTab)
+		else
+			disableTab(modelTab)
+		end
+	end
+end
+
 
 UI.Add(component)

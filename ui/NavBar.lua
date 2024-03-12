@@ -70,6 +70,8 @@ function component.Refresh(encounterName)
 		NavBar_AddButton(component.frame, {
 			name = instance.name,
 			OnClick = function()
+				AdventureGuideNavigationService.Reset()
+				AdventureGuideNavigationService.SetInstance(instance)
 				components.EncounterFrame.ShowInstanceInfo(instance)
 			end,
 			listFunc = nop

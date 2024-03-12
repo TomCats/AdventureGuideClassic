@@ -31,6 +31,7 @@ function component.ShowInstanceInfo(instance)
 	components.NavBar.SetInstance(instance)
 	components.NavBar.SetEncounter()
 	components.NavBar.Refresh()
+	components.InfoTabs.Refresh()
 end
 
 function component.SetCurrentView(newView)

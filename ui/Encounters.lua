@@ -23,6 +23,7 @@ local function EncounterButton_OnClick(self)
 	sharedHighlightFrame:SetAllPoints(self)
 	sharedHighlightFrame:Show()
 	components.DynamicContentScroller.Show()
+	components.InfoTabs.Refresh()
 end
 
 function component.Init(components_)
