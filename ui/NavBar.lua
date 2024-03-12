@@ -82,13 +82,13 @@ function component.Refresh(encounterName)
 				listFunc = nop
 			})
 		end
-	if encounterName then
-		NavBar_AddButton(component.frame, {
-		name = encounterName,
-		OnClick = nop,
-		listFunc = nop
-		})
-	end
+		if encounterName then
+			NavBar_AddButton(component.frame, {
+			name = encounterName,
+			OnClick = nop,
+			listFunc = nop
+			})
+		end
 	end
 end
 
