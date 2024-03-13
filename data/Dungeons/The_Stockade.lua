@@ -50,26 +50,18 @@ InstanceService.AddDungeon({
 		overview = {
 			"Kam Deepfury is a corrupt dwarf officer who has aligned himself with the criminal elements within the Stockade. He serves as an enforcer for the corrupt leadership and has a reputation for brutality. Kam's presence in the Stockade reflects the mingling of criminal elements with the prison's staff.",
 			{ heading = "Overview" },
-			"information goes here..",
-
-			--Kam Deepfury is the second boss you will encounter in the Stockade. He is a level 27 elite Dark Iron dwarf. He is not officially accompanied by any other monsters, but nearby elite Defias will often join the fight.
+			"Kam Deepfury is the second boss you will encounter in The Stockade. He is not officially accompanied by any other mobs, but nearby defias will often join the fight. Damage dealers should focus on killing the adds before engaging Kam Deepfury, while managing their threat. Healers should concentrate their healing on the tank. Tanks should maximize threat so damage dealers can go all-out. Kam Deepfury does a high amount of damage while also frequently stunning his target with {spell:8242}. Tanks should be aware that an early stun can make holding aggro tricky.",
 			{
 				role = DAMAGE,
-				"",
-
-				--This fight is a tank and spank so you should do as much damage as possible while watching your threat. Damage dealers should focus on killing the adds before Kam Deepfury.
+				"Damage dealers should do as much damage as possible while watching your threat. Damage dealers should focus on killing the adds before Kam Deepfury.",
 			},
 			{
 				role = HEALER,
-				"",
-
-				--This fight is a tank and spank so you should focus your healing on the tank. Healers should keep track of their mana, as Kam Deepfury can deal significant damage to the party. Kam will frequently stun the tank using [Shield Slam], so be ready for your tank's health to spike while stunned.
+				"Focus your healing on the tank. Healers should keep track of their mana, as Kam Deepfury can deal significant damage to the party.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--This fight is a tank and spank so you should focus on doing as much threat as possible on the boss, so the DPS can go all-out. Kam Deepfury does a high amount of damage while also frequently stunning his target with [Shield Slam]. Tanks should be aware that an early stun can make holding aggro tricky.
+				"Tanks should focus on doing as much threat as possible, so the damage dealers can go all-out. Kam Deepfury does a high amount of damage while also frequently stunning his target with {spell:8242}. Tanks should be aware that an early stun can make holding aggro tricky.",
 			}
 		},
 		abilities = {
@@ -85,29 +77,19 @@ InstanceService.AddDungeon({
 		overview = {
 			"Hamhock is a massive ogre who has been incarcerated within the Stockade for his crimes. Despite his imposing size, he is often manipulated by the corrupt staff and used as muscle for their schemes. Hamhock's presence in the Stockade reflects the complex power dynamics and the exploitation of inmates within the prison.",
 			{ heading = "Overview" },
-			"information goes here..",
-
-			--Hamhock is the third boss you will encounter in the Stockade. He is a level 28 elite ogre magi. He is accompanied by 2 Defias.
-
+			"Hamhock is the third boss you will encounter in the Stockade. He is a ogre magi. He is accompanied by two Defias. Damage dealers should do as much damage as possible while watching their threat. Healers should focus healing on the tank. If you are a Shaman or Priest, purge his {spell:6742} effect. Tanks should focus on doing as much threat as possible on Hamhock, so the damage dealers can go all-out. Tanks should keep in mind that they can interrupt his {spell:421} if they have any interrupt abilities.",
 			{
 				role = DAMAGE,
-				"",
-
-				--This fight is a tank and spank so you should do as much damage as possible while watching your threat. Hamhock is accompanied by two adds that should be killed before engaging him. Damage dealers can interrupt Hamhock's [Chain Lightning] and purge his [Bloodlust] effect.
+				"Damage dealers should do as much damage as possible while watching your threat. Hamhock is accompanied by two adds that should be killed before engaging him. Damage dealers can interrupt Hamhock's {spell:421} and purge his {spell:6742} effect.",
 
 			},
 			{
 				role = HEALER,
-				"",
-
-				--This fight is a tank and spank so you should focus your healing on the tank. If you are a Shaman or Priest, purge his [Bloodlust] effect.
+				"Healers should focus healing on the tank. If you are a Shaman or Priest, purge his {spell:6742} effect.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--This fight is a tank and spank so you should focus on doing as much threat as possible on the boss, so the DPS can go all-out. Tanks should keep in mind that they can interrupt his [Chain Lightning] if they possess any interrupt abilities.
-
+				"Tanks should focus on doing as much threat as possible on Hamhock, so the damage dealers can go all-out. Tanks should keep in mind that they can interrupt his {spell:421} if they have any interrupt abilities.",
 			}
 		},
 		abilities = {
@@ -123,29 +105,18 @@ InstanceService.AddDungeon({
 		overview = {
 			"Dextren Ward is a defias traitor who was imprisoned within the Stockade for his crimes against the brotherhood. Despite his past loyalties, he has become a victim of the very organization he once served. Dextren's presence in the Stockade highlights the internal strife and betrayals that often occur among criminal factions.",
 			{ heading = "Overview" },
-			"information goes here..",
-
-			--Dextren Ward is the last boss you will encounter in the Stockade. He is a level 26 elite human. He is not officially accompanied by any other monsters, but nearby elite Defias will often join the fight.
-
+			"Dextren Ward is the last boss you will encounter in the Stockade. He is not officially accompanied by any other monsters, but nerby Defias will often join the fight. Damage dealers should focus on killing the adds before engaging Dextren Ward, while managing their threat. Healers should concentrate their healing on the tank. Tanks should maximize threat so damage dealers can go all-out. Dextren Ward deals significant damage. Healers should be aware of his {spell:5246} and keep track of the entire party's position to quickly get back in healing range.",
 			{
 				role = DAMAGE,
-				"",
-
-				--This fight is a tank and spank so you should do as much damage as possible while watching your threat. Damage dealers should focus on killing the adds first before engaging Dextren Ward while being cautious of his [Intimidating Shout].
-
+				"Damage dealers should do as much damage as possible while watching your threat. Focus on defeating the adds first before engaging Dextren Ward while being cautious of his {spell:5246}",
 			},
 			{
 				role = HEALER,
-				"",
-
-				--This fight is a tank and spank so you should focus your healing on the tank. Dextren Ward casts [Intimidating Shout] so healers should beware of this mechanic and keep track of the entire party's position to quickly get back in healing range.
-
+				"Healers should focus on maintaining the tank's health pool. Dextren Ward deals significant damage. Healers should be aware of his {spell:5246} and keep track of the entire party's position to quickly get back in healing range.",
 			},
 			{
 				role = TANK,
-				"",
-
-				--This fight is a tank and spank so you should focus on doing as much threat as possible on the boss, so the DPS can go all-out. Dextren Ward deals significant damage. Tanks should be careful not to lose aggro, and use their defensive cooldowns properly.
+				"Tanks should focus on doing as much threat as possible on Dextren, so the damage dealers can go all-out. Dextran Ward deals significant damage. Tanks should be careful not to lose aggro, and use their defensive cooldowns properly.",
 			}
 		},
 		abilities = {
