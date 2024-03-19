@@ -40,6 +40,7 @@ function component.Init(components_)
 	local homeData = {
 		name = "Home",
 		OnClick = function()
+			AdventureGuideNavigationService.SetInstances(InstanceService.GetDungeons())
 			local instances = AdventureGuideNavigationService.GetInstances()
 			if (instances) then
 				components.InstanceSelect.Show()

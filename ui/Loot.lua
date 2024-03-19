@@ -9,6 +9,8 @@ select(2, ...).SetupGlobalFacade()
 local component = UI.CreateComponent("Loot")
 
 local components
+local lootScrollBox
+local lootScrollBar
 
 local function CreateEncounterItem()
 -- todo: Return a frame that can be added to the scrollframe
@@ -122,43 +124,178 @@ local function CreateEncounterItem()
 end
 
 function component.Init(components_)
-	components = components_
--- todo: Replace placeholder (from instance overview) with actual loot scroll frame (see xml below function)
-	local instance = CreateFrame("Frame", nil, EncounterJournal.encounter)
-	component.frame = instance
-	EncounterJournal.encounter.instance = instance
-	instance:SetSize(390, 425)
-	instance:SetPoint("BOTTOMRIGHT", -1, 2)
-	instance.loreBG = instance:CreateTexture()
-	instance.loreBG:SetDrawLayer("BACKGROUND", 4)
-	instance.loreBG:SetTexture("Interface/EncounterJournal/UI-EJ-LOREBG-Default")
-	instance.loreBG:SetSize(390, 336)
-	instance.loreBG:SetPoint("TOP", 3, -9)
-	instance.loreBG:SetTexCoord(0, 0.7617187, 0, 0.65625)
-	instance.title = instance:CreateFontString(nil, "OVERLAY", "QuestFont_Super_Huge")
-	instance.title:SetJustifyH("CENTER")
-	instance.title:SetJustifyV("BOTTOM")
-	Mixin(instance.title, AutoScalingFontStringMixin)
-	instance.title:SetSize(320, 35)
-	instance.title:SetPoint("TOP", 0, -48)
-	instance.titleBG = instance:CreateTexture(nil, "ARTWORK")
-	instance.titleBG:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
-	instance.titleBG:SetSize(256, 64)
-	instance.titleBG:SetTexCoord(0.34570313, 0.84570313, 0.42871094, 0.49121094)
-	instance.titleBG:SetPoint("TOP", instance.loreBG, 0, -38)
-	instance.loreScrollingFont = CreateFrame("Frame", nil, instance, "AdventureGuideClassic_ScrollingFontTemplate_GameFontBlack")
-	instance.loreScrollingFont:SetFrameStrata("HIGH")
-	instance.loreScrollingFont:SetSize(315, 100)
-	instance.loreScrollingFont:SetPoint("BOTTOMLEFT", 35, 5)
-	instance.loreScrollBar = CreateFrame("EventFrame", nil, instance, "AdventureGuideClassic_MinimalScrollBar_NoTrack")
-	instance.loreScrollBar:SetFrameStrata("HIGH")
-	instance.loreScrollBar:SetPoint("TOPLEFT", instance.loreScrollingFont, "TOPRIGHT", 9, -33)
-	instance.loreScrollBar:SetPoint("BOTTOMLEFT", instance.loreScrollingFont, "BOTTOMRIGHT", 9, 33)
-	instance.loreScrollingFont:SetTextColor(CreateColor(.13, .07, .01));
-	local scrollBox = instance.loreScrollingFont:GetScrollBox();
-	ScrollUtil.RegisterScrollBoxWithScrollBar(scrollBox, instance.loreScrollBar);
-	instance:Hide()
+    components = components_
+	local info = EncounterJournal.encounter.info
+    lootScrollBox = CreateFrame("ScrollFrame", nil, info, "WowScrollBoxList")
+    component.frame = lootScrollBox
+    EncounterJournal.encounter.info.lootScrollBox = lootScrollBox
+    lootScrollBox:SetSize(345, 382)
+    lootScrollBox:SetPoint("BOTTOMRIGHT", -5, 1)
+	lootScrollBox:Hide()
+	lootScrollBar = CreateFrame("EventFrame", nil, lootScrollBox, "MinimalScrollBar")
+	EncounterJournal.encounter.info.lootScrollBar = lootScrollBar
+	lootScrollBar:SetPoint("TOPLEFT", lootScrollBox, "TOPRIGHT", 5, -5)
+	lootScrollBar:SetPoint("BOTTOMLEFT", lootScrollBox, "BOTTOMRIGHT", 5, 5)
+
+	local contentFrame = CreateFrame("Frame", nil, lootScrollBox)
+	lootScrollBox:SetScrollChild(contentFrame)
+	contentFrame:SetSize(lootScrollBox:GetWidth(), lootScrollBox:GetHeight())
+
+    local function LootButtonInitalizer(button, lootItem)
+        button:SetSize(321, 45)
+        button:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+        local icon = button:CreateTexture(nil, "BACKGROUND")
+        icon:SetSize(42, 42)
+        icon:SetPoint("TOPLEFT", 2, -2)
+        button.icon = icon
+        local bgTexture = button:CreateTexture(nil, "BORDER")
+        bgTexture:SetSize(321, 45)
+        bgTexture:SetPoint("CENTER", button, "CENTER", 0, 0)
+        bgTexture:SetTexture("Interface\\EncounterJournal\\UI-EncounterJournalTextures")
+        bgTexture:SetTexCoord(0.00195313, 0.62890625, 0.61816406, 0.66210938)
+        local name = button:CreateFontString(nil, "OVERLAY", "GameFontNormalMed3")
+        name:SetSize(250, 12)
+        name:SetPoint("TOPLEFT", icon, "TOPRIGHT", 7, -7)
+        button.name = name
+        if lootItem then
+            icon:SetTexture(lootItem.iconPath)
+            name:SetText(lootItem.name)
+        end
+    end
+
+	local lootItems = {
+		{iconPath = "Interface\\Icons\\inv_misc_coin_01", name = "Gold Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_03", name = "Silver Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_05", name = "Copper Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_01", name = "Gold Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_03", name = "Silver Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_05", name = "Copper Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_01", name = "Gold Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_03", name = "Silver Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_05", name = "Copper Coin"},
+		{iconPath = "Interface\\Icons\\inv_misc_coin_01", name = "Gold Coin"},
+	}
+
+	local lootView = CreateScrollBoxListLinearView()
+	lootView:SetElementExtent(55)
+	lootView:SetElementInitializer("Button", LootButtonInitalizer)
+	lootView:SetPadding(10,0,0,20,15);
+	ScrollUtil.InitScrollBoxListWithScrollBar(lootScrollBox, lootScrollBar, lootView)
+
+	local dataProvider = CreateDataProvider(lootItems)
+	for _, lootItem in ipairs(lootItems) do
+		dataProvider:Insert(lootItem)
+	end
+	lootScrollBox:SetDataProvider(dataProvider)
 end
+
+--[[
+		<Button name="EncounterItemTemplate" registerForClicks="LeftButtonUp, RightButtonUp" mixin="EncounterJournalItemMixin" virtual="true">
+		<Size x="321" y="45"/>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentIcon" parentKey="icon">
+					<Size x="42" y="42"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="2" y="-2"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="BORDER">
+				<Texture inherits="UI-EJ-DungeonLootFrame" parentKey="bossTexture">
+					<Anchors>
+						<Anchor point="LEFT" x="0" y="0"/>
+					</Anchors>
+				</Texture>
+				<Texture inherits="UI-EJ-LootFrame" parentKey="bosslessTexture">
+					<Anchors>
+						<Anchor point="LEFT" x="0" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentName" inherits="GameFontNormalMed3" justifyH="LEFT" parentKey="name">
+					<Size x="250" y="12"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeKey="$parent.icon" x="7" y="-7"/>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentArmorClass" inherits="GameFontBlack" justifyH="RIGHT" parentKey="armorType">
+					<Size x="0" y="12"/>
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.name" relativePoint="TOPLEFT" x="264" y="-30"/>
+					</Anchors>
+					<Color r="0.25" g="0.1484375" b=".02" a="1"/>
+				</FontString>
+				<FontString name="$parentSlot" inherits="GameFontBlack" justifyH="LEFT" parentKey="slot">
+					<Size x="0" y="12"/>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" relativeKey="$parent.icon" x="7" y="5"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" relativeKey="$parent.armorType" x="-15" y="0"/>
+					</Anchors>
+					<Color r="0.25" g="0.1484375" b=".02" a="1"/>
+				</FontString>
+				<FontString name="$parentBoss" inherits="GameFontBlack" justifyH="LEFT" parentKey="boss">
+					<Size x="0" y="12"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.icon" relativePoint="BOTTOMLEFT" y="-3"/>
+					</Anchors>
+					<Color r="0.25" g="0.1484375" b=".02" a="1"/>
+				</FontString>
+			</Layer>
+			<Layer level="OVERLAY" textureSubLevel="1">
+				<Texture parentKey="IconBorder" file="Interface\Common\WhiteIconFrame" hidden="true">
+					<Size x="37" y="37"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.icon"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY" textureSubLevel="2">
+				<Texture parentKey="IconOverlay" hidden="true">
+					<Size x="37" y="37"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.icon"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY" textureSubLevel="2">
+				<Texture parentKey="IconOverlay2" hidden="true">
+					<Size x="37" y="37"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.icon"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnClick>
+				if (not HandleModifiedItemClick(self.link)) then
+					EncounterJournal_Loot_OnClick(self);
+				else
+					PlaySound(SOUNDKIT.IG_MAINMENU_OPTION);
+				end
+			</OnClick>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+				local useSpec = true;
+				EncounterJournal_SetTooltipWithCompare(GameTooltip, self.link, useSpec);
+				self.showingTooltip = true;
+				self:SetScript("OnUpdate", EncounterJournal_Loot_OnUpdate);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+				self.showingTooltip = false;
+				self:SetScript("OnUpdate", nil);
+				ResetCursor();
+			</OnLeave>
+		</Scripts>
+	</Button>
+]]
+
 
 --[[
 <Frame parentKey="LootContainer" frameStrata="HIGH">
@@ -285,13 +422,8 @@ end
 ]]
 
 function component.Show()
-	local instance = AdventureGuideNavigationService.GetInstance()
-	EncounterJournal.encounter.info.encounterTitle:SetText("")
-	component.frame.title:SetText("Loot Placeholder")
-	component.frame.loreBG:SetTexture(instance.splash)
-	-- component.frame.infoButton:SetText(instance.info)
-	component.frame.loreScrollingFont:SetText(instance.overview);
-	component.frame.loreScrollBar:SetShown(component.frame.loreScrollingFont:HasScrollableExtent());
+	local lootContainer = AdventureGuideNavigationService.GetInstance()
+	EncounterJournal.encounter.info.encounterTitle:SetText("Loot")
 	components.EncounterFrame.SetCurrentView(component.frame)
 end
 
