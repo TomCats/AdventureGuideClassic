@@ -37,10 +37,10 @@ end
 function component.SetCurrentView(newView)
 	if (currentView) then
 		currentView:Hide()
-		currentView = newView
-		currentView:Show()
-	else
-		currentView = newView
+	end
+
+	currentView = newView
+	if currentView then
 		currentView:Show()
 	end
 end
