@@ -30,6 +30,10 @@ function AdventureGuideNavigationService.GetEncounterContent()
 	return encounter.overview or { }
 end
 
+function AdventureGuideNavigationService.GetEncounterLoot()
+	return encounter and encounter.loot or { }
+end
+
 function AdventureGuideNavigationService.GetInstance()
 	return instance
 end

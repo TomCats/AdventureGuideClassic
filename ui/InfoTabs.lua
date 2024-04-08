@@ -48,16 +48,6 @@ local function AddTab(label)
 	return tab
 end
 
-local function extractVersion(versionString)
-	local major, minor, patch = string.match(versionString, "(%d+)%.(%d+)%.(%d+)")
-	return tonumber(major), tonumber(minor), tonumber(patch)
-end
-
-local function validateVersion(versionString)
-	local major, minor, _ = extractVersion(versionString)
-	return major == 1 and minor == 15
-end
-
 function component.Init(components_)
 	components = components_
 	overviewTab = AddTab("Overview")
@@ -101,12 +91,9 @@ function component.Init(components_)
 		GameTooltip:Hide()
 	end)
 	lootTab:SetScript("OnClick", function()
-		components.Loot.Show()
 		selectedTab = lootTab
+		components.DynamicContentScroller.ShowLoot()
 		component.Refresh()
-		--tab.onclickFunc()
-		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
-		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
 		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
 	end)
 	questTab = AddTab("Quests")
@@ -202,7 +189,11 @@ function component.Refresh()
 		unselectTab(overviewTab)
 	end
 	if (selectedTab ~= lootTab) then
-		unselectTab(lootTab)
+		if (AdventureGuideNavigationService.GetEncounter()) then
+			unselectTab(lootTab)
+		else
+			disableTab(lootTab)
+		end
 	end
 	disableTab(questTab)
 	if (selectedTab ~= abilitiesTab) then
