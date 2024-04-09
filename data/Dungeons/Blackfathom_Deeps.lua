@@ -19,7 +19,7 @@ InstanceService.AddDungeon({
 		encounterID = 4887,
 		portrait = 607613,
 		instance = "Blackfathom Deeps",
-		loot = { 9449, 9449, 9449, 9449, 9449, 6908 },
+		loot = { 6908, 6907 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Ghamoo-Ra is a massive and ancient turtle residing deep within Blackfathom Deeps. This aquatic behemoth is considered a guardian of the subterranean waters and the creatures that dwell within them. Ghamoo-Ra's immense size and formidable defenses make it a fearsome inhabitant of the underground aquatic realm.",
@@ -87,7 +87,7 @@ InstanceService.AddDungeon({
 		name = "Lady Sarevess",
 		encounterID = 4837,
 		portrait = 607682,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 888, 11121, 3078 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lady Sarevess is a naga sorceress who has claimed Blackfathom Deeps as her lair. She is known for her mastery of water-based magic and her allegiance to the naga forces that seek to expand their dominion beneath the waves. Lady Sarevess's control over the aquatic environment and her cunning tactics make her a formidable adversary in the depths.",

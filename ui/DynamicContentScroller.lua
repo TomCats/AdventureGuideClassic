@@ -48,10 +48,4 @@ function component.ShowAbilities()
 	component.frame.child:SetContents(AdventureGuideNavigationService.GetEncounter().abilities)
 end
 
-function component.ShowLoot()
-	components.EncounterFrame.SetCurrentView(component.frame)
-	components.Loot.SetInstance(AdventureGuideNavigationService.GetEncounter())
-	component.frame.child:SetContents(components.Loot)
-end
-
 UI.Add(component)
