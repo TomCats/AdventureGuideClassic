@@ -23,7 +23,19 @@ local function EncounterButton_OnClick(self)
 	sharedHighlightFrame:SetAllPoints(self)
 	sharedHighlightFrame:Show()
 	--todo: Switch to correct view
-	components.DynamicContentScroller.ShowOverview()
+	local selectedTabName = components.InfoTabs.GetSelectedTabName()
+	if selectedTabName == "Overview" then
+		components.DynamicContentScroller.ShowOverview()
+	elseif selectedTabName == "Loot" then
+		components.Loot.Show()
+	elseif selectedTabName == "Quest" then
+		-- todo: implement
+	elseif selectedTabName == "Abilities" then
+		components.DynamicContentScroller.ShowAbilities()
+	elseif selectedTabName == "Model" then
+		-- todo: implement
+	end
+	-- components.DynamicContentScroller.ShowOverview()
 	components.InfoTabs.Refresh()
 end
 

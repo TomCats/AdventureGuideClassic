@@ -128,6 +128,40 @@ local lootScrollBox
 	</Button>
 ]]
 
+local equipLocMapping = {
+	INVTYPE_HEAD = "Head",
+	INVTYPE_NECK = "Neck",
+	INVTYPE_SHOULDER = "Shoulder",
+	INVTYPE_BODY = "Shirt",
+	INVTYPE_CLOAK = "Back",
+	INVTYPE_CHEST = "Chest",
+	INVTYPE_WRIST = "Wrist",
+	INVTYPE_HAND = "Hands",
+	INVTYPE_WAIST = "Waist",
+	INVTYPE_LEGS = "Legs",
+	INVTYPE_FEET = "Feet",
+	INVTYPE_FINGER = "Finger",
+	INVTYPE_TRINKET = "Trinket",
+	INVTYPE_WEAPON = "One-Hand",
+	INVTYPE_SHIELD = "Off Hand",
+	INVTYPE_2HWEAPON = "Two-Hand",
+	INVTYPE_WEAPONMAINHAND = "Main Hand",
+	INVTYPE_WEAPONOFFHAND = "Off Hand",
+	INVTYPE_HOLDABLE = "Held In Off-hand",
+	INVTYPE_RANGED = "Ranged",
+	INVTYPE_THROWN = "Thrown",
+	INVTYPE_RELIC = "Relic",
+	INVTYPE_TABARD = "Tabard",
+	INVTYPE_ROBE = "Chest",
+	INVTYPE_BAG = "Bag",
+	INVTYPE_QUIVER = "Quiver",
+	INVTYPE_AMMO = "Ammo",
+	INVTYPE_GUN = "Gun",
+	INVTYPE_CROSSBOW = "Crossbow",
+	INVTYPE_WAND = "Wand",
+	INVTYPE_FIST = "Fist Weapon",
+}
+
 function component.Init(components_)
 	components = components_
     lootContainer = CreateFrame("Frame", nil, EncounterJournal.encounter.info)
@@ -150,6 +184,7 @@ function component.Init(components_)
 			local lootFrame = CreateFrame("Frame", nil, button)
 			lootFrame:SetSize(1, 1)
 			lootFrame:SetPoint("TOPLEFT", 0, 0)
+			button.icon = button:CreateTexture()
 			button.icon:SetSize(45, 45)
 			button.icon:SetPoint("LEFT", 0, -5)
 			button.icon:SetDrawLayer("BACKGROUND")
@@ -159,6 +194,18 @@ function component.Init(components_)
 			bosslessTexture:SetSize(321, 45)
 			bosslessTexture:SetPoint("LEFT", 0, -5)
 			bosslessTexture:SetDrawLayer("BORDER")
+			button.armorType = button:CreateFontString()
+			button.armorType:SetJustifyH("LEFT")
+			button.armorType:SetTextColor(0, 0, 0)
+			button.armorType:SetSize(0, 12)
+			button.armorType:SetPoint("BOTTOMRIGHT", -25, 5)
+			button.armorType:SetFont("Fonts\\FRIZQT__.TTF", 10)
+			button.slot = button:CreateFontString()
+			button.slot:SetJustifyH("LEFT")
+			button.slot:SetTextColor(0, 0, 0)
+			button.slot:SetSize(0, 12)
+			button.slot:SetPoint("BOTTOMLEFT", 55, 5)
+			button.slot:SetFont("Fonts\\FRIZQT__.TTF", 10)
 			button.name = button:CreateFontString()
 			button.name:SetJustifyH("LEFT")
 			button.name:SetJustifyV("MIDDLE")
@@ -171,6 +218,8 @@ function component.Init(components_)
 		end
 		button.name:SetText(lootItem.name)
 		button.icon:SetTexture(lootItem.icon)
+		button.armorType:SetText(lootItem.armorType or "Unknown")
+		button.slot:SetText(lootItem.slot or "Unknown")
 		button:SetScript("OnEnter", function(self)
 			GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 			GameTooltip:SetHyperlink(lootItem.link)
@@ -204,8 +253,8 @@ function component.Show()
     local dataProvider = CreateDataProvider()
     lootScrollBox:SetDataProvider(dataProvider);
 	for _, itemId in ipairs(loot) do
-		local itemName, itemLink, itemRarity, _, _, _, _, _, _, itemIcon =  C_Item.GetItemInfo(itemId)
-		local lootItem = { name = itemName, link = itemLink, rarity = itemRarity, icon = itemIcon }
+		local itemName, itemLink, itemRarity, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon =  C_Item.GetItemInfo(itemId)
+		local lootItem = { name = itemName, link = itemLink, rarity = itemRarity, icon = itemIcon, armorType = itemSubType, slot = equipLocMapping[itemEquipLoc] or itemEquipLoc}
 		dataProvider:Insert(lootItem)
 	end
 	components.EncounterFrame.SetCurrentView(lootContainer)

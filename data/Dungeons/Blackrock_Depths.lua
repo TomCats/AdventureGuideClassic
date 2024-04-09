@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Lord Roccor",
 		encounterID = 9025,
 		portrait = 607697,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22397, 22234, 11631, 11632 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lord Roccor is the first boss of Blackrock Depths, and is a powerful fire elemental. He is known for his destructive capabilities and his control over flames, Lord Roccor is a formidable adversary. He is believed to have been summoned and bound to the fortress by the Dark Iron dwarves, harnessing his fiery power for their own purposes.",

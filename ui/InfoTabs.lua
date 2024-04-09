@@ -11,6 +11,13 @@ local components
 local overviewTab, lootTab, questTab, abilitiesTab, modelTab
 local selectedTab
 
+-- Track the selected tab
+local isOverviewTabSelected = true
+local isLootTabSelected = false
+local isQuestTabSelected = false
+local isAbilitiesTabSelected = false
+local isModelTabSelected = false
+
 local function AddTab(label)
 	local tab = CreateFrame("Button", nil, EncounterJournal.encounter.info)
 	tab:SetFrameLevel(510)
@@ -76,6 +83,11 @@ function component.Init(components_)
 		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
 		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
 		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+		isOverviewTabSelected = true
+		isLootTabSelected = false
+		isQuestTabSelected = false
+		isAbilitiesTabSelected = false
+		isModelTabSelected = false
 	end)
 	lootTab = AddTab("Loot")
 	EncounterJournal.encounter.info.lootTab = lootTab
@@ -95,6 +107,11 @@ function component.Init(components_)
 		selectedTab = lootTab
 		component.Refresh()
 		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+		isOverviewTabSelected = false
+		isLootTabSelected = true
+		isQuestTabSelected = false
+		isAbilitiesTabSelected = false
+		isModelTabSelected = false
 	end)
 	questTab = AddTab("Quests")
     EncounterJournal.encounter.info.questTab = questTab
@@ -122,6 +139,11 @@ function component.Init(components_)
 		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
 		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
 		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+		isOverviewTabSelected = false
+		isLootTabSelected = false
+		isQuestTabSelected = true
+		isAbilitiesTabSelected = false
+		isModelTabSelected = false
 	end)
 	abilitiesTab = AddTab("Abilities")
 	EncounterJournal.encounter.info.abilitiesTab = abilitiesTab
@@ -144,6 +166,11 @@ function component.Init(components_)
 		--PanelTemplates_Tab_OnClick(tab, EncounterJournal.encounter.info)
 		--PanelTemplates_SetTab(EncounterJournal.encounter.info, tabIdx)
 		PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
+		isOverviewTabSelected = false
+		isLootTabSelected = false
+		isQuestTabSelected = false
+		isAbilitiesTabSelected = true
+		isModelTabSelected = false
 	end)
 	modelTab = AddTab("Model")
 	EncounterJournal.encounter.info.modelTab = modelTab
@@ -212,5 +239,12 @@ function component.Refresh()
 	end
 end
 
+function component.GetSelectedTabName()
+	if isOverviewTabSelected then return "Overview" end
+	if isLootTabSelected then return "Loot" end
+	if isQuestTabSelected then return "Quest" end
+	if isAbilitiesTabSelected then return "Abilities" end
+	if isModelTabSelected then return "Model" end
+end
 
 UI.Add(component)

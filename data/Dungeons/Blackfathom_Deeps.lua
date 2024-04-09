@@ -155,7 +155,7 @@ InstanceService.AddDungeon({
 		name = "Gelihast",
 		encounterID = 6243,
 		portrait = 607609,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 6906, 6905 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Gelihast is a fearsome murloc warrior who has established a stronghold within Blackfathom Deeps. He commands a tribe of murlocs and is known for his ruthless tactics and territorial nature. Gelihast's mastery of close combat and his control over his murloc followers make him a dangerous foe in the depths.",
@@ -178,38 +178,38 @@ InstanceService.AddDungeon({
 
 		}
 	},
-	{
-		name = "Baron Aquanis",
-		encounterID = 12876,
-		portrait = 607552,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
-		npcs = { 2135, 12456, 12314 },
-		overview = {
-			"Baron Aquanis is a powerful water elemental that has been summoned to Blackfathom Deeps by dark forces. This elemental entity serves as a guardian of the submerged tunnels and channels beneath the depths. Baron Aquanis's control over water magic and his formidable elemental form make him a formidable protector of the underground waters.",
-			{ heading = "Overview" },
-			"Baron Aquanis is another miniboss that is summoned when Horde party members loot the Fathom Stone for a dungeon quest.",
-			{
-				role = DAMAGE,
-				"Baron Aquanis is an easy fight, let the tank pull and don't over aggro, focus damage on Baron Aquanis.",
-			},
-			{
-				role = HEALER,
-				"Maintain healing on the tank.",
-			},
-			{
-				role = TANK,
-				"Maintain aggro on Baron Aquanis and face him away from the group.",
-			}
-		},
-		abilities = {
+	-- {
+	-- 	name = "Baron Aquanis",
+	-- 	encounterID = 12876,
+	-- 	portrait = 607552,
+	-- 	loot = { 1155, 6903 },
+	-- 	npcs = { 2135, 12456, 12314 },
+	-- 	overview = {
+	-- 		"Baron Aquanis is a powerful water elemental that has been summoned to Blackfathom Deeps by dark forces. This elemental entity serves as a guardian of the submerged tunnels and channels beneath the depths. Baron Aquanis's control over water magic and his formidable elemental form make him a formidable protector of the underground waters.",
+	-- 		{ heading = "Overview" },
+	-- 		"Baron Aquanis is another miniboss that is summoned when Horde party members loot the Fathom Stone for a dungeon quest.",
+	-- 		{
+	-- 			role = DAMAGE,
+	-- 			"Baron Aquanis is an easy fight, let the tank pull and don't over aggro, focus damage on Baron Aquanis.",
+	-- 		},
+	-- 		{
+	-- 			role = HEALER,
+	-- 			"Maintain healing on the tank.",
+	-- 		},
+	-- 		{
+	-- 			role = TANK,
+	-- 			"Maintain aggro on Baron Aquanis and face him away from the group.",
+	-- 		}
+	-- 	},
+	-- 	abilities = {
 			
-		}
-	},
+	-- 	}
+	-- },
 	{
 		name = "Twilight Lord Kelris",
 		encounterID = 4832,
 		portrait = 607800,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 1155, 6903, },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Twilight Lord Kelris is a high-ranking member of the Twilight's Hammer cult, which seeks to usher in the return of the malevolent Old Gods. Within Blackfathom Deeps, Kelris conducts dark rituals and schemes to further the cult's goals. His mastery of shadow magic and his allegiance to the Old Gods make him a formidable and sinister figure in the depths.",
@@ -236,7 +236,7 @@ InstanceService.AddDungeon({
 		name = "Old Serra'kis",
 		encounterID = 4830,
 		portrait = 607733,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 6901, 6902, 6904 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Old Serra'kis is a massive and ancient hydra that dwells within the watery depths of Blackfathom Deeps. This colossal creature is a testament to the primal forces of nature that still exist deep underground. Old Serra'kis's multiple heads and devastating attacks make it a formidable and iconic inhabitant of the submerged realm.",
@@ -263,7 +263,7 @@ InstanceService.AddDungeon({
 		name = "Aku'mai",
 		encounterID = 4829,
 		portrait = 607614,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 6910, 6911, 6909 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Aku'mai is an immense and malevolent creature known as the Deepstrider that lurks in the darkest depths of Blackfathom Deeps. Its origins are shrouded in mystery, but it is believed to be a primeval and nightmarish entity. Aku'mai's horrifying form and deadly attacks make it the ultimate challenge for adventurers who dare to explore the deepest reaches of the submerged caverns.",
