@@ -21,113 +21,7 @@ local lootScrollBox
 -- 	end
 -- end
 
---[[
-	<Button name="EncounterItemTemplate" registerForClicks="LeftButtonUp, RightButtonUp" mixin="EncounterJournalItemMixin" virtual="true">
-		<Size x="321" y="45"/>
-		<Layers>
-			<Layer level="BACKGROUND">
-				<Texture name="$parentIcon" parentKey="icon">
-					<Size x="42" y="42"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" x="2" y="-2"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-			<Layer level="BORDER">
-				<Texture inherits="UI-EJ-DungeonLootFrame" parentKey="bossTexture">
-					<Anchors>
-						<Anchor point="LEFT" x="0" y="0"/>
-					</Anchors>
-				</Texture>
-				<Texture inherits="UI-EJ-LootFrame" parentKey="bosslessTexture">
-					<Anchors>
-						<Anchor point="LEFT" x="0" y="0"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-			<Layer level="OVERLAY">
-				<FontString name="$parentName" inherits="GameFontNormalMed3" justifyH="LEFT" parentKey="name">
-					<Size x="250" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeKey="$parent.icon" x="7" y="-7"/>
-					</Anchors>
-				</FontString>
-				<FontString name="$parentArmorClass" inherits="GameFontBlack" justifyH="RIGHT" parentKey="armorType">
-					<Size x="0" y="12"/>
-					<Anchors>
-						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.name" relativePoint="TOPLEFT" x="264" y="-30"/>
-					</Anchors>
-					<Color r="0.25" g="0.1484375" b=".02" a="1"/>
-				</FontString>
-				<FontString name="$parentSlot" inherits="GameFontBlack" justifyH="LEFT" parentKey="slot">
-					<Size x="0" y="12"/>
-					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" relativeKey="$parent.icon" x="7" y="5"/>
-						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" relativeKey="$parent.armorType" x="-15" y="0"/>
-					</Anchors>
-					<Color r="0.25" g="0.1484375" b=".02" a="1"/>
-				</FontString>
-				<FontString name="$parentBoss" inherits="GameFontBlack" justifyH="LEFT" parentKey="boss">
-					<Size x="0" y="12"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeKey="$parent.icon" relativePoint="BOTTOMLEFT" y="-3"/>
-					</Anchors>
-					<Color r="0.25" g="0.1484375" b=".02" a="1"/>
-				</FontString>
-			</Layer>
-			<Layer level="OVERLAY" textureSubLevel="1">
-				<Texture parentKey="IconBorder" file="Interface\Common\WhiteIconFrame" hidden="true">
-					<Size x="37" y="37"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeKey="$parent.icon"/>
-						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-			<Layer level="OVERLAY" textureSubLevel="2">
-				<Texture parentKey="IconOverlay" hidden="true">
-					<Size x="37" y="37"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeKey="$parent.icon"/>
-						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-			<Layer level="OVERLAY" textureSubLevel="2">
-				<Texture parentKey="IconOverlay2" hidden="true">
-					<Size x="37" y="37"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" relativeKey="$parent.icon"/>
-						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-		</Layers>
-		<Scripts>
-			<OnClick>
-				if (not HandleModifiedItemClick(self.link)) then
-					EncounterJournal_Loot_OnClick(self);
-				else
-					PlaySound(SOUNDKIT.IG_MAINMENU_OPTION);
-				end
-			</OnClick>
-			<OnEnter>
-				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-				local useSpec = true;
-				EncounterJournal_SetTooltipWithCompare(GameTooltip, self.link, useSpec);
-				self.showingTooltip = true;
-				self:SetScript("OnUpdate", EncounterJournal_Loot_OnUpdate);
-			</OnEnter>
-			<OnLeave>
-				GameTooltip:Hide();
-				self.showingTooltip = false;
-				self:SetScript("OnUpdate", nil);
-				ResetCursor();
-			</OnLeave>
-		</Scripts>
-	</Button>
-]]
-
+-- Move this to a better place, function maybe so it can be reused
 local equipLocMapping = {
 	INVTYPE_HEAD = "Head",
 	INVTYPE_NECK = "Neck",
@@ -147,8 +41,10 @@ local equipLocMapping = {
 	INVTYPE_2HWEAPON = "Two-Hand",
 	INVTYPE_WEAPONMAINHAND = "Main Hand",
 	INVTYPE_WEAPONOFFHAND = "Off Hand",
+	INVTYPE_NON_EQUIP_IGNORE = "Unique",
 	INVTYPE_HOLDABLE = "Held In Off-hand",
 	INVTYPE_RANGED = "Ranged",
+	INVTYPE_RANGEDRIGHT = "Ranged",
 	INVTYPE_THROWN = "Thrown",
 	INVTYPE_RELIC = "Relic",
 	INVTYPE_TABARD = "Tabard",
@@ -188,6 +84,16 @@ function component.Init(components_)
 			button.icon:SetSize(45, 45)
 			button.icon:SetPoint("LEFT", 0, -5)
 			button.icon:SetDrawLayer("BACKGROUND")
+			button.iconBorder = button:CreateTexture()
+			button.iconBorder:SetTexture("Interface/Common/WhiteIconFrame")
+			button.iconBorder:SetSize(45, 45)
+			button.iconBorder:SetDrawLayer("OVERLAY")
+			button.iconBorder:SetPoint("TOPLEFT", button.icon, "BOTTOMRIGHT", -45, 45)
+			button.iconOverlay = button:CreateTexture()
+			button.iconOverlay:SetTexture("Interface/Common/WhiteIconFrame")
+			button.iconOverlay:SetSize(45, 45)
+			button.iconOverlay:SetDrawLayer("OVERLAY")
+			button.iconOverlay:SetPoint("TOPLEFT", button.icon, "BOTTOMRIGHT", -45, 45)
 			local bosslessTexture = button:CreateTexture()
 			bosslessTexture:SetTexture("Interface/EncounterJournal/UI-EncounterJournalTextures")
 			bosslessTexture:SetTexCoord(0.00195313, 0.62890625, 0.61816406, 0.66210938)
@@ -228,6 +134,14 @@ function component.Init(components_)
 		button:SetScript("OnLeave", function(self)
 			GameTooltip:Hide()
 		end)
+		button:SetScript("OnClick", function(self, mouseButton)
+			if mouseButton == "LeftButton" and IsControlKeyDown() then
+				if self.lootItem and self.lootItem.link then
+					DressUpItemLink(self.lootItem.link)
+				end
+			end
+		end)
+		-- Move this to a better place, function maybe so it can be reused
 		local colors = {
 			[0] = {r = 0.62, g = 0.62, b = 0.62}, -- Poor
 			[1] = {r = 1.00, g = 1.00, b = 1.00}, -- Common
@@ -240,6 +154,8 @@ function component.Init(components_)
 		}
 		local color = colors[lootItem.rarity] or colors[0]
 		button.name:SetVertexColor(color.r, color.g, color.b)
+		button.iconBorder:SetVertexColor(color.r, color.g, color.b)
+		button.iconOverlay:SetVertexColor(color.r, color.g, color.b)
 		-- todo: Require more bgTextures for different loot qualities
 	end
 	local lootView = CreateScrollBoxListLinearView()
@@ -248,14 +164,30 @@ function component.Init(components_)
 	ScrollUtil.InitScrollBoxListWithScrollBar(lootScrollBox, lootScrollBar, lootView)
 end
 
+local function OnItemDataLoadResult(event, itemId, success)
+	if success then
+		component.Show()
+	end
+end
+
+local eventFrame = CreateFrame("Frame")
+eventFrame:RegisterEvent("ITEM_DATA_LOAD_RESULT")
+eventFrame:SetScript("OnEvent", function(self, event, ...)
+	OnItemDataLoadResult(event, ...)
+end)
+
 function component.Show()
 	local loot = AdventureGuideNavigationService.GetEncounterLoot()
     local dataProvider = CreateDataProvider()
     lootScrollBox:SetDataProvider(dataProvider);
 	for _, itemId in ipairs(loot) do
 		local itemName, itemLink, itemRarity, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon =  C_Item.GetItemInfo(itemId)
+		if itemName then
 		local lootItem = { name = itemName, link = itemLink, rarity = itemRarity, icon = itemIcon, armorType = itemSubType, slot = equipLocMapping[itemEquipLoc] or itemEquipLoc}
 		dataProvider:Insert(lootItem)
+		else
+			C_Item.RequestLoadItemDataByID(itemId)
+		end
 	end
 	components.EncounterFrame.SetCurrentView(lootContainer)
 end

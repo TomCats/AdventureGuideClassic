@@ -45,7 +45,7 @@ InstanceService.AddDungeon({
 		name = "Bael'Gar",
 		encounterID = 9016,
 		portrait = 607549,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11802, 11803, 11805, 11807 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Bael'Gar is a fearsome fire elemental that lurks within Blackrock Depths. Known for his destructive capabilities and affinity for fire magic, Bael'Gar is a formidable adversary. He is believed to have been summoned and bound to the depths by the Dark Iron dwarves, harnessing his fiery power for their own purposes.",
@@ -72,7 +72,7 @@ InstanceService.AddDungeon({
 		name = "Houndmaster Grebmar",
 		encounterID = 9319,
 		portrait = 607647,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11623, 11629, 11628, 11627 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Houndmaster Grebmar is a loyal servant of the Dark Iron dwarves and the master of a pack of ferocious hounds within Blackrock Depths. He is known for his ruthless training methods and his unwavering loyalty to Emperor Dagran Thaurissan. Grebmar's responsibility includes overseeing the fortress's canine defenders and ensuring their readiness to protect their masters.",
@@ -99,7 +99,7 @@ InstanceService.AddDungeon({
 		name = "High Interrogator Gerstahn",
 		encounterID = 9018,
 		portrait = 607644,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22240, 11626, 11625, 11624 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"High Interrogator Gerstahn is a powerful sorceress and a prominent member of the Dark Iron clan within Blackrock Depths. She is known for her expertise in dark magic and her role in extracting information from captives. Gerstahn's allegiance to Emperor Dagran Thaurissan and her mastery of the arcane arts make her a formidable figure within the fortress.",
@@ -126,7 +126,7 @@ InstanceService.AddDungeon({
 		name = "Ring of Law",
 		encounterID = 10096,
 		portrait = 608314,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11726, 22271, 22266, 22257, 22270, 11722, 11703, 11702, 11730, 11679, 11685, 11686, 11728, 11662, 11665, 11824, 11731, 11675, 11677, 11678, 11729, 11633, 11634, 11635 },
 		npcs = { 9027, 9028, 9029, 9030, 9031, 9032 },
 		overview = {
 			"The Ring of Law is a unique and mysterious arena within Blackrock Depths, overseen by the enigmatic goblin, Short John Mithril. It serves as a place of entertainment, where combatants are pitted against each other and various challengers in a battle for survival. The Ring of Law's purpose within the fortress remains shrouded in mystery, but it is a place where both combat and spectacle thrive.",
@@ -232,7 +232,7 @@ InstanceService.AddDungeon({
 		name = "Pyromancer Loregrain",
 		encounterID = 9024,
 		portrait = 607749,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11750, 11749, 11748, 11747 },
 		npcs = { 9024 },
 		overview = {
 			"Pyromancer Loregrain is a powerful sorcerer specializing in fire magic, and he is one of the key lieutenants of the Dark Iron clan within Blackrock Depths. Known for his mastery over flames and his role in the fortress's defenses, Loregrain is a formidable adversary. He is believed to have harnessed the power of fire to aid the Dark Irons in their efforts to maintain control over the depths.",
@@ -259,7 +259,7 @@ InstanceService.AddDungeon({
 		name = "General Angerforge",
 		encounterID = 9033,
 		portrait = 607610,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11816, 11817, 11820, 11821, 11810 },
 		npcs = { 9033 },
 		overview = {
 			"General Angerforge is a high-ranking military leader among the Dark Iron dwarves, responsible for overseeing the fortress's defenses and the training of its troops. He is known for his tactical brilliance and his unwavering loyalty to Emperor Dagran Thaurissan. Angerforge's role is crucial in ensuring the readiness of the Dark Iron forces within Blackrock Depths.",
@@ -286,7 +286,7 @@ InstanceService.AddDungeon({
 		name = "Golem Lord Argelmach",
 		encounterID = 8983,
 		portrait = 607618,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11669, 11819, 11822, 11823 },
 		npcs = { 8983 },
 		overview = {
 			"Golem Lord Argelmach is a master of golemcraft and a prominent figure within Blackrock Depths. He is responsible for creating and overseeing the formidable golem guardians that defend the fortress. Argelmach's expertise in constructing and controlling these powerful automatons makes him a key enforcer of the Dark Iron clan's will.",
@@ -313,7 +313,7 @@ InstanceService.AddDungeon({
 		name = "Ribbly Screwspigot",
 		encounterID = 9543,
 		portrait = 607758,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11742, 2663, 2662 },
 		npcs = { 9543 },
 		overview = {
 			"Ribbly Screwspigot is a goblin known for his shrewd business dealings and his establishment of the Grim Guzzler tavern within Blackrock Depths. While not a traditional boss, Ribbly plays a unique role in the fortress. He is known for his ties to various factions and his ability to broker deals even within the depths of Blackrock.",
@@ -340,7 +340,7 @@ InstanceService.AddDungeon({
 		name = "Hurley Blackbreath",
 		encounterID = 9537,
 		portrait = 607650,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22275, 18044, 18043 },
 		npcs = { 9537 },
 		overview = {
 			"Hurley Blackbreath is a formidable Dark Iron dwarf and one of the key figures in the Grim Guzzler tavern within Blackrock Depths. Known for his formidable combat skills and his penchant for violence, Hurley is a feared enforcer within the fortress. His role includes maintaining order within the tavern and dealing with unruly patrons.",
@@ -367,7 +367,7 @@ InstanceService.AddDungeon({
 		name = "Plugger Spazzring",
 		encounterID = 9499,
 		portrait = 607741,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 12791, 12793 },
 		npcs = { 9499 },
 		overview = {
 			"Plugger Spazzring is a goblin known for his control over the bar and various services within the Grim Guzzler tavern in Blackrock Depths. While not a traditional boss, Plugger plays a unique role in the fortress. He is a master of brewing and serves as the tavern's brewmaster, offering drinks and concoctions to patrons.",
@@ -394,7 +394,7 @@ InstanceService.AddDungeon({
 		name = "Phalanx",
 		encounterID = 9502,
 		portrait = 607740,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22212, 11744, 11745, 11743 },
 		npcs = { 9502 },
 		overview = {
 			"Phalanx is a massive fire elemental that has been bound to serve the Dark Iron dwarves within Blackrock Depths. Its fiery form and powerful attacks make it a formidable guardian of the fortress. Phalanx's role is to ensure the security of key areas within the depths and to repel intruders.",
@@ -421,7 +421,7 @@ InstanceService.AddDungeon({
 		name = "Lord Incendius",
 		encounterID = 9017,
 		portrait = 607694,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11764, 11765, 11766, 11767 },
 		npcs = { 9017 },
 		overview = {
 			"Lord Incendius is a powerful fire elemental and a key enforcer within Blackrock Depths. Known for his destructive capabilities and his control over flames, Incendius is a formidable adversary. He is believed to have been summoned and bound to the fortress by the Dark Iron dwarves, harnessing his fiery power for their own purposes.",
@@ -448,7 +448,7 @@ InstanceService.AddDungeon({
 		name = "Fineous Darkvire",
 		encounterID = 9056,
 		portrait = 607602,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22223, 11839, 11841, 11842 },
 		npcs = { 9056 },
 		overview = {
 			"Fineous Darkvire is a Dark Iron dwarf known for his role as the chief architect and overseer of the detention block within Blackrock Depths. He is responsible for the imprisonment and interrogation of captives, and his methods are known to be ruthless. Fineous's allegiance to Emperor Dagran Thaurissan and his mastery of the fortress's security make him a formidable figure within the depths.",
@@ -476,7 +476,7 @@ InstanceService.AddDungeon({
 		name = "Warder Stilgiss & Verek",
 		encounterID = 9041,
 		portrait = 607814,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22241, 11784, 11783, 11782, 22242, 11755, 22242 },
 		npcs = { 9041 },
 		overview = {
 			"Warder Stilgiss is a formidable Dark Iron dwarf who serves as the chief jailer and enforcer within Blackrock Depths. He is known for his merciless treatment of prisoners and his loyalty to Emperor Dagran Thaurissan. Stilgiss is always accompanied by his loyal pet, Verek, a fierce and deadly worg.",
@@ -503,7 +503,7 @@ InstanceService.AddDungeon({
 		name = "Ambassador Flamelash",
 		encounterID = 9156,
 		portrait = 607535,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11808, 11809, 11812, 11814, 11832 },
 		npcs = { 9156 },
 		overview = {
 			"Ambassador Flamelash is a powerful fire elemental who serves as the ambassador of Ragnaros the Firelord within Blackrock Depths. Known for his control over flames and his connection to the elemental plane of fire, Flamelash is a formidable representative of the Firelord's interests. His role includes overseeing the alliance between the Dark Iron dwarves and the elemental forces.",
@@ -530,7 +530,7 @@ InstanceService.AddDungeon({
 		name = "Chest of The Seven",
 		encounterID = 169243,
 		portrait = 607636,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11920, 11921, 11922, 11923, 11925, 11926, 11927, 11929 },
 		npcs = { 9034, 9035, 9036, 9037, 9038, 9039, 9040 },
 		overview = {
 			"The Chest of The Seven is a mysterious and heavily guarded vault within Blackrock Depths. It is rumored to contain powerful artifacts and treasures belonging to the seven Dark Iron clans of the past. The chest is protected by a complex set of traps and guardians, making it a challenging prize for those who seek its contents.",
@@ -557,7 +557,7 @@ InstanceService.AddDungeon({
 		name = "Magmus",
 		encounterID = 9938,
 		portrait = 607705,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 11746, 22400, 22395, 22208, 11935 },
 		npcs = { 9938 },
 		overview = {
 			"Magmus is a formidable fire elemental known for his role as the elemental lord of Blackrock Depths. He is a loyal servant of Ragnaros the Firelord and oversees the alliance between the Dark Iron dwarves and the elemental forces. Magmus's control over fire and his connection to the Firelord make him a formidable figure within the depths.",
@@ -584,7 +584,7 @@ InstanceService.AddDungeon({
 		name = "Emperor Dagran Thaurissan",
 		encounterID = 9019,
 		portrait = 607595,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22204, 22207, 11815, 11684, 11924, 11928, 11932, 11934, 11930, 11933, 11931, 12553, 12554, 12556, 12557 },
 		npcs = { 8929 },
 		overview = {
 			"Emperor Dagran Thaurissan is the sovereign ruler of the Dark Iron dwarves within Blackrock Depths, an imposing fortress. He is a significant figure in the lore, known for his role in sparking the War of Three Hammers. Thaurissan united the Dark Iron clan and claimed leadership, seeking to unite all dwarves under his rule.",

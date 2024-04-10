@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Antu'sul",
 		encounterID = 8127,
 		portrait = 607541,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Antu'sul is a powerful sand troll and a guardian of Zul'Farrak, a vast troll city in the Tanaris Desert. His role within the city is tied to the preservation of its ancient secrets and the protection of its inhabitants. Antu'sul's formidable presence and mastery over earth magic make him a significant figure in the troll hierarchy.",
@@ -46,7 +46,7 @@ InstanceService.AddDungeon({
 		name = "Theka the Martyr",
 		encounterID = 7272,
 		portrait = 607793,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Theka the Martyr is a revered figure among the sand trolls of Zul'Farrak. His devotion to the ancient rituals and traditions of his people has earned him a special place within the city. Theka's resilience and his mastery of protective magic make him a central figure in the troll hierarchy.",
@@ -74,7 +74,7 @@ InstanceService.AddDungeon({
 		name = "Witch Doctor Zum'rah",
 		encounterID = 7271,
 		portrait = 607819,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Witch Doctor Zum'rah is a cunning practitioner of dark voodoo magic within Zul'Farrak. His role within the city is to invoke the power of the loa and provide spiritual guidance to the sand troll community. Zum'rah's mystical abilities and connection to the spirit world make him a prominent figure in the troll hierarchy.",
@@ -102,7 +102,7 @@ InstanceService.AddDungeon({
 		name = "Nekrum Gutchewer",
 		encounterID = 7796,
 		portrait = 607723,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Nekrum Gutchewer is a ruthless troll warrior who serves as a protector of Zul'Farrak. His role within the city involves defending it from intruders and maintaining its security. Nekrum's combat prowess and unyielding dedication make him a formidable enforcer in the troll hierarchy.",
@@ -130,7 +130,7 @@ InstanceService.AddDungeon({
 		name = "Shadowpriest Sezz'ziz",
 		encounterID = 7275,
 		portrait = 607770,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Shadowpriest Sezz'ziz is a malevolent troll who has delved into the darker aspects of voodoo magic within Zul'Farrak. His role within the city involves wielding shadowy powers and maintaining control over sinister forces. Sezz'ziz's mastery of dark magic and his malevolent nature make him a feared figure in the troll hierarchy.",
@@ -158,7 +158,7 @@ InstanceService.AddDungeon({
 		name = "Sergeant Bly",
 		encounterID = 7604,
 		portrait = I.UIEJBossSergeantBly,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Sergeant Bly is a battle-hardened troll warrior who has risen through the ranks within Zul'Farrak. His role involves training and leading the troll forces in defense of the city. Bly's combat expertise and unwavering loyalty to his people make him a crucial figure in the troll hierarchy.",
@@ -186,7 +186,7 @@ InstanceService.AddDungeon({
 		name = "Hydromancer Velratha",
 		encounterID = 7795,
 		portrait = 607652,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Hydromancer Velratha is a master of water and frost magic among the sand trolls of Zul'Farrak. Her role within the city involves harnessing the power of water and maintaining control over its elemental forces. Velratha's mastery of elemental magic and her connection to the waters make her a significant figure in the troll hierarchy.",
@@ -214,7 +214,7 @@ InstanceService.AddDungeon({
 		name = "Chief Ukorz Sandscalp",
 		encounterID = 7267,
 		portrait = 607564,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Chief Ukorz Sandscalp is the formidable leader of the sand trolls within Zul'Farrak. His role involves overseeing the city's operations and ensuring the welfare of his people. Ukorz's strength, wisdom, and unwavering dedication make him the highest authority in the troll hierarchy.",
@@ -242,7 +242,7 @@ InstanceService.AddDungeon({
 		name = "Ruuzlu",
 		encounterID = 7797,
 		portrait = 607762,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Ruuzlu is a menacing basilisk that dwells within the depths of Zul'Farrak. His presence in the city represents the diverse array of creatures that have found refuge in its labyrinthine passages. Ruuzlu's petrifying gaze and stone-shattering attacks make him a formidable inhabitant of this underground realm.",

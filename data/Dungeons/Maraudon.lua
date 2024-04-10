@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Noxxion",
 		encounterID = 13282,
 		portrait = 607728,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17744, 17745, 17746 },
 		overview = {
 			"Noxxion is a malevolent elemental lord who dwells within the putrid waters of Maraudon's inner sanctum. His watery form and toxic abilities have corrupted the once-pure waters of the cavern. Noxxion's presence in Maraudon is a stark reminder of the elemental chaos that has consumed the underground springs.",
 			{ heading = "Overview" },
@@ -44,7 +44,7 @@ InstanceService.AddDungeon({
 		name = "Razorlash",
 		encounterID = 12258,
 		portrait = 607756,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17749, 17748, 17751, 17750 },
 		overview = {
 			"Razorlash is a monstrous thorned terror that has taken root within the lush greenery of Maraudon's inner sanctum. Its massive form and deadly thorns have overrun the verdant growth, twisting it into a dangerous and chaotic realm. Razorlash's presence within Maraudon represents the perversion of nature and the struggle to contain its unchecked power.",
 			{ heading = "Overview" },
@@ -70,7 +70,7 @@ InstanceService.AddDungeon({
 		name = "Lord Vyletongue",
 		encounterID = 12236,
 		portrait = 607699,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17754, 17752, 17755 },
 		overview = {
 			"Lord Vyletongue is a sinister satyr who has established a stronghold within Maraudon's inner sanctum. His dark sorcery and malevolent presence have corrupted the once-pure heart of the cavern. Lord Vyletongue's presence in Maraudon symbolizes the insidious influence of the Burning Legion on the sacred earth.",
 			{ heading = "Overview" },
@@ -96,7 +96,7 @@ InstanceService.AddDungeon({
 		name = "Celebras the Cursed",
 		encounterID = 12225,
 		portrait = 607562,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17738, 17739, 17740 },
 		overview = {
 			"Celebras the Cursed is a tragic figure who was once a guardian of Maraudon but has been twisted by corruption. His existence within the sacred cavern is a poignant reminder of the cataclysmic events that have befallen the area. Celebras's presence in Maraudon symbolizes the desperate struggle to restore balance and purity to the cavern's depths.",
 			{ heading = "Overview" },
@@ -122,7 +122,7 @@ InstanceService.AddDungeon({
 		name = "Landslide",
 		encounterID = 12203,
 		portrait = 607684,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17737, 17943, 17734, 17736 },
 		overview = {
 			"Landslide is a colossal earth elemental that roams the rocky passages of Maraudon's inner sanctum. Its immense size and destructive force have reshaped the underground terrain, turning it into a treacherous labyrinth. Landslide's presence within Maraudon reflects the elemental upheaval that has gripped the subterranean caverns.",
 			{ heading = "Overview" },
@@ -148,7 +148,7 @@ InstanceService.AddDungeon({
 		name = "Tinkerer Gizlock",
 		encounterID = 13601,
 		portrait = 607796,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17718, 17719, 17717 },
 		overview = {
 			"Tinkerer Gizlock is a cunning goblin engineer who has established a workshop within Maraudon's inner sanctum. His ingenious gadgets and destructive creations have added chaos to the cavern's already tumultuous environment. Tinkerer Gizlock's presence in Maraudon represents the volatile combination of goblin innovation and the cavern's inherent dangers.",
 			{ heading = "Overview" },
@@ -174,7 +174,7 @@ InstanceService.AddDungeon({
 		name = "Rotgrip",
 		encounterID = 13596,
 		portrait = 607761,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17728, 17730, 17732 },
 		overview = {
 			"Rotgrip is a monstrous and ravenous hydra that lurks within the murky waters of Maraudon's inner sanctum. Its multiple heads and insatiable appetite have made it a feared inhabitant of the subterranean pools. Rotgrip's presence within Maraudon underscores the dangerous and diverse wildlife that inhabits the cavern.",
 			{ heading = "Overview" },
@@ -200,7 +200,7 @@ InstanceService.AddDungeon({
 		name = "Princess Theradras",
 		encounterID = 12201,
 		portrait = 607747,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 17780, 17713, 17714, 17710, 17711, 17715, 17707, 17766 },
 		overview = {
 			"Princess Theradras is a powerful earth elemental lordess who has claimed Maraudon as her domain. Her dominion over the sacred cavern and her dark ambitions have made her a formidable and reviled figure. Princess Theradras's presence in Maraudon represents the ongoing struggle to cleanse and purify the cavern's depths.",
 			{ heading = "Overview" },

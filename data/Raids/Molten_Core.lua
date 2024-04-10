@@ -18,7 +18,7 @@ InstanceService.AddRaid({
 		name = "Lucifron",
 		encounterID = 12118,
 		portrait = 1378993,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -45,7 +45,7 @@ InstanceService.AddRaid({
 		name = "Magmadar",
 		encounterID = 11982,
 		portrait = 1378995,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -72,7 +72,7 @@ InstanceService.AddRaid({
 		name = "Gehennas",
 		encounterID = 12259,
 		portrait = 1378976,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -99,7 +99,7 @@ InstanceService.AddRaid({
 		name = "Garr",
 		encounterID = 12057,
 		portrait = 1378975,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -126,7 +126,7 @@ InstanceService.AddRaid({
 		name = "Shazzrah",
 		encounterID = 12264,
 		portrait = 1379013,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -153,7 +153,7 @@ InstanceService.AddRaid({
 		name = "Baron Geddon",
 		encounterID = 12056,
 		portrait = 1378966,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -180,7 +180,7 @@ InstanceService.AddRaid({
 		name = "Golemagg the Incinerator",
 		encounterID = 11988,
 		portrait = 1378978,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -207,7 +207,7 @@ InstanceService.AddRaid({
 		name = "Sulfuron Harbinger",
 		encounterID = 12098,
 		portrait = 1379015,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -234,7 +234,7 @@ InstanceService.AddRaid({
 		name = "Majordomo Executus",
 		encounterID = 12018,
 		portrait = 1378998,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -261,7 +261,7 @@ InstanceService.AddRaid({
 		name = "Ragnaros",
 		encounterID = 11502,
 		portrait = 522261,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",

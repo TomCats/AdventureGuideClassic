@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Revelosh",
 		encounterID = 6910,
 		portrait = 607757,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Revelosh is an ancient and enigmatic stone golem that guards the depths of Uldaman. Crafted by the titans in ages past, he stands as a sentinel over the secrets hidden within the ancient vaults. Revelosh's presence in Uldaman signifies the enduring power of the titans' creations.",
@@ -46,7 +46,7 @@ InstanceService.AddDungeon({
 		name = "Baelog",
 		encounterID = 6906,
 		portrait = 607550,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Baelog is a fierce vrykul warrior who has made Uldaman his home. His origins are shrouded in mystery, but his combat skills are undeniable. Baelog's presence within Uldaman adds an element of danger to the ancient chambers, where he seeks to defend his territory.",
@@ -74,7 +74,7 @@ InstanceService.AddDungeon({
 		name = "Ironaya",
 		encounterID = 7228,
 		portrait = 607664,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Ironaya is a fearsome stone golem that dwells deep within Uldaman. Created by the titans, she guards the inner chambers of the ancient complex. Ironaya's presence in Uldaman symbolizes the titans' dedication to safeguarding their creations.",
@@ -102,7 +102,7 @@ InstanceService.AddDungeon({
 		name = "Obsidian Sentinel",
 		encounterID = 7023,
 		portrait = 607729,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"The Obsidian Sentinel is an imposing construct that watches over Uldaman's inner chambers. Crafted from obsidian and enchanted by the titans, it stands as an unyielding guardian. The Obsidian Sentinel's presence underscores the enduring power of the titans' creations.",
@@ -130,7 +130,7 @@ InstanceService.AddDungeon({
 		name = "Ancient Stone Keeper",
 		encounterID = 7206,
 		portrait = 607538,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"The Ancient Stone Keeper is a sentinel crafted by the titans to protect the secrets within Uldaman. Its ancient and weathered form stands as a testament to the passage of time. The presence of the Ancient Stone Keeper in Uldaman signifies the enduring legacy of the titans.",
@@ -158,7 +158,7 @@ InstanceService.AddDungeon({
 		name = "Galgann Firehammer",
 		encounterID = 7291,
 		portrait = 607606,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Galgann Firehammer is a formidable Dark Iron dwarf who has taken up residence within Uldaman. His allegiance to the Dark Iron clan and his mastery of fire magic make him a formidable adversary. Galgann's presence within Uldaman adds an element of danger to the ancient chambers.",
@@ -186,7 +186,7 @@ InstanceService.AddDungeon({
 		name = "Grimlok",
 		encounterID = 4854,
 		portrait = 607626,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Grimlok is a powerful and brutish trogg chieftain who has claimed a portion of Uldaman as his domain. His physical strength and leadership over the troggs make him a formidable adversary. Grimlok's presence in Uldaman signifies the diverse inhabitants that have carved out territories within the ancient complex.",
@@ -214,7 +214,7 @@ InstanceService.AddDungeon({
 		name = "Archaedas",
 		encounterID = 2748,
 		portrait = 607546,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Archaedas is a colossal and ancient stone golem that guards the deepest chambers of Uldaman. Crafted by the titans themselves, he stands as a sentinel over the most sacred secrets of the complex. Archaedas's presence in Uldaman signifies the pinnacle of the titans' creations.",

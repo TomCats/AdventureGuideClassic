@@ -18,7 +18,7 @@ InstanceService.AddRaid({
 		name = "Anub'Rekhan",
 		encounterID = 15956,
 		portrait = 1378964,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -45,7 +45,7 @@ InstanceService.AddRaid({
 		name = "Grand Widow Faerlina",
 		encounterID = 15953,
 		portrait = 1378980,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -72,7 +72,7 @@ InstanceService.AddRaid({
 		name = "Maexxna",
 		encounterID = 15952,
 		portrait = 1378994,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -99,7 +99,7 @@ InstanceService.AddRaid({
 		name = "Noth the Plaguebringer",
 		encounterID = 15954,
 		portrait = 1379004,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -126,7 +126,7 @@ InstanceService.AddRaid({
 		name = "Heigan the Unclean",
 		encounterID = 15936,
 		portrait = 1378984,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -153,7 +153,7 @@ InstanceService.AddRaid({
 		name = "Instructors Razuvious",
 		encounterID = 16061,
 		portrait = 1378988,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -180,7 +180,7 @@ InstanceService.AddRaid({
 		name = "Gothik the Harvester",
 		encounterID = 16060,
 		portrait = 1378979,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -207,7 +207,7 @@ InstanceService.AddRaid({
 		name = "The Four Horsemen",
 		encounterID = 181366,
 		portrait = 1385732,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -234,7 +234,7 @@ InstanceService.AddRaid({
 		name = "Patchwerk",
 		encounterID = 16028,
 		portrait = 1379005,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -261,7 +261,7 @@ InstanceService.AddRaid({
 		name = "Grobbulus",
 		encounterID = 15931,
 		portrait = 1378981,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -288,7 +288,7 @@ InstanceService.AddRaid({
 		name = "Gluth",
 		encounterID = 15932,
 		portrait = 1378977,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -315,7 +315,7 @@ InstanceService.AddRaid({
 		name = "Thaddius",
 		encounterID = 15928,
 		portrait = 1379019,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -342,7 +342,7 @@ InstanceService.AddRaid({
 		name = "Sapphiron",
 		encounterID = 15989,
 		portrait = 1379010,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -369,7 +369,7 @@ InstanceService.AddRaid({
 		name = "Kel'Thuzad",
 		encounterID = 15990,
 		portrait = 1378989,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",

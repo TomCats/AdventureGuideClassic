@@ -18,7 +18,7 @@ InstanceService.AddRaid({
 		name = "The Prophet Skeram",
 		encounterID = 15263,
 		portrait = 1385769,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -45,7 +45,7 @@ InstanceService.AddRaid({
 		name = "Battleguard Sartura",
 		encounterID = 15516,
 		portrait = 1385720,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -72,7 +72,7 @@ InstanceService.AddRaid({
 		name = "Fankriss the Unyielding",
 		encounterID = 15510,
 		portrait = 1385728,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -99,7 +99,7 @@ InstanceService.AddRaid({
 		name = "Viscidus",
 		encounterID = 15299,
 		portrait = 1385771,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -126,7 +126,7 @@ InstanceService.AddRaid({
 		name = "Princess Huhuran",
 		encounterID = 15509,
 		portrait = 1385761,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -153,7 +153,7 @@ InstanceService.AddRaid({
 		name = "Vek'lor",
 		encounterID = 15276,
 		portrait = 1390437,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -180,7 +180,7 @@ InstanceService.AddRaid({
 		name = "Vek'nilash",
 		encounterID = 15275,
 		portrait = 1390437,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -207,7 +207,7 @@ InstanceService.AddRaid({
 		name = "Ouro",
 		encounterID = 15517,
 		portrait = 1385760,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",
@@ -234,7 +234,7 @@ InstanceService.AddRaid({
 		name = "C'Thun",
 		encounterID = 15727,
 		portrait = 1385726,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"lore information goes here..",

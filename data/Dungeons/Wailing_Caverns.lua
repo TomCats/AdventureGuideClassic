@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Kresh",
 		encounterID = 3653,
 		portrait = 607676,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Kresh is a massive and territorial snapping turtle that dwells deep within the Wailing Caverns. His presence in the caverns represents the diverse array of creatures that have taken refuge in this sprawling subterranean labyrinth. Kresh's imposing size and armored shell make him a formidable resident of the Wailing Caverns, challenging those who dare to venture into his territory.",
@@ -46,7 +46,7 @@ InstanceService.AddDungeon({
 		name = "Lady Anacondra",
 		encounterID = 3671,
 		portrait = 607680,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lady Anacondra is a formidable naga sorceress who has established herself as a resident of the Wailing Caverns. Her presence within the caverns adds a magical dimension to the already mysterious and perilous environment. Lady Anacondra's mastery of arcane magic and serpentine nature make her a unique and dangerous adversary.",
@@ -74,7 +74,7 @@ InstanceService.AddDungeon({
 		name = "Lord Cobrahn",
 		encounterID = 3669,
 		portrait = 607693,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lord Cobrahn is a cunning and agile naga lord who has taken up residence within the Wailing Caverns. His presence adds an element of stealth and deception to the already complex ecosystem of the caverns. Lord Cobrahn's serpentine form and venomous attacks make him a dangerous inhabitant of this underground realm.",
@@ -102,7 +102,7 @@ InstanceService.AddDungeon({
 		name = "Lord Pythas",
 		encounterID = 3670,
 		portrait = 607696,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lord Pythas is a powerful naga lord who has made the Wailing Caverns his domain. His presence adds a touch of arcane mystique to the already enigmatic caverns. Lord Pythas's formidable magical abilities and commanding presence make him a noteworthy adversary within the subterranean labyrinth.",
@@ -130,7 +130,7 @@ InstanceService.AddDungeon({
 		name = "Skum",
 		encounterID = 3674,
 		portrait = 607775,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Skum is a monstrous murloc who resides in the watery depths of the Wailing Caverns. His presence within the caverns represents the wide array of creatures that have found refuge in its labyrinthine passages. Skum's ferocity and aquatic nature make him a formidable resident of this underground realm.",
@@ -158,7 +158,7 @@ InstanceService.AddDungeon({
 		name = "Lord Serpentis",
 		encounterID = 3673,
 		portrait = 607698,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lord Serpentis is a cunning naga lord who has established himself as a resident of the Wailing Caverns. His presence within the caverns adds a touch of intrigue and danger to the underground labyrinth. Lord Serpentis's serpentine form and mastery of venomous attacks make him a dangerous adversary lurking in the shadows.",
@@ -186,7 +186,7 @@ InstanceService.AddDungeon({
 		name = "Verdan the Everliving",
 		encounterID = 5775,
 		portrait = 607805,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Verdan the Everliving is an ancient and colossal serpent who has taken root within the Wailing Caverns. His presence in the caverns signifies the enduring power of nature and the intricate web of life within this underground ecosystem. Verdan's immense size and regenerative abilities make him a legendary inhabitant of the caverns, a living testament to the forces of nature.",
@@ -214,7 +214,7 @@ InstanceService.AddDungeon({
 		name = "Mutanus the Devourer",
 		encounterID = 3654,
 		portrait = 607721,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Mutanus the Devourer is a monstrous hydra that lurks in the watery recesses of the Wailing Caverns. His presence within the caverns represents the primal and ferocious aspects of the underground ecosystem. Mutanus's multiple heads and insatiable appetite make him a terrifying resident of this labyrinthine realm.",

@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Interrogator Vishas",
 		encounterID = 3983,
 		portrait = 607662,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7683, 7682 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Interrogator Vishas is a sadistic member of the Scarlet Crusade known for his brutal methods of extracting information from prisoners. He plays a key role within the Scarlet Monastery, using his dark techniques to interrogate and torment those captured by the Crusade. Vishas's presence in the Monastery highlights the ruthless and fanatical nature of the Scarlet Crusade as they seek to eradicate all perceived threats.",
@@ -45,7 +45,7 @@ InstanceService.AddDungeon({
 		name = "Bloodmage Thalnos",
 		encounterID = 4543,
 		portrait = 607557,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7684, 7685 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Bloodmage Thalnos is a formidable spellcaster within the Scarlet Crusade, specializing in the destructive power of fire magic. He serves as a key member of the Crusade within the Scarlet Monastery, using his fiery abilities to incinerate any who oppose the order. Thalnos's presence in the Monastery symbolizes the fanatical devotion of the Scarlet Crusade and their willingness to employ dark magic to further their cause.",
@@ -72,7 +72,7 @@ InstanceService.AddDungeon({
 		name = "Houndmaster Loksey",
 		encounterID = 3974,
 		portrait = 607648,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7756, 3456, 7710 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Houndmaster Loksey is a ruthless enforcer of the Scarlet Crusade who commands the ferocious hunting hounds within the Scarlet Monastery. His skill in training and controlling the beasts is matched only by his unwavering loyalty to the Crusade's cause. Loksey's presence in the Monastery represents the Crusade's brutal methods and their use of loyal animals as weapons.",
@@ -99,7 +99,7 @@ InstanceService.AddDungeon({
 		name = "Arcanist Doan",
 		encounterID = 6487,
 		portrait = 607545,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7712, 7711, 7713, 7714 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Arcanist Doan is a powerful mage within the Scarlet Crusade who guards the library of the Scarlet Monastery. His extensive knowledge of arcane magic and his dedication to the Crusade's ideals have made him a crucial figure within the order. Doan's presence in the Monastery reflects the Scarlet Crusade's use of magic to further their goals.",
@@ -126,7 +126,7 @@ InstanceService.AddDungeon({
 		name = "Herod",
 		encounterID = 3975,
 		portrait = 607640,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7719, 7718, 10330, 7717 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Herod is a fearsome warrior who has earned a reputation for his deadly combat skills and his loyalty to the Scarlet Crusade. He serves as a champion and gladiator within the Scarlet Monastery, entertaining the Crusade's followers with brutal combat displays. Herod's presence in the Monastery represents the Crusade's martial prowess and their use of champions to maintain control.",
@@ -153,7 +153,7 @@ InstanceService.AddDungeon({
 		name = "High Inquisitor Fairbanks",
 		encounterID = 4542,
 		portrait = 607642,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 19508, 19509, 19507 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"High Inquisitor Fairbanks was once a devoted member of the Scarlet Crusade but grew disillusioned with the order's extreme methods and fanaticism. He now opposes the Crusade's ideals and works to expose their corruption from within the Scarlet Monastery. Fairbanks's presence in the Monastery symbolizes the internal conflicts and dissent within the Scarlet Crusade's ranks.",
@@ -180,7 +180,7 @@ InstanceService.AddDungeon({
 		name = "Scarlet Commander Mograine",
 		encounterID = 3976,
 		portrait = 607764,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7726, 7723, 7724, 10330 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Scarlet Commander Mograine is a high-ranking officer within the Scarlet Crusade and a member of the Mograine family, known for their involvement in the order. He holds a commanding position within the Scarlet Monastery, overseeing the Crusade's operations and enforcing its doctrine. Mograine's presence in the Monastery symbolizes the Crusade's determination to eradicate perceived threats and maintain their hold on the land.",
@@ -207,7 +207,7 @@ InstanceService.AddDungeon({
 		name = "High Inquisitor Whitemane",
 		encounterID = 3977,
 		portrait = 607643,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7720, 7721, 7722 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"High Inquisitor Whitemane is a revered and powerful figure within the Scarlet Crusade, known for her unwavering faith and formidable combat abilities. She stands as a central figure within the Scarlet Monastery, guiding the Crusade's efforts and leading their spiritual endeavors. Whitemane's presence in the Monastery represents the Crusade's religious fervor and their commitment to eradicating all who oppose them.",

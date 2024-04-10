@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Taragaman the Hungerer",
 		encounterID = 11520,
 		portrait = 607781,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 14148, 14149, 14145 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Taragaman the Hungerer is a formidable elemental lord who resides within the depths of Ragefire Chasm. His fiery presence and insatiable appetite for destruction have turned the chasm into a seething inferno. Taragaman's existence within Ragefire Chasm is a testament to the elemental forces that rage beneath the surface of the world.",
@@ -45,7 +45,7 @@ InstanceService.AddDungeon({
 		name = "Oggleflint",
 		encounterID = 11517,
 		portrait = 607730,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Oggleflint is a cunning ogre magi who has taken refuge within the fiery caverns of Ragefire Chasm. His arcane powers and malevolent scheming have made him a significant threat within the chasm. Oggleflint's presence in Ragefire Chasm signifies the dark alliances that have formed within its blazing tunnels.",
@@ -72,7 +72,7 @@ InstanceService.AddDungeon({
 		name = "Jergosh the Invoker",
 		encounterID = 11518,
 		portrait = 607668,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 14147, 14150, 14151 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Jergosh the Invoker is a formidable warlock who has established a stronghold within the fiery depths of Ragefire Chasm. His dark sorcery and mastery over demonic forces have corrupted the once-natural caverns. Jergosh's presence in Ragefire Chasm represents the sinister influences that have taken hold within its blazing tunnels.",
@@ -99,7 +99,7 @@ InstanceService.AddDungeon({
 		name = "Bazzalan",
 		encounterID = 11519,
 		portrait = 607554,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Bazzalan is a cunning satyr who has infiltrated the depths of Ragefire Chasm. His enigmatic motives and affiliation with dark powers have made him a dangerous figure within the chasm. Bazzalan's presence in Ragefire Chasm underscores the mysterious and shadowy influences that lurk in its fiery corridors.",

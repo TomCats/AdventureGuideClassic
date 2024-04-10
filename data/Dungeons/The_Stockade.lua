@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Targorr the Dread",
 		encounterID = 1696,
 		portrait = I.UIEJBossTargorrTheDread,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Targorr the Dread is a menacing ogre warden who presides over the prisoners within the Stockade. Known for his ruthless and oppressive rule, he represents the brutal authority of the prison's wardens. Targorr's presence within the Stockade reflects the grim and unforgiving environment in which the inmates are held.",
@@ -45,7 +45,7 @@ InstanceService.AddDungeon({
 		name = "Kam Deepfury",
 		encounterID = 1666,
 		portrait = I.UIEJBossKamDeepfury,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Kam Deepfury is a corrupt dwarf officer who has aligned himself with the criminal elements within the Stockade. He serves as an enforcer for the corrupt leadership and has a reputation for brutality. Kam's presence in the Stockade reflects the mingling of criminal elements with the prison's staff.",
@@ -72,7 +72,7 @@ InstanceService.AddDungeon({
 		name = "Hamhock",
 		encounterID = 1717,
 		portrait = I.UIEJBossHamhock,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Hamhock is a massive ogre who has been incarcerated within the Stockade for his crimes. Despite his imposing size, he is often manipulated by the corrupt staff and used as muscle for their schemes. Hamhock's presence in the Stockade reflects the complex power dynamics and the exploitation of inmates within the prison.",
@@ -100,7 +100,7 @@ InstanceService.AddDungeon({
 		name = "Dextren Ward",
 		encounterID = 1663,
 		portrait = I.UIEJBossDextrenWard,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Dextren Ward is a defias traitor who was imprisoned within the Stockade for his crimes against the brotherhood. Despite his past loyalties, he has become a victim of the very organization he once served. Dextren's presence in the Stockade highlights the internal strife and betrayals that often occur among criminal factions.",
@@ -127,7 +127,7 @@ InstanceService.AddDungeon({
 		name = "Bazil Thredd",
 		encounterID = 1716,
 		portrait = I.UIEJBossBazilThredd,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Bazil Thredd is a cunning and treacherous defias rogue who has taken control of the Stockade's operations. He is responsible for the corruption and chaos that have engulfed the prison. Bazil's presence within the Stockade represents the power and influence of the Defias Brotherhood over the institution.",

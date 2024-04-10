@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Rhahk'Zor",
 		encounterID = 644,
 		portrait = 607777,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 5187, 872 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Rhahk'Zor, a massive ogre, is one of the earliest challenges adventurers face within The Deadmines. Known for his immense strength and brutal tactics, he serves as a formidable guardian of the pirate-infested underground complex. Rhahk'Zor's presence in The Deadmines reflects the danger and lawlessness that have taken hold of the once-prosperous mine.",
@@ -45,7 +45,7 @@ InstanceService.AddDungeon({
 		name = "Sneed's Shredder",
 		encounterID = 642,
 		portrait = I.UIEJBossSneedsShredder,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 5194, 5195, 2169, 1937 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Sneed's Shredder, a hulking mechanical monstrosity, is a creation of the cunning engineer, Sneed. It guards the inner chambers of The Deadmines and represents the technological ingenuity of the Defias Brotherhood. Sneed's Shredder's presence in the mines reflects the combination of engineering prowess and criminal intent that fuels the pirate operation.",
@@ -72,7 +72,7 @@ InstanceService.AddDungeon({
 		name = "Gilnid",
 		encounterID = 1763,
 		portrait = I.UIEJBossGilnid,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 5199, 1156 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Gilnid, a cunning and ruthless foreman, oversees the operations within The Deadmines. He is known for his sadistic methods and willingness to exploit the mine's laborers. Gilnid's presence reflects the oppressive rule of the Defias Brotherhood over their captive workers.",
@@ -99,7 +99,7 @@ InstanceService.AddDungeon({
 		name = "Mr. Smite",
 		encounterID = 646,
 		portrait = I.UIEJBossMrSmite,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 7230, 5196, 5192 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Mr. Smite is a hulking pirate enforcer who serves as the muscle behind the Defias Brotherhood's operations within The Deadmines. Known for his love of melee combat and brute force, he represents the brawn that keeps the pirates in control. Mr. Smite's presence reflects the reliance of the Defias Brotherhood on physical strength and intimidation.",
@@ -126,7 +126,7 @@ InstanceService.AddDungeon({
 		name = "Captain Greenskin",
 		encounterID = 647,
 		portrait = I.UIEJBossCaptainGreenSkin,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 5201, 5200, 10403 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Captain Greenskin is a notorious pirate captain who commands the pirates of The Deadmines. With a penchant for combat and leadership, he stands as a central figure in the Defias Brotherhood's hierarchy. Captain Greenskin's presence reflects the authority and danger posed by the pirate captain at the heart of the operation.",
@@ -153,7 +153,7 @@ InstanceService.AddDungeon({
 		name = "Edwin VanCleef",
 		encounterID = 639,
 		portrait = I.UIEJBossEdwinVanCleef,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 5193, 5202, 5191, 10399 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Edwin VanCleef, the mastermind behind the Defias Brotherhood, is the final boss of The Deadmines. Once a skilled architect who oversaw the construction of Stormwind, he turned to a life of crime after his services were undervalued. VanCleef's presence in the mines reflects the calculated and vengeful nature of the Defias Brotherhood's leader.",
@@ -180,7 +180,7 @@ InstanceService.AddDungeon({
 		name = "Cookie",
 		encounterID = 645,
 		portrait = 522210,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 5198, 5197,  },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Cookie is an unusual resident of The Deadmines, a friendly and affable goblin who serves as the chef for the pirate crew. Despite his culinary skills, he remains loyal to the Defias Brotherhood's cause. Cookie's presence in the mines reflects the unexpected and quirky elements of the pirate operation.",

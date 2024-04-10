@@ -18,7 +18,7 @@ InstanceService.AddDungeon({
 		name = "Kirtonos the Herald",
 		encounterID = 10506,
 		portrait = 607675,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 13969, 13960, 13956, 13955, 14024, 13967, 13957, 13983, 16734 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"irtonos the Herald is a powerful necromancer and a key figure within Scholomance, where he practices dark and forbidden magics. He is known for his role in summoning and controlling the undead, furthering the twisted experiments of Scholomance. Kirtonos's presence within the academy highlights the depths of the dark arts studied within its halls and the danger it poses to the living.",
@@ -45,7 +45,7 @@ InstanceService.AddDungeon({
 		name = "Jandice Barov",
 		encounterID = 10503,
 		portrait = 607666,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 18690, 18689, 14548, 14545, 14543, 16701, 14541, 22394 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Jandice Barov is a cunning illusionist and a member of the Barov family, known for their twisted experiments and involvement with the Scourge. She resides within Scholomance, using her illusionary magic to deceive and confound intruders. Jandice's presence in the academy reflects the Barov family's dark legacy and their willingness to employ deception to protect their secrets.",
@@ -72,7 +72,7 @@ InstanceService.AddDungeon({
 		name = "Rattlegore",
 		encounterID = 11622,
 		portrait = 607755,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 18686, 14539, 14537, 14538, 14531, 14528, 16711 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Rattlegore is a massive and fearsome skeletal monstrosity created through dark experiments within Scholomance. He is a guardian of the academy, tasked with defending its halls and preventing intruders from reaching its inner sanctum. Rattlegore's presence within Scholomance represents the horrors of necromantic experimentation and the lengths to which its inhabitants will go to protect their secrets.",
@@ -99,7 +99,7 @@ InstanceService.AddDungeon({
 		name = "Marduk Blackpool",
 		encounterID = 10433,
 		portrait = 607709,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 18692, 14576 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Marduk Blackpool is a formidable warlock who resides within Scholomance, where he delves into dark magic and demonology. He serves as a key figure in the academy's research, conducting experiments and summoning demons to further the Scourge's goals. Marduk's presence in Scholomance reflects the alliance between dark magic and the undead, and the danger it poses to the world.",
@@ -126,7 +126,7 @@ InstanceService.AddDungeon({
 		name = "Vectus",
 		encounterID = 10432,
 		portrait = 607804,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 18691, 14577 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Vectus is a skilled alchemist and necromancer who conducts vile experiments within Scholomance, seeking to create powerful undead minions. He is known for his role in furthering the Scourge's agenda through his twisted research. Vectus's presence in the academy highlights the fusion of alchemy and necromancy, resulting in abominable creations.",
@@ -153,7 +153,7 @@ InstanceService.AddDungeon({
 		name = "Ras Frostwhisper",
 		encounterID = 10508,
 		portrait = 607754,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 13314, 14487, 14525, 14503, 14340, 14502, 13952, 18696, 14522, 16689, 18694, 18693, 18695 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Ras Frostwhisper is a formidable lich and one of the leaders of Scholomance. He is a master of frost magic and a powerful necromancer, dedicated to furthering the Scourge's goals within the academy. Ras's presence in Scholomance reflects the academy's ties to the Scourge and the dark magics that sustain its inhabitants.",
@@ -180,7 +180,7 @@ InstanceService.AddDungeon({
 		name = "Instructor Malicia",
 		encounterID = 10505,
 		portrait = 607661,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 23201, 23200, 16710, 18681, 18680, 18682, 18683, 18684 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Instructor Malicia is a sadistic and enigmatic figure within Scholomance, responsible for training students in dark magic and necromancy. She revels in tormenting her students and has a deep affinity for the necromantic arts. Malicia's presence in the academy highlights the twisted education offered within its walls and the cruelty of its instructors.",
@@ -207,7 +207,7 @@ InstanceService.AddDungeon({
 		name = "Doctor Theolen Krastinov",
 		encounterID = 11261,
 		portrait = 607586,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 23201, 23200, 16684, 18681, 18680, 18682, 18683, 18684 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Doctor Theolen Krastinov, also known as the Butcher, is a horrifying and brutal creation within Scholomance. He was once a healer and a victim of dark experiments, transformed into a monstrous abomination with an insatiable appetite for violence. Krastinov's presence in the academy serves as a grim testament to the horrors of necromantic experimentation.",
@@ -234,7 +234,7 @@ InstanceService.AddDungeon({
 		name = "Lorekeeper Polkelt",
 		encounterID = 10901,
 		portrait = 607700,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 23201, 23200, 16705, 18681, 18680, 18682, 18683, 18684 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lorekeeper Polkelt is a scholar and historian within Scholomance, responsible for maintaining the academy's vast collection of knowledge. He is dedicated to preserving the secrets and lore of the Scourge. Polkelt's presence in the academy reflects the importance of knowledge within Scholomance and the lengths its inhabitants go to protect it.",
@@ -261,7 +261,7 @@ InstanceService.AddDungeon({
 		name = "The Ravenian",
 		encounterID = 10507,
 		portrait = 607791,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 23201, 23200, 16716, 18681, 18680, 18682, 18683, 18684 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"The Ravenian is a sinister and agile figure within Scholomance, known for his ability to transform into a raven and stalk his prey. He is a guardian of the academy, tasked with patrolling its halls and hunting intruders. The Ravenian's presence in Scholomance symbolizes the cunning and stealth employed by its defenders.",
@@ -288,7 +288,7 @@ InstanceService.AddDungeon({
 		name = "Lord Alexei Barov",
 		encounterID = 10504,
 		portrait = 607691,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 23201, 23200, 16722, 18681, 18680, 18682, 18683, 18684 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lord Alexei Barov is a member of the Barov family, known for their involvement with the Scourge and their twisted experiments. He resides within Scholomance, where he continues to conduct dark research and protect the secrets of the academy. Lord Barov's presence reflects the Barov family's dark legacy and their commitment to furthering the Scourge's goals.",
@@ -315,7 +315,7 @@ InstanceService.AddDungeon({
 		name = "Lady Illucia Barov",
 		encounterID = 10502,
 		portrait = 607681,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 23201, 23200, 16722, 18681, 18680, 18682, 18683, 18684 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Lady Illucia Barov, a member of the Barov family, is a powerful necromancer who resides within Scholomance. She is dedicated to the study of necromantic magic and serves as a guardian of the academy. Lady Barov's presence in Scholomance reflects the Barov family's dark lineage and their involvement with the Scourge.",
@@ -342,7 +342,7 @@ InstanceService.AddDungeon({
 		name = "Darkmaster Gandling",
 		encounterID = 1853,
 		portrait = 607582,
-		loot = { 12345, 12345, 12345, 12534, 13423, 213423, 14235 },
+		loot = { 22433, 13937, 13950, 13964, 13398, 13951, 13938, 13953, 13944, 16693, 16698, 16720, 16677, 16731, 16686, 16707, 16727, 16667 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Darkmaster Gandling is the ultimate authority within Scholomance, responsible for overseeing the academy's operations and maintaining its dark curriculum. He is a formidable necromancer and a key figure in the Scourge's plans within the academy. Gandling's presence reflects the academy's role as a center for the study of dark magic and necromancy.",
