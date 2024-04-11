@@ -177,19 +177,21 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
 end)
 
 function component.Show()
-	local loot = AdventureGuideNavigationService.GetEncounterLoot()
-    local dataProvider = CreateDataProvider()
-    lootScrollBox:SetDataProvider(dataProvider);
-	for _, itemId in ipairs(loot) do
-		local itemName, itemLink, itemRarity, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon =  C_Item.GetItemInfo(itemId)
-		if itemName then
-		local lootItem = { name = itemName, link = itemLink, rarity = itemRarity, icon = itemIcon, armorType = itemSubType, slot = equipLocMapping[itemEquipLoc] or itemEquipLoc}
-		dataProvider:Insert(lootItem)
-		else
-			C_Item.RequestLoadItemDataByID(itemId)
+	if lootScrollBox then
+		local loot = AdventureGuideNavigationService.GetEncounterLoot()
+		local dataProvider = CreateDataProvider()
+		lootScrollBox:SetDataProvider(dataProvider);
+		for _, itemId in ipairs(loot) do
+			local itemName, itemLink, itemRarity, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon =  C_Item.GetItemInfo(itemId)
+			if itemName then
+			local lootItem = { name = itemName, link = itemLink, rarity = itemRarity, icon = itemIcon, armorType = itemSubType, slot = equipLocMapping[itemEquipLoc] or itemEquipLoc}
+			dataProvider:Insert(lootItem)
+			else
+				C_Item.RequestLoadItemDataByID(itemId)
+			end
 		end
+		components.EncounterFrame.SetCurrentView(lootContainer)
 	end
-	components.EncounterFrame.SetCurrentView(lootContainer)
 end
 
 UI.Add(component)
