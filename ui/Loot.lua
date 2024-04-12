@@ -7,6 +7,8 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("Loot")
+local EquipMapping = GetEquipMapping()
+local Colors = GetColorMapping()
 local components
 local lootContainer
 local lootScrollBox
@@ -20,43 +22,6 @@ local lootScrollBox
 -- 		components.NavBar.Refresh(encounterName)
 -- 	end
 -- end
-
--- Move this to a better place, function maybe so it can be reused
-local equipLocMapping = {
-	INVTYPE_HEAD = "Head",
-	INVTYPE_NECK = "Neck",
-	INVTYPE_SHOULDER = "Shoulder",
-	INVTYPE_BODY = "Shirt",
-	INVTYPE_CLOAK = "Back",
-	INVTYPE_CHEST = "Chest",
-	INVTYPE_WRIST = "Wrist",
-	INVTYPE_HAND = "Hands",
-	INVTYPE_WAIST = "Waist",
-	INVTYPE_LEGS = "Legs",
-	INVTYPE_FEET = "Feet",
-	INVTYPE_FINGER = "Finger",
-	INVTYPE_TRINKET = "Trinket",
-	INVTYPE_WEAPON = "One-Hand",
-	INVTYPE_SHIELD = "Off Hand",
-	INVTYPE_2HWEAPON = "Two-Hand",
-	INVTYPE_WEAPONMAINHAND = "Main Hand",
-	INVTYPE_WEAPONOFFHAND = "Off Hand",
-	INVTYPE_NON_EQUIP_IGNORE = "Unique",
-	INVTYPE_HOLDABLE = "Held In Off-hand",
-	INVTYPE_RANGED = "Ranged",
-	INVTYPE_RANGEDRIGHT = "Ranged",
-	INVTYPE_THROWN = "Thrown",
-	INVTYPE_RELIC = "Relic",
-	INVTYPE_TABARD = "Tabard",
-	INVTYPE_ROBE = "Chest",
-	INVTYPE_BAG = "Bag",
-	INVTYPE_QUIVER = "Quiver",
-	INVTYPE_AMMO = "Ammo",
-	INVTYPE_GUN = "Gun",
-	INVTYPE_CROSSBOW = "Crossbow",
-	INVTYPE_WAND = "Wand",
-	INVTYPE_FIST = "Fist Weapon",
-}
 
 function component.Init(components_)
 	components = components_
@@ -141,22 +106,10 @@ function component.Init(components_)
 				end
 			end
 		end)
-		-- Move this to a better place, function maybe so it can be reused
-		local colors = {
-			[0] = {r = 0.62, g = 0.62, b = 0.62}, -- Poor
-			[1] = {r = 1.00, g = 1.00, b = 1.00}, -- Common
-			[2] = {r = 0.12, g = 1.00, b = 0.00}, -- Uncommon
-			[3] = {r = 0.00, g = 0.44, b = 0.87}, -- Rare
-			[4] = {r = 0.64, g = 0.21, b = 0.93}, -- Epic
-			[5] = {r = 1.00, g = 0.50, b = 0.00}, -- Legendary
-			[6] = {r = 0.90, g = 0.80, b = 0.50}, -- Artifact
-			[7] = {r = 1.00, g = 0.00, b = 0.00}, -- Heirloom
-		}
-		local color = colors[lootItem.rarity] or colors[0]
+		local color = Colors[lootItem.rarity] or Colors[0]
 		button.name:SetVertexColor(color.r, color.g, color.b)
 		button.iconBorder:SetVertexColor(color.r, color.g, color.b)
 		button.iconOverlay:SetVertexColor(color.r, color.g, color.b)
-		-- todo: Require more bgTextures for different loot qualities
 	end
 	local lootView = CreateScrollBoxListLinearView()
 	lootView:SetElementExtent(55)
@@ -184,7 +137,7 @@ function component.Show()
 		for _, itemId in ipairs(loot) do
 			local itemName, itemLink, itemRarity, _, _, itemType, itemSubType, _, itemEquipLoc, itemIcon =  C_Item.GetItemInfo(itemId)
 			if itemName then
-			local lootItem = { name = itemName, link = itemLink, rarity = itemRarity, icon = itemIcon, armorType = itemSubType, slot = equipLocMapping[itemEquipLoc] or itemEquipLoc}
+			local lootItem = { name = itemName, link = itemLink, rarity = itemRarity, icon = itemIcon, armorType = itemSubType, slot = EquipMapping[itemEquipLoc] or itemEquipLoc}
 			dataProvider:Insert(lootItem)
 			else
 				C_Item.RequestLoadItemDataByID(itemId)

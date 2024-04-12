@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136352,
 	splash = 608251,
 	mapID = 129,
+	season = true,
 	overview = "Legends state that where the demigod Agamaggan fell, his blood gave rise to great masses of thorny vines. Recently, scouts have reported seeing undead milling about the region, engendering fears that the dreaded Scourge may be moving to conquer Kalimdor.",
 	{
 		name = "Tuten'kash",

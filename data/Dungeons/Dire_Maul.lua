@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136333,
 	splash = 608239,
 	mapID = 429,
+	season = true,
 	overview = "Built thousands of years ago to house the kaldorei's arcane secrets, the formerly great city of Eldre'Thalas now lies in ruin, writhing with warped, twisted forces. Competing covens once fought for control of Dire Maul's corrupted energy, but they have since settled into uneasy truces, choosing to exploit the power within their own territories rather than continue to battle over the entire complex.",
 	{
 		name = "Pusillin",

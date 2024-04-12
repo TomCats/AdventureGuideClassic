@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136353,
 	splash = 608252,
 	mapID = 47,
+	season = true,
 	overview = "Legends state that where the demigod Agamaggan fell, his blood gave rise to great masses of thorny vines. Many quilboar have taken up residence in the largest cluster of giant thorns, the Razorfen, which they revere as Agamaggan's resting place.",
 	{
 		name = "Roogug",

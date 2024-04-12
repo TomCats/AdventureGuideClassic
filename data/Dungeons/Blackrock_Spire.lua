@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136327,
 	splash = 608236,
 	mapID = 229,
+	season = true,
 	overview = "This imposing fortress, carved into the fiery core of Blackrock Mountain, represented the might of the Dark Iron clan for centuries. More recently, the black dragon Nefarian and his spawn seized the keep's upper spire and ignited a brutal war against the dwarves. The draconic armies have since allied with Warchief Rend Blackhand and his false Horde. This combined force lords over the spire, conducting horrific experiments to bolster its ranks while plotting the meddlesome Dark Irons' downfall.",
 		{
 			name = "Highlord Omokk",

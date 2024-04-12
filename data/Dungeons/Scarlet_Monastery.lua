@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136354,
 	splash = 608253,
 	mapID = 1004,
+	season = true,
 	overview = "The Crusade's fanatical leaders direct their followers from the Scarlet Cathedral, at the heart of the monastery grounds. This heavily guarded location functions as the order's headquarters, and some of the most zealous and intolerant crusaders roam the halls of this once-hallowed place.",
 	{
 		name = "Interrogator Vishas",

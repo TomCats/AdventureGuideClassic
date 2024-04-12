@@ -20,7 +20,17 @@ function InstanceService.AddRaid(raid)
 end
 
 function InstanceService.GetDungeons()
-	return dungeons
+	local filteredDungeons = { }
+	for i, dungeon in ipairs(dungeons) do
+		if dungeon.season then
+			table.insert(filteredDungeons, dungeon)
+		end
+	end
+	if C_Seasons.HasActiveSeason() and C_Seasons.GetActiveSeason() == 2 then
+		return filteredDungeons
+	else
+		return dungeons
+	end
 end
 
 function InstanceService.GetRaids()

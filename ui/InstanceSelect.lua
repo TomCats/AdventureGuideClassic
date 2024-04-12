@@ -7,7 +7,6 @@ Programming by: TomCat / TomCat's Gaming
 select(2, ...).SetupGlobalFacade()
 
 local component = UI.CreateComponent("InstanceSelect")
-
 local components
 local scrollbox
 
@@ -18,8 +17,48 @@ function component.Init(components_)
 	EncounterJournal.instanceSelect = instanceSelect
 	instanceSelect:SetPoint("TOPLEFT", EncounterJournal.inset, 0, -2)
 	instanceSelect:SetPoint("BOTTOMRIGHT", EncounterJournal.inset, -3, 0)
-	instanceSelect.bg = instanceSelect:CreateTexture(nil, "BACKGROUND")
-	instanceSelect.bg:SetTexture("Interface/EncounterJournal/UI-EJ-Classic")
+	instanceSelect.tierDropDown = CreateFrame("Frame", "SeasonDropDownMenu", instanceSelect, "UIDropDownMenuTemplate")
+	instanceSelect.tierDropDown:SetPoint("TOPRIGHT", 5, -10)
+	instanceSelect.tierDropDown:SetSize(176, 32)
+	UIDropDownMenu_SetWidth(instanceSelect.tierDropDown, 176)
+	function instanceSelect.tierDropDown:SetValue(newValue)
+		UIDropDownMenu_SetText(instanceSelect.tierDropDown, newValue)
+		UIDropDownMenu_JustifyText(instanceSelect.tierDropDown, "LEFT")
+		CloseDropDownMenus()
+	end
+	UIDropDownMenu_Initialize(instanceSelect.tierDropDown, function(self, level)
+		local info = UIDropDownMenu_CreateInfo()
+		info.func = self.SetValue
+		local seasons = GetSeasons()
+		for id, season in pairs(seasons) do
+			info.text, info.arg1 = season, season
+			UIDropDownMenu_AddButton(info, level)
+		end
+		if C_Seasons.HasActiveSeason() then
+			local activeSeasonID = C_Seasons.GetActiveSeason()
+			if activeSeasonID == 3 then
+				self:SetValue(seasons[1])
+			else
+				self:SetValue(seasons[activeSeasonID])
+			end
+		else
+			self:SetValue(seasons[1])
+		end
+	end)
+    UIDropDownMenu_DisableDropDown(instanceSelect.tierDropDown)
+	if C_Seasons.HasActiveSeason() then
+		local activeSeasonID = C_Seasons.GetActiveSeason()
+		if activeSeasonID == 3 then
+			instanceSelect.bg = instanceSelect:CreateTexture(nil, "BACKGROUND")
+			instanceSelect.bg:SetTexture("Interface/EncounterJournal/UI-EJ-Cataclysm")
+		else
+			instanceSelect.bg = instanceSelect:CreateTexture(nil, "BACKGROUND")
+			instanceSelect.bg:SetTexture("Interface/EncounterJournal/UI-EJ-Classic")
+		end
+	else
+		instanceSelect.bg = instanceSelect:CreateTexture(nil, "BACKGROUND")
+		instanceSelect.bg:SetTexture("Interface/EncounterJournal/UI-EJ-Classic")
+	end
 	instanceSelect.bg:SetAllPoints()
 	instanceSelect.bg:SetPoint("TOPLEFT", 3, -1)
 	instanceSelect.title = instanceSelect:CreateFontString(nil, "BACKGROUND", "GameFontNormalLarge2")

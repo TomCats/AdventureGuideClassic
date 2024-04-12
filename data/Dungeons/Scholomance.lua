@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136355,
 	splash = 608254,
 	mapID = 1007,
+	season = true,
 	overview = "Individuals seeking to master the powers of undeath know well of Scholomance, the infamous school of necromancy located in the dark and foreboding crypts beneath Caer Darrow. In recent years, several of the instructors have changed, but the institution remains under the control of Darkmaster Gandling, a particularly sadistic and insidious practitioner of necromantic magic.",
 	{
 		name = "Kirtonos the Herald",

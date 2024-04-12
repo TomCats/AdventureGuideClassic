@@ -6,21 +6,21 @@ Programming by: TomCat / TomCat's Gaming
 ]]
 select(2, ...).SetupGlobalFacade()
 
-InstanceService.AddDungeon({
+InstanceService.AddRaid({
 	name = "Blackfathom Deeps",
 	instanceID = 227,
 	thumbnail = 608195,
 	icon = 136325,
 	splash = 608234,
 	mapID = 48,
-	season = false,
+	season = true,
 	overview = "Once dedicated to the night elves' goddess Elune, Blackfathom Deeps was thought to have been destroyed during the Sundering, lost beneath the ocean. Millennia later, members of the Twilight's Hammer cult were drawn to the temple by whispers and foul dreams. After sacrificing untold numbers of innocents, the cult was rewarded with a new task: to protect one of the Old Gods' most cherished creatures, a pet that is still in need of nurturing before he can unleash his dark powers on the world.",
 	{
 		name = "Ghamoo-Ra",
 		encounterID = 4887,
 		portrait = 607613,
 		instance = "Blackfathom Deeps",
-		loot = { 6908, 6907 },
+		loot = { 209436, 209830, 209418, 209824 },
 		npcs = { 2135, 12456, 12314 },
 		overview = {
 			"Ghamoo-Ra is a massive and ancient turtle residing deep within Blackfathom Deeps. This aquatic behemoth is considered a guardian of the subterranean waters and the creatures that dwell within them. Ghamoo-Ra's immense size and formidable defenses make it a fearsome inhabitant of the underground aquatic realm.",

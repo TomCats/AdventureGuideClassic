@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136332,
 	splash = 526404,
 	mapID = 36,
+	season = true,
 	overview = "It is said the Deadmines' gold deposits once accounted for a third of Stormwind's treasure reserves. Amid the chaos of the First War, the mines were abandoned and later thought to be haunted, leaving them relatively untouched until the Defias Brotherhood--a group of former laborers turned brigands--claimed the labyrinth as a base of operations for its subversive activities against Stormwind.",
 	{
 		name = "Rhahk'Zor",

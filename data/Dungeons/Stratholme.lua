@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136359,
 	splash = 608255,
 	mapID = 329,
+	season = true,
 	overview = "Stratholme was once the jewel of northern Lordaeron, but today it is remembered for its harrowing fall to ruin. It was here that Prince Arthas turned his back on the noble paladin Uther Lightbringer, slaughtering countless residents believed to be infected with the horrific plague of undeath. Ever since, cursed Stratholme has been marred by death, betrayal, and hopelessness.",
 	{
 		name = "Skul",

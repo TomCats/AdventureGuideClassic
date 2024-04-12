@@ -14,6 +14,11 @@
     <Script file="ui/widgets/Spell.lua" />
     <Script file="ui/widgets/NPC.lua" />
 
+    <Script file="ui/mappings/EquipMapping.lua" />
+    <Script file="ui/mappings/Colors.lua" />
+    <Script file="ui/mappings/SeasonMapping.lua" />
+    <Script file="ui/mappings/InstanceMapping.lua" />
+
     <Script file="ui/Component.lua" />
     <Script file="ui/EncounterJournal.lua" />
     <Script file="ui/NavBar.lua" />

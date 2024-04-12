@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136360,
 	splash = 608256,
 	mapID = 109,
+	season = false,
 	overview = "Thousands of years ago, the Gurubashi empire was plunged into a civil war by a powerful sect of priests, the Atal'ai, who sought to summon to Azeroth an avatar of their god of blood, Hakkar the Soulflayer. The Gurubashi people exiled the Atal'ai to the Swamp of Sorrows, where the priests built the Temple of Atal'Hakkar. Ysera, Aspect of the green dragonflight, sank the temple beneath the swamp and assigned wardens to ensure that the summoning rituals never be performed again.",
 	-- {
 	-- 	name = "Gasher",

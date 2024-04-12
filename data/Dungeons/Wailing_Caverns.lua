@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136364,
 	splash = 608313,
 	mapID = 43,
+	season = true,
 	overview = "Years ago, the famed druid Naralex and his followers descended into the shadowy Wailing Caverns, named for the mournful cry one hears when steam bursts from the cave system's fissures. Naralex planned to use the underground springs to restore lushness to the arid Barrens. But upon entering the Emerald Dream, he saw his vision of regrowth turn into a waking nightmare, one that has plagued the caverns ever since.",
 	{
 		name = "Kresh",

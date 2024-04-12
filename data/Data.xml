@@ -27,6 +27,7 @@
     <Script file="data/Raids/Ruins_of_Ahn_Qiraj.lua" />
     <Script file="data/Raids/Temple_of_Ahn_Qiraj.lua" />
     <Script file="data/Raids/Naxxramas.lua" />
+    <Script file="data/Raids/Blackfathom_Deeps.lua" />
 
     <SimpleHTML name="AdventureGuideClassic_SampleEncounterDescription"
                 file="Interface\AddOns\AdventureGuideClassic\data\encounterDescriptions\sample.html"

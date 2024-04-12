@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136363,
 	splash = 608264,
 	mapID = 70,
+	season = true,
 	overview = "Uldaman is an ancient titan vault buried deep within the earth. It is said the titans sealed away a failed experiment there and then moved on to a new project, related to the genesis of the dwarves. Tales of a fabled treasure containing great knowledge have enticed would-be treasure hunters to dig deeper into the secrets of Uldaman, a task made perilous by the presence of stone defenders, savage troggs, Dark Iron invaders, and other dangers lurking in the lost city.",
 	{
 		name = "Revelosh",

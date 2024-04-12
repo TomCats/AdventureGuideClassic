@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136345,
 	splash = 608248,
 	mapID = 349,
+	season = true,
 	overview = "According to legend, Zaetar, son of Cenarius, and the earth elemental princess Theradras begot the barbaric centaur race. Shortly after the centaur's creation, the ruthless creatures murdered their father. The grief-stricken Theradras is said to have trapped her lover's spirit within Maraudon, corrupting the region. Now, vicious centaur ghosts and twisted elemental minions roam every corner of the sprawling caves.",
 	{
 		name = "Noxxion",

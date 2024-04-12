@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136357,
 	splash = 526410,
 	mapID = 33,
+	season = true,
 	overview = "Looming over Pyrewood Village from the southern bluffs of Silverpine Forest, Shadowfang Keep casts a shadow as dark as its legacy. Sinister forces occupy these ruins, formerly the dwelling of the mad archmage Arugal's worgen. The restless shade of Baron Silverlaine lingers, while Lord Godfrey and his cabal of erstwhile Gilnean noblemen plot against their enemies both living and undead.",
 	{
 		name = "Rethilgore",

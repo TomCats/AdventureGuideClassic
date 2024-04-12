@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136350,
 	splash = 608250,
 	mapID = 389,
+	season = true,
 	overview = "Ragefire Chasm extends deep below the city of Orgrimmar. Barbaric troggs and devious Searing Blade cultists once plagued the volcanic caves, but now a new threat has emerged: dark shaman. Although Warchief Garrosh Hellscream recently called on a number of shaman to use the elements as weapons against the Alliance, the chasm's current inhabitants appear to be renegades. Reports have surfaced that these shadowy figures are amassing a blistering army that could wreak havoc if unleashed upon Orgrimmar.",
 	{
 		name = "Taragaman the Hungerer",

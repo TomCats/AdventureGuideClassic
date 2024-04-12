@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136368,
 	splash = 608267,
 	mapID = 209,
+	season = true,
 	overview = "Zul'Farrak was once the shining jewel of Tanaris, ferociously protected by the cunning Sandfury tribe. Despite the trolls' tenacity, this isolated group was forced to surrender much of its territory throughout history. Now, it appears that Zul'Farrak's inhabitants are creating a horrific army of undead trolls to conquer the surrounding region. Other disturbing rumors tell of an ancient creature sleeping within the city--one that, if awakened, will rain death and destruction across Tanaris.",
 	{
 		name = "Antu'sul",

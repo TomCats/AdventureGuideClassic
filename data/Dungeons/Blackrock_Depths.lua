@@ -13,6 +13,7 @@ InstanceService.AddDungeon({
 	icon = 136326,
 	splash = 608235,
 	mapID = 230,
+	season = true,
 	overview = "The smoldering Blackrock Depths are home to the Dark Iron dwarves and their emperor, Dagran Thaurissan. Like his predecessors, he serves under the iron rule of Ragnaros the Firelord, a merciless being summoned into the world centuries ago. The presence of chaotic elementals has attracted Twilight's Hammer cultists to the mountain domain. Along with Ragnaros' servants, they have pushed the dwarves toward increasingly destructive ends that could soon spell doom for all of Azeroth.",
 	{
 		name = "Lord Roccor",
