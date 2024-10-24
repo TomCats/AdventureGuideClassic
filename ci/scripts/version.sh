@@ -1,6 +1,8 @@
 #!/bin/bash
+set -x
+set -euo pipefail
 
-toc_file="$dirname/$(ls | grep .toc)"
+toc_file=$(find "$(pwd)" -name "*.toc" | head -n 1)
 pre_release=false
 pre_release_type=""
 commit_hash=$(git rev-parse --short HEAD)
@@ -29,8 +31,9 @@ increment_version() {
     echo "$major.$minor.$patch"
 }
 
+
 get_version_from_toc() {
-    awk -F'"' '/Version/ {print $2}' $toc_file
+    awk -F': ' '/^## Version:/ {print $2}' "$toc_file"
 }
 
 update_toc_version() {
@@ -45,7 +48,7 @@ if [[ $commit_message == *"BREAKING CHANGE:"* ]]; then
     version_type="major"
 elif [[ $commit_message == *"feat:"* ]]; then
     version_type="minor"
-elif [[ $commit_message == *"fix:"* ]]; then
+elif [[ $commit_message == *"fix:"* ]] || [[ $commit_message == *"Fix"* ]]; then
     version_type="patch"
 else
     echo "No version increment detected in commit message."
